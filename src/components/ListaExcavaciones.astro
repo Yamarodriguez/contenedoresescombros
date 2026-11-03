@@ -2,7 +2,7 @@
 // «Excavaciones por lugares»: la misma lista de la página de inicio («Contenedores por
 // lugares»), en las mismas 5 columnas y en el mismo orden, pero enlazando a la página de
 // excavaciones de cada lugar. Va AL FINAL de la página de Excavaciones (Yama, 2026-11-03).
-// Con `enlaces` pinta esa lista en las mismas 5 columnas (los pueblos de /excavaciones-valencia/).
+// Con `enlaces` pinta esa lista con el mismo formato, en 4 columnas para que los nombres largos quepan en una línea (los pueblos de /excavaciones-valencia/).
 import inicio from '../content/pages/index.json';
 import datosExcavacion from '../data/excavaciones-ciudades.json';
 import { rutaExcavacion } from '../lib/excavaciones.mjs';
@@ -10,7 +10,7 @@ import { rutaExcavacion } from '../lib/excavaciones.mjs';
 interface Enlace { texto: string; ruta: string }
 interface Props { titulo?: string; enlaces?: Enlace[] }
 const { titulo = 'Excavaciones por lugares', enlaces } = Astro.props as Props;
-const COLUMNAS = 5;
+const COLUMNAS = 4;
 
 const bloques = (inicio as any).blocks as any[];
 const h = bloques.findIndex((b) => b.type === 'heading' && /^nuestra area de trabajo$/i.test(b.text.trim()));
@@ -35,7 +35,7 @@ if (!enlaces && columnas.flat().length < 40) throw new Error('Lista de excavacio
   <section class="banda banda-panel">
     <div class="banda-in">
       <div class="fila cols-1"><div class="col"><h2 class="titular">{titulo}</h2></div></div>
-      <div class={`fila cols-${columnas.length}`} style={`--plantilla:${columnas.map(() => '20fr').join(' ')}`}>
+      <div class="fila cols-5" style={`--plantilla:${columnas.map(() => '1fr').join(' ')}`}>
         {columnas.map((c) => (
           <div class="col"><div class="texto"><p set:html={c.map((e) => `<a href="${e.ruta}">${e.texto}</a>`).join('<br />')} /></div></div>
         ))}
