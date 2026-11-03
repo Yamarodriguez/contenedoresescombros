@@ -7,6 +7,8 @@ interface Props { datos: any }
 const { datos } = Astro.props as Props;
 const h2 = (text: string) => ({ type: 'heading', tag: 'h2', text });
 const texto = (html: string) => ({ type: 'text', html, text: '' });
+// Filas completas: de 4 en 4 si salen justas; si no, como mucho 3 por fila (6 -> 3+3, 5 -> 3+2).
+const rejilla = (n: number) => (n % 4 === 0 ? 'tarjetas-texto' : 'tarjetas-texto tres');
 ---
 <div class="contenido anadido">
   {datos.entradilla && (
@@ -32,14 +34,14 @@ const texto = (html: string) => ({ type: 'text', html, text: '' });
           </>
         )}
         {s.tarjetas && (
-          <div class="tarjetas-texto">
+          <div class={rejilla(s.tarjetas.length)}>
             {s.tarjetas.map((t: any) => (
               <article class="tarjeta-texto"><h3 class="titular">{t.h3}</h3><div class="texto" set:html={t.html} /></article>
             ))}
           </div>
         )}
         {s.faq && (
-          <div class="tarjetas-texto">
+          <div class={rejilla(s.faq.length)}>
             {s.faq.map((f: any) => (
               <article class="tarjeta-texto"><h3 class="titular">{f.pregunta}</h3><div class="texto"><p>{f.respuesta}</p></div></article>
             ))}
