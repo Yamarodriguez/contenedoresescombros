@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+*.log
+referencia/
+informes/*.json
+capturas/
+.claude/
+origen/
+kit/
+marca/

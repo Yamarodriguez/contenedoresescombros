@@ -1,0 +1,36 @@
+---
+import imagenes from '../data/imagenes.json';
+import Formulario from './Formulario.astro';
+
+const { b } = Astro.props as { b: any };
+const dim = (src: string) => (imagenes as Record<string, any>)[src] || {};
+const telFix = (h = '') => h.replace(/^tel:\s+/, 'tel:');
+const Tag = (b.type === 'heading' ? b.tag : 'div') as any;
+const d = b.type === 'image' ? dim(b.src) : {};
+---
+{b.type === 'heading' && (
+  b.href
+    ? <Tag class="titular"><a href={b.href}>{b.text}</a></Tag>
+    : <Tag class="titular">{b.text}</Tag>
+)}
+{b.type === 'text' && <div class="texto" set:html={b.html || b.text} />}
+{b.type === 'image' && (
+  b.href
+    ? <a href={b.href} class="foto"><img src={b.src} alt={b.alt || ''} width={d.w} height={d.h} loading="lazy" decoding="async" /></a>
+    : <img class="foto" src={b.src} alt={b.alt || ''} width={d.w} height={d.h} loading="lazy" decoding="async" />
+)}
+{b.type === 'button' && <a class="boton" href={telFix(b.href || '#')}>{b.text}</a>}
+{b.type === 'map' && (
+  <iframe class="mapa" src={`https://www.google.com/maps?q=${encodeURIComponent(b.address)}&output=embed`} title={b.address} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+)}
+{b.type === 'toggle' && (
+  <div class="acordeon">
+    {b.items.map((it: any) => (
+      <details>
+        <summary>{it.title}</summary>
+        <div class="texto" set:html={it.html || it.text}></div>
+      </details>
+    ))}
+  </div>
+)}
+{b.type === 'contact_form' && <Formulario />}

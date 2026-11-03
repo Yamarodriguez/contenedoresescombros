@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Contenido from '../components/Contenido.astro';
+import { seoDe } from '../lib/seo';
+import site from '../data/site.json';
+
+export async function getStaticPaths() {
+  const files = import.meta.glob('../content/pages/*.json', { eager: true });
+  return Object.values(files)
+    .map((m: any) => m.default)
+    .filter((d: any) => d.slug !== 'index')
+    .map((d: any) => ({
+      params: { slug: new URL(d.url).pathname.replace(/^\/|\/$/g, '') },
+      props: { data: d },
+    }));
+}
+
+const { data } = Astro.props as { data: any };
+const dominio = `https://${site.dominio}`;
+const key = new URL(data.url).pathname.replace(/^\/|\/$/g, '').replace(/\//g, '__') || 'index';
+const seo = seoDe(key);
+const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
+const bloques = data.blocks.filter((b: any) => !(b.type === 'heading' && b.tag === 'h1'));
+const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: data.title, url: data.url }];
+---
+<Base
+  title={seo.titulo || data.title}
+  description={seo.descripcion}
+  canonical={data.url}
+  imagen={seo.imagen}
+  ogTitulo={seo.ogTitulo}
+  ogDescripcion={seo.ogDescripcion}
+  migas={migas}
+>
+  <Hero titulo={h1 ? h1.text : data.title} />
+  <Contenido bloques={bloques} />
+</Base>

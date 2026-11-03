@@ -1,0 +1,255 @@
+{
+ "slug": "empresa",
+ "title": "Empresa de contendores",
+ "url": "https://contenedoresescombros.com/empresa/",
+ "meta_description": "Empresa de contendores para escombros, empresa de contenedor de obra y cubas, precios competitivos, contáctenos",
+ "blocks": [
+  {
+   "type": "heading",
+   "tag": "h1",
+   "text": "Empresa de contenedores"
+  },
+  {
+   "type": "text",
+   "text": "Eres empresa de contenedores y quieres trabajar con nosotros, Rellena el cuestionario y nos pondremos en contacto con usted. Gracias!",
+   "html": "<p>Eres empresa de contenedores y quieres trabajar con nosotros, Rellena el cuestionario y nos pondremos en contacto con usted. Gracias!</p>"
+  },
+  {
+   "type": "contact_form",
+   "form_id": ""
+  },
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Empresa de Contenedores de Escombros"
+  },
+  {
+   "type": "heading",
+   "tag": "p",
+   "text": "Profesionales, eficientes y económicos."
+  },
+  {
+   "type": "heading",
+   "tag": "p",
+   "text": "Ajustamos su necesidad, al mejor precio."
+  },
+  {
+   "type": "text",
+   "text": "En Contenedores encontraras la profesionalidad y seguridad que requiere un servicio tan demandado como este; la gestión de residuos y contenedores de obra. Así, garantizamos excelentes servicios de transporte y gestión integral de residuos, bajo precios competitivos y asequibles, contando al mismo tiempo con la mejor calidad. Ofrecemos una gran variedad de contenedores de escombros, diferentes tipos de tamaños, utilidad y seguridad, ajustándonos siempre a las necesidades demandadas.Los contenedores de escombros son una solución ideal cuando se trata de pequeñas reformas, construcciones de obras nuevas o demoliciones, que al generar tantos residuos no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía publica y ser retirados de forma sencilla.Es importante aclarar que la disposición final de sus residuos o escombros, serán destinados, a los centros de segregación y/o clasificación autorizados.",
+   "html": "<p>En <a href=\"https://contenedoresescombros.com/\"><strong>Contenedores</strong></a><b> </b>encontraras la profesionalidad y seguridad que requiere un servicio tan demandado como este; la <strong>gestión de residuos y contenedores de obra</strong>. Así, garantizamos excelentes servicios de transporte y gestión integral de residuos, bajo precios competitivos y asequibles, contando al mismo tiempo con la mejor calidad.<br />Ofrecemos una gran variedad de contenedores de escombros, diferentes tipos de tamaños, utilidad y seguridad, ajustándonos siempre a las necesidades demandadas.</p><p>Los <strong>contenedores de escombros</strong> son una solución ideal cuando se trata de pequeñas reformas, construcciones de obras nuevas o demoliciones, que al generar tantos residuos no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía publica y ser retirados de forma sencilla.</p><p>Es importante aclarar que la disposición final de sus residuos o escombros, serán destinados, a los centros de segregación y/o clasificación autorizados.</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Empresa de contenedores de obra"
+  },
+  {
+   "type": "text",
+   "text": "Los contenedores de escombros son una solución ideal cuando se trata de pequeñas reformas, construcciones de obras nuevas o demoliciones, que al generar tantos residuos no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía publica y ser retirados de forma sencilla.Conoce todos los contenedores de escombros que ofrecemos para la recogida del residuo inerte producido en las reformas y obras.",
+   "html": "<p>Los contenedores de escombros son una solución ideal cuando se trata de pequeñas reformas, construcciones de obras nuevas o demoliciones, que al generar tantos residuos no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía publica y ser retirados de forma sencilla.</p><p>Conoce todos los <strong>contenedores de escombros</strong> que ofrecemos para la recogida del residuo inerte producido en las reformas y obras.</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Materiales aceptados"
+  },
+  {
+   "type": "text",
+   "text": "Tierra, Escombros, Hormigón, Ladrillos, Tejas y materiales cerámicos, Todos los anteriores mezclados, Madera, Vidrio, Plástico, Metales, Cartón, Materiales de aislamiento que no contengan sustancias peligrosas por normas Europeas",
+   "html": "<p>Tierra, Escombros, Hormigón, Ladrillos, Tejas y materiales cerámicos, Todos  los anteriores mezclados, Madera, Vidrio, Plástico, Metales, Cartón, Materiales de aislamiento que no contengan sustancias peligrosas por normas Europeas</p>"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/sacos-de-escombros.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/sacos-para-escombros/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Sacos de escombros",
+   "href": "https://contenedoresescombros.com/sacos-para-escombros/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-escombro-3-m3.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-3-m3/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor de escombros 3 m3",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-3-m3/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-escombro-5-m3.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-5-m3/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor de escombros 5 m3",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-5-m3/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-escombro-9-m3.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-9-m3/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor de escombros 9 m3",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-9-m3/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-escombro-12-m3.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-12-m3/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor escombros 12 m3.",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-12-m3/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-escombro-20-m3.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-20-m3/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor escombros 20 m3",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-20-m3/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-escombro-30-m3.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-30-m3/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor escombros 30 m3",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-30-m3/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedores-escombros-cerrados.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-con-llave/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedores de escombros con llave",
+   "href": "https://contenedoresescombros.com/contenedores-escombros-con-llave/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedor-de-poda.jpg",
+   "alt": "",
+   "href": "https://contenedoresescombros.com/poda/"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedor de Poda",
+   "href": "https://contenedoresescombros.com/poda/"
+  },
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Empresas de Alquiler contenedores de escombro"
+  },
+  {
+   "type": "text",
+   "text": "El alquiler de contenedores de escombros y/o residuos, cuentan con un coste variado según su necesidad, accesible y competitivo. Gestionamos los residuos de forma segura, profesional y económica.",
+   "html": "<p>El alquiler de contenedores de escombros y/o residuos, cuentan con un coste variado según su necesidad, accesible y competitivo. Gestionamos los residuos de forma segura, profesional y económica.</p>"
+  },
+  {
+   "type": "button",
+   "text": "Alquiler contenedor Escombro",
+   "href": "https://contenedoresescombros.com/alquiler/"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/alquiler-contenedores-escombros.jpg",
+   "alt": ""
+  },
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Otros servicios de contenedores"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Venta de contenedores"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/venta-contenedores.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Si tienes un contenedor y quieres venderlo estas en el sitio adecuado",
+   "html": "<p>Si tienes un contenedor y quieres venderlo estas en el sitio adecuado</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Excavaciones"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/excavaciones.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Toda la informacion de construcciones de oficinas con contenedores precios y modelos de oficias",
+   "html": "<p>Toda la informacion de construcciones de oficinas con contenedores precios y modelos de oficias</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Comprar contenedores"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/comprar-contenedores.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consulta mas!",
+   "html": "<p>Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consulta mas!</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedores marítimos"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedores-maritimos.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!",
+   "html": "<p>Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!</p>"
+  }
+ ]
+}

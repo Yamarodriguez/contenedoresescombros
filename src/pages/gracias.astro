@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+const dominio = `https://${site.dominio}`;
+const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: 'Gracias', url: `${dominio}/gracias/` }];
+---
+<Base title="Gracias por tu mensaje" canonical={`${dominio}/gracias/`} migas={migas} indexar={false}>
+  <section class="heroe">
+    <div class="heroe-in">
+      <h1>¡Gracias!</h1>
+      <p>Hemos recibido tu mensaje. Te responderemos lo antes posible.</p>
+      <p><a class="boton" href="/">Volver al inicio</a></p>
+    </div>
+  </section>
+</Base>

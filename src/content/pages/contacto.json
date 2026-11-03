@@ -1,0 +1,102 @@
+{
+ "slug": "contacto",
+ "title": "Contacto",
+ "url": "https://contenedoresescombros.com/contacto/",
+ "meta_description": "",
+ "blocks": [
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Solicita presupuesto gratuito y sin compromiso"
+  },
+  {
+   "type": "contact_form",
+   "form_id": ""
+  },
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Contenedores de Escombros"
+  },
+  {
+   "type": "heading",
+   "tag": "p",
+   "text": "Profesionales, eficientes y económicos."
+  },
+  {
+   "type": "heading",
+   "tag": "p",
+   "text": "Ajustamos su necesidad, al mejor precio."
+  },
+  {
+   "type": "text",
+   "text": "En Contenedores escombros encontraras la profesionalidad y seguridad que requiere un servicio tan demandado como este; la gestión de residuos y contenedores de obra. Así, garantizamos excelentes servicios de transporte y gestión integral de residuos, bajo precios competitivos y asequibles, contando al mismo tiempo con la mejor calidad. Ofrecemos una gran variedad de contenedores de escombros, diferentes tipos de tamaños, utilidad y seguridad, ajustándonos siempre a las necesidades demandadas.Los contenedores de escombros son una solución ideal cuando se trata de pequeñas reformas, construcciones de obras nuevas o demoliciones, que al generar tantos residuos no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía publica y ser retirados de forma sencilla.Es importante aclarar que la disposición final de sus residuos o escombros, serán destinados, a los centros de segregación y/o clasificación autorizados.",
+   "html": "<p>En <a href=\"https://contenedoresescombros.com/\"><strong>Contenedores escombros</strong></a> encontraras la profesionalidad y seguridad que requiere un servicio tan demandado como este; la <strong>gestión de residuos y contenedores de obra</strong>. Así, garantizamos excelentes servicios de transporte y gestión integral de residuos, bajo precios competitivos y asequibles, contando al mismo tiempo con la mejor calidad.<br />Ofrecemos una gran variedad de contenedores de escombros, diferentes tipos de tamaños, utilidad y seguridad, ajustándonos siempre a las necesidades demandadas.</p><p>Los <strong>contenedores de escombros</strong> son una solución ideal cuando se trata de pequeñas reformas, construcciones de obras nuevas o demoliciones, que al generar tantos residuos no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía publica y ser retirados de forma sencilla.</p><p>Es importante aclarar que la disposición final de sus residuos o escombros, serán destinados, a los centros de segregación y/o clasificación autorizados.</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h2",
+   "text": "Otros servicios de contenedores"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Venta de contenedores"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/venta-contenedores.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Si tienes un contenedor y quieres venderlo estas en el sitio adecuado",
+   "html": "<p>Si tienes un contenedor y quieres venderlo estas en el sitio adecuado</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Excavaciones"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/excavaciones.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Toda la informacion de construcciones de oficinas con contenedores precios y modelos de oficias",
+   "html": "<p>Toda la informacion de construcciones de oficinas con contenedores precios y modelos de oficias</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Comprar contenedores"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/comprar-contenedores.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consulta mas!",
+   "html": "<p>Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consulta mas!</p>"
+  },
+  {
+   "type": "heading",
+   "tag": "h3",
+   "text": "Contenedores marítimos"
+  },
+  {
+   "type": "image",
+   "src": "/img/2021/06/contenedores-maritimos.jpg",
+   "alt": ""
+  },
+  {
+   "type": "text",
+   "text": "Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!",
+   "html": "<p>Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!</p>"
+  }
+ ]
+}

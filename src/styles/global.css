@@ -1,0 +1,88 @@
+:root {
+  --fondo: #ffffff;
+  --texto: #1c2430;
+  --suave: #5a6676;
+  --marca: #d4531e;
+  --marca-osc: #b8431510;
+  --borde: #e6e9ee;
+  --panel: #f6f8fa;
+  --ancho: 1100px;
+  --radio: 10px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--marca); }
+main { min-height: 50vh; }
+
+/* Cabecera */
+.cabecera { border-bottom: 1px solid var(--borde); position: sticky; top: 0; background: var(--fondo); z-index: 50; }
+.cabecera-in { max-width: var(--ancho); margin: 0 auto; display: flex; align-items: center; gap: 1rem; padding: .6rem 16px; }
+.logo { font-weight: 700; font-size: 1.15rem; color: var(--texto); text-decoration: none; margin-right: auto; }
+.menu-boton { display: none; font-size: 1.5rem; background: none; border: 0; cursor: pointer; }
+.menu-lista { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin: 0; padding: 0; }
+.menu-lista > li { position: relative; }
+.menu-lista a { color: var(--texto); text-decoration: none; padding: .35rem 0; display: inline-block; font-size: .95rem; }
+.menu-lista a:hover { color: var(--marca); }
+.submenu { list-style: none; margin: 0; padding: .4rem; position: absolute; top: 100%; left: 0; background: var(--fondo); border: 1px solid var(--borde); border-radius: var(--radio); min-width: 200px; display: none; box-shadow: 0 8px 24px rgba(0,0,0,.08); max-height: 70vh; overflow: auto; z-index: 60; }
+.con-hijos:hover .submenu { display: block; }
+
+/* Migas */
+.migas { max-width: var(--ancho); margin: 0 auto; padding: .6rem 16px 0; font-size: .85rem; }
+.migas ol { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; color: var(--suave); }
+.migas li + li::before { content: "›"; margin-right: .4rem; color: var(--suave); }
+
+/* Héroe */
+.heroe { background: var(--panel); border-bottom: 1px solid var(--borde); }
+.heroe-in { max-width: var(--ancho); margin: 0 auto; padding: 2.4rem 16px; }
+.heroe h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 .4rem; line-height: 1.2; }
+
+/* Contenido */
+.contenido { max-width: var(--ancho); margin: 0 auto; padding: 1.6rem 16px 2.4rem; }
+.contenido .titular { margin: 1.6rem 0 .6rem; line-height: 1.25; }
+.contenido h2.titular { font-size: 1.5rem; }
+.contenido h3.titular { font-size: 1.2rem; }
+.contenido p.titular { font-weight: 600; color: var(--suave); }
+.texto { margin: 0 0 1rem; }
+.texto :where(ul, ol) { padding-left: 1.2rem; }
+.foto { display: block; margin: 1rem 0; border-radius: var(--radio); }
+img.foto, .foto img { border-radius: var(--radio); }
+.mapa { width: 100%; height: 360px; border: 0; border-radius: var(--radio); margin: 1rem 0; }
+
+/* Botones */
+.boton { display: inline-block; background: var(--marca); color: #fff; text-decoration: none; padding: .6rem 1.1rem; border-radius: 999px; font-weight: 600; border: 0; cursor: pointer; margin: .3rem .3rem .3rem 0; }
+.boton:hover { filter: brightness(.95); }
+
+/* Acordeón */
+.acordeon details { border: 1px solid var(--borde); border-radius: var(--radio); padding: .4rem .9rem; margin: .5rem 0; }
+.acordeon summary { cursor: pointer; font-weight: 600; padding: .3rem 0; }
+
+/* Formulario */
+.formulario { display: grid; gap: .8rem; max-width: 560px; background: var(--panel); padding: 1.2rem; border-radius: var(--radio); border: 1px solid var(--borde); }
+.formulario label { display: grid; gap: .3rem; font-weight: 600; font-size: .95rem; }
+.formulario input, .formulario textarea { font: inherit; padding: .6rem; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
+.formulario .acepto { font-weight: 400; display: flex; align-items: flex-start; gap: .5rem; }
+.campo-trampa { position: absolute; left: -9999px; }
+
+/* Pie */
+.pie { background: #141b24; color: #d7dde4; margin-top: 2rem; }
+.pie-in { max-width: var(--ancho); margin: 0 auto; padding: 2rem 16px; display: grid; gap: 1.4rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.pie a { color: #d7dde4; }
+.pie-col ul { list-style: none; margin: 0; padding: 0; }
+.pie-col li { margin: .3rem 0; }
+.pie-copy { text-align: center; padding: 1rem; border-top: 1px solid #263140; font-size: .85rem; color: #9aa6b2; }
+
+@media (max-width: 820px) {
+  .menu-boton { display: block; order: 3; }
+  .menu { flex-basis: 100%; display: none; }
+  .menu.abierto { display: block; }
+  .menu-lista { flex-direction: column; gap: 0; max-height: 70vh; overflow: auto; }
+  .submenu { position: static; display: block; border: 0; box-shadow: none; padding-left: 1rem; }
+}

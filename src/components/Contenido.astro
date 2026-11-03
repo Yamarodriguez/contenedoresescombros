@@ -1,0 +1,7 @@
+---
+import Bloque from './Bloque.astro';
+const { bloques } = Astro.props as { bloques: any[] };
+---
+<div class="contenido">
+  {bloques.map((b) => <Bloque b={b} />)}
+</div>

@@ -1,0 +1,30 @@
+---
+import site from '../data/site.json';
+import menus from '../data/menus.json';
+const pie = ((menus as any).pie || []) as any[];
+---
+<footer class="pie">
+  <div class="pie-in">
+    <div class="pie-col">
+      <strong>{site.nombre}</strong>
+      <p>Contenedores de escombros y residuos de obra en toda España.</p>
+    </div>
+    <div class="pie-col">
+      <p>Teléfono y WhatsApp: <a href={`tel:${site.telefono}`}>{site.telefono}</a></p>
+      <p>Correo: <a href={`mailto:${site.correo}`}>{site.correo}</a></p>
+    </div>
+    {pie.length > 0 && (
+      <nav class="pie-col" aria-label="Pie">
+        <ul>{pie.map((e) => <li><a href={e.url || '#'}>{e.label}</a></li>)}</ul>
+      </nav>
+    )}
+    <nav class="pie-col" aria-label="Legal">
+      <ul>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/politica-de-privacidad/">Política de privacidad</a></li>
+        <li><a href="/politica-de-cookies/">Política de cookies</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="pie-copy">© {new Date().getFullYear()} {site.nombre}</div>
+</footer>

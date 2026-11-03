@@ -1,0 +1,10 @@
+---
+interface Props { titulo: string; }
+const { titulo } = Astro.props;
+---
+<section class="heroe">
+  <div class="heroe-in">
+    <h1>{titulo}</h1>
+    <slot />
+  </div>
+</section>

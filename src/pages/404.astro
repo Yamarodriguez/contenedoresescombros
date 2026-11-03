@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+---
+<Base title="Página no encontrada" canonical={`https://${site.dominio}/404/`} indexar={false}>
+  <section class="heroe">
+    <div class="heroe-in">
+      <h1>No encontramos esa página</h1>
+      <p>Puede que se haya movido. Vuelve al <a href="/">inicio</a> o usa el menú.</p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,15 @@
+---
+// Formulario de contacto. En la Fase 5 se termina (Netlify Forms, envio sin salir
+// de la pagina, aviso y /gracias/). Aqui va la base con los mismos campos.
+---
+<form class="formulario" name="contacto" method="POST" data-netlify="true" netlify-honeypot="empresa-bot" action="/gracias/">
+  <input type="hidden" name="form-name" value="contacto" />
+  <p class="campo-trampa"><label>No rellenar <input name="empresa-bot" tabindex="-1" autocomplete="off" /></label></p>
+  <label>Nombre<input type="text" name="nombre" required /></label>
+  <label>Email<input type="email" name="email" required /></label>
+  <label>Teléfono<input type="tel" name="telefono" /></label>
+  <label>Asunto<input type="text" name="asunto" /></label>
+  <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+  <label class="acepto"><input type="checkbox" name="acepto" required /> He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>.</label>
+  <button type="submit" class="boton">Enviar</button>
+</form>

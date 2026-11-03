@@ -1,0 +1,78 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import site from '../data/site.json';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical: string;
+  imagen?: string;
+  ogTitulo?: string;
+  ogDescripcion?: string;
+  datos?: Record<string, unknown>[];
+  migas?: { nombre: string; url: string }[];
+  indexar?: boolean;
+}
+const { title, description = '', canonical, imagen = '', ogTitulo, ogDescripcion, datos = [], migas = [], indexar = true } = Astro.props as Props;
+const dominio = `https://${site.dominio}`;
+const imagenAbs = imagen ? (imagen.startsWith('http') ? imagen : `${dominio}${imagen}`) : '';
+
+const empresa: Record<string, unknown> = {
+  '@type': 'Organization', '@id': `${dominio}/#empresa`, name: site.nombre, url: `${dominio}/`,
+  description: site.descripcion, areaServed: { '@type': 'Country', name: 'España' },
+  ...(site.correo ? { email: site.correo } : {}),
+  ...(site.telefono ? { telephone: site.telefono } : {}),
+};
+const grafo: Record<string, unknown>[] = [
+  empresa,
+  { '@type': 'WebSite', '@id': `${dominio}/#web`, url: `${dominio}/`, name: site.nombre, inLanguage: 'es', publisher: { '@id': `${dominio}/#empresa` } },
+  { '@type': 'WebPage', '@id': `${canonical}#pagina`, url: canonical, name: title, ...(description ? { description } : {}), isPartOf: { '@id': `${dominio}/#web` }, inLanguage: 'es-ES', ...(migas.length > 1 ? { breadcrumb: { '@id': `${canonical}#migas` } } : {}) },
+  ...(migas.length > 1 ? [{ '@type': 'BreadcrumbList', '@id': `${canonical}#migas`, itemListElement: migas.map((m, i) => ({ '@type': 'ListItem', position: i + 1, name: m.nombre, item: m.url })) }] : []),
+  ...datos,
+];
+const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': grafo });
+---
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {site.verificacionGoogle && <meta name="google-site-verification" content={site.verificacionGoogle} />}
+    {site.bing && <meta name="msvalidate.01" content={site.bing} />}
+    {!indexar && <meta name="robots" content="noindex, follow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content={site.nombre} />
+    <meta property="og:title" content={ogTitulo || title} />
+    {(ogDescripcion || description) && <meta property="og:description" content={ogDescripcion || description} />}
+    <meta property="og:url" content={canonical} />
+    {imagenAbs && <meta property="og:image" content={imagenAbs} />}
+    <meta name="twitter:card" content={imagenAbs ? 'summary_large_image' : 'summary'} />
+    <script type="application/ld+json" set:html={jsonld} />
+    {site.analytics.adsense && <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.analytics.adsense}`} crossorigin="anonymous"></script>}
+    {site.analytics.ga4 && <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.analytics.ga4}`}></script>}
+    {site.analytics.ga4 && <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.analytics.ga4}');`} />}
+  </head>
+  <body>
+    <Header />
+    {migas.length > 1 && (
+      <nav class="migas" aria-label="Estás en">
+        <ol>
+          {migas.map((m, i) => i < migas.length - 1
+            ? <li><a href={m.url.replace(dominio, '')}>{m.nombre}</a></li>
+            : <li aria-current="page">{m.nombre}</li>)}
+        </ol>
+      </nav>
+    )}
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,33 @@
+---
+import site from '../data/site.json';
+import menus from '../data/menus.json';
+const principal = (menus as any).principal as any[];
+---
+<header class="cabecera">
+  <div class="cabecera-in">
+    <a class="logo" href="/">{site.nombre}</a>
+    <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
+    <nav id="menu-principal" class="menu" aria-label="Menú principal">
+      <ul class="menu-lista">
+        {principal.map((e) => (
+          <li class={e.children && e.children.length ? 'con-hijos' : ''}>
+            <a href={e.url || '#'}>{e.label}</a>
+            {e.children && e.children.length > 0 && (
+              <ul class="submenu">
+                {e.children.map((c: any) => <li><a href={c.url || '#'}>{c.label}</a></li>)}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  const b = document.querySelector('.menu-boton');
+  const n = document.getElementById('menu-principal');
+  b?.addEventListener('click', () => {
+    const abierto = n?.classList.toggle('abierto');
+    b.setAttribute('aria-expanded', String(!!abierto));
+  });
+</script>

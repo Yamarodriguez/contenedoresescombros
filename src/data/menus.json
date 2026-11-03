@@ -1,0 +1,304 @@
+{
+ "principal": [
+  {
+   "label": "Inicio",
+   "url": "/",
+   "children": []
+  },
+  {
+   "label": "Precios",
+   "url": "/precio/",
+   "children": []
+  },
+  {
+   "label": "Medidas y tipos",
+   "url": "#",
+   "children": [
+    {
+     "label": "Sacos para Escombros",
+     "url": "/sacos-para-escombros/",
+     "children": []
+    },
+    {
+     "label": "Contenedores 3 M3",
+     "url": "/contenedores-escombros-3-m3/",
+     "children": []
+    },
+    {
+     "label": "Contenedores 5 m3",
+     "url": "/contenedores-escombros-5-m3/",
+     "children": []
+    },
+    {
+     "label": "Contenedores 9 m3",
+     "url": "/contenedores-escombros-9-m3/",
+     "children": []
+    },
+    {
+     "label": "Contenedores 12 m3",
+     "url": "/contenedores-escombros-12-m3/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Escombros 20 m3",
+     "url": "/contenedores-escombros-20-m3/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Escombros 30 m3",
+     "url": "/contenedores-escombros-30-m3/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Escombros Poda",
+     "url": "/poda/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Escombros con llave",
+     "url": "/contenedores-escombros-con-llave/",
+     "children": []
+    },
+    {
+     "label": "Camiones portacontenedores",
+     "url": "/camiones-portacontenedores/",
+     "children": []
+    },
+    {
+     "label": "Medidas de contenedores",
+     "url": "/medidas/",
+     "children": []
+    }
+   ]
+  },
+  {
+   "label": "Alquiler",
+   "url": "/alquiler/",
+   "children": []
+  },
+  {
+   "label": "Recogida Escombros",
+   "url": "/recogida-escombros/",
+   "children": []
+  },
+  {
+   "label": "Venta",
+   "url": "/venta/",
+   "children": []
+  },
+  {
+   "label": "Transporte",
+   "url": "/transporte/",
+   "children": []
+  },
+  {
+   "label": "Habilitación vía publica",
+   "url": "/habilitacion-contenedores-escombros-via-publica/",
+   "children": []
+  },
+  {
+   "label": "Provincias",
+   "url": "#",
+   "children": [
+    {
+     "label": "Contenedores Valencia",
+     "url": "/valencia/",
+     "children": [
+      {
+       "label": "Contenedores Gandía",
+       "url": "/gandia/",
+       "children": []
+      }
+     ]
+    },
+    {
+     "label": "Contenedores Alicante",
+     "url": "/contenedores-escombros-alicante/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Madrid",
+     "url": "/madrid/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Barcelona",
+     "url": "/barcelona/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Sevilla",
+     "url": "/contenedores-escombros-sevilla/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Málaga",
+     "url": "/contenedores-escombros-malaga/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Murcia",
+     "url": "/murcia/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Vizcaya",
+     "url": "/vizcaya/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Cádiz",
+     "url": "/cadiz/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Asturias",
+     "url": "/asturias/",
+     "children": []
+    },
+    {
+     "label": "Contenedores La Coruña",
+     "url": "/coruna/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Girona",
+     "url": "/girona/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Tarragona",
+     "url": "/tarragona/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Granada",
+     "url": "/granada/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Pontevedra",
+     "url": "/pontevedra/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Zaragoza",
+     "url": "/zaragoza/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Ibiza",
+     "url": "/ibiza/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Zamora",
+     "url": "/zamora/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Teruel",
+     "url": "/teruel/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Soria",
+     "url": "/soria/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Segovia",
+     "url": "/segovia/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Baleares",
+     "url": "/baleares/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Ávila",
+     "url": "/avila/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Álava",
+     "url": "/alava/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Tenerife",
+     "url": "/tenerife/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Salamanca",
+     "url": "/salamanca/",
+     "children": []
+    },
+    {
+     "label": "Contenedores La Rioja",
+     "url": "/la-rioja/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Las Palmas",
+     "url": "/las-palmas/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Palencia",
+     "url": "/palencia/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Ourense",
+     "url": "/ourense/",
+     "children": []
+    },
+    {
+     "label": "Contenedores Cuenca",
+     "url": "/cuenca/",
+     "children": []
+    },
+    {
+     "label": "TODAS",
+     "url": "#provincias",
+     "children": []
+    }
+   ]
+  },
+  {
+   "label": "Excavaciones",
+   "url": "/excavaciones/",
+   "children": []
+  },
+  {
+   "label": "Empresas",
+   "url": "/empresa/",
+   "children": []
+  },
+  {
+   "label": "Contacto",
+   "url": "/contacto/",
+   "children": []
+  }
+ ],
+ "pie": [
+  {
+   "label": "Política de Cookies",
+   "url": "/politica-de-cookies/",
+   "children": []
+  },
+  {
+   "label": "Política de Privacidad",
+   "url": "/politica-de-privacidad/",
+   "children": []
+  },
+  {
+   "label": "Aviso Legal",
+   "url": "/aviso-legal/",
+   "children": []
+  }
+ ]
+}
