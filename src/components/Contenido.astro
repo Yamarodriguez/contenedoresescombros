@@ -1,7 +1,30 @@
 ---
 import Bloque from './Bloque.astro';
 const { bloques } = Astro.props as { bloques: any[] };
+
+// Se agrupa el contenido en secciones: cada H2 abre una sección (con fondo
+// alterno). Lo anterior al primer H2 va en una sección de intro. El orden y el
+// contenido no cambian.
+type Sec = { titular: any | null; bloques: any[] };
+const secciones: Sec[] = [];
+let actual: Sec = { titular: null, bloques: [] };
+for (const b of bloques) {
+  if (b.type === 'heading' && b.tag === 'h2') {
+    if (actual.titular || actual.bloques.length) secciones.push(actual);
+    actual = { titular: b, bloques: [] };
+  } else {
+    actual.bloques.push(b);
+  }
+}
+if (actual.titular || actual.bloques.length) secciones.push(actual);
 ---
 <div class="contenido">
-  {bloques.map((b) => <Bloque b={b} />)}
+  {secciones.map((s, i) => (
+    <section class:list={['seccion', { alt: i % 2 === 1 }]}>
+      <div class="seccion-in">
+        {s.titular && <Bloque b={s.titular} />}
+        {s.bloques.map((b) => <Bloque b={b} />)}
+      </div>
+    </section>
+  ))}
 </div>

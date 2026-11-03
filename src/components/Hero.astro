@@ -1,10 +1,18 @@
 ---
-interface Props { titulo: string; }
-const { titulo } = Astro.props;
+import site from '../data/site.json';
+interface Props { titulo: string; subtitulo?: string; cta?: boolean; }
+const { titulo, subtitulo, cta = true } = Astro.props;
 ---
 <section class="heroe">
   <div class="heroe-in">
     <h1>{titulo}</h1>
+    {subtitulo && <p class="heroe-sub">{subtitulo}</p>}
+    {cta && (
+      <div class="heroe-cta">
+        <a class="boton" href="/presupuesto/">Pide presupuesto gratis</a>
+        <a class="boton boton-wa" href={`https://wa.me/${site.whatsapp}`} rel="nofollow">WhatsApp {site.telefono}</a>
+      </div>
+    )}
     <slot />
   </div>
 </section>
