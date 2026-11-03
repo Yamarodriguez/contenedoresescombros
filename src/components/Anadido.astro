@@ -1,0 +1,52 @@
+---
+// Contenido nuevo que va ENCIMA del original (src/data/contenido-nuevo.json), p. ej.
+// la página de Excavaciones (Yama, 2026-11-03). Usa los mismos bloques y estilos.
+import Bloque from './Bloque.astro';
+
+interface Props { datos: any }
+const { datos } = Astro.props as Props;
+const h2 = (text: string) => ({ type: 'heading', tag: 'h2', text });
+const texto = (html: string) => ({ type: 'text', html, text: '' });
+---
+<div class="contenido anadido">
+  {datos.entradilla && (
+    <section class="banda">
+      <div class="banda-in"><div class="texto entradilla" set:html={datos.entradilla} /></div>
+    </section>
+  )}
+  {datos.secciones.map((s: any) => (
+    <section class="banda">
+      <div class="banda-in">
+        {s.foto ? (
+          <div class="fila cols-2" style="--plantilla:1.15fr .85fr">
+            <div class="col">
+              <Bloque b={h2(s.h2)} />
+              {s.html && <Bloque b={texto(s.html)} />}
+            </div>
+            <div class="col"><Bloque b={{ type: 'image', src: `/img/nuevas/${s.foto.nombre}.jpg`, alt: s.h2 }} /></div>
+          </div>
+        ) : (
+          <>
+            <Bloque b={h2(s.h2)} />
+            {s.html && <Bloque b={texto(s.html)} />}
+          </>
+        )}
+        {s.tarjetas && (
+          <div class="tarjetas-texto">
+            {s.tarjetas.map((t: any) => (
+              <article class="tarjeta-texto"><h3 class="titular">{t.h3}</h3><div class="texto" set:html={t.html} /></article>
+            ))}
+          </div>
+        )}
+        {s.faq && (
+          <div class="tarjetas-texto">
+            {s.faq.map((f: any) => (
+              <article class="tarjeta-texto"><h3 class="titular">{f.pregunta}</h3><div class="texto"><p>{f.respuesta}</p></div></article>
+            ))}
+          </div>
+        )}
+        {s.boton && <p><a class="boton" href={s.boton.href}>{s.boton.texto}</a></p>}
+      </div>
+    </section>
+  ))}
+</div>

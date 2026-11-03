@@ -41,6 +41,9 @@ for (const [k, s] of Object.entries(seo)) {
   if (nuevo) titulos[k] = nuevo; else console.log(`  AVISO sin regla para el título de ${k}`);
 }
 
+// Títulos cambiados aunque no pasen de 60 caracteres (Yama, 2026-11-03: SEO de Excavaciones).
+Object.assign(titulos, { excavaciones: 'Excavaciones y movimiento de tierras: tipos y presupuesto' });
+
 // --- H1 de las páginas de servicio ---
 const h1 = {
   alquiler: 'Alquiler de contenedores de escombros',
@@ -61,6 +64,7 @@ const descripciones = {
   'aviso-legal': 'Aviso legal de contenedoresescombros.com: titular del sitio web, condiciones de uso, propiedad intelectual y legislación aplicable.',
   'politica-de-privacidad': 'Política de privacidad de contenedoresescombros.com: qué datos personales se recogen, para qué se usan y cómo ejercer tus derechos.',
   'politica-de-cookies': 'Política de cookies de contenedoresescombros.com: qué cookies usa la web, para qué sirven y cómo configurarlas o desactivarlas.',
+  excavaciones: 'Excavaciones y movimiento de tierras: vaciado de solares, zanjas, piscinas y nivelación, y contenedores para retirar la tierra. Presupuesto sin compromiso.',
 };
 
 // --- Bloque «Medidas / Recogida» (4 columnas, 90 páginas) -> «Preguntas frecuentes de contenedores» ---

@@ -47,7 +47,8 @@
   "transporte": "Transporte de contenedores de escombros y de obra",
   "valladolid": "Contenedores de escombros en Valladolid: precio y alquiler",
   "venta": "Venta de contenedores de escombros",
-  "zaragoza": "Contenedores de escombros en Zaragoza: precio y alquiler"
+  "zaragoza": "Contenedores de escombros en Zaragoza: precio y alquiler",
+  "excavaciones": "Excavaciones y movimiento de tierras: tipos y presupuesto"
  },
  "h1": {
   "alquiler": "Alquiler de contenedores de escombros",
@@ -65,7 +66,8 @@
   "presupuesto": "Pide presupuesto sin compromiso para un contenedor de escombros: indica el tamaño, la dirección de entrega y los días que lo necesitas.",
   "aviso-legal": "Aviso legal de contenedoresescombros.com: titular del sitio web, condiciones de uso, propiedad intelectual y legislación aplicable.",
   "politica-de-privacidad": "Política de privacidad de contenedoresescombros.com: qué datos personales se recogen, para qué se usan y cómo ejercer tus derechos.",
-  "politica-de-cookies": "Política de cookies de contenedoresescombros.com: qué cookies usa la web, para qué sirven y cómo configurarlas o desactivarlas."
+  "politica-de-cookies": "Política de cookies de contenedoresescombros.com: qué cookies usa la web, para qué sirven y cómo configurarlas o desactivarlas.",
+  "excavaciones": "Excavaciones y movimiento de tierras: vaciado de solares, zanjas, piscinas y nivelación, y contenedores para retirar la tierra. Presupuesto sin compromiso."
  },
  "tituloFaq": "Preguntas frecuentes de contenedores",
  "preguntas": {

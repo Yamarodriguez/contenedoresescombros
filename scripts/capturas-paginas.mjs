@@ -15,11 +15,13 @@ if (LOCAL) {
   for (let i = 0; i < 60; i++) { try { if ((await fetch(BASE + '/')).ok) break; } catch {} await new Promise((r) => setTimeout(r, 500)); }
 }
 const CARPETA = process.argv[3] || 'capturas/revision';
-const PAGINAS = [
+// 4.º argumento opcional: una sola ruta (p. ej. /excavaciones/), con más pantallas.
+const RUTA = process.argv[4];
+const PAGINAS = RUTA ? [[RUTA.replace(/\//g, '') || 'inicio', RUTA]] : [
   ['inicio', '/'], ['ciudad', '/valencia/'], ['tipo', '/contenedores-escombros-3-m3/'],
   ['servicio', '/precio/'], ['contacto', '/contacto/'], ['legal', '/aviso-legal/'],
 ];
-const VISTAS = [['escritorio', 1440, 900, 4], ['movil', 390, 844, 3]];
+const VISTAS = RUTA ? [['escritorio', 1440, 900, 6], ['movil', 390, 844, 10]] : [['escritorio', 1440, 900, 4], ['movil', 390, 844, 3]];
 
 fs.mkdirSync(CARPETA, { recursive: true });
 const nav = await chromium.launch();

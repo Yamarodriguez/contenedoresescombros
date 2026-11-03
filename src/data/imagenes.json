@@ -4007,6 +4007,54 @@
    512
   ]
  },
+ "/img/nuevas/contenedores-para-tierras-y-residuos-de-excavacion-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-para-tierras-y-residuos-de-excavacion-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-para-tierras-y-residuos-de-excavacion-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-para-tierras-y-residuos-de-excavacion.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
+ "/img/nuevas/tipos-de-excavacion-y-movimiento-de-tierras-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/tipos-de-excavacion-y-movimiento-de-tierras-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/tipos-de-excavacion-y-movimiento-de-tierras-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/tipos-de-excavacion-y-movimiento-de-tierras.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
  "/img/principal/alquiler-contenedores-escombros-1200.webp": {
   "w": 1200,
   "h": 630,

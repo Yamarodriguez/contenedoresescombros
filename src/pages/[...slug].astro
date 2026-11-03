@@ -10,6 +10,8 @@ import faqData from '../data/faq.json';
 import ciudades from '../data/ciudades.json';
 import cambiosData from '../data/fallos-original.json';
 import principales from '../data/principales.json';
+import contenidoNuevo from '../data/contenido-nuevo.json';
+import Anadido from '../components/Anadido.astro';
 import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq } from '../lib/textos.mjs';
 
 export async function getStaticPaths() {
@@ -38,7 +40,10 @@ const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: cambios.h1[da
 const faq = (faqData as Record<string, any[]>)[data.slug] || [];
 // Bloque Medidas / Recogida convertido en preguntas: si existe, las preguntas de faq.json van dentro.
 const faqBloque = (data.filas || []).map((f: any) => detectarFaq(f, bloques, cambios.preguntas)).find(Boolean);
+// Contenido nuevo encima del original (p. ej. Excavaciones): sus preguntas también van a los datos.
+const anadido = (contenidoNuevo as Record<string, any>)[data.slug] || null;
 const preguntasPagina = [
+  ...(anadido ? anadido.secciones.flatMap((s: any) => s.faq || []) : []),
   ...(faqBloque ? faqBloque.items.map((it: any) => ({ pregunta: it.q, respuesta: bloques[it.t].text })) : []),
   ...faq,
 ];
@@ -46,7 +51,7 @@ const datos = preguntasPagina.length ? [{ '@type': 'FAQPage', mainEntity: pregun
 const zona = (ciudades as Record<string, any>)[data.slug] || null;
 const principal = (principales as Record<string, any>)[data.slug] || null;
 const legal = /^(aviso-legal|politica-de-)/.test(data.slug);
-const subtitulo = legal ? '' : zona
+const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
   ? `Contenedores para escombros y residuos de obra en ${zona.nombre}: tamaños, precios orientativos y presupuesto sin compromiso.`
   : site.descripcion;
 ---
@@ -61,6 +66,7 @@ const subtitulo = legal ? '' : zona
   datos={datos}
 >
   <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} imagen={principal} />
+  {anadido && <Anadido datos={anadido} />}
   <Contenido bloques={bloques} filas={data.filas} omitir={omitir} preguntas={cambios.preguntas} tituloFaq={cambios.tituloFaq} faqExtra={faqBloque ? faq : []} />
   <Zona zona={zona} />
   {!faqBloque && <Faq items={faq} />}

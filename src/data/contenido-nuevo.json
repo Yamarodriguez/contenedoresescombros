@@ -1,0 +1,51 @@
+{
+  "_nota": "Contenido NUEVO que se pinta encima del original (petición de Yama, 2026-11-03). Tono informativo y neutro: no promete servicios ni precios hasta que Yama confirme quién hace los trabajos.",
+  "excavaciones": {
+    "subtitulo": "Tipos de excavación, contenedores para retirar la tierra y de qué depende el precio. Presupuesto sin compromiso.",
+    "entradilla": "<p>Las <strong>excavaciones y el movimiento de tierras</strong> preparan el terreno de una obra: vaciado de solares, zanjas para cimientos o tuberías, piscinas y nivelación del terreno. La tierra que sale se retira en <strong>contenedores</strong> o camiones hasta un gestor autorizado. Aquí tienes los tipos de excavación, qué contenedor usar para la tierra y de qué depende el precio.</p>",
+    "secciones": [
+      {
+        "h2": "Tipos de excavación y movimiento de tierras",
+        "foto": { "de": "/img/2021/06/excavaciones.jpg", "nombre": "tipos-de-excavacion-y-movimiento-de-tierras" },
+        "html": "<p>Cada obra necesita un tipo de excavación distinto según lo que se vaya a construir y el terreno. Estos son los trabajos más habituales:</p>",
+        "tarjetas": [
+          { "h3": "Vaciado de solares y sótanos", "html": "<p>Se excava todo el volumen del terreno donde irá el sótano, el garaje o la planta baja de un edificio nuevo, hasta la profundidad del proyecto.</p>" },
+          { "h3": "Zanjas y cimentaciones", "html": "<p>Excavaciones estrechas y alargadas para los cimientos y para tuberías de agua, saneamiento o canalizaciones eléctricas.</p>" },
+          { "h3": "Excavación de piscinas", "html": "<p>Se abre el hueco de la piscina con la forma y la profundidad previstas, y se retira la tierra que sobra.</p>" },
+          { "h3": "Desmonte, nivelación y explanación", "html": "<p>Se rebaja o se rellena el terreno para dejarlo a la altura y con la pendiente que necesita la obra, el jardín o un camino.</p>" }
+        ]
+      },
+      {
+        "h2": "Contenedores para tierras y residuos de excavación",
+        "foto": { "de": "/img/2021/06/alquiler-contenedores-escombros.jpg", "nombre": "contenedores-para-tierras-y-residuos-de-excavacion" },
+        "html": "<p>La tierra y las piedras de una excavación se cargan en <strong>contenedores de escombros</strong> para llevarlas a un gestor autorizado. Elegir bien el contenedor evita viajes de más.</p>",
+        "tarjetas": [
+          { "h3": "Qué tamaño de contenedor elegir para la tierra", "html": "<p>Para tierra suele convenir un contenedor pequeño o mediano, de 3 a 9 m³: el límite lo marca el peso que puede cargar el camión, no el volumen. Mira las <a href=\"/medidas/\">medidas de los contenedores</a>.</p>" },
+          { "h3": "Por qué la tierra llena antes el contenedor por peso que por volumen", "html": "<p>Un metro cúbico de tierra pesa mucho más que uno de escombro de reforma: aproximadamente entre 1,5 y 2 toneladas, según la humedad y el tipo de terreno. Por eso un contenedor de tierra no se llena hasta arriba.</p>" },
+          { "h3": "Retirada de tierras y escombros", "html": "<p>Cuando el contenedor está lleno se retira y se lleva a un gestor o vertedero autorizado. Consulta la <a href=\"/recogida-escombros/\">recogida de escombros</a> y el <a href=\"/transporte/\">transporte de contenedores</a>.</p>" }
+        ]
+      },
+      {
+        "h2": "Excavaciones en Valencia y alrededores",
+        "html": "<p>Si tu obra está en la provincia de Valencia, consulta la página de tu localidad para ver los contenedores y servicios de la zona: <a href=\"/valencia/\">Valencia</a>, <a href=\"/betera/\">Bétera</a>, <a href=\"/sagunto/\">Sagunto</a>, <a href=\"/xativa/\">Xàtiva</a>, <a href=\"/algemesi/\">Algemesí</a>, <a href=\"/cullera/\">Cullera</a>, <a href=\"/paterna/\">Paterna</a>, <a href=\"/lliria/\">Llíria</a>, <a href=\"/torrent/\">Torrent</a> y <a href=\"/gandia/\">Gandía</a>.</p>"
+      },
+      {
+        "h2": "Precio de una excavación: de qué depende",
+        "html": "<p>El precio de una excavación se calcula para cada obra. Depende sobre todo de:</p><ul><li>El <strong>volumen</strong> de tierra que hay que sacar (metros cúbicos) y la profundidad.</li><li>El <strong>tipo de terreno</strong>: no cuesta lo mismo excavar tierra blanda que roca.</li><li>El <strong>acceso</strong> para la máquina y el espacio para trabajar.</li><li>La <strong>retirada de la tierra</strong>: cuántos contenedores o camiones hacen falta y a qué distancia está el vertedero.</li></ul><p>Con estos datos se puede dar un presupuesto ajustado.</p>"
+      },
+      {
+        "h2": "Preguntas frecuentes sobre excavaciones",
+        "faq": [
+          { "pregunta": "¿Hace falta licencia para hacer una excavación?", "respuesta": "Depende del municipio y de la obra. Las excavaciones suelen formar parte de una obra que necesita licencia o declaración responsable del ayuntamiento, así que conviene consultarlo antes de empezar. Si el contenedor va en la vía pública, también hace falta autorización." },
+          { "pregunta": "¿Qué se hace con la tierra que sale de la excavación?", "respuesta": "Se carga en contenedores o camiones y se lleva a un gestor o vertedero autorizado. La tierra limpia a veces se reutiliza en la propia obra o en rellenos." },
+          { "pregunta": "¿Qué datos necesito para pedir presupuesto?", "respuesta": "La dirección de la obra, el tipo de trabajo (vaciado, zanja, piscina, nivelación), las medidas aproximadas (largo, ancho y profundidad), cómo es el acceso para la máquina y si hay que retirar la tierra." }
+        ]
+      },
+      {
+        "h2": "Pide presupuesto de excavación",
+        "html": "<p>Cuéntanos dónde está la obra, qué hay que excavar y las medidas aproximadas, y te enviamos un presupuesto sin compromiso.</p>",
+        "boton": { "texto": "Pide presupuesto", "href": "/presupuesto/" }
+      }
+    ]
+  }
+}
