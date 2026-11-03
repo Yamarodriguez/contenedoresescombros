@@ -1,31 +1,76 @@
 ---
+// Franja final de presupuesto y pie en columnas, como en contenedoresmaritimos.net
+// (Yama, 2026-11-03). Sin teléfono ni correo en el pie. Los enlaces salen del menú.
 import site from '../data/site.json';
 import menus from '../data/menus.json';
 import Logo from './Logo.astro';
-const pie = ((menus as any).pie || []) as any[];
+
+const principal = (menus as any).principal as any[];
+const legales = ((menus as any).pie || []) as any[];
+const entrada = (etiqueta: string) => principal.find((e) => e.label === etiqueta);
+const hijos = (etiqueta: string) => (entrada(etiqueta)?.children || []) as any[];
+// Nombres cortos y uniformes para la columna «Contenedores».
+const bonito = (t: string) => {
+  const m = t.match(/(\d+)\s*m3/i);
+  if (m) return `Contenedor de ${m[1]} m³`;
+  if (/poda/i.test(t)) return 'Contenedor de poda';
+  if (/llave/i.test(t)) return 'Contenedor con llave';
+  if (/sacos/i.test(t)) return 'Sacos para escombros';
+  return t;
+};
+const contenedores = [
+  { label: 'Precios', url: '/precio/' },
+  { label: 'Medidas', url: '/medidas/' },
+  ...hijos('Medidas y tipos').filter((c) => c.url !== '/medidas/').slice(0, 9),
+];
+const servicios = ['Alquiler', 'Recogida Escombros', 'Transporte', 'Habilitación vía publica', 'Venta', 'Excavaciones'].map(entrada).filter(Boolean);
+const lugares = hijos('Provincias').slice(0, 8);
+const year = new Date().getFullYear();
 ---
+<section class="cierre">
+  <div class="cierre-in">
+    <div>
+      <p class="etiqueta">Presupuesto sin compromiso</p>
+      <h2>¿Necesitas un contenedor de escombros?</h2>
+      <p>Cuéntanos qué contenedor buscas, para qué obra y dónde lo necesitas.</p>
+      <p><a class="boton boton-claro" href="/presupuesto/">Pide presupuesto</a></p>
+    </div>
+    <dl class="cierre-datos">
+      <div><dt>Tamaños</dt><dd>Sacos y contenedores de 3 a 30 m³</dd></div>
+      <div><dt>Servicios</dt><dd>Alquiler · recogida · transporte</dd></div>
+      <div><dt>Dónde</dt><dd>Toda España</dd></div>
+    </dl>
+  </div>
+</section>
 <footer class="pie">
-  <div class="pie-in">
-    <div class="pie-col">
-      <a class="logo-pie" href="/" aria-label={`${site.nombre}: inicio`}><Logo claro /></a>
-      <p>Contenedores de escombros y residuos de obra en toda España.</p>
+  <div class="pie-cols">
+    <div class="pie-marca">
+      <a class="logo-pie" href="/" aria-label={`${site.nombre}: inicio`}><Logo claro tam={56} /></a>
+      <p>{site.descripcion}</p>
     </div>
-    <div class="pie-col">
-      <p>Teléfono y WhatsApp: <a href={`tel:${site.telefono}`}>{site.telefono}</a></p>
-      <p>Correo: <a href={`mailto:${site.correo}`}>{site.correo}</a></p>
-    </div>
-    {pie.length > 0 && (
-      <nav class="pie-col" aria-label="Pie">
-        <ul>{pie.map((e) => <li><a href={e.url || '#'}>{e.label}</a></li>)}</ul>
-      </nav>
-    )}
-    <nav class="pie-col" aria-label="Legal">
+    <nav aria-label="Contenedores">
+      <h3>Contenedores</h3>
+      <ul>{contenedores.map((e) => <li><a href={e.url}>{bonito(e.label)}</a></li>)}</ul>
+    </nav>
+    <nav aria-label="Servicios">
+      <h3>Servicios</h3>
+      <ul>{servicios.map((e: any) => <li><a href={e.url}>{e.label.replace('Recogida Escombros', 'Recogida de escombros').replace('vía publica', 'vía pública')}</a></li>)}</ul>
+    </nav>
+    <nav aria-label="Dónde">
+      <h3>Dónde</h3>
+      <ul>{lugares.map((e) => <li><a href={e.url}>{e.label.replace(/^Contenedores\s+(escombros\s+)?/i, '')}</a></li>)}</ul>
+    </nav>
+    <nav aria-label="Contacto">
+      <h3>Contacto</h3>
       <ul>
-        <li><a href="/aviso-legal/">Aviso legal</a></li>
-        <li><a href="/politica-de-privacidad/">Política de privacidad</a></li>
-        <li><a href="/politica-de-cookies/">Política de cookies</a></li>
+        <li><a href="/presupuesto/">Pedir presupuesto</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/empresa/">Anuncia tu empresa</a></li>
       </ul>
     </nav>
   </div>
-  <div class="pie-copy">© {new Date().getFullYear()} {site.nombre}</div>
+  <div class="pie-base">
+    <p>© {year} {site.nombre}. Todos los derechos reservados.</p>
+    <ul class="pie-legales">{legales.map((e) => <li><a href={e.url}>{e.label}</a></li>)}</ul>
+  </div>
 </footer>

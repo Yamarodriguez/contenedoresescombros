@@ -56,12 +56,6 @@ function palabraClave(p) {
   return tipoFrase(base.split(/:| - | \| /)[0].trim(), propios);
 }
 
-const ICONO = `<g transform="scale(0.6875)">
-  <path d="M19 24 L26 14 L31 24 Z M29 24 L36 11 L43 24 Z M41 24 L46 17 L50 24 Z" fill="#d99a4e"/>
-  <rect x="9" y="23" width="46" height="7" rx="2.5" fill="#1b5733"/>
-  <path d="M13 30 H51 L45 51 H19 Z" fill="#2f8f54"/>
-  <rect x="24" y="37" width="16" height="3.5" rx="1.75" fill="#fff" opacity=".9"/></g>`;
-
 async function generar(p, texto, destino) {
   const [foto, rellena] = FOTO[p.slug] || PORDEFECTO;
   const origen = path.join('public', foto);
@@ -69,7 +63,7 @@ async function generar(p, texto, destino) {
   const imgFoto = rellena
     ? await sharp(origen).resize(ANCHO, altoFoto, { fit: 'cover' }).toBuffer()
     : await sharp(await sharp(origen).flatten({ background: '#ffffff' }).trim({ threshold: 18 }).toBuffer())
-      .resize(ANCHO - 160, altoFoto - 130, { fit: 'contain', background: '#ffffff' }).toBuffer();
+      .resize(ANCHO - 160, altoFoto - 140, { fit: 'contain', background: '#ffffff' }).toBuffer();
   const meta = await sharp(imgFoto).metadata();
   const visible = texto.replace(/(\d+) m3\b/g, '$1 m³');
   const tam = Math.min(58, Math.floor((ANCHO - 120) / (visible.length * 0.56)));
@@ -78,14 +72,17 @@ async function generar(p, texto, destino) {
     <rect x="0" y="${ALTO - FRANJA}" width="${ANCHO}" height="${FRANJA}" fill="url(#g)"/>
     <rect x="0" y="${ALTO - FRANJA}" width="${ANCHO}" height="6" fill="#2f8f54"/>
     <text x="60" y="${ALTO - FRANJA / 2 + tam * 0.36}" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="${tam}" fill="#ffffff">${esc(visible)}</text>
-    <rect x="36" y="30" width="250" height="62" rx="31" fill="#ffffff" opacity=".96"/>
-    <g transform="translate(52 39)">${ICONO}</g>
-    <text x="104" y="72" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="30" fill="#1b2430">Contenedores</text>
+    <rect x="34" y="26" width="300" height="82" rx="41" fill="#ffffff" opacity=".96"/>
+    <text x="114" y="62" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="29" fill="#12301d">Contenedores</text>
+    <rect x="114" y="70" width="186" height="3" fill="#f2b01e"/>
+    <text x="114" y="91" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="5.6" fill="#236f41">ESCOMBROS</text>
   </svg>`);
+  const logo = await sharp(fs.readFileSync('public/img/logo-contenedores.svg'), { density: 400 }).resize(64, 64).png().toBuffer();
   await sharp({ create: { width: ANCHO, height: ALTO, channels: 3, background: '#ffffff' } })
     .composite([
-      { input: imgFoto, left: Math.round((ANCHO - meta.width) / 2), top: rellena ? 0 : 110 + Math.round((altoFoto - 130 - meta.height) / 2) },
+      { input: imgFoto, left: Math.round((ANCHO - meta.width) / 2), top: rellena ? 0 : 120 + Math.round((altoFoto - 140 - meta.height) / 2) },
       { input: capa, left: 0, top: 0 },
+      { input: logo, left: 43, top: 35 },
     ])
     .jpeg({ quality: 84, mozjpeg: true })
     .toFile(destino);

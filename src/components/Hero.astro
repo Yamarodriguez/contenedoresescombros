@@ -1,9 +1,9 @@
 ---
-import site from '../data/site.json';
 import imagenes from '../data/imagenes.json';
 
+// Sin botones en la cabecera (Yama, 2026-11-03): el WhatsApp flotante sigue en todas las páginas.
 interface Props { titulo: string; subtitulo?: string; cta?: boolean; imagen?: { src: string; alt: string } | null }
-const { titulo, subtitulo, cta = true, imagen = null } = Astro.props;
+const { titulo, subtitulo, imagen = null } = Astro.props;
 // Imagen principal de la página (palabra clave en el fichero y en el alt). Arriba del
 // todo: carga en el momento, no en diferido.
 const d = imagen ? (imagenes as Record<string, any>)[imagen.src] || {} : {};
@@ -15,12 +15,6 @@ const srcset = ((d.ws || []) as number[]).map((w) => `${base}-${w}.webp ${w}w`).
     <div class="heroe-texto">
       <h1>{titulo}</h1>
       {subtitulo && <p class="heroe-sub">{subtitulo}</p>}
-      {cta && (
-        <div class="heroe-cta">
-          <a class="boton" href="/presupuesto/">Pide presupuesto gratis</a>
-          <a class="boton boton-wa" href={`https://wa.me/${site.whatsapp}`} rel="nofollow">WhatsApp {site.telefono}</a>
-        </div>
-      )}
       <slot />
     </div>
     {imagen && (

@@ -7,6 +7,7 @@
   --marca: #2f8f54;
   --marca2: #236f41;
   --marca-suave: #e9f5ee;
+  --acento: #f2b01e; /* amarillo de la cuba y la raya del logo */
   --heroe-ini: #163520;
   --heroe-fin: #26502f;
   --heroe-texto: #ffffff;
@@ -44,11 +45,16 @@ a:where(:not(.boton)) { color: var(--marca2); }
 .cabecera { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--borde); }
 .cabecera-in { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; padding: .7rem 16px; min-height: 60px; }
 .logo { font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; color: var(--texto); text-decoration: none; margin-right: auto; white-space: nowrap; }
-.marca { display: inline-flex; align-items: center; gap: .5rem; }
-.marca-icono { width: 34px; height: 34px; flex: none; }
-.marca-nombre { font-weight: 800; font-size: 1.25rem; letter-spacing: -.03em; color: var(--texto); }
-.marca-clara .marca-nombre { color: #fff; }
-.logo-pie { display: inline-block; text-decoration: none; margin-bottom: .4rem; }
+/* Logo al estilo de Contenedores Marítimos: icono redondo + nombre en dos líneas */
+.logo-marca { display: inline-flex; align-items: center; gap: .65rem; }
+.logo-marca img { flex: none; display: block; }
+.marca { display: block; line-height: 1; }
+.marca b { display: block; font-weight: 800; font-size: 1.32rem; letter-spacing: -.02em; color: #12301d; }
+.marca i { display: block; margin-top: 5px; padding-top: 4px; border-top: 3px solid var(--acento); font-style: normal; font-weight: 700; font-size: .72rem; letter-spacing: .34em; text-transform: uppercase; color: var(--marca2); }
+.logo-claro .marca b { color: #fff; }
+.logo-claro .marca i { color: #a8d9b7; }
+.logo:hover, .logo-pie:hover { opacity: .92; }
+.logo-pie { display: inline-block; text-decoration: none; }
 .menu-boton { display: none; font-size: 1.6rem; line-height: 1; background: none; border: 0; cursor: pointer; color: var(--texto); }
 .menu-lista { list-style: none; display: flex; flex-wrap: nowrap; align-items: center; gap: 0 .1rem; margin: 0; padding: 0; }
 .menu-lista > li { position: relative; }
@@ -138,12 +144,15 @@ a.foto:hover { transform: translateY(-3px); }
 
 /* Preguntas frecuentes de contenedores (antes, bloque Medidas / Recogida) */
 .faq-tarjetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; margin-top: .8rem; }
-.faq-tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.4rem; box-shadow: 0 4px 14px rgba(18, 28, 45, .05); display: flex; flex-direction: column; }
-.faq-tarjeta .foto { display: block; margin: 0 0 1.1rem; }
+/* Foto cuadrada a la izquierda (las fotos de este bloque son cuadradas): llena el marco sin bandas ni recortes */
+.faq-tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.3rem; box-shadow: 0 4px 14px rgba(18, 28, 45, .05); display: grid; grid-template-columns: clamp(120px, 14vw, 180px) minmax(0, 1fr); column-gap: 1.3rem; align-content: start; }
+.faq-tarjeta > .foto { grid-row: 1 / span 4; margin: 0; display: block; }
+.faq-tarjeta > :not(.foto) { grid-column: 2; }
 .faq-tarjeta a.foto:hover { transform: none; }
-.faq-tarjeta .foto img { width: 100%; height: 210px; max-width: none; object-fit: contain; background: var(--panel); border-radius: 10px; box-shadow: none; padding: .7rem; }
-.faq-pregunta { font-size: 1.25rem; margin: 0 0 .6rem; line-height: 1.3; }
-.faq-tarjeta .boton { margin-top: auto; align-self: flex-start; }
+.faq-tarjeta .foto img { width: 100%; height: auto; max-width: none; aspect-ratio: 1 / 1; object-fit: cover; background: #fff; border: 1px solid var(--borde); border-radius: 12px; box-shadow: none; padding: 0; }
+.faq-pregunta { font-size: 1.2rem; margin: 0 0 .5rem; line-height: 1.3; }
+.faq-tarjeta .texto { margin-bottom: .8rem; }
+.faq-tarjeta .boton { justify-self: start; margin: 0; }
 .faq-mas { margin-top: 1.4rem; }
 
 /* -------- Botones -------- */
@@ -174,14 +183,32 @@ a.foto:hover { transform: translateY(-3px); }
 .form-estado.error { background: #fde8e8; color: #972020; }
 
 /* -------- Pie -------- */
-.pie { background: #131a22; color: #d7dde4; margin-top: 0; }
-.pie-in { max-width: var(--ancho); margin: 0 auto; padding: 2.4rem 16px; display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-.pie strong { color: #fff; font-size: 1.05rem; }
-.pie a { color: #d7dde4; }
-.pie a:hover { color: #fff; }
-.pie-col ul { list-style: none; margin: .4rem 0 0; padding: 0; }
-.pie-col li { margin: .35rem 0; }
-.pie-copy { text-align: center; padding: 1rem; border-top: 1px solid #243040; font-size: .85rem; color: #93a0ad; }
+/* Franja final de presupuesto (como en contenedoresmaritimos.net) */
+.cierre { background: linear-gradient(115deg, #163520 0%, #26502f 100%); color: #dcebe1; }
+.cierre-in { max-width: var(--ancho); margin: 0 auto; padding: 3.2rem 16px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center; }
+.cierre h2 { color: #fff; font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: .3rem 0 .6rem; }
+.cierre p { margin: 0 0 1rem; }
+.etiqueta { display: inline-flex; align-items: center; gap: .6rem; font-size: .75rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--acento); margin: 0; }
+.etiqueta::before { content: ""; width: 34px; height: 2px; background: currentColor; }
+.boton-claro { background: #fff; color: var(--marca2); }
+.cierre-datos { display: grid; gap: 1.1rem; margin: 0; }
+.cierre-datos > div { border-top: 1px solid rgba(255, 255, 255, .28); padding-top: .7rem; }
+.cierre-datos dt { font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #b9d6c3; margin: 0 0 .25rem; }
+.cierre-datos dd { margin: 0; font-weight: 600; color: #fff; font-size: 1.05rem; }
+
+/* Pie en columnas */
+.pie { background: #0f1f16; color: #b9cdbf; font-size: .92rem; }
+.pie a { color: #dbe8df; text-decoration: none; }
+.pie a:hover { color: #fff; text-decoration: underline; }
+.pie-cols { max-width: var(--ancho); margin: 0 auto; padding: 3.2rem 16px 2.2rem; display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 2.2rem; }
+.pie-marca p { margin: .9rem 0 0; max-width: 320px; line-height: 1.55; }
+.pie h3 { font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #9fc2ab; margin: 0 0 .9rem; }
+.pie ul { list-style: none; margin: 0; padding: 0; }
+.pie li { margin: 0 0 .5rem; }
+.pie-base { max-width: var(--ancho); margin: 0 auto; padding: 1.1rem 16px 1.4rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; border-top: 1px solid rgba(255, 255, 255, .1); font-size: .84rem; }
+.pie-base p { margin: 0; }
+.pie-legales { display: flex !important; gap: 1.1rem; flex-wrap: wrap; }
+.pie-legales li { margin: 0; }
 
 /* -------- WhatsApp flotante -------- */
 .wa-flotante { position: fixed; right: 18px; bottom: 18px; width: 56px; height: 56px; background: var(--wa); border-radius: 50%; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0,0,0,.28); z-index: 80; color: #fff; }
@@ -193,9 +220,19 @@ a.foto:hover { transform: translateY(-3px); }
   .banda { padding: 1.7rem 0; }
   .heroe-in.con-imagen { grid-template-columns: 1fr; gap: 1.4rem; }
   .faq-tarjetas { grid-template-columns: 1fr; }
+  .cierre-in { grid-template-columns: 1fr; gap: 1.6rem; padding: 2.4rem 16px; }
+  .pie-cols { grid-template-columns: 1fr 1fr; gap: 1.8rem; }
+  .pie-marca { grid-column: 1 / -1; }
+  .marca b { font-size: 1.12rem; }
+  .marca i { font-size: .62rem; letter-spacing: .28em; }
   .fila { grid-template-columns: 1fr; gap: 1.1rem; }
   .fila.anidada { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
   .rejilla { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .faq-tarjeta { grid-template-columns: 1fr; }
+  .faq-tarjeta > .foto { grid-row: auto; margin-bottom: 1rem; }
+  .faq-tarjeta > :not(.foto) { grid-column: 1; }
 }
 @media (max-width: 1300px) {
   .menu-boton { display: block; order: 3; }
