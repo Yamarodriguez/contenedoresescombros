@@ -2,12 +2,16 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import Contenido from '../components/Contenido.astro';
+import Faq from '../components/Faq.astro';
 import { seoDe } from '../lib/seo';
 import data from '../content/pages/index.json';
+import faqData from '../data/faq.json';
 
 const seo = seoDe('index');
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
 const bloques = data.blocks.filter((b: any) => !(b.type === 'heading' && b.tag === 'h1'));
+const faq = (faqData as Record<string, any[]>)['index'] || [];
+const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 ---
 <Base
   title={seo.titulo || data.title}
@@ -16,7 +20,9 @@ const bloques = data.blocks.filter((b: any) => !(b.type === 'heading' && b.tag =
   imagen={seo.imagen}
   ogTitulo={seo.ogTitulo}
   ogDescripcion={seo.ogDescripcion}
+  datos={datos}
 >
   <Hero titulo={h1 ? h1.text : data.title} />
   <Contenido bloques={bloques} />
+  <Faq items={faq} />
 </Base>

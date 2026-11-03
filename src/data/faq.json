@@ -1,0 +1,25 @@
+{
+  "index": [
+    { "pregunta": "¿Qué es un contenedor de escombros?", "respuesta": "Es un contenedor metálico abierto que se usa para recoger los residuos de una obra o reforma (escombros, tierra, hormigón, ladrillos o material cerámico) y llevarlos a un gestor de residuos autorizado." },
+    { "pregunta": "¿Qué tamaños de contenedor de escombros existen?", "respuesta": "Los más habituales son de 3, 5, 9, 12, 20 y 30 m³. Los pequeños (3 y 5 m³) van bien para reformas en casa, y los grandes (20 y 30 m³) para obras y demoliciones." },
+    { "pregunta": "¿Qué se puede tirar en un contenedor de escombros?", "respuesta": "Tierra, escombros, hormigón, ladrillos, tejas y materiales cerámicos, entre otros. No se admiten residuos peligrosos ni materiales que requieran una gestión especial." },
+    { "pregunta": "¿Hace falta permiso para dejar el contenedor en la calle?", "respuesta": "Sí. Para colocar un contenedor en la vía pública se necesita una autorización del ayuntamiento del municipio." },
+    { "pregunta": "¿Cuánto cuesta alquilar un contenedor de escombros?", "respuesta": "El precio depende del tamaño del contenedor, de la zona y del tiempo que lo necesites. Lo mejor es pedir un presupuesto sin compromiso indicando la dirección." }
+  ],
+  "medidas": [
+    { "pregunta": "¿Qué medidas tiene un contenedor de escombros?", "respuesta": "Varían según el tamaño: los de 3 m³ miden alrededor de 2,8 m de largo, y los de 30 m³ superan los 5 m. Consulta la tabla y las fichas de cada tamaño para ver las medidas exactas." },
+    { "pregunta": "¿Qué tamaño de contenedor necesito?", "respuesta": "Para una reforma pequeña suele bastar uno de 3 a 5 m³; para una obra o una demolición se usan los de 12, 20 o 30 m³. Si tienes dudas, te asesoramos según el tipo de residuo y el espacio disponible." }
+  ],
+  "precio": [
+    { "pregunta": "¿De qué depende el precio de un contenedor de escombros?", "respuesta": "Del tamaño del contenedor, de la provincia o población, del tiempo que lo tengas y del tipo de residuo. Pide presupuesto con la dirección de entrega para tener el precio cerrado." },
+    { "pregunta": "¿El precio incluye la retirada y la gestión de los residuos?", "respuesta": "Normalmente el servicio incluye la entrega, la recogida y el traslado a un gestor autorizado. Confírmalo al pedir el presupuesto." }
+  ],
+  "alquiler": [
+    { "pregunta": "¿Cuántos días puedo tener el contenedor?", "respuesta": "El tiempo se acuerda al contratar el servicio y se puede ampliar si lo necesitas. Indícalo al pedir el presupuesto." },
+    { "pregunta": "¿Dónde se puede colocar el contenedor?", "respuesta": "En un sitio con acceso para el camión. Si va en la vía pública, hace falta la autorización del ayuntamiento." }
+  ],
+  "recogida-escombros": [
+    { "pregunta": "¿Se recogen los escombros de cualquier obra?", "respuesta": "Se recogen los residuos inertes habituales de reformas, obras y demoliciones. Los residuos peligrosos necesitan una gestión aparte." },
+    { "pregunta": "¿Qué pasa con los escombros después de recogerlos?", "respuesta": "Se trasladan a una planta o gestor de residuos autorizado para su tratamiento o reciclaje, como exige la normativa." }
+  ]
+}

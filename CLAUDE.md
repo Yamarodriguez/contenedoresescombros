@@ -54,4 +54,6 @@ Scripts visuales: `scripts/visual.mjs` (todo:visual) y `scripts/capturas-temas.m
 Pendiente de Yama: modelo de negocio (¿directorio o alquilas tú?), dirección legal completa, GA4, horario, palabras a evitar.
 2 páginas sin Elementor pendientes (personalizar-cookies, hola-mundo) para Fase 4.
 AdSense en la cabecera: no se puede probar en local (solo sirve en el dominio aprobado); revisar en el preview de Netlify (Fase 7).
-Siguiente: Fase 4 (contenido nuevo y SEO: datos estructurados ya puestos; faltan FAQ, tablas, enriquecer ciudades, legales reescritas).
+Fase 4 EN CURSO: hecho FAQ con datos estructurados (FAQPage) en index/medidas/precio/alquiler/recogida-escombros + `llms.txt`. todo y todo:visual a 0, subido a GitHub.
+Pendiente Fase 4: enlazado interno entre ciudades (info propia + cercanas + provincia, geo de OpenStreetMap); legales reescritas (necesita dirección legal completa y confirmar modelo de negocio); decidir hola-mundo y personalizar-cookies.
+Las FAQ son factuales y neutras (no dicen quién presta el servicio) hasta confirmar si es directorio o alquiler propio.
