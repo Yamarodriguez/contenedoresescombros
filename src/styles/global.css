@@ -87,6 +87,8 @@ img.foto, a.foto img { border-radius: var(--radio); box-shadow: var(--sombra); m
 a.foto { display: inline-block; transition: transform .15s ease; }
 a.foto:hover { transform: translateY(-3px); }
 .mapa { width: 100%; height: 380px; border: 0; border-radius: var(--radio); margin: 1rem 0; box-shadow: var(--sombra); }
+.enlaces-zona { list-style: none; padding: 0; margin: .6rem 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .3rem .9rem; }
+.enlaces-zona a { color: var(--marca2); }
 
 /* -------- Botones -------- */
 .boton { display: inline-flex; align-items: center; gap: .4rem; background: var(--marca2); color: #fff; text-decoration: none; padding: .7rem 1.3rem; border-radius: 999px; font-weight: 700; font-size: 1rem; border: 0; cursor: pointer; transition: filter .15s ease, transform .15s ease; }

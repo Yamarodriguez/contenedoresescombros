@@ -1,0 +1,2172 @@
+{
+ "alava": {
+  "nombre": "Álava",
+  "provincia": "País Vasco",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "vizcaya",
+    "nombre": "Vizcaya"
+   },
+   {
+    "slug": "guipuzcoa",
+    "nombre": "Guipúzcoa"
+   },
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   },
+   {
+    "slug": "cantabria",
+    "nombre": "Cantabria"
+   }
+  ]
+ },
+ "albacete": {
+  "nombre": "Albacete",
+  "provincia": "Castilla-La Mancha",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "requena",
+    "nombre": "Requena"
+   },
+   {
+    "slug": "ontinyent",
+    "nombre": "Ontinyent"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "cuenca",
+    "nombre": "Cuenca"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   }
+  ]
+ },
+ "alboraya": {
+  "nombre": "Alboraya",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   }
+  ]
+ },
+ "algemesi": {
+  "nombre": "Algemesí",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   },
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   },
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   }
+  ]
+ },
+ "almeria": {
+  "nombre": "Almería",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "granada",
+    "nombre": "Granada"
+   },
+   {
+    "slug": "murcia",
+    "nombre": "Murcia"
+   },
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "contenedores-escombros-alicante",
+    "nombre": "Alicante"
+   },
+   {
+    "slug": "albacete",
+    "nombre": "Albacete"
+   }
+  ]
+ },
+ "asturias": {
+  "nombre": "Asturias",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "lugo",
+    "nombre": "Lugo"
+   },
+   {
+    "slug": "palencia",
+    "nombre": "Palencia"
+   },
+   {
+    "slug": "cantabria",
+    "nombre": "Cantabria"
+   },
+   {
+    "slug": "ourense",
+    "nombre": "Ourense"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   }
+  ]
+ },
+ "avila": {
+  "nombre": "Ávila",
+  "provincia": "Castilla y León",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "salamanca",
+    "nombre": "Salamanca"
+   },
+   {
+    "slug": "toledo",
+    "nombre": "Toledo"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   }
+  ]
+ },
+ "badajoz": {
+  "nombre": "Badajoz",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "caceres",
+    "nombre": "Cáceres"
+   },
+   {
+    "slug": "huelva",
+    "nombre": "Huelva"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "salamanca",
+    "nombre": "Salamanca"
+   },
+   {
+    "slug": "ciudad-real",
+    "nombre": "Ciudad Real"
+   }
+  ]
+ },
+ "baleares": {
+  "nombre": "Baleares",
+  "provincia": "Islas Baleares",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "ibiza",
+    "nombre": "Ibiza"
+   },
+   {
+    "slug": "barcelona",
+    "nombre": "Barcelona"
+   },
+   {
+    "slug": "tarragona",
+    "nombre": "Tarragona"
+   },
+   {
+    "slug": "torrent",
+    "nombre": "Torrent"
+   },
+   {
+    "slug": "castellon",
+    "nombre": "Castellón"
+   },
+   {
+    "slug": "girona",
+    "nombre": "Girona"
+   }
+  ]
+ },
+ "barcelona": {
+  "nombre": "Barcelona",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "tarragona",
+    "nombre": "Tarragona"
+   },
+   {
+    "slug": "girona",
+    "nombre": "Girona"
+   },
+   {
+    "slug": "torrent",
+    "nombre": "Torrent"
+   },
+   {
+    "slug": "lleida",
+    "nombre": "Lleida"
+   },
+   {
+    "slug": "huesca",
+    "nombre": "Huesca"
+   },
+   {
+    "slug": "baleares",
+    "nombre": "Baleares"
+   }
+  ]
+ },
+ "betera": {
+  "nombre": "Bétera",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   },
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   }
+  ]
+ },
+ "burgos": {
+  "nombre": "Burgos",
+  "provincia": "Castilla y León",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "palencia",
+    "nombre": "Palencia"
+   },
+   {
+    "slug": "cantabria",
+    "nombre": "Cantabria"
+   },
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   }
+  ]
+ },
+ "caceres": {
+  "nombre": "Cáceres",
+  "provincia": "Extremadura",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "badajoz",
+    "nombre": "Badajoz"
+   },
+   {
+    "slug": "salamanca",
+    "nombre": "Salamanca"
+   },
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   },
+   {
+    "slug": "toledo",
+    "nombre": "Toledo"
+   },
+   {
+    "slug": "ciudad-real",
+    "nombre": "Ciudad Real"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   }
+  ]
+ },
+ "cadiz": {
+  "nombre": "Cádiz",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "huelva",
+    "nombre": "Huelva"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "granada",
+    "nombre": "Granada"
+   },
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   }
+  ]
+ },
+ "cantabria": {
+  "nombre": "Cantabria",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "palencia",
+    "nombre": "Palencia"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   },
+   {
+    "slug": "vizcaya",
+    "nombre": "Vizcaya"
+   },
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   },
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   },
+   {
+    "slug": "guipuzcoa",
+    "nombre": "Guipúzcoa"
+   }
+  ]
+ },
+ "carcaixent": {
+  "nombre": "Carcaixent",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   },
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   }
+  ]
+ },
+ "castellon": {
+  "nombre": "Castellón",
+  "provincia": "Comunidad Valenciana",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "sagunto",
+    "nombre": "Sagunto"
+   },
+   {
+    "slug": "puerto-de-sagunto",
+    "nombre": "Puerto de Sagunto"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "teruel",
+    "nombre": "Teruel"
+   },
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   }
+  ]
+ },
+ "ciudad-real": {
+  "nombre": "Ciudad Real",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "toledo",
+    "nombre": "Toledo"
+   },
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "albacete",
+    "nombre": "Albacete"
+   },
+   {
+    "slug": "cuenca",
+    "nombre": "Cuenca"
+   }
+  ]
+ },
+ "contenedores-escombros-alicante": {
+  "nombre": "Alicante",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "ontinyent",
+    "nombre": "Ontinyent"
+   },
+   {
+    "slug": "murcia",
+    "nombre": "Murcia"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   }
+  ]
+ },
+ "contenedores-escombros-malaga": {
+  "nombre": "Málaga",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "granada",
+    "nombre": "Granada"
+   },
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "cadiz",
+    "nombre": "Cádiz"
+   },
+   {
+    "slug": "almeria",
+    "nombre": "Almería"
+   }
+  ]
+ },
+ "contenedores-escombros-sevilla": {
+  "nombre": "Sevilla",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "huelva",
+    "nombre": "Huelva"
+   },
+   {
+    "slug": "cadiz",
+    "nombre": "Cádiz"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "badajoz",
+    "nombre": "Badajoz"
+   },
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   }
+  ]
+ },
+ "cordoba": {
+  "nombre": "Córdoba",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "granada",
+    "nombre": "Granada"
+   },
+   {
+    "slug": "ciudad-real",
+    "nombre": "Ciudad Real"
+   },
+   {
+    "slug": "cadiz",
+    "nombre": "Cádiz"
+   }
+  ]
+ },
+ "coruna": {
+  "nombre": "La Coruña",
+  "provincia": "Galicia",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "lugo",
+    "nombre": "Lugo"
+   },
+   {
+    "slug": "pontevedra",
+    "nombre": "Pontevedra"
+   },
+   {
+    "slug": "ourense",
+    "nombre": "Ourense"
+   },
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   },
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   }
+  ]
+ },
+ "cuenca": {
+  "nombre": "Cuenca",
+  "provincia": "Castilla-La Mancha",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "guadalajara",
+    "nombre": "Guadalajara"
+   },
+   {
+    "slug": "requena",
+    "nombre": "Requena"
+   },
+   {
+    "slug": "teruel",
+    "nombre": "Teruel"
+   },
+   {
+    "slug": "albacete",
+    "nombre": "Albacete"
+   },
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   }
+  ]
+ },
+ "cullera": {
+  "nombre": "Cullera",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   }
+  ]
+ },
+ "gandia": {
+  "nombre": "Gandía",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   },
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   },
+   {
+    "slug": "ontinyent",
+    "nombre": "Ontinyent"
+   }
+  ]
+ },
+ "girona": {
+  "nombre": "Girona",
+  "provincia": "Cataluña",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "torrent",
+    "nombre": "Torrent"
+   },
+   {
+    "slug": "barcelona",
+    "nombre": "Barcelona"
+   },
+   {
+    "slug": "tarragona",
+    "nombre": "Tarragona"
+   },
+   {
+    "slug": "lleida",
+    "nombre": "Lleida"
+   },
+   {
+    "slug": "huesca",
+    "nombre": "Huesca"
+   },
+   {
+    "slug": "baleares",
+    "nombre": "Baleares"
+   }
+  ]
+ },
+ "granada": {
+  "nombre": "Granada",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "jaen",
+    "nombre": "Jaén"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "almeria",
+    "nombre": "Almería"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "ciudad-real",
+    "nombre": "Ciudad Real"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   }
+  ]
+ },
+ "guadalajara": {
+  "nombre": "Guadalajara",
+  "provincia": "Castilla-La Mancha",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "cuenca",
+    "nombre": "Cuenca"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   },
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "teruel",
+    "nombre": "Teruel"
+   },
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "toledo",
+    "nombre": "Toledo"
+   }
+  ]
+ },
+ "guipuzcoa": {
+  "nombre": "Guipúzcoa",
+  "provincia": "País Vasco",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   },
+   {
+    "slug": "vizcaya",
+    "nombre": "Vizcaya"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   },
+   {
+    "slug": "cantabria",
+    "nombre": "Cantabria"
+   }
+  ]
+ },
+ "huelva": {
+  "nombre": "Huelva",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "cadiz",
+    "nombre": "Cádiz"
+   },
+   {
+    "slug": "badajoz",
+    "nombre": "Badajoz"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "caceres",
+    "nombre": "Cáceres"
+   }
+  ]
+ },
+ "huesca": {
+  "nombre": "Huesca",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "lleida",
+    "nombre": "Lleida"
+   },
+   {
+    "slug": "zaragoza",
+    "nombre": "Zaragoza"
+   },
+   {
+    "slug": "tarragona",
+    "nombre": "Tarragona"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "teruel",
+    "nombre": "Teruel"
+   },
+   {
+    "slug": "barcelona",
+    "nombre": "Barcelona"
+   }
+  ]
+ },
+ "ibiza": {
+  "nombre": "Ibiza",
+  "provincia": "Islas Baleares",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "baleares",
+    "nombre": "Baleares"
+   },
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   },
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   },
+   {
+    "slug": "puerto-de-sagunto",
+    "nombre": "Puerto de Sagunto"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   }
+  ]
+ },
+ "jaen": {
+  "nombre": "Jaén",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "granada",
+    "nombre": "Granada"
+   },
+   {
+    "slug": "cordoba",
+    "nombre": "Córdoba"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "ciudad-real",
+    "nombre": "Ciudad Real"
+   },
+   {
+    "slug": "almeria",
+    "nombre": "Almería"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   }
+  ]
+ },
+ "la-rioja": {
+  "nombre": "La Rioja",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   },
+   {
+    "slug": "guipuzcoa",
+    "nombre": "Guipúzcoa"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   },
+   {
+    "slug": "vizcaya",
+    "nombre": "Vizcaya"
+   }
+  ]
+ },
+ "las-palmas": {
+  "nombre": "Las Palmas",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "tenerife",
+    "nombre": "Tenerife"
+   },
+   {
+    "slug": "cadiz",
+    "nombre": "Cádiz"
+   },
+   {
+    "slug": "huelva",
+    "nombre": "Huelva"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   },
+   {
+    "slug": "badajoz",
+    "nombre": "Badajoz"
+   }
+  ]
+ },
+ "leon": {
+  "nombre": "León",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   },
+   {
+    "slug": "palencia",
+    "nombre": "Palencia"
+   },
+   {
+    "slug": "lugo",
+    "nombre": "Lugo"
+   },
+   {
+    "slug": "ourense",
+    "nombre": "Ourense"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   }
+  ]
+ },
+ "lleida": {
+  "nombre": "Lleida",
+  "provincia": "Lérida",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "tarragona",
+    "nombre": "Tarragona"
+   },
+   {
+    "slug": "huesca",
+    "nombre": "Huesca"
+   },
+   {
+    "slug": "zaragoza",
+    "nombre": "Zaragoza"
+   },
+   {
+    "slug": "barcelona",
+    "nombre": "Barcelona"
+   },
+   {
+    "slug": "castellon",
+    "nombre": "Castellón"
+   },
+   {
+    "slug": "teruel",
+    "nombre": "Teruel"
+   }
+  ]
+ },
+ "lliria": {
+  "nombre": "Llíria",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   }
+  ]
+ },
+ "lugo": {
+  "nombre": "Lugo",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "coruna",
+    "nombre": "La Coruña"
+   },
+   {
+    "slug": "ourense",
+    "nombre": "Ourense"
+   },
+   {
+    "slug": "pontevedra",
+    "nombre": "Pontevedra"
+   },
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   },
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   }
+  ]
+ },
+ "madrid": {
+  "nombre": "Madrid",
+  "provincia": "Comunidad de Madrid",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "toledo",
+    "nombre": "Toledo"
+   },
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   },
+   {
+    "slug": "guadalajara",
+    "nombre": "Guadalajara"
+   },
+   {
+    "slug": "cuenca",
+    "nombre": "Cuenca"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   }
+  ]
+ },
+ "moncada": {
+  "nombre": "Moncada",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   },
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   }
+  ]
+ },
+ "murcia": {
+  "nombre": "Murcia",
+  "provincia": "Región de Murcia",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "contenedores-escombros-alicante",
+    "nombre": "Alicante"
+   },
+   {
+    "slug": "ontinyent",
+    "nombre": "Ontinyent"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "albacete",
+    "nombre": "Albacete"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   }
+  ]
+ },
+ "navarra": {
+  "nombre": "Navarra",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "guipuzcoa",
+    "nombre": "Guipúzcoa"
+   },
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   },
+   {
+    "slug": "vizcaya",
+    "nombre": "Vizcaya"
+   },
+   {
+    "slug": "zaragoza",
+    "nombre": "Zaragoza"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   }
+  ]
+ },
+ "ontinyent": {
+  "nombre": "Ontinyent",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   },
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   },
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   }
+  ]
+ },
+ "ourense": {
+  "nombre": "Ourense",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "pontevedra",
+    "nombre": "Pontevedra"
+   },
+   {
+    "slug": "lugo",
+    "nombre": "Lugo"
+   },
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   },
+   {
+    "slug": "coruna",
+    "nombre": "La Coruña"
+   },
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   }
+  ]
+ },
+ "paiporta": {
+  "nombre": "Paiporta",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   }
+  ]
+ },
+ "palencia": {
+  "nombre": "Palencia",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   },
+   {
+    "slug": "cantabria",
+    "nombre": "Cantabria"
+   },
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   },
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   }
+  ]
+ },
+ "paterna": {
+  "nombre": "Paterna",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   },
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   },
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   }
+  ]
+ },
+ "pobla-de-vallbona": {
+  "nombre": "Pobla de Vallbona",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   },
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   }
+  ]
+ },
+ "pontevedra": {
+  "nombre": "Pontevedra",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "ourense",
+    "nombre": "Ourense"
+   },
+   {
+    "slug": "coruna",
+    "nombre": "La Coruña"
+   },
+   {
+    "slug": "lugo",
+    "nombre": "Lugo"
+   },
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   },
+   {
+    "slug": "asturias",
+    "nombre": "Asturias"
+   }
+  ]
+ },
+ "puerto-de-sagunto": {
+  "nombre": "Puerto de Sagunto",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "sagunto",
+    "nombre": "Sagunto"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   }
+  ]
+ },
+ "requena": {
+  "nombre": "Requena",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   },
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   }
+  ]
+ },
+ "ribarroja-del-turia": {
+  "nombre": "Ribarroja del Turia",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   }
+  ]
+ },
+ "sagunto": {
+  "nombre": "Sagunto",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "puerto-de-sagunto",
+    "nombre": "Puerto de Sagunto"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "valencia",
+    "nombre": "Valencia"
+   }
+  ]
+ },
+ "salamanca": {
+  "nombre": "Salamanca",
+  "provincia": "Castilla y León",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   },
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   },
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "caceres",
+    "nombre": "Cáceres"
+   }
+  ]
+ },
+ "segovia": {
+  "nombre": "Segovia",
+  "provincia": "Castilla y León",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   },
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   },
+   {
+    "slug": "toledo",
+    "nombre": "Toledo"
+   },
+   {
+    "slug": "salamanca",
+    "nombre": "Salamanca"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   }
+  ]
+ },
+ "soria": {
+  "nombre": "Soria",
+  "provincia": "Castilla y León",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "guadalajara",
+    "nombre": "Guadalajara"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   }
+  ]
+ },
+ "sueca": {
+  "nombre": "Sueca",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   },
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "xativa",
+    "nombre": "Xàtiva"
+   }
+  ]
+ },
+ "tarragona": {
+  "nombre": "Tarragona",
+  "provincia": "Cataluña",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "lleida",
+    "nombre": "Lleida"
+   },
+   {
+    "slug": "barcelona",
+    "nombre": "Barcelona"
+   },
+   {
+    "slug": "castellon",
+    "nombre": "Castellón"
+   },
+   {
+    "slug": "huesca",
+    "nombre": "Huesca"
+   },
+   {
+    "slug": "girona",
+    "nombre": "Girona"
+   },
+   {
+    "slug": "torrent",
+    "nombre": "Torrent"
+   }
+  ]
+ },
+ "tenerife": {
+  "nombre": "Tenerife",
+  "provincia": "Canarias",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "las-palmas",
+    "nombre": "Las Palmas"
+   },
+   {
+    "slug": "cadiz",
+    "nombre": "Cádiz"
+   },
+   {
+    "slug": "huelva",
+    "nombre": "Huelva"
+   },
+   {
+    "slug": "contenedores-escombros-sevilla",
+    "nombre": "Sevilla"
+   },
+   {
+    "slug": "badajoz",
+    "nombre": "Badajoz"
+   },
+   {
+    "slug": "contenedores-escombros-malaga",
+    "nombre": "Málaga"
+   }
+  ]
+ },
+ "teruel": {
+  "nombre": "Teruel",
+  "provincia": "Aragón",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "castellon",
+    "nombre": "Castellón"
+   },
+   {
+    "slug": "lliria",
+    "nombre": "Llíria"
+   },
+   {
+    "slug": "sagunto",
+    "nombre": "Sagunto"
+   },
+   {
+    "slug": "pobla-de-vallbona",
+    "nombre": "Pobla de Vallbona"
+   },
+   {
+    "slug": "cuenca",
+    "nombre": "Cuenca"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   }
+  ]
+ },
+ "toledo": {
+  "nombre": "Toledo",
+  "provincia": "Castilla-La Mancha",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "madrid",
+    "nombre": "Madrid"
+   },
+   {
+    "slug": "ciudad-real",
+    "nombre": "Ciudad Real"
+   },
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   },
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "guadalajara",
+    "nombre": "Guadalajara"
+   },
+   {
+    "slug": "cuenca",
+    "nombre": "Cuenca"
+   }
+  ]
+ },
+ "torrent": {
+  "nombre": "Torrent",
+  "provincia": "Cataluña",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "girona",
+    "nombre": "Girona"
+   },
+   {
+    "slug": "barcelona",
+    "nombre": "Barcelona"
+   },
+   {
+    "slug": "tarragona",
+    "nombre": "Tarragona"
+   },
+   {
+    "slug": "lleida",
+    "nombre": "Lleida"
+   },
+   {
+    "slug": "baleares",
+    "nombre": "Baleares"
+   },
+   {
+    "slug": "huesca",
+    "nombre": "Huesca"
+   }
+  ]
+ },
+ "valencia": {
+  "nombre": "Valencia",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "alboraya",
+    "nombre": "Alboraya"
+   },
+   {
+    "slug": "paiporta",
+    "nombre": "Paiporta"
+   },
+   {
+    "slug": "moncada",
+    "nombre": "Moncada"
+   },
+   {
+    "slug": "paterna",
+    "nombre": "Paterna"
+   },
+   {
+    "slug": "betera",
+    "nombre": "Bétera"
+   },
+   {
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
+   }
+  ]
+ },
+ "valladolid": {
+  "nombre": "Valladolid",
+  "provincia": "Castilla y León",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "palencia",
+    "nombre": "Palencia"
+   },
+   {
+    "slug": "segovia",
+    "nombre": "Segovia"
+   },
+   {
+    "slug": "zamora",
+    "nombre": "Zamora"
+   },
+   {
+    "slug": "salamanca",
+    "nombre": "Salamanca"
+   },
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   }
+  ]
+ },
+ "vizcaya": {
+  "nombre": "Vizcaya",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "alava",
+    "nombre": "Álava"
+   },
+   {
+    "slug": "guipuzcoa",
+    "nombre": "Guipúzcoa"
+   },
+   {
+    "slug": "cantabria",
+    "nombre": "Cantabria"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "burgos",
+    "nombre": "Burgos"
+   }
+  ]
+ },
+ "xativa": {
+  "nombre": "Xàtiva",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
+  "cercanas": [
+   {
+    "slug": "carcaixent",
+    "nombre": "Carcaixent"
+   },
+   {
+    "slug": "ontinyent",
+    "nombre": "Ontinyent"
+   },
+   {
+    "slug": "algemesi",
+    "nombre": "Algemesí"
+   },
+   {
+    "slug": "gandia",
+    "nombre": "Gandía"
+   },
+   {
+    "slug": "sueca",
+    "nombre": "Sueca"
+   },
+   {
+    "slug": "cullera",
+    "nombre": "Cullera"
+   }
+  ]
+ },
+ "zamora": {
+  "nombre": "Zamora",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "salamanca",
+    "nombre": "Salamanca"
+   },
+   {
+    "slug": "valladolid",
+    "nombre": "Valladolid"
+   },
+   {
+    "slug": "leon",
+    "nombre": "León"
+   },
+   {
+    "slug": "palencia",
+    "nombre": "Palencia"
+   },
+   {
+    "slug": "ourense",
+    "nombre": "Ourense"
+   },
+   {
+    "slug": "avila",
+    "nombre": "Ávila"
+   }
+  ]
+ },
+ "zaragoza": {
+  "nombre": "Zaragoza",
+  "provincia": "",
+  "provinciaSlug": "",
+  "cercanas": [
+   {
+    "slug": "huesca",
+    "nombre": "Huesca"
+   },
+   {
+    "slug": "teruel",
+    "nombre": "Teruel"
+   },
+   {
+    "slug": "navarra",
+    "nombre": "Navarra"
+   },
+   {
+    "slug": "lleida",
+    "nombre": "Lleida"
+   },
+   {
+    "slug": "la-rioja",
+    "nombre": "La Rioja"
+   },
+   {
+    "slug": "soria",
+    "nombre": "Soria"
+   }
+  ]
+ }
+}

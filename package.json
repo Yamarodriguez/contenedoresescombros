@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "extraer": "node scripts/extraer.mjs",
+    "generar": "node scripts/extraer.mjs && node scripts/geo-ciudades.mjs && node scripts/medidas-imagenes.mjs && node scripts/seo-desde-referencia.mjs && node scripts/menus-desde-referencia.mjs",
     "todo": "node scripts/todo.mjs",
     "todo:visual": "node scripts/visual.mjs"
   },

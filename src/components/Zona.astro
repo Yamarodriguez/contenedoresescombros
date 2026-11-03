@@ -1,0 +1,23 @@
+---
+// Seccion anadida al final de cada pagina de ciudad: provincia y localidades
+// cercanas enlazadas (datos geograficos de OpenStreetMap). Texto factual.
+const { zona } = Astro.props as { zona: any };
+---
+{zona && (
+  <section class="seccion">
+    <div class="seccion-in">
+      <h2 class="titular">Contenedores de escombros cerca de {zona.nombre}</h2>
+      {zona.provincia && (
+        <p class="texto">{zona.nombre} pertenece a la provincia de {zona.provincia}.{zona.provinciaSlug && (<> Consulta todos los <a href={`/${zona.provinciaSlug}/`}>contenedores de escombros en {zona.provincia}</a>.</>)}</p>
+      )}
+      {zona.cercanas && zona.cercanas.length > 0 && (
+        <>
+          <p class="texto">Estas son otras localidades cercanas donde también encontrarás contenedores de escombros:</p>
+          <ul class="enlaces-zona">
+            {zona.cercanas.map((c: any) => <li><a href={`/${c.slug}/`}>Contenedores de escombros en {c.nombre}</a></li>)}
+          </ul>
+        </>
+      )}
+    </div>
+  </section>
+)}
