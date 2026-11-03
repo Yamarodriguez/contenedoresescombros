@@ -1,0 +1,60 @@
+---
+// Pinta una fila de Elementor con sus columnas (rejilla CSS), respetando el orden.
+// Las parejas seguidas «foto enlazada + titular enlazado» (las fichas de tipos de
+// contenedor) se agrupan en tarjetas pequeñas. Se llama a sí misma para las filas
+// anidadas (p. ej. la fila de 3 botones dentro de una columna).
+import Bloque from './Bloque.astro';
+
+interface Props { fila: any; bloques: any[]; omitir?: number[]; nivel?: number }
+const { fila, bloques, omitir = [], nivel = 0 } = Astro.props as Props;
+const salta = new Set(omitir);
+
+type Grupo = { tipo: 'bloque'; b: number } | { tipo: 'fila'; fila: any } | { tipo: 'rejilla'; tarjetas: number[][] };
+function grupos(items: any[]): Grupo[] {
+  const its = items.filter((it) => it.fila || !salta.has(it.b));
+  const out: Grupo[] = [];
+  for (let i = 0; i < its.length; i++) {
+    const a = its[i], sig = its[i + 1];
+    const ba = a.b !== undefined ? bloques[a.b] : null;
+    const bs = sig && sig.b !== undefined ? bloques[sig.b] : null;
+    if (ba && bs && ba.type === 'image' && ba.href && bs.type === 'heading' && bs.href) {
+      const ult = out[out.length - 1];
+      if (ult && ult.tipo === 'rejilla') ult.tarjetas.push([a.b, sig.b]);
+      else out.push({ tipo: 'rejilla', tarjetas: [[a.b, sig.b]] });
+      i++;
+    } else if (a.fila) out.push({ tipo: 'fila', fila: a.fila });
+    else out.push({ tipo: 'bloque', b: a.b });
+  }
+  return out;
+}
+
+const cols = fila.columnas.map((c: any) => ({ ancho: c.ancho, grupos: grupos(c.items) })).filter((c: any) => c.grupos.length);
+const n = cols.length;
+const plantilla = n > 1 ? cols.map((c: any) => `${c.ancho || Math.round(100 / n)}fr`).join(' ') : '';
+---
+{n > 0 && (
+  <div class:list={['fila', `cols-${n}`, { anidada: nivel > 0 }]} style={plantilla ? `--plantilla:${plantilla}` : undefined}>
+    {cols.map((c: any) => (
+      <div class="col">
+        {c.grupos.map((g: Grupo) =>
+          g.tipo === 'bloque' ? <Bloque b={bloques[g.b]} />
+          : g.tipo === 'fila' ? <Astro.self fila={g.fila} bloques={bloques} omitir={omitir} nivel={nivel + 1} />
+          : g.tarjetas.length === 1 ? (
+            <div class="tarjeta">
+              <Bloque b={bloques[g.tarjetas[0][0]]} />
+              <Bloque b={bloques[g.tarjetas[0][1]]} />
+            </div>
+          ) : (
+            <div class="rejilla">
+              {g.tarjetas.map(([ib, ih]) => (
+                <div class="tarjeta">
+                  <Bloque b={bloques[ib]} />
+                  <Bloque b={bloques[ih]} />
+                </div>
+              ))}
+            </div>
+          ))}
+      </div>
+    ))}
+  </div>
+)}

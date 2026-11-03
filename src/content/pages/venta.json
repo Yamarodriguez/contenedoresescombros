@@ -426,5 +426,540 @@
    "text": "Contenedores Segovia Contenedores Sevilla Contenedores Soria Contenedores Tarragona Contenedores Teruel Contenedores Toledo Contenedores Valencia Contenedores Valladolid Contenedores Zamora Contenedores Zaragoza",
    "html": "<p>Contenedores Segovia<br />Contenedores Sevilla<br />Contenedores Soria<br />Contenedores Tarragona<br />Contenedores Teruel<br />Contenedores Toledo<br />Contenedores Valencia<br />Contenedores Valladolid<br />Contenedores Zamora<br />Contenedores Zaragoza</p>"
   }
+ ],
+ "filas": [
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 0
+      },
+      {
+       "b": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 2
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 3
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 4
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 5
+           },
+           {
+            "b": 6
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 7
+           },
+           {
+            "b": 8
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 9
+           },
+           {
+            "b": 10
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 11
+           },
+           {
+            "b": 12
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 13
+           },
+           {
+            "b": 14
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 15
+           },
+           {
+            "b": 16
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 17
+           },
+           {
+            "b": 18
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 19
+           },
+           {
+            "b": 20
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 21
+           },
+           {
+            "b": 22
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 23
+      },
+      {
+       "b": 24
+      },
+      {
+       "b": 25
+      },
+      {
+       "b": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 65.87,
+     "items": [
+      {
+       "b": 27
+      },
+      {
+       "b": 28
+      },
+      {
+       "b": 29
+      }
+     ]
+    },
+    {
+     "ancho": 33.956,
+     "items": [
+      {
+       "b": 30
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 66.569,
+     "items": [
+      {
+       "b": 31
+      },
+      {
+       "b": 32
+      },
+      {
+       "b": 33
+      }
+     ]
+    },
+    {
+     "ancho": 33.391,
+     "items": [
+      {
+       "b": 34
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 48.973,
+     "items": [
+      {
+       "b": 35
+      },
+      {
+       "b": 36
+      },
+      {
+       "b": 37
+      }
+     ]
+    },
+    {
+     "ancho": 50.983,
+     "items": [
+      {
+       "b": 38
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 39
+      },
+      {
+       "b": 40
+      },
+      {
+       "b": 41
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 58.246,
+     "items": [
+      {
+       "b": 42
+      },
+      {
+       "b": 43
+      },
+      {
+       "b": 44
+      }
+     ]
+    },
+    {
+     "ancho": 41.58,
+     "items": [
+      {
+       "b": 45
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 46
+      },
+      {
+       "b": 47
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 48
+      },
+      {
+       "b": 49
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 50
+      },
+      {
+       "b": 51
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 52
+      },
+      {
+       "b": 53
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 54
+      },
+      {
+       "b": 55
+      },
+      {
+       "b": 56
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 57
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 60.911,
+     "items": [
+      {
+       "b": 58
+      },
+      {
+       "b": 59
+      }
+     ]
+    },
+    {
+     "ancho": 38.804,
+     "items": [
+      {
+       "b": 60
+      },
+      {
+       "b": 61
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 62
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 63
+      },
+      {
+       "b": 64
+      },
+      {
+       "b": 65
+      }
+     ]
+    },
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 66
+      },
+      {
+       "b": 67
+      },
+      {
+       "b": 68
+      }
+     ]
+    },
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 69
+      },
+      {
+       "b": 70
+      },
+      {
+       "b": 71
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 72
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 73
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 74
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 75
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 76
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 77
+      }
+     ]
+    }
+   ]
+  }
  ]
 }

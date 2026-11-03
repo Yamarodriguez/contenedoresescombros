@@ -518,5 +518,581 @@
    "text": "Contenedores Segovia Contenedores Sevilla Contenedores Soria Contenedores Tarragona Contenedores Teruel Contenedores Toledo Contenedores Girona Contenedores Valladolid Contenedores Zamora Contenedores Zaragoza",
    "html": "<p><a href=\"https://contenedoresescombros.com/segovia/\">Contenedores Segovia</a><br /><a href=\"https://contenedoresescombros.com/Contenedores-escombros-sevilla/\">Contenedores Sevilla</a><br /><a href=\"https://contenedoresescombros.com/soria/\">Contenedores Soria</a><br /><a href=\"https://contenedoresescombros.com/tarragona/\">Contenedores Tarragona</a><br /><a href=\"https://contenedoresescombros.com/teruel/\">Contenedores Teruel</a><br /><a href=\"https://contenedoresescombros.com/toledo/\">Contenedores Toledo</a><br /><a href=\"https://contenedoresescombros.com/girona/\">Contenedores Girona</a><br /><a href=\"https://contenedoresescombros.com/valladolid/\">Contenedores Valladolid</a><br /><a href=\"https://contenedoresescombros.com/zamora/\">Contenedores Zamora</a><br /><a href=\"https://contenedoresescombros.com/zaragoza/\" data-wplink-edit=\"true\">Contenedores Zaragoza</a></p>"
   }
+ ],
+ "filas": [
+  {
+   "columnas": [
+    {
+     "ancho": 58.246,
+     "items": [
+      {
+       "b": 0
+      },
+      {
+       "b": 1
+      },
+      {
+       "b": 2
+      },
+      {
+       "b": 3
+      }
+     ]
+    },
+    {
+     "ancho": 41.58,
+     "items": [
+      {
+       "b": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 5
+      },
+      {
+       "b": 6
+      },
+      {
+       "b": 7
+      },
+      {
+       "b": 8
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 9
+           },
+           {
+            "b": 10
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 11
+           },
+           {
+            "b": 12
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 13
+           },
+           {
+            "b": 14
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 15
+           },
+           {
+            "b": 16
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 17
+           },
+           {
+            "b": 18
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 19
+           },
+           {
+            "b": 20
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 21
+           },
+           {
+            "b": 22
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 23
+           },
+           {
+            "b": 24
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 25
+           },
+           {
+            "b": 26
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 27
+      },
+      {
+       "b": 28
+      },
+      {
+       "b": 29
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 30
+      },
+      {
+       "b": 31
+      },
+      {
+       "b": 32
+      }
+     ]
+    },
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 33
+      },
+      {
+       "b": 34
+      },
+      {
+       "b": 35
+      }
+     ]
+    },
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 36
+      },
+      {
+       "b": 37
+      },
+      {
+       "b": 38
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 66.569,
+     "items": [
+      {
+       "b": 39
+      },
+      {
+       "b": 40
+      },
+      {
+       "b": 41
+      }
+     ]
+    },
+    {
+     "ancho": 33.391,
+     "items": [
+      {
+       "b": 42
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 65.87,
+     "items": [
+      {
+       "b": 43
+      },
+      {
+       "b": 44
+      },
+      {
+       "b": 45
+      }
+     ]
+    },
+    {
+     "ancho": 33.956,
+     "items": [
+      {
+       "b": 46
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 48.973,
+     "items": [
+      {
+       "b": 47
+      },
+      {
+       "b": 48
+      },
+      {
+       "b": 49
+      }
+     ]
+    },
+    {
+     "ancho": 50.983,
+     "items": [
+      {
+       "b": 50
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 51
+      },
+      {
+       "b": 52
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 53
+      },
+      {
+       "b": 54
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 55
+      },
+      {
+       "b": 56
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 57
+      },
+      {
+       "b": 58
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 59
+      },
+      {
+       "b": 60
+      },
+      {
+       "b": 61
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 60.911,
+     "items": [
+      {
+       "b": 62
+      },
+      {
+       "b": 63
+      }
+     ]
+    },
+    {
+     "ancho": 38.804,
+     "items": [
+      {
+       "b": 64
+      },
+      {
+       "b": 65
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 66
+      },
+      {
+       "b": 67
+      },
+      {
+       "b": 68
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 69
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 71
+      },
+      {
+       "b": 72
+      },
+      {
+       "b": 73
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 74
+      },
+      {
+       "b": 75
+      },
+      {
+       "b": 76
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 77
+      },
+      {
+       "b": 78
+      },
+      {
+       "b": 79
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 80
+      },
+      {
+       "b": 81
+      },
+      {
+       "b": 82
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 83
+      },
+      {
+       "b": 84
+      },
+      {
+       "b": 85
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 86
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 87
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 88
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 89
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 90
+      }
+     ]
+    },
+    {
+     "ancho": 20,
+     "items": [
+      {
+       "b": 91
+      }
+     ]
+    }
+   ]
+  }
  ]
 }

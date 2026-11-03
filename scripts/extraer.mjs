@@ -71,10 +71,8 @@ function aLocal(url) {
 
 // ---------- recorrido del arbol de Elementor -> bloques ----------
 const widgetsVistos = {};
-function construirBloques(arbol) {
-  const bloques = [];
-  (function walk(lista) {
-    for (const e of lista || []) {
+const tiposEl = {};
+function anadirWidget(e, bloques) {
       if (e.elType === 'widget') {
         const s = e.settings || {};
         widgetsVistos[e.widgetType] = (widgetsVistos[e.widgetType] || 0) + 1;
@@ -131,10 +129,46 @@ function construirBloques(arbol) {
           // spacer, divider, menu-anchor, etc.: solo visual, se ignoran
         }
       }
-      if (e.elements) walk(e.elements);
+}
+
+// Recorre el arbol respetando las filas y columnas de Elementor. Devuelve los
+// bloques en el mismo orden de siempre y, aparte, las filas con indices a esos
+// bloques (para pintar la maquetacion original: texto al lado de la foto, etc.).
+function construirBloques(arbol) {
+  const bloques = [];
+  const ancho = (c) => {
+    const s = c.settings || {};
+    const v = +(s._inline_size || s._column_size || (s.width && s.width.unit === '%' ? s.width.size : 0));
+    return v > 0 ? v : null;
+  };
+  function itemsDe(c) {
+    const items = [];
+    for (const h of c.elements || []) {
+      if (h.elType === 'widget') { const i0 = bloques.length; anadirWidget(h, bloques); for (let i = i0; i < bloques.length; i++) items.push({ b: i }); }
+      else if (h.elType === 'section' || h.elType === 'container') { const f = filaDe(h); if (f) items.push({ fila: f }); }
+      else if (h.elType === 'column') items.push(...itemsDe(h));
     }
-  })(arbol);
-  return bloques;
+    return items;
+  }
+  function filaDe(e) {
+    tiposEl[e.elType] = (tiposEl[e.elType] || 0) + 1;
+    const hijos = e.elements || [];
+    let cols;
+    if (hijos.length && hijos.every((h) => h.elType === 'column')) cols = hijos;
+    else if (e.elType === 'container' && String(e.settings?.flex_direction || '').startsWith('row') && hijos.length > 1 && hijos.every((h) => h.elType === 'container')) cols = hijos;
+    else cols = [{ elements: hijos, settings: {} }];
+    const columnas = cols.map((c) => ({ ancho: cols.length > 1 ? ancho(c) : null, items: itemsDe(c) })).filter((c) => c.items.length);
+    return columnas.length ? { columnas } : null;
+  }
+  const filas = [];
+  for (const e of arbol || []) {
+    if (e.elType === 'widget') {
+      const i0 = bloques.length; anadirWidget(e, bloques);
+      const items = []; for (let i = i0; i < bloques.length; i++) items.push({ b: i });
+      if (items.length) filas.push({ columnas: [{ ancho: null, items }] });
+    } else { const f = filaDe(e); if (f) filas.push(f); }
+  }
+  return { bloques, filas };
 }
 
 // ---------- leer items del export (dedupe por slug, el de _elementor_data mas largo) ----------
@@ -173,7 +207,7 @@ for (const [key, p] of mejores) {
   let arbol;
   try { arbol = JSON.parse(p.elData); } catch (e) { informe.errores.push(`${p.link}: ${e.message}`); continue; }
 
-  const bloques = construirBloques(arbol);
+  const { bloques, filas } = construirBloques(arbol);
   for (const b of bloques) informe.porTipo[b.type] = (informe.porTipo[b.type] || 0) + 1;
   if (!bloques.length) informe.vacias.push(p.link);
 
@@ -188,6 +222,7 @@ for (const [key, p] of mejores) {
     url: p.link,
     meta_description: (p.meta['_yoast_wpseo_metadesc'] || '').trim(),
     blocks: bloques,
+    filas,
   };
   fs.writeFileSync(path.join(DIR_PAGES, fileSlug + '.json'), JSON.stringify(pagina, null, 1) + '\n');
   informe.paginas++;
@@ -203,6 +238,7 @@ fs.writeFileSync('informes/extraccion.json', JSON.stringify({ ...informe, widget
 // ---------- resumen ----------
 console.log(`Paginas generadas: ${informe.paginas}`);
 console.log('Bloques por tipo: ' + Object.entries(informe.porTipo).sort((a, b) => b[1] - a[1]).map(([t, n]) => `${t}:${n}`).join('  '));
+console.log('Filas/columnas: ' + Object.entries(tiposEl).map(([t, n]) => `${t}:${n}`).join('  '));
 console.log('Widgets vistos: ' + Object.entries(widgetsVistos).sort((a, b) => b[1] - a[1]).map(([t, n]) => `${t}:${n}`).join('  '));
 console.log(`Imagenes a bajar: ${imgs.length}`);
 if (informe.sinElementor.length) console.log(`Sin Elementor (${informe.sinElementor.length}): ` + informe.sinElementor.join(', '));

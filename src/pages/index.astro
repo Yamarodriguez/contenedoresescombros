@@ -6,10 +6,11 @@ import Faq from '../components/Faq.astro';
 import { seoDe } from '../lib/seo';
 import data from '../content/pages/index.json';
 import faqData from '../data/faq.json';
+import site from '../data/site.json';
 
 const seo = seoDe('index');
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
-const bloques = data.blocks.filter((b: any) => !(b.type === 'heading' && b.tag === 'h1'));
+const omitir = data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0);
 const faq = (faqData as Record<string, any[]>)['index'] || [];
 const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 ---
@@ -22,7 +23,7 @@ const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ 
   ogDescripcion={seo.ogDescripcion}
   datos={datos}
 >
-  <Hero titulo={h1 ? h1.text : data.title} />
-  <Contenido bloques={bloques} />
+  <Hero titulo={h1 ? h1.text : data.title} subtitulo={site.descripcion} />
+  <Contenido bloques={data.blocks} filas={(data as any).filas} omitir={omitir} />
   <Faq items={faq} />
 </Base>

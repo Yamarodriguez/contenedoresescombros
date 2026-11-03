@@ -25,11 +25,15 @@ const dominio = `https://${site.dominio}`;
 const key = new URL(data.url).pathname.replace(/^\/|\/$/g, '').replace(/\//g, '__') || 'index';
 const seo = seoDe(key);
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
-const bloques = data.blocks.filter((b: any) => !(b.type === 'heading' && b.tag === 'h1'));
+const omitir = data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0);
 const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: data.title, url: data.url }];
 const faq = (faqData as Record<string, any[]>)[data.slug] || [];
 const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 const zona = (ciudades as Record<string, any>)[data.slug] || null;
+const legal = /^(aviso-legal|politica-de-)/.test(data.slug);
+const subtitulo = legal ? '' : zona
+  ? `Contenedores para escombros y residuos de obra en ${zona.nombre}: tamaños, precios orientativos y presupuesto sin compromiso.`
+  : site.descripcion;
 ---
 <Base
   title={seo.titulo || data.title}
@@ -41,8 +45,8 @@ const zona = (ciudades as Record<string, any>)[data.slug] || null;
   migas={migas}
   datos={datos}
 >
-  <Hero titulo={h1 ? h1.text : data.title} />
-  <Contenido bloques={bloques} />
+  <Hero titulo={h1 ? h1.text : data.title} subtitulo={subtitulo} cta={!legal} />
+  <Contenido bloques={data.blocks} filas={data.filas} omitir={omitir} />
   <Zona zona={zona} />
   <Faq items={faq} />
 </Base>

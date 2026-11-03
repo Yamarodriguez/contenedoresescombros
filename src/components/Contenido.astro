@@ -1,30 +1,30 @@
 ---
+// Contenido de la página con su maquetación original de Elementor: cada fila
+// principal es una banda (fondo alterno) y dentro van sus columnas. El orden y
+// el contenido no cambian. Si una página no tuviera filas, se pinta en lista.
 import Bloque from './Bloque.astro';
-const { bloques } = Astro.props as { bloques: any[] };
+import Fila from './Fila.astro';
 
-// Se agrupa el contenido en secciones: cada H2 abre una sección (con fondo
-// alterno). Lo anterior al primer H2 va en una sección de intro. El orden y el
-// contenido no cambian.
-type Sec = { titular: any | null; bloques: any[] };
-const secciones: Sec[] = [];
-let actual: Sec = { titular: null, bloques: [] };
-for (const b of bloques) {
-  if (b.type === 'heading' && b.tag === 'h2') {
-    if (actual.titular || actual.bloques.length) secciones.push(actual);
-    actual = { titular: b, bloques: [] };
-  } else {
-    actual.bloques.push(b);
-  }
-}
-if (actual.titular || actual.bloques.length) secciones.push(actual);
+interface Props { bloques: any[]; filas?: any[]; omitir?: number[] }
+const { bloques, filas = [], omitir = [] } = Astro.props as Props;
+const salta = new Set(omitir);
+const visibles = (f: any): number => f.columnas.reduce((n: number, c: any) => n + c.items.reduce((m: number, it: any) => m + (it.fila ? visibles(it.fila) : salta.has(it.b) ? 0 : 1), 0), 0);
+const bandas = filas.filter((f) => visibles(f) > 0);
 ---
 <div class="contenido">
-  {secciones.map((s, i) => (
-    <section class:list={['seccion', { alt: i % 2 === 1 }]}>
-      <div class="seccion-in">
-        {s.titular && <Bloque b={s.titular} />}
-        {s.bloques.map((b) => <Bloque b={b} />)}
-      </div>
-    </section>
-  ))}
+  {bandas.length
+    ? bandas.map((f) => (
+        <section class="banda">
+          <div class="banda-in">
+            <Fila fila={f} bloques={bloques} omitir={omitir} />
+          </div>
+        </section>
+      ))
+    : (
+        <section class="banda">
+          <div class="banda-in">
+            {bloques.map((b, i) => !salta.has(i) && <Bloque b={b} />)}
+          </div>
+        </section>
+      )}
 </div>

@@ -377,5 +377,419 @@
    "text": "Venta de camiones portacontenedores, si necesitas un camión, no dudes en consultarnos! Precios y garantías",
    "html": "<p>Venta de camiones portacontenedores, si necesitas un camión, no dudes en consultarnos! Precios y garantías</p>"
   }
+ ],
+ "filas": [
+  {
+   "columnas": [
+    {
+     "ancho": 58.246,
+     "items": [
+      {
+       "b": 0
+      },
+      {
+       "b": 1
+      },
+      {
+       "b": 2
+      }
+     ]
+    },
+    {
+     "ancho": 41.58,
+     "items": [
+      {
+       "b": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 4
+      },
+      {
+       "b": 5
+      },
+      {
+       "b": 6
+      },
+      {
+       "b": 7
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 50,
+          "items": [
+           {
+            "b": 8
+           },
+           {
+            "b": 9
+           }
+          ]
+         },
+         {
+          "ancho": 50,
+          "items": [
+           {
+            "b": 10
+           },
+           {
+            "b": 11
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 12
+           },
+           {
+            "b": 13
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 14
+           },
+           {
+            "b": 15
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 16
+           },
+           {
+            "b": 17
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 18
+           },
+           {
+            "b": 19
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 20
+           },
+           {
+            "b": 21
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 22
+           },
+           {
+            "b": 23
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 65.87,
+     "items": [
+      {
+       "b": 24
+      },
+      {
+       "b": 25
+      },
+      {
+       "b": 26
+      }
+     ]
+    },
+    {
+     "ancho": 33.956,
+     "items": [
+      {
+       "b": 27
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 66.569,
+     "items": [
+      {
+       "b": 28
+      },
+      {
+       "b": 29
+      },
+      {
+       "b": 30
+      }
+     ]
+    },
+    {
+     "ancho": 33.391,
+     "items": [
+      {
+       "b": 31
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 48.973,
+     "items": [
+      {
+       "b": 32
+      },
+      {
+       "b": 33
+      },
+      {
+       "b": 34
+      }
+     ]
+    },
+    {
+     "ancho": 50.983,
+     "items": [
+      {
+       "b": 35
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 36
+      },
+      {
+       "b": 37
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 38
+      },
+      {
+       "b": 39
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 40
+      },
+      {
+       "b": 41
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 42
+      },
+      {
+       "b": 43
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 44
+      },
+      {
+       "b": 45
+      },
+      {
+       "b": 46
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 47
+      },
+      {
+       "b": 48
+      },
+      {
+       "b": 49
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 50
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 60.911,
+     "items": [
+      {
+       "b": 51
+      },
+      {
+       "b": 52
+      }
+     ]
+    },
+    {
+     "ancho": 38.804,
+     "items": [
+      {
+       "b": 53
+      },
+      {
+       "b": 54
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 55
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 56
+      },
+      {
+       "b": 57
+      },
+      {
+       "b": 58
+      }
+     ]
+    },
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 59
+      },
+      {
+       "b": 60
+      },
+      {
+       "b": 61
+      }
+     ]
+    },
+    {
+     "ancho": 33,
+     "items": [
+      {
+       "b": 62
+      },
+      {
+       "b": 63
+      },
+      {
+       "b": 64
+      }
+     ]
+    }
+   ]
+  }
  ]
 }

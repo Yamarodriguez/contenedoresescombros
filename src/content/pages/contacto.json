@@ -98,5 +98,129 @@
    "text": "Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!",
    "html": "<p>Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!</p>"
   }
+ ],
+ "filas": [
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 58.246,
+     "items": [
+      {
+       "b": 2
+      },
+      {
+       "b": 3
+      },
+      {
+       "b": 4
+      }
+     ]
+    },
+    {
+     "ancho": 41.58,
+     "items": [
+      {
+       "b": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 25.189,
+     "items": [
+      {
+       "b": 7
+      },
+      {
+       "b": 8
+      },
+      {
+       "b": 9
+      }
+     ]
+    },
+    {
+     "ancho": 24.787,
+     "items": [
+      {
+       "b": 10
+      },
+      {
+       "b": 11
+      },
+      {
+       "b": 12
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 13
+      },
+      {
+       "b": 14
+      },
+      {
+       "b": 15
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 16
+      },
+      {
+       "b": 17
+      },
+      {
+       "b": 18
+      }
+     ]
+    }
+   ]
+  }
  ]
 }

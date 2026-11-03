@@ -6,7 +6,7 @@ Cada informe dice el estado (local / commit / main desplegado).
 
 ## Decisiones (valores por defecto del método; se confirman al tener el export)
 - D1 Fuente: el XML de WordPress (`_elementor_data`), no la web en vivo.
-- D2 Sube a main: Claude, con `npm run todo` y `todo:visual` a 0.
+- D2 Sube a main: SOLO cuando Yama lo confirme en el chat (cambiado el 2026-11-03). Antes, `todo` y `todo:visual` a 0. Netlify publica en cada push.
 - D3 Diseño: 2-3 propuestas (`?tema=a|b|c`) desde webs de referencia; se elige una y se prueba por tipos.
 - D4 DNS: se quedan en el registrador; si van a Netlify, copiar antes los registros de correo.
 - D5 Países: cada país no principal en su subcarpeta (/ar/, /mx/…) desde el principio.

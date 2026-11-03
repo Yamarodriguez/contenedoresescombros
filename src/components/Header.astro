@@ -13,7 +13,7 @@ const principal = (menus as any).principal as any[];
           <li class={e.children && e.children.length ? 'con-hijos' : ''}>
             <a href={e.url || '#'}>{e.label}</a>
             {e.children && e.children.length > 0 && (
-              <ul class="submenu">
+              <ul class:list={['submenu', { 'submenu-ancho': e.children.length > 8 }]}>
                 {e.children.map((c: any) => <li><a href={c.url || '#'}>{c.label}</a></li>)}
               </ul>
             )}

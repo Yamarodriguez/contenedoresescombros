@@ -251,5 +251,301 @@
    "text": "Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!",
    "html": "<p>Quieres comprar un contenedor quieres conocer sus precios de contenedores para casas! Consutla mas!</p>"
   }
+ ],
+ "filas": [
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 0
+      },
+      {
+       "b": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 58.246,
+     "items": [
+      {
+       "b": 3
+      },
+      {
+       "b": 4
+      },
+      {
+       "b": 5
+      }
+     ]
+    },
+    {
+     "ancho": 41.58,
+     "items": [
+      {
+       "b": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "b": 7
+      },
+      {
+       "b": 8
+      },
+      {
+       "b": 9
+      },
+      {
+       "b": 10
+      }
+     ]
+    },
+    {
+     "ancho": 50,
+     "items": [
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 11
+           },
+           {
+            "b": 12
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 13
+           },
+           {
+            "b": 14
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 15
+           },
+           {
+            "b": 16
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 17
+           },
+           {
+            "b": 18
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 19
+           },
+           {
+            "b": 20
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 21
+           },
+           {
+            "b": 22
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "fila": {
+        "columnas": [
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 23
+           },
+           {
+            "b": 24
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 25
+           },
+           {
+            "b": 26
+           }
+          ]
+         },
+         {
+          "ancho": 33,
+          "items": [
+           {
+            "b": 27
+           },
+           {
+            "b": 28
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 66.569,
+     "items": [
+      {
+       "b": 29
+      },
+      {
+       "b": 30
+      },
+      {
+       "b": 31
+      }
+     ]
+    },
+    {
+     "ancho": 33.391,
+     "items": [
+      {
+       "b": 32
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": null,
+     "items": [
+      {
+       "b": 33
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "ancho": 25.189,
+     "items": [
+      {
+       "b": 34
+      },
+      {
+       "b": 35
+      },
+      {
+       "b": 36
+      }
+     ]
+    },
+    {
+     "ancho": 24.787,
+     "items": [
+      {
+       "b": 37
+      },
+      {
+       "b": 38
+      },
+      {
+       "b": 39
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 40
+      },
+      {
+       "b": 41
+      },
+      {
+       "b": 42
+      }
+     ]
+    },
+    {
+     "ancho": 25,
+     "items": [
+      {
+       "b": 43
+      },
+      {
+       "b": 44
+      },
+      {
+       "b": 45
+      }
+     ]
+    }
+   ]
+  }
  ]
 }
