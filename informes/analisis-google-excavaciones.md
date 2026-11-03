@@ -89,13 +89,46 @@
 
 Contenido nuevo: unas 1.200 palabras (antes unas 700), a la altura de las mejores de Madrid. 8 preguntas con datos estructurados.
 
+Después del análisis de excavacionesvalencia.net (apartado 7) se añadieron 3 H3 de tipos, el H2 de alquiler de excavadora con conductor, una pregunta más y 20 localidades: en total **9 H2, 33 H3, 9 preguntas y unas 1.500 palabras**.
+
 ## 6. Lo que NO he puesto (necesito tus datos)
 
 - **Precios en euros.** Las mejores de Madrid y Habitissimo los tienen, pero yo no me los invento. Si me das precios reales (por m³, por jornada de máquina, por piscina…), los pongo en una tabla y la página gana mucho.
 - **Trabajos hechos, fotos de obras y opiniones.** Las mejores los tienen. Solo si son reales.
 - **Quién hace las excavaciones y en qué zonas.** El texto sigue siendo neutro hasta que me lo confirmes.
 
-## 7. Siguiente paso: páginas de cada ciudad
+## 7. A fondo: excavacionesvalencia.net (1.º en «excavaciones Valencia»)
+
+**Por qué sale primero**
+
+1. **El dominio es la búsqueda**: «excavacionesvalencia.net». Eso pesa mucho y no se puede copiar.
+2. **Web antigua** (con contenido de 2014) de una empresa real de Xirivella con dirección y teléfono: Google se fía de ella.
+3. **Muchas páginas del mismo tema**:
+   - **12 páginas de servicio**, una por trabajo: canalizaciones, transformaciones agrícolas, cimentaciones, rellenos y compactaciones, desbroce de parcelas, transporte de áridos, movimientos de tierra, desmontes, excavaciones (zanjas y piscinas), alquiler de maquinaria con conductor, derribos y alquiler de excavadoras.
+   - **Unas 30 páginas de pueblo** («excavaciones-torrente», «excavaciones-sagunto», «excavaciones-jativa», «excavaciones-alcira», «excavaciones-onteniente»…), con H1 «Excavaciones {Pueblo}» y título «Excavaciones {Pueblo} - Alquiler excavadoras {Pueblo}». Usan el **nombre en castellano** (Torrente, Játiva, Alcira, Onteniente) y a veces los dos (Xirivella y Chirivella).
+   - Un **blog** con 13 entradas: cimentaciones, piscinas, muros de contención y escolleras, desbrozadoras, canalizaciones, transformaciones agrícolas.
+
+**Sus puntos flojos (donde se le puede ganar)**
+
+- Páginas de pueblo de **unas 450 palabras** hechas con plantilla: cambia el nombre del pueblo y poco más.
+- **Sin preguntas frecuentes, sin precios, sin mapa.** Solo una pregunta suelta: «¿Necesita alquilar una excavadora?».
+- El texto de la página de accesibilidad, en inglés, se cuela en todas las páginas con H2 y H3 que no tienen nada que ver.
+- Páginas sin tocar desde junio de 2024.
+
+**Ideas que he añadido a tu página de Excavaciones**
+
+- H3 nuevos en «Tipos de excavación»: **Canalizaciones**, **Transformaciones agrícolas** (muy de Valencia: campos y huertos) y **Muros de contención y escolleras**.
+- H2 nuevo: **Alquiler de excavadora con conductor o excavación completa**. Es su segunda palabra clave («alquiler excavadoras {pueblo}») y explica las dos formas de contratar.
+- Pregunta nueva: **¿Cuánto cuesta alquilar una excavadora con conductor?** (sin cifras).
+- Enlaces a **20 localidades** de Valencia con página en tu web, con el nombre en los dos idiomas cuando la gente busca de las dos formas: Torrent (Torrente), Xàtiva (Játiva), Ontinyent (Onteniente), Llíria (Liria)…
+
+**Ideas para más adelante**
+
+- **Páginas de pueblo mejores que las suyas**: 900-1.200 palabras, con tipos, contenedores para la tierra, preguntas del ayuntamiento de ese pueblo y pueblos cercanos. Título con las dos formas cuando haga falta: «Excavaciones en Xàtiva (Játiva)».
+- **Galería de trabajos reales** y una **ficha de Google Business Profile** (empresa en Google Maps). Lo tienen las empresas que salen arriba. Solo si hay empresa y trabajos reales detrás.
+- **Páginas de servicio** (piscinas, alquiler de excavadora con conductor, canalizaciones…) solo para los trabajos que de verdad se ofrezcan.
+
+## 8. Siguiente paso: páginas de cada ciudad
 
 Plantilla que propongo, a partir de lo que hacen las que ganan en Valencia y Madrid:
 
