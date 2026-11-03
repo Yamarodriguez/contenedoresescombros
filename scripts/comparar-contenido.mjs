@@ -76,11 +76,13 @@ for (const p of paginas) {
   const zona = zonaNueva(html);
   const pag = JSON.parse(fs.readFileSync(path.join('src/content/pages', (ruta || 'index') + '.json'), 'utf8'));
   const conv = preguntasConvertidas(pag.blocks, pag.filas, cambios.preguntas);
-  const bl = p.blocks.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b));
+  // Partes del original que Yama ha pedido quitar (fallos-original.json -> quitar).
+  const quitados = new Set(cambios.quitar?.[ruta || 'index'] || []);
+  const bl = p.blocks.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b)).filter((_, i) => !quitados.has(i));
   subTxt(viejoTextos(bl), textoUnidades(zona).join(' || '), 'texto', p, dif);
-  subArr(viejoBotones(p.blocks), nuevoBotones(html), 'boton', p, dif);
-  subArr(viejoEnlaces(p.blocks), nuevoEnlaces(html), 'enlace', p, dif);
-  subImg(viejoImagenes(p.blocks), nuevoImagenes(html), p, dif);
+  subArr(viejoBotones(bl), nuevoBotones(html), 'boton', p, dif);
+  subArr(viejoEnlaces(bl), nuevoEnlaces(html), 'enlace', p, dif);
+  subImg(viejoImagenes(bl), nuevoImagenes(html), p, dif);
 }
 
 fs.mkdirSync('informes', { recursive: true });

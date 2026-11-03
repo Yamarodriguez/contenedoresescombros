@@ -3,7 +3,8 @@
  "reglas": [
   "Encabezados en MAYÚSCULAS -> tipo frase",
   "Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)",
-  "Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)"
+  "Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)",
+  "quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)"
  ],
  "titulos": {
   "albacete": "Contenedores de escombros en Albacete: precio y alquiler",
@@ -75,5 +76,53 @@
   "medidas de contenedores de escombros": "¿Qué medidas tienen los contenedores de escombros?",
   "recogida de escombros": "¿Se puede contratar la recogida de escombros?",
   "retirada de escombros y residuos": "¿Se puede contratar la retirada de escombros y residuos?"
+ },
+ "quitar": {
+  "excavaciones": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81
+  ]
  }
 }

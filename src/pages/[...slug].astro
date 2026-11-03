@@ -12,7 +12,7 @@ import cambiosData from '../data/fallos-original.json';
 import principales from '../data/principales.json';
 import contenidoNuevo from '../data/contenido-nuevo.json';
 import Anadido from '../components/Anadido.astro';
-import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq } from '../lib/textos.mjs';
+import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq, bloquesDeFila } from '../lib/textos.mjs';
 
 export async function getStaticPaths() {
   const files = import.meta.glob('../content/pages/*.json', { eager: true });
@@ -35,11 +35,14 @@ const propios = nombresPropios(ciudades);
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
 const tituloH1 = cambios.h1[data.slug] || tipoFrase(h1 ? h1.text : data.title, propios);
 const bloques = aplicarCambios(data.blocks, { titulo: tituloH1, propios });
-const omitir = data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0);
+// Partes del original que Yama ha pedido quitar (fallos-original.json -> quitar).
+const quitados = new Set<number>(cambios.quitar?.[data.slug] || []);
+const filas = (data.filas || []).filter((f: any) => !bloquesDeFila(f).every((i: number) => quitados.has(i)));
+const omitir = [...data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0), ...quitados];
 const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: cambios.h1[data.slug] || tipoFrase(data.title, propios), url: data.url }];
 const faq = (faqData as Record<string, any[]>)[data.slug] || [];
 // Bloque Medidas / Recogida convertido en preguntas: si existe, las preguntas de faq.json van dentro.
-const faqBloque = (data.filas || []).map((f: any) => detectarFaq(f, bloques, cambios.preguntas)).find(Boolean);
+const faqBloque = filas.map((f: any) => detectarFaq(f, bloques, cambios.preguntas)).find(Boolean);
 // Contenido nuevo encima del original (p. ej. Excavaciones): sus preguntas también van a los datos.
 const anadido = (contenidoNuevo as Record<string, any>)[data.slug] || null;
 const preguntasPagina = [
@@ -67,7 +70,7 @@ const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
 >
   <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} imagen={principal} />
   {anadido && <Anadido datos={anadido} />}
-  <Contenido bloques={bloques} filas={data.filas} omitir={omitir} preguntas={cambios.preguntas} tituloFaq={cambios.tituloFaq} faqExtra={faqBloque ? faq : []} />
+  <Contenido bloques={bloques} filas={filas} omitir={omitir} preguntas={cambios.preguntas} tituloFaq={cambios.tituloFaq} faqExtra={faqBloque ? faq : []} />
   <Zona zona={zona} />
   {!faqBloque && <Faq items={faq} />}
 </Base>

@@ -30,8 +30,11 @@ for (const p of paginas) {
   const conv = preguntasConvertidas(pag.blocks, pag.filas, cambios.preguntas);
   const hb = pag.blocks.map((b, i) => (b.type === 'heading' ? i : -1)).filter((i) => i >= 0);
   if (hb.length !== p.headings.length) { diferencias.push(`${p.url}: la estructura viva y la página no tienen los mismos titulares`); continue; }
+  // Partes del original que Yama ha pedido quitar (fallos-original.json -> quitar).
+  const quitados = new Set(cambios.quitar?.[slug] || []);
   let originales = []; let conTituloFaq = false;
   p.headings.forEach((h, k) => {
+    if (quitados.has(hb[k])) return;
     const q = conv.get(hb[k]);
     if (q) { if (!conTituloFaq) { originales.push(['h2', limpia(cambios.tituloFaq)]); conTituloFaq = true; } originales.push(['h3', limpia(q)]); }
     else if (/^h[1-3]$/.test(h.tag)) originales.push([h.tag, limpia(tipoFrase(h.text, propios))]);

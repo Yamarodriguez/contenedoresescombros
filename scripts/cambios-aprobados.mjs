@@ -9,7 +9,7 @@
 //      node scripts/cambios-aprobados.mjs         (escribe el fichero)
 import fs from 'node:fs';
 import path from 'node:path';
-import { aplicarCambios, esMayusculas, nombresPropios } from '../src/lib/textos.mjs';
+import { aplicarCambios, esMayusculas, nombresPropios, bloquesDeFila, normT } from '../src/lib/textos.mjs';
 
 const SECO = process.argv.includes('--seco');
 const seo = JSON.parse(fs.readFileSync('src/data/seo.json', 'utf8'));
@@ -77,8 +77,26 @@ const preguntas = {
   'retirada de escombros y residuos': '¿Se puede contratar la retirada de escombros y residuos?',
 };
 
-// --- Comprobaciones de las reglas ---
+// --- Partes del original que se quitan ---
+// Yama (2026-11-03): en Excavaciones, quitar lo repetido de contenedores y dejar los tipos de
+// contenedores de escombros y «Otros servicios de contenedores». Se conservan las filas
+// principales cuyo primer titular está en la lista; el resto de filas se quita.
+const conservar = {
+  excavaciones: ['contenedores escombros y residuos', 'otros servicios de contenedores', 'venta de contenedores'],
+};
 const errores = [];
+const quitar = {};
+const resumenQuitar = [];
+for (const [slug, lista] of Object.entries(conservar)) {
+  const p = paginas.find((x) => x.slug === slug);
+  const titular = (f) => normT((bloquesDeFila(f).map((i) => p.blocks[i]).find((b) => b.type === 'heading') || {}).text || '');
+  for (const t of lista) if (!p.filas.some((f) => titular(f) === t)) errores.push(`${slug}: no hay ninguna fila que empiece por «${t}»`);
+  const quitadas = p.filas.filter((f) => !lista.includes(titular(f)));
+  quitar[slug] = quitadas.flatMap(bloquesDeFila).sort((a, b) => a - b);
+  resumenQuitar.push(`${slug}: se quitan ${quitadas.length} filas (${quitar[slug].length} bloques): ${quitadas.map((f) => titular(f) || '(sin titular)').join(' · ')}`);
+}
+
+// --- Comprobaciones de las reglas ---
 for (const [k, t] of Object.entries(titulos)) if (t.length > MAX) errores.push(`título de ${k} con ${t.length} caracteres`);
 const repetidos = Object.values(titulos).filter((t, i, a) => a.indexOf(t) !== i);
 if (repetidos.length) errores.push('títulos repetidos: ' + repetidos.join(' | '));
@@ -101,12 +119,13 @@ console.log(`H1 nuevos: ${Object.keys(h1).length} (${Object.entries(h1).map(([k,
 console.log(`Descripciones nuevas: ${Object.keys(descripciones).length} (${Object.keys(descripciones).join(', ')})`);
 console.log(`Encabezados de MAYÚSCULAS a tipo frase: ${mayus} (${ejMayus.size} textos distintos)\n${[...ejMayus].slice(0, 5).map(([a, b]) => `    «${a}» -> «${b}»`).join('\n')}`);
 console.log(`Fotos que reciben texto alternativo: ${alts}\n${ejAlt.map((e) => '    ' + e).join('\n')}`);
+console.log(`Partes quitadas:\n${resumenQuitar.map((e) => '    ' + e).join('\n')}`);
 if (errores.length) { console.log('ERRORES:\n  ' + errores.join('\n  ')); process.exit(1); }
 if (SECO) { console.log('\n(--seco: no se ha escrito nada)'); process.exit(0); }
 
 fs.writeFileSync('src/data/fallos-original.json', JSON.stringify({
   aprobado: 'Yama, 2026-11-03 (auditoría SEO/AEO)',
-  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)'],
-  titulos, h1, descripciones, tituloFaq, preguntas,
+  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)'],
+  titulos, h1, descripciones, tituloFaq, preguntas, quitar,
 }, null, 1) + '\n');
 console.log('\nEscrito src/data/fallos-original.json');

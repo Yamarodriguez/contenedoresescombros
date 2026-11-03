@@ -6,22 +6,30 @@
 import Bloque from './Bloque.astro';
 import Fila from './Fila.astro';
 import FaqBloque from './FaqBloque.astro';
-import { detectarFaq } from '../lib/textos.mjs';
+import { detectarFaq, bloquesDeFila } from '../lib/textos.mjs';
 
 interface Props { bloques: any[]; filas?: any[]; omitir?: number[]; preguntas?: Record<string, string>; tituloFaq?: string; faqExtra?: any[] }
 const { bloques, filas = [], omitir = [], preguntas = {}, tituloFaq = 'Preguntas frecuentes', faqExtra = [] } = Astro.props as Props;
 const salta = new Set(omitir);
 const visibles = (f: any): number => f.columnas.reduce((n: number, c: any) => n + c.items.reduce((m: number, it: any) => m + (it.fila ? visibles(it.fila) : salta.has(it.b) ? 0 : 1), 0), 0);
 const bandas = filas.filter((f) => visibles(f) > 0).map((f) => ({ f, faq: detectarFaq(f, bloques, preguntas) }));
+// Una fila que solo trae un titular (p. ej. «Otros servicios de contenedores») va en la
+// misma banda que la fila siguiente, para que no quede separado de sus fichas.
+const soloTitular = (f: any) => { const v = bloquesDeFila(f).filter((i) => !salta.has(i)); return v.length === 1 && bloques[v[0]].type === 'heading'; };
+const grupos: any[][] = [];
+for (const b of bandas) {
+  const ant = grupos[grupos.length - 1];
+  if (ant && ant.length === 1 && !ant[0].faq && soloTitular(ant[0].f)) ant.push(b); else grupos.push([b]);
+}
 ---
 <div class="contenido">
-  {bandas.length
-    ? bandas.map(({ f, faq }) => (
+  {grupos.length
+    ? grupos.map((grupo) => (
         <section class="banda">
           <div class="banda-in">
-            {faq
+            {grupo.map(({ f, faq }) => (faq
               ? <FaqBloque items={faq.items} bloques={bloques} titulo={tituloFaq} extra={faqExtra} />
-              : <Fila fila={f} bloques={bloques} omitir={omitir} />}
+              : <Fila fila={f} bloques={bloques} omitir={omitir} />))}
           </div>
         </section>
       ))

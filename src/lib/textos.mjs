@@ -55,7 +55,12 @@ export function aplicarCambios(bloques, { titulo = '', propios = [] } = {}) {
   });
 }
 
-const normT = (t = '') => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.\s]+$/, '').replace(/\s+/g, ' ').trim();
+export const normT = (t = '') => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.\s]+$/, '').replace(/\s+/g, ' ').trim();
+
+/** Índices de todos los bloques de una fila, con sus filas anidadas. */
+export function bloquesDeFila(fila) {
+  return fila.columnas.flatMap((c) => c.items.flatMap((it) => (it.fila ? bloquesDeFila(it.fila) : [it.b])));
+}
 
 /**
  * Bloque de 4 columnas «titular H2 + texto | foto + botón | titular H2 + texto | foto + botón»
