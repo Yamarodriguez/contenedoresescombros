@@ -21,6 +21,10 @@ if (!/trailingSlash:\s*'always'/.test(config)) fallos.push('astro.config.mjs sin
 if (!/format:\s*'directory'/.test(config)) fallos.push("astro.config.mjs sin build.format: 'directory'");
 
 const ficheros = paginas('dist');
+// Sin indexar SOLO: 404, gracias y legales (Yama, 2026-11-03). El mapa del sitio lleva
+// exactamente las páginas que se indexan.
+const NOINDEX = /^(404\.html|gracias\/index\.html|aviso-legal\/index\.html|politica-de-[^/]+\/index\.html)$/;
+const mapa = new Set([...fs.readFileSync('dist/sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 for (const f of ficheros) {
   const rel = path.relative('dist', f).replace(/\\/g, '/');
   const html = fs.readFileSync(f, 'utf8');
@@ -64,9 +68,14 @@ for (const f of ficheros) {
     }
   }
   const sinIndice = /<meta name="robots" content="noindex/.test(html);
-  const debeIndexarse = !es404 && rel !== 'gracias/index.html';
+  const debeIndexarse = !NOINDEX.test(rel);
   if (debeIndexarse && sinIndice) fallos.push(`${rel}: lleva noindex y debería indexarse`);
   if (!debeIndexarse && !sinIndice) fallos.push(`${rel}: debería llevar noindex`);
+  if (!es404) {
+    const url = `${DOMINIO}${rel === 'index.html' ? '/' : '/' + rel.replace(/index\.html$/, '')}`;
+    if (debeIndexarse && !mapa.has(url)) fallos.push(`${rel}: se indexa pero no está en el mapa del sitio`);
+    if (!debeIndexarse && mapa.has(url)) fallos.push(`${rel}: lleva noindex y está en el mapa del sitio`);
+  }
 }
 
 fs.mkdirSync('informes', { recursive: true });

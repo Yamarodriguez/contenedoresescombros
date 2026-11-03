@@ -33,7 +33,9 @@ for (const [key, s] of Object.entries(seo)) {
   if (descEsperada !== desc) dif.push(`${key}: descripcion «${desc.slice(0, 50)}» != «${descEsperada.slice(0, 50)}»`);
   const og = (html.match(/<meta property="og:image" content="([^"]*)"/i) || [])[1] || '';
   if (s.imagen && !og) dif.push(`${key}: sin og:image`);
-  if (mapa && !mapa.includes(`<loc>${DOM}${rutaDe(key)}</loc>`)) dif.push(`${key}: no está en sitemap.xml`);
+  // Las legales llevan noindex y no van en el mapa (Yama, 2026-11-03).
+  const legal = /^(aviso-legal|politica-de-)/.test(key);
+  if (mapa && !legal && !mapa.includes(`<loc>${DOM}${rutaDe(key)}</loc>`)) dif.push(`${key}: no está en sitemap.xml`);
 }
 
 fs.mkdirSync('informes', { recursive: true });

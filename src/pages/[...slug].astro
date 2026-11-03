@@ -55,6 +55,7 @@ const preguntasPagina = [
 const datos = preguntasPagina.length ? [{ '@type': 'FAQPage', mainEntity: preguntasPagina.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 const zona = (ciudades as Record<string, any>)[data.slug] || null;
 const principal = (principales as Record<string, any>)[data.slug] || null;
+// Legales: sin indexar y fuera del mapa del sitio (Yama, 2026-11-03).
 const legal = /^(aviso-legal|politica-de-)/.test(data.slug);
 const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
   ? `Contenedores para escombros y residuos de obra en ${zona.nombre}: tamaños, precios orientativos y presupuesto sin compromiso.`
@@ -69,6 +70,7 @@ const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
   ogDescripcion={seo.ogDescripcion}
   migas={migas}
   datos={datos}
+  indexar={!legal}
 >
   <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} imagen={principal} />
   {anadido && <Anadido datos={anadido} />}

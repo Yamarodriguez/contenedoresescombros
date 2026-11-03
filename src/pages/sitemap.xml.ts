@@ -8,7 +8,8 @@ const files = import.meta.glob('../content/pages/*.json', { eager: true });
 
 export const GET: APIRoute = () => {
   const urls = [
-    ...Object.values(files).map((m: any) => m.default.url as string),
+    // Las legales llevan «noindex» y no van en el mapa (Yama, 2026-11-03).
+    ...Object.values(files).map((m: any) => m.default).filter((d: any) => !/^(aviso-legal|politica-de-)/.test(d.slug)).map((d: any) => d.url as string),
     // Páginas de excavaciones por ciudad (nuevas, no vienen de WordPress).
     ...paginasExcavacion(datosExcavacion, ciudades).map((p: any) => `https://${site.dominio}${p.ruta}`),
   ].sort();
