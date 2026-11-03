@@ -1,0 +1,63 @@
+// Reglas de texto aprobadas por Yama el 2026-11-03 (auditoría SEO/AEO). Se aplican
+// al pintar la página y en los comprobadores; el contenido original
+// (src/content/pages, contenido-vivo.json) no se toca. Lo puntual (títulos, H1,
+// descripciones) va en src/data/fallos-original.json.
+
+const letras = (t) => (t.match(/\p{L}/gu) || []).length;
+const escapar = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** ¿Está escrito todo en MAYÚSCULAS? (al menos 4 letras) */
+export function esMayusculas(t = '') {
+  return letras(t) >= 4 && t === t.toLocaleUpperCase('es') && t !== t.toLocaleLowerCase('es');
+}
+
+/** MAYÚSCULAS -> tipo frase, devolviendo su forma a los nombres propios. */
+export function tipoFrase(t = '', propios = []) {
+  if (!esMayusculas(t)) return t;
+  let s = t.toLocaleLowerCase('es');
+  s = s.replace(/\p{L}/u, (c) => c.toLocaleUpperCase('es'));
+  for (const p of [...propios].sort((a, b) => b.length - a.length)) {
+    if (!p) continue;
+    const re = new RegExp(`(?<!\\p{L})${escapar(p.toLocaleLowerCase('es'))}(?!\\p{L})`, 'gu');
+    s = s.replace(re, p);
+  }
+  return s;
+}
+
+const limpiarAlt = (t = '') => t.replace(/^[¿¡\s]+/, '').replace(/[?!.:;,\s]+$/, '').replace(/\s+/g, ' ').trim();
+
+/**
+ * Texto alternativo para una foto que no lo tiene, sacado del contenido de la
+ * propia página (sin inventar): el titular enlazado a lo mismo que la foto (fichas
+ * de tipos), si no el último titular anterior, y si no el título de la página.
+ */
+export function altPara(bloques, i, porDefecto = '', propios = []) {
+  const img = bloques[i];
+  const sig = bloques[i + 1], ant = bloques[i - 1];
+  let t = '';
+  if (img.href && sig && sig.type === 'heading' && sig.href === img.href) t = sig.text;
+  else if (img.href && ant && ant.type === 'heading' && ant.href === img.href) t = ant.text;
+  else {
+    for (let k = i - 1; k >= 0; k--) {
+      const b = bloques[k];
+      if (b.type === 'heading' && /^h[1-4]$/.test(b.tag)) { t = b.text; break; }
+    }
+  }
+  return limpiarAlt(tipoFrase(t || porDefecto, propios));
+}
+
+/** Aplica las reglas a los bloques de una página: encabezados en tipo frase y alt de las fotos. */
+export function aplicarCambios(bloques, { titulo = '', propios = [] } = {}) {
+  return bloques.map((b, i) => {
+    if (b.type === 'heading') return { ...b, text: tipoFrase(b.text, propios) };
+    if (b.type === 'image' && !(b.alt || '').trim()) return { ...b, alt: altPara(bloques, i, titulo, propios) };
+    return b;
+  });
+}
+
+/** Nombres propios que hay que respetar al quitar las mayúsculas. */
+export function nombresPropios(ciudades = {}) {
+  const s = new Set(['España', 'Comunidad Valenciana', 'Canarias', 'Cataluña']);
+  for (const c of Object.values(ciudades)) { if (c.nombre) s.add(c.nombre); if (c.provincia) s.add(c.provincia); }
+  return [...s];
+}

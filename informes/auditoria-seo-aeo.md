@@ -188,6 +188,8 @@ Bloquear los de entrenamiento **no** te quita de las búsquedas de ChatGPT, Clau
 
 **Ya hecho (en local, sin subir):** diseño con las columnas originales; 1.047 redirecciones de miniaturas de WordPress a su foto; caché larga de imágenes y estilos.
 
+**Aplicado con tu OK (3 nov):** rápidas nº 1, 2, 4, 5, 6, 7 y 9. Títulos cortados por Google: de 42 a 0. Fotos sin descripción: de 1.731 a 0. Subtítulos en mayúsculas: de 87 a 0. Páginas sin descripción: de 5 a 0. Páginas con preguntas frecuentes: de 5 a 10. `llms.txt` completo. Los cambios están en `src/data/fallos-original.json` y `src/lib/textos.mjs`, y las comprobaciones los aceptan. Pendientes: la 3 (Bing, con tu cuenta), la 8 (necesita tu dirección) y la 10 (tu decisión).
+
 ### Rápidas (esta semana)
 
 | # | Qué | Impacto | Esfuerzo | Necesita |

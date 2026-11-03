@@ -60,5 +60,8 @@ Regenerar todo en orden: `npm run generar` (extraer → geo → medidas → seo 
 Pendiente Fase 4: legales reescritas (necesita dirección legal completa y confirmar modelo de negocio); decidir hola-mundo y personalizar-cookies; (opcional) tablas de medidas, más FAQ.
 Fase 5 (formulario) HECHA: Netlify Forms con envío sin recargar (fetch), aviso de enviado/error, honeypot anti-spam, /gracias/. Avisa a yamandu_5@hotmail.com (se activa en el panel de Netlify, Fase 7). Prueba real de envío: solo con el sitio ya en Netlify.
 Fase 6 (velocidad) HECHA: webp 400/800 con `<picture>` (470 webp), tipografía Inter local (fontsource), todas las imágenes con medidas. sharp funciona (devDependency).
+Diseño rehecho (2026-11-03): filas y columnas de Elementor (`filas` en cada JSON, `Fila.astro`), fichas en tarjetas, héroe con foto. Capturas: `node scripts/capturas-paginas.mjs local <carpeta>`.
+Auditoría SEO/AEO en `informes/auditoria-seo-aeo.md`. Cambios aprobados por Yama en `src/data/fallos-original.json` (títulos, H1, descripciones) y `src/lib/textos.mjs` (mayúsculas -> tipo frase, alt de fotos); los comprobadores los aplican. Regla: `node scripts/cambios-aprobados.mjs --seco`.
+Miniaturas de WordPress: `public/_redirects` (scripts/redirecciones-wp.mjs). Pendiente de Yama: subir (push), Bing, dirección, modelo de negocio, precios reales, robots de entrenamiento.
 Siguiente: legales (Fase 4, pendiente de tus datos) y Fase 7 (lanzamiento: conectar Netlify, DNS y correo, GA4, redirecciones wp-content/Yoast, ads.txt, Search Console). Netlix/DNS necesitan a Yama.
 Las FAQ son factuales y neutras (no dicen quién presta el servicio) hasta confirmar si es directorio o alquiler propio.

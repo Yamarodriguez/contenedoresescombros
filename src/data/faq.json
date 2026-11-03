@@ -4,7 +4,8 @@
     { "pregunta": "¿Qué tamaños de contenedor de escombros existen?", "respuesta": "Los más habituales son de 3, 5, 9, 12, 20 y 30 m³. Los pequeños (3 y 5 m³) van bien para reformas en casa, y los grandes (20 y 30 m³) para obras y demoliciones." },
     { "pregunta": "¿Qué se puede tirar en un contenedor de escombros?", "respuesta": "Tierra, escombros, hormigón, ladrillos, tejas y materiales cerámicos, entre otros. No se admiten residuos peligrosos ni materiales que requieran una gestión especial." },
     { "pregunta": "¿Hace falta permiso para dejar el contenedor en la calle?", "respuesta": "Sí. Para colocar un contenedor en la vía pública se necesita una autorización del ayuntamiento del municipio." },
-    { "pregunta": "¿Cuánto cuesta alquilar un contenedor de escombros?", "respuesta": "El precio depende del tamaño del contenedor, de la zona y del tiempo que lo necesites. Lo mejor es pedir un presupuesto sin compromiso indicando la dirección." }
+    { "pregunta": "¿Cuánto cuesta alquilar un contenedor de escombros?", "respuesta": "El precio depende del tamaño del contenedor, de la zona y del tiempo que lo necesites. Lo mejor es pedir un presupuesto sin compromiso indicando la dirección." },
+    { "pregunta": "¿Es lo mismo una cuba, una cubeta o un contenedor de obra?", "respuesta": "Sí. «Contenedor de escombros», «contenedor de obra», «cuba» y «cubeta» son nombres distintos para el mismo contenedor metálico abierto donde se echan los residuos de una obra o reforma. En Cataluña también se le llama contenedor de runa («contenidor de runa»)." }
   ],
   "medidas": [
     { "pregunta": "¿Qué medidas tiene un contenedor de escombros?", "respuesta": "Varían según el tamaño: los de 3 m³ miden alrededor de 2,8 m de largo, y los de 30 m³ superan los 5 m. Consulta la tabla y las fichas de cada tamaño para ver las medidas exactas." },
@@ -12,7 +13,23 @@
   ],
   "precio": [
     { "pregunta": "¿De qué depende el precio de un contenedor de escombros?", "respuesta": "Del tamaño del contenedor, de la provincia o población, del tiempo que lo tengas y del tipo de residuo. Pide presupuesto con la dirección de entrega para tener el precio cerrado." },
-    { "pregunta": "¿El precio incluye la retirada y la gestión de los residuos?", "respuesta": "Normalmente el servicio incluye la entrega, la recogida y el traslado a un gestor autorizado. Confírmalo al pedir el presupuesto." }
+    { "pregunta": "¿El precio incluye la retirada y la gestión de los residuos?", "respuesta": "Normalmente el servicio incluye la entrega, la recogida y el traslado a un gestor autorizado. Confírmalo al pedir el presupuesto." },
+    { "pregunta": "¿Cuánto cuesta una cuba de escombros?", "respuesta": "Una cuba es lo mismo que un contenedor de escombros, así que cuesta lo mismo. Como referencia, un contenedor de 5 a 6 m³ puede costar aproximadamente entre 80 y 170 euros por semana, y alrededor de 250 euros con el transporte, la recogida y la descarga incluidos. El precio final depende del tamaño, la zona y los días que lo necesites." }
+  ],
+  "barcelona": [
+    { "pregunta": "¿Qué es un contenedor de runa?", "respuesta": "Es el nombre que recibe en catalán el contenedor de escombros («contenidor de runa»). Se usa para los residuos de obras y reformas: escombros, tierra, hormigón, ladrillos o material cerámico. Para dejarlo en la vía pública hace falta autorización del ayuntamiento." }
+  ],
+  "girona": [
+    { "pregunta": "¿Qué es un contenedor de runa?", "respuesta": "Es el nombre que recibe en catalán el contenedor de escombros («contenidor de runa»). Se usa para los residuos de obras y reformas: escombros, tierra, hormigón, ladrillos o material cerámico. Para dejarlo en la vía pública hace falta autorización del ayuntamiento." }
+  ],
+  "lleida": [
+    { "pregunta": "¿Qué es un contenedor de runa?", "respuesta": "Es el nombre que recibe en catalán el contenedor de escombros («contenidor de runa»). Se usa para los residuos de obras y reformas: escombros, tierra, hormigón, ladrillos o material cerámico. Para dejarlo en la vía pública hace falta autorización del ayuntamiento." }
+  ],
+  "tarragona": [
+    { "pregunta": "¿Qué es un contenedor de runa?", "respuesta": "Es el nombre que recibe en catalán el contenedor de escombros («contenidor de runa»). Se usa para los residuos de obras y reformas: escombros, tierra, hormigón, ladrillos o material cerámico. Para dejarlo en la vía pública hace falta autorización del ayuntamiento." }
+  ],
+  "albacete": [
+    { "pregunta": "¿Qué es una cubeta de escombros?", "respuesta": "Es otra forma de llamar al contenedor de escombros, también conocido como cuba o contenedor de obra: un contenedor metálico abierto para los residuos de obras y reformas. Para dejarlo en la calle hace falta autorización del ayuntamiento." }
   ],
   "alquiler": [
     { "pregunta": "¿Cuántos días puedo tener el contenedor?", "respuesta": "El tiempo se acuerda al contratar el servicio y se puede ampliar si lo necesitas. Indícalo al pedir el presupuesto." },

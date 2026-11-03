@@ -41,14 +41,23 @@ const viejoEnlaces = (blocks) => {
   }
   return internos(hrefs);
 };
-const viejoImagenes = (blocks) => blocks.filter((b) => b.type === 'image').map((b) => decodeURI(b.src.split('?')[0].split('/').pop()) + ' | ' + norm(b.alt || ''));
+// Imágenes: misma foto y en el mismo orden. El texto alternativo se compara solo si el
+// original ya tenía uno (cambio aprobado: alt añadido a las fotos que no lo tenían).
+const viejoImagenes = (blocks) => blocks.filter((b) => b.type === 'image').map((b) => ({ f: decodeURI(b.src.split('?')[0].split('/').pop()), alt: norm(b.alt || '') }));
 
 const nuevoBotones = (html) => [...zonaNueva(html).matchAll(/<a[^>]*class="[^"]*boton[^"]*"[^>]*>([\s\S]*?)<\/a>/gi)].map((m) => norm(m[1])).filter((t) => t.length > 0);
 const nuevoEnlaces = (html) => internos([...zonaNueva(html).matchAll(/<a\b[^>]*href="([^"]+)"/gi)].map((m) => m[1]));
 const nuevoImagenes = (html) => [...zonaNueva(html).matchAll(/<img\b[^>]*>/gi)].map((m) => {
   const s = (m[0].match(/src="([^"]+)"/i) || [])[1] || ''; const a = (m[0].match(/alt="([^"]*)"/i) || [])[1] || '';
-  return decodeURI(s.split('?')[0].split('/').pop()) + ' | ' + norm(a);
+  return { f: decodeURI(s.split('?')[0].split('/').pop()), alt: norm(a) };
 });
+function subImg(viejo, nuevo, p, dif) {
+  let k = 0;
+  for (const v of viejo) {
+    const i = nuevo.findIndex((x, j) => j >= k && x.f === v.f && (!v.alt || x.alt === v.alt));
+    if (i < 0) dif.push(`${p.url}: falta imagen ${v.f}${v.alt ? ' | ' + v.alt : ''}`); else k = i + 1;
+  }
+}
 
 function subTxt(viejo, nuevoStr, et, p, dif) { let pos = 0; for (const t of viejo) { const i = nuevoStr.indexOf(t, pos); if (i < 0) dif.push(`${p.url}: falta ${et} «${t.slice(0, 70)}»`); else pos = i + t.length; } }
 function subArr(viejo, nuevo, et, p, dif) { let k = 0; for (const t of viejo) { const i = nuevo.indexOf(t, k); if (i < 0) dif.push(`${p.url}: falta ${et} ${String(t).slice(0, 70)}`); else k = i + 1; } }
@@ -65,7 +74,7 @@ for (const p of paginas) {
   subTxt(viejoTextos(p.blocks), textoUnidades(zona).join(' || '), 'texto', p, dif);
   subArr(viejoBotones(p.blocks), nuevoBotones(html), 'boton', p, dif);
   subArr(viejoEnlaces(p.blocks), nuevoEnlaces(html), 'enlace', p, dif);
-  subArr(viejoImagenes(p.blocks), nuevoImagenes(html), 'imagen', p, dif);
+  subImg(viejoImagenes(p.blocks), nuevoImagenes(html), p, dif);
 }
 
 fs.mkdirSync('informes', { recursive: true });
