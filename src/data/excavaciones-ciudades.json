@@ -1,0 +1,48 @@
+{
+ "_nota": "Páginas /excavaciones/<ciudad>/ (Yama, 2026-11-03). Nombre y cercanas salen de ciudades.json; aquí solo lo local y comprobable. region: «cv» (licencia según el artículo 232 del TRLOTUP) o «madrid». tipos: orden de los trabajos (claves de src/lib/excavaciones.mjs). enfoque: frase local, sin inventar datos.",
+ "valencia": {
+  "tambien": "València",
+  "situacion": "es la capital de la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "En la ciudad son habituales las obras en solares entre medianeras, los sótanos y las zanjas para acometidas, a menudo con poco espacio: ahí se trabaja con miniexcavadora y el contenedor necesita permiso para ocupar la calle.",
+  "tipos": ["vaciado", "zanjas", "canalizaciones", "piscinas", "nivelacion", "desbroce"]
+ },
+ "betera": {
+  "situacion": "está en la comarca del Camp de Túria, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Tiene muchas urbanizaciones de chalets, así que son habituales la excavación de piscinas, las zanjas para acometidas y la nivelación de parcelas.",
+  "tipos": ["piscinas", "nivelacion", "zanjas", "canalizaciones", "desbroce", "muros"]
+ },
+ "sagunto": {
+  "tambien": "Sagunt",
+  "situacion": "es la capital de la comarca del Camp de Morvedre, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "El municipio incluye el casco de Sagunto y el Puerto de Sagunto, con obras de vivienda, solares y naves, además de parcelas de cultivo en el término.",
+  "tipos": ["vaciado", "zanjas", "nivelacion", "canalizaciones", "agricolas", "piscinas"]
+ },
+ "xativa": {
+  "tambien": "Játiva",
+  "situacion": "es la capital de la comarca de La Costera, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Parte de la ciudad está en ladera, al pie del castillo, y en las parcelas con desnivel son frecuentes los muros de contención y la nivelación del terreno.",
+  "tipos": ["nivelacion", "muros", "zanjas", "vaciado", "agricolas", "piscinas"]
+ },
+ "algemesi": {
+  "situacion": "está en la comarca de la Ribera Alta, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Está rodeado de huerta y campos de naranjos, así que además de las obras urbanas son habituales las transformaciones agrícolas y las canalizaciones de riego.",
+  "tipos": ["agricolas", "canalizaciones", "nivelacion", "zanjas", "vaciado", "desbroce"]
+ },
+ "cullera": {
+  "situacion": "está en la costa, en la comarca de la Ribera Baixa (provincia de Valencia)",
+  "region": "cv",
+  "enfoque": "Cerca del mar y del río Júcar el agua puede aparecer a poca profundidad al excavar; si pasa, hay que achicarla con bombas antes de seguir.",
+  "tipos": ["piscinas", "vaciado", "zanjas", "canalizaciones", "nivelacion", "agricolas"]
+ },
+ "madrid": {
+  "situacion": "es la capital de España y de la Comunidad de Madrid",
+  "region": "madrid",
+  "enfoque": "En la ciudad son habituales los vaciados de sótanos, las obras en solares con acceso estrecho y las zanjas para acometidas; en las urbanizaciones de los alrededores, las piscinas y la nivelación de parcelas.",
+  "tipos": ["vaciado", "zanjas", "piscinas", "nivelacion", "canalizaciones", "muros"]
+ }
+}

@@ -2,6 +2,9 @@
 // Contenido nuevo que va ENCIMA del original (src/data/contenido-nuevo.json), p. ej.
 // la página de Excavaciones (Yama, 2026-11-03). Usa los mismos bloques y estilos.
 import Bloque from './Bloque.astro';
+import ciudades from '../data/ciudades.json';
+import datosExcavacion from '../data/excavaciones-ciudades.json';
+import { paginasExcavacion } from '../lib/excavaciones.mjs';
 
 interface Props { datos: any }
 const { datos } = Astro.props as Props;
@@ -9,6 +12,8 @@ const h2 = (text: string) => ({ type: 'heading', tag: 'h2', text });
 const texto = (html: string) => ({ type: 'text', html, text: '' });
 // Filas completas: de 4 en 4 si salen justas; si no, como mucho 3 por fila (6 -> 3+3, 5 -> 3+2).
 const rejilla = (n: number) => (n % 4 === 0 ? 'tarjetas-texto' : 'tarjetas-texto tres');
+// Sección con «enlacesExcavaciones»: enlaza las páginas de excavaciones por ciudad que existan.
+const excavacionesCiudad = paginasExcavacion(datosExcavacion, ciudades);
 ---
 <div class="contenido anadido">
   {datos.entradilla && (
@@ -30,6 +35,14 @@ const rejilla = (n: number) => (n % 4 === 0 ? 'tarjetas-texto' : 'tarjetas-texto
         ) : (
           <>
             <Bloque b={h2(s.h2)} />
+            {s.enlacesExcavaciones && (
+              <>
+                <p class="texto">Excavaciones y movimiento de tierras por localidad:</p>
+                <ul class="enlaces-zona">
+                  {excavacionesCiudad.map((e: any) => <li><a href={e.ruta}>{e.clave}</a></li>)}
+                </ul>
+              </>
+            )}
             {s.html && <Bloque b={texto(s.html)} />}
           </>
         )}

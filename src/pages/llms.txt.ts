@@ -4,6 +4,8 @@ import seo from '../data/seo.json';
 import ciudades from '../data/ciudades.json';
 import cambiosData from '../data/fallos-original.json';
 import { tipoFrase, nombresPropios } from '../lib/textos.mjs';
+import datosExcavacion from '../data/excavaciones-ciudades.json';
+import { paginasExcavacion } from '../lib/excavaciones.mjs';
 
 // llms.txt: resumen de la web para asistentes de IA (qué es, datos clave y
 // enlaces agrupados con una línea de descripción). Solo datos que ya están en la web.
@@ -51,6 +53,9 @@ ${tamanos.map(linea).join('\n')}
 
 ## Provincias y localidades
 ${lugares.map((p: any) => `- [${nombre(p)}](${p.url})${ciudadesData[p.slug].provincia ? ` (provincia de ${ciudadesData[p.slug].provincia})` : ''}`).join('\n')}
+
+## Excavaciones y movimiento de tierras por localidad
+${paginasExcavacion(datosExcavacion, ciudadesData).map((e: any) => `- [${e.h1}](https://${site.dominio}${e.ruta}): ${e.descripcion}`).join('\n')}
 
 ## Información legal
 ${legales.map(linea).join('\n')}

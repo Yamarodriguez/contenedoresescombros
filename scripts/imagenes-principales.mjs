@@ -8,6 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 import { tipoFrase, nombresPropios } from '../src/lib/textos.mjs';
+import { paginasExcavacion } from '../src/lib/excavaciones.mjs';
 
 const SOLO = process.argv[2];
 const ANCHO = 1200, ALTO = 630, FRANJA = 150;
@@ -100,6 +101,18 @@ for (const p of pages) {
   const src = `/img/principal/${nombre}.jpg`;
   await generar(p, texto, path.join('public', src));
   salida[p.slug] = { src, alt: texto };
+}
+// Páginas de excavaciones por ciudad (src/lib/excavaciones.mjs): «Excavaciones en {ciudad}».
+const datosExcavacion = JSON.parse(fs.readFileSync('src/data/excavaciones-ciudades.json', 'utf8'));
+for (const e of paginasExcavacion(datosExcavacion, ciudades)) {
+  const clave = `excavaciones/${e.slug}`;
+  if (SOLO && clave !== SOLO) continue;
+  let nombre = fichero(e.clave);
+  if (usados.has(nombre)) nombre = `${nombre}-${e.slug}`;
+  usados.add(nombre);
+  const src = `/img/principal/${nombre}.jpg`;
+  await generar({ slug: 'excavaciones' }, e.clave, path.join('public', src));
+  salida[clave] = { src, alt: e.clave };
 }
 if (!SOLO) fs.writeFileSync('src/data/principales.json', JSON.stringify(salida, null, 1) + '\n');
 console.log(`Imágenes principales: ${Object.keys(salida).length}${SOLO ? ' (prueba, sin escribir el índice)' : ''}`);

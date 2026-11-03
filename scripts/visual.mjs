@@ -11,6 +11,7 @@ const BASE = `http://localhost:${PUERTO}`;
 const TIPOS = [
   ['inicio', '/'], ['servicio', '/precio/'], ['tipo-contenedor', '/contenedores-escombros-3-m3/'],
   ['ciudad', '/valencia/'], ['provincia', '/madrid/'], ['contacto', '/contacto/'],
+  ['excavaciones', '/excavaciones/'], ['excavaciones-ciudad', '/excavaciones/betera/'],
   ['legal', '/aviso-legal/'], ['privacidad', '/politica-de-privacidad/'], ['404', '/esta-pagina-no-existe/'],
 ];
 const VISTAS = [['1400', 1400, 900], ['390', 390, 800]];

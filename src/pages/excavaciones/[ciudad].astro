@@ -1,0 +1,30 @@
+---
+// Páginas de excavaciones por ciudad (Yama, 2026-11-03). Contenido en src/lib/excavaciones.mjs.
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Anadido from '../../components/Anadido.astro';
+import site from '../../data/site.json';
+import ciudades from '../../data/ciudades.json';
+import datosExcavacion from '../../data/excavaciones-ciudades.json';
+import principales from '../../data/principales.json';
+import { paginasExcavacion } from '../../lib/excavaciones.mjs';
+
+export function getStaticPaths() {
+  return paginasExcavacion(datosExcavacion, ciudades).map((p) => ({ params: { ciudad: p.slug }, props: { p } }));
+}
+
+const { p } = Astro.props as { p: any };
+const dominio = `https://${site.dominio}`;
+const url = `${dominio}${p.ruta}`;
+const principal = (principales as Record<string, any>)[`excavaciones/${p.slug}`] || null;
+const migas = [
+  { nombre: 'Inicio', url: `${dominio}/` },
+  { nombre: 'Excavaciones y movimiento de tierras', url: `${dominio}/excavaciones/` },
+  { nombre: p.clave, url },
+];
+const datos = [{ '@type': 'FAQPage', mainEntity: p.faq.map((f: any) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }];
+---
+<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos}>
+  <Hero titulo={p.h1} subtitulo={p.contenido.subtitulo} imagen={principal} />
+  <Anadido datos={p.contenido} />
+</Base>

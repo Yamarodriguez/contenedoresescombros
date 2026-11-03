@@ -128,7 +128,24 @@ Después del análisis de excavacionesvalencia.net (apartado 7) se añadieron 3 
 - **Galería de trabajos reales** y una **ficha de Google Business Profile** (empresa en Google Maps). Lo tienen las empresas que salen arriba. Solo si hay empresa y trabajos reales detrás.
 - **Páginas de servicio** (piscinas, alquiler de excavadora con conductor, canalizaciones…) solo para los trabajos que de verdad se ofrezcan.
 
-## 8. Siguiente paso: páginas de cada ciudad
+## 8. Páginas de excavaciones por ciudad (hechas: primera tanda)
+
+Yama eligió una página nueva por ciudad: **/excavaciones/{ciudad}/**. Primera tanda, con las que ya tienen búsquedas: **Valencia, Bétera, Sagunto, Xàtiva, Algemesí, Cullera y Madrid**.
+
+Cada página lleva:
+
+- **Título:** «Excavaciones en {ciudad}: movimiento de tierras y contenedores» (con el otro nombre si cabe: «Excavaciones en Xàtiva (Játiva): movimiento de tierras»). **H1:** «Excavaciones y movimiento de tierras en {ciudad}».
+- **Entradilla local:** comarca y una frase propia de la zona (urbanizaciones en Bétera, ladera en Xàtiva, huerta en Algemesí, agua cerca del mar en Cullera…).
+- **H2:** tipos de trabajo (6 H3 en el orden que más encaja con la zona) · contenedores para la tierra (enlace a la página de contenedores de esa ciudad) · **licencia para excavar** · precio · zonas cercanas · 5 preguntas con datos estructurados · presupuesto.
+- **Licencia, comprobada:** en la Comunitat Valenciana, el **artículo 232 del TRLOTUP** pide licencia urbanística para los movimientos de tierras y las explanaciones (salvo en un proyecto de reparcelación); el 233, declaración responsable para otras obras en el subsuelo; el 234 deja fuera las labores agrícolas normales. En Madrid se dice solo «licencia o declaración responsable según la obra».
+- Imagen principal propia («excavaciones-betera.jpg»), migas Inicio › Excavaciones › Excavaciones en {ciudad}, en el mapa del sitio y en llms.txt.
+- **Enlaces:** desde /excavaciones/ (lista de localidades) y desde la página de contenedores de esa ciudad («¿Vas a hacer una excavación?»).
+
+**Arreglo de paso:** la página /torrent/ estaba situada en un Torrent de Girona (cercanas: Girona, Barcelona…). Ahora es Torrent (Valencia), con Paiporta, Valencia y Paterna como cercanas.
+
+**Siguiente tanda (cuando Yama lo apruebe):** Torrent, Paterna, Moncada, Alboraya, Paiporta, Ribarroja del Turia, La Pobla de Vallbona, Llíria, Puerto de Sagunto, Carcaixent, Sueca, Gandía, Ontinyent y Requena. Basta con añadirlas a `src/data/excavaciones-ciudades.json` con su comarca y su frase local.
+
+## 9. Plantilla original propuesta para las páginas de ciudad
 
 Plantilla que propongo, a partir de lo que hacen las que ganan en Valencia y Madrid:
 

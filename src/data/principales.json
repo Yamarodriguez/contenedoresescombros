@@ -366,5 +366,33 @@
  "zaragoza": {
   "src": "/img/principal/contenedores-escombros-zaragoza.jpg",
   "alt": "Contenedores de escombros en Zaragoza"
+ },
+ "excavaciones/valencia": {
+  "src": "/img/principal/excavaciones-valencia.jpg",
+  "alt": "Excavaciones en Valencia"
+ },
+ "excavaciones/betera": {
+  "src": "/img/principal/excavaciones-betera.jpg",
+  "alt": "Excavaciones en Bétera"
+ },
+ "excavaciones/sagunto": {
+  "src": "/img/principal/excavaciones-sagunto.jpg",
+  "alt": "Excavaciones en Sagunto"
+ },
+ "excavaciones/xativa": {
+  "src": "/img/principal/excavaciones-xativa.jpg",
+  "alt": "Excavaciones en Xàtiva"
+ },
+ "excavaciones/algemesi": {
+  "src": "/img/principal/excavaciones-algemesi.jpg",
+  "alt": "Excavaciones en Algemesí"
+ },
+ "excavaciones/cullera": {
+  "src": "/img/principal/excavaciones-cullera.jpg",
+  "alt": "Excavaciones en Cullera"
+ },
+ "excavaciones/madrid": {
+  "src": "/img/principal/excavaciones-madrid.jpg",
+  "alt": "Excavaciones en Madrid"
  }
 }

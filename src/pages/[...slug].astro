@@ -12,6 +12,7 @@ import cambiosData from '../data/fallos-original.json';
 import principales from '../data/principales.json';
 import contenidoNuevo from '../data/contenido-nuevo.json';
 import Anadido from '../components/Anadido.astro';
+import datosExcavacion from '../data/excavaciones-ciudades.json';
 import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq, bloquesDeFila } from '../lib/textos.mjs';
 
 export async function getStaticPaths() {
@@ -71,6 +72,6 @@ const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
   <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} imagen={principal} />
   {anadido && <Anadido datos={anadido} />}
   <Contenido bloques={bloques} filas={filas} omitir={omitir} preguntas={cambios.preguntas} tituloFaq={cambios.tituloFaq} faqExtra={faqBloque ? faq : []} />
-  <Zona zona={zona} />
+  <Zona zona={zona} excavacion={(datosExcavacion as Record<string, any>)[data.slug] ? `/excavaciones/${data.slug}/` : null} />
   {!faqBloque && <Faq items={faq} />}
 </Base>

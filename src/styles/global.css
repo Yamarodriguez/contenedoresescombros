@@ -160,6 +160,7 @@ a.foto:hover { transform: translateY(-3px); }
 
 /* Contenido nuevo encima del original (Anadido.astro) */
 .entradilla p { font-size: 1.2rem; line-height: 1.6; max-width: 72ch; margin: 0; }
+.entradilla p + p { margin-top: .9rem; }
 .tarjetas-texto { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin: 1.4rem 0 .4rem; }
 .tarjetas-texto.tres { grid-template-columns: repeat(auto-fit, minmax(max(240px, calc((100% - 2.4rem) / 3)), 1fr)); }
 .tarjeta-texto { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.3rem; box-shadow: 0 4px 14px rgba(18, 28, 45, .05); }

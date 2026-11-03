@@ -1,7 +1,8 @@
 ---
 // Seccion anadida al final de cada pagina de ciudad: provincia y localidades
 // cercanas enlazadas (datos geograficos de OpenStreetMap). Texto factual.
-const { zona } = Astro.props as { zona: any };
+// excavacion: ruta de la página de excavaciones de esa ciudad, si la hay.
+const { zona, excavacion = null } = Astro.props as { zona: any; excavacion?: string | null };
 ---
 {zona && (
   <section class="seccion">
@@ -17,6 +18,9 @@ const { zona } = Astro.props as { zona: any };
             {zona.cercanas.map((c: any) => <li><a href={`/${c.slug}/`}>Contenedores de escombros en {c.nombre}</a></li>)}
           </ul>
         </>
+      )}
+      {excavacion && (
+        <p class="texto">¿Vas a hacer una excavación? Consulta las <a href={excavacion}>excavaciones y movimiento de tierras en {zona.nombre}</a>.</p>
       )}
     </div>
   </section>

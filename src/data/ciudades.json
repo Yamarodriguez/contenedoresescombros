@@ -83,12 +83,12 @@
     "nombre": "Paterna"
    },
    {
-    "slug": "betera",
-    "nombre": "Bétera"
+    "slug": "torrent",
+    "nombre": "Torrent"
    },
    {
-    "slug": "ribarroja-del-turia",
-    "nombre": "Ribarroja del Turia"
+    "slug": "betera",
+    "nombre": "Bétera"
    }
   ]
  },
@@ -118,8 +118,8 @@
     "nombre": "Paiporta"
    },
    {
-    "slug": "valencia",
-    "nombre": "Valencia"
+    "slug": "torrent",
+    "nombre": "Torrent"
    }
   ]
  },
@@ -265,16 +265,16 @@
     "nombre": "Tarragona"
    },
    {
-    "slug": "torrent",
-    "nombre": "Torrent"
-   },
-   {
     "slug": "castellon",
     "nombre": "Castellón"
    },
    {
     "slug": "girona",
     "nombre": "Girona"
+   },
+   {
+    "slug": "puerto-de-sagunto",
+    "nombre": "Puerto de Sagunto"
    }
   ]
  },
@@ -292,10 +292,6 @@
     "nombre": "Girona"
    },
    {
-    "slug": "torrent",
-    "nombre": "Torrent"
-   },
-   {
     "slug": "lleida",
     "nombre": "Lleida"
    },
@@ -306,6 +302,10 @@
    {
     "slug": "baleares",
     "nombre": "Baleares"
+   },
+   {
+    "slug": "castellon",
+    "nombre": "Castellón"
    }
   ]
  },
@@ -811,10 +811,6 @@
   "provinciaSlug": "",
   "cercanas": [
    {
-    "slug": "torrent",
-    "nombre": "Torrent"
-   },
-   {
     "slug": "barcelona",
     "nombre": "Barcelona"
    },
@@ -833,6 +829,10 @@
    {
     "slug": "baleares",
     "nombre": "Baleares"
+   },
+   {
+    "slug": "castellon",
+    "nombre": "Castellón"
    }
   ]
  },
@@ -1203,8 +1203,8 @@
     "nombre": "Moncada"
    },
    {
-    "slug": "alboraya",
-    "nombre": "Alboraya"
+    "slug": "torrent",
+    "nombre": "Torrent"
    }
   ]
  },
@@ -1296,8 +1296,8 @@
     "nombre": "Paiporta"
    },
    {
-    "slug": "pobla-de-vallbona",
-    "nombre": "Pobla de Vallbona"
+    "slug": "torrent",
+    "nombre": "Torrent"
    }
   ]
  },
@@ -1431,6 +1431,10 @@
   "provinciaSlug": "valencia",
   "cercanas": [
    {
+    "slug": "torrent",
+    "nombre": "Torrent"
+   },
+   {
     "slug": "valencia",
     "nombre": "Valencia"
    },
@@ -1449,10 +1453,6 @@
    {
     "slug": "ribarroja-del-turia",
     "nombre": "Ribarroja del Turia"
-   },
-   {
-    "slug": "betera",
-    "nombre": "Bétera"
    }
   ]
  },
@@ -1509,12 +1509,12 @@
     "nombre": "Pobla de Vallbona"
    },
    {
-    "slug": "valencia",
-    "nombre": "Valencia"
+    "slug": "torrent",
+    "nombre": "Torrent"
    },
    {
-    "slug": "alboraya",
-    "nombre": "Alboraya"
+    "slug": "valencia",
+    "nombre": "Valencia"
    }
   ]
  },
@@ -1544,8 +1544,8 @@
     "nombre": "Moncada"
    },
    {
-    "slug": "alboraya",
-    "nombre": "Alboraya"
+    "slug": "torrent",
+    "nombre": "Torrent"
    }
   ]
  },
@@ -1633,12 +1633,12 @@
     "nombre": "Paterna"
    },
    {
-    "slug": "betera",
-    "nombre": "Bétera"
+    "slug": "torrent",
+    "nombre": "Torrent"
    },
    {
-    "slug": "paiporta",
-    "nombre": "Paiporta"
+    "slug": "betera",
+    "nombre": "Bétera"
    }
   ]
  },
@@ -1668,8 +1668,8 @@
     "nombre": "Moncada"
    },
    {
-    "slug": "paiporta",
-    "nombre": "Paiporta"
+    "slug": "torrent",
+    "nombre": "Torrent"
    }
   ]
  },
@@ -1823,8 +1823,8 @@
     "nombre": "Gandía"
    },
    {
-    "slug": "xativa",
-    "nombre": "Xàtiva"
+    "slug": "torrent",
+    "nombre": "Torrent"
    }
   ]
  },
@@ -1854,8 +1854,8 @@
     "nombre": "Girona"
    },
    {
-    "slug": "torrent",
-    "nombre": "Torrent"
+    "slug": "zaragoza",
+    "nombre": "Zaragoza"
    }
   ]
  },
@@ -1954,32 +1954,32 @@
  },
  "torrent": {
   "nombre": "Torrent",
-  "provincia": "Cataluña",
-  "provinciaSlug": "",
+  "provincia": "Valencia",
+  "provinciaSlug": "valencia",
   "cercanas": [
    {
-    "slug": "girona",
-    "nombre": "Girona"
+    "slug": "paiporta",
+    "nombre": "Paiporta"
    },
    {
-    "slug": "barcelona",
-    "nombre": "Barcelona"
+    "slug": "valencia",
+    "nombre": "Valencia"
    },
    {
-    "slug": "tarragona",
-    "nombre": "Tarragona"
+    "slug": "paterna",
+    "nombre": "Paterna"
    },
    {
-    "slug": "lleida",
-    "nombre": "Lleida"
+    "slug": "alboraya",
+    "nombre": "Alboraya"
    },
    {
-    "slug": "baleares",
-    "nombre": "Baleares"
+    "slug": "moncada",
+    "nombre": "Moncada"
    },
    {
-    "slug": "huesca",
-    "nombre": "Huesca"
+    "slug": "ribarroja-del-turia",
+    "nombre": "Ribarroja del Turia"
    }
   ]
  },
@@ -1997,6 +1997,10 @@
     "nombre": "Paiporta"
    },
    {
+    "slug": "torrent",
+    "nombre": "Torrent"
+   },
+   {
     "slug": "moncada",
     "nombre": "Moncada"
    },
@@ -2007,10 +2011,6 @@
    {
     "slug": "betera",
     "nombre": "Bétera"
-   },
-   {
-    "slug": "ribarroja-del-turia",
-    "nombre": "Ribarroja del Turia"
    }
   ]
  },

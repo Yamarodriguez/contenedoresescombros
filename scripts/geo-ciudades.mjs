@@ -19,6 +19,9 @@ const NONCITY = new Set([
   'aviso-legal', 'politica-de-privacidad', 'politica-de-cookies',
 ]);
 
+// Nombres que existen en varias provincias: se busca el de Valencia (la web es de Valencia).
+const CONSULTA = { Torrent: 'Torrent, Valencia' };
+
 const norm = (s = '') => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 const nombreDe = (title) => title.replace(/^contenedores(\s+escombros)?\s+/i, '').replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
 
@@ -44,7 +47,7 @@ async function geo(nombre) {
 }
 
 const info = {};
-for (const p of ciudades) { info[p.slug] = { nombre: nombreDe(p.title), geo: await geo(nombreDe(p.title)) }; }
+for (const p of ciudades) { const n = nombreDe(p.title); info[p.slug] = { nombre: n, geo: await geo(CONSULTA[n] || n) }; }
 
 const porNombre = new Map();
 for (const p of ciudades) porNombre.set(norm(info[p.slug].nombre), p.slug);
