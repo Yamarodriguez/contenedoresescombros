@@ -30,8 +30,13 @@
   from = "/sitemap_index.xml"
   to = "/sitemap.xml"
   status = 301
+# Netlify no admite «*» en mitad del nombre: los mapas de Yoast de la web antigua, uno a uno.
 [[redirects]]
-  from = "/*-sitemap.xml"
+  from = "/page-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/post-sitemap.xml"
   to = "/sitemap.xml"
   status = 301
 
