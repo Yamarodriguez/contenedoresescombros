@@ -1,0 +1,52 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# --- Redirecciones de WordPress (que no se pierda nada de lo indexado) ---
+
+# Imagenes viejas: /wp-content/uploads/... -> /img/...
+[[redirects]]
+  from = "/wp-content/uploads/*"
+  to = "/img/:splat"
+  status = 301
+  force = true
+
+# Sitemaps de Yoast -> nuestro sitemap
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301
+[[redirects]]
+  from = "/*-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+# Feed de WordPress
+[[redirects]]
+  from = "/feed"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/feed/*"
+  to = "/"
+  status = 301
+
+# Restos de WordPress sin pagina nueva
+[[redirects]]
+  from = "/wp-content/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/wp-includes/*"
+  to = "/"
+  status = 301
+
+# www -> sin www
+[[redirects]]
+  from = "https://www.contenedoresescombros.com/*"
+  to = "https://contenedoresescombros.com/:splat"
+  status = 301
+  force = true
+
+# PENDIENTE AL LANZAR (Fase 7): redirigir el subdominio de Netlify (xxx.netlify.app)
+# al dominio, cuando se sepa el nombre que asigna Netlify.
