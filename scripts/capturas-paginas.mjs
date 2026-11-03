@@ -36,7 +36,8 @@ for (const [nombre, ruta] of PAGINAS) {
       await Promise.all([...document.images].map((i) => (i.complete ? 1 : new Promise((r) => { i.onload = i.onerror = r; }))));
     });
     const altoTotal = await p.evaluate(() => document.body.scrollHeight);
-    for (let i = 0; i < pantallas; i++) {
+    // Con una sola ruta se captura la página entera, pantalla a pantalla.
+    for (let i = 0; i < (RUTA ? Math.ceil(altoTotal / alto) : pantallas); i++) {
       await p.evaluate((y) => window.scrollTo(0, y), i * alto);
       await p.waitForTimeout(150);
       await p.screenshot({ path: `${CARPETA}/${nombre}-${vista}-${i + 1}.png` });

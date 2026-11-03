@@ -87,14 +87,30 @@ const conservar = {
 const errores = [];
 const quitar = {};
 const resumenQuitar = [];
+const titular = (p, f) => normT((bloquesDeFila(f).map((i) => p.blocks[i]).find((b) => b.type === 'heading') || {}).text || '');
+const anotar = (slug, filas) => { quitar[slug] = [...new Set([...(quitar[slug] || []), ...filas.flatMap(bloquesDeFila)])].sort((a, b) => a - b); };
 for (const [slug, lista] of Object.entries(conservar)) {
   const p = paginas.find((x) => x.slug === slug);
-  const titular = (f) => normT((bloquesDeFila(f).map((i) => p.blocks[i]).find((b) => b.type === 'heading') || {}).text || '');
-  for (const t of lista) if (!p.filas.some((f) => titular(f) === t)) errores.push(`${slug}: no hay ninguna fila que empiece por «${t}»`);
-  const quitadas = p.filas.filter((f) => !lista.includes(titular(f)));
-  quitar[slug] = quitadas.flatMap(bloquesDeFila).sort((a, b) => a - b);
-  resumenQuitar.push(`${slug}: se quitan ${quitadas.length} filas (${quitar[slug].length} bloques): ${quitadas.map((f) => titular(f) || '(sin titular)').join(' · ')}`);
+  for (const t of lista) if (!p.filas.some((f) => titular(p, f) === t)) errores.push(`${slug}: no hay ninguna fila que empiece por «${t}»`);
+  const quitadas = p.filas.filter((f) => !lista.includes(titular(p, f)));
+  anotar(slug, quitadas);
+  resumenQuitar.push(`${slug}: se quitan ${quitadas.length} filas: ${quitadas.map((f) => titular(p, f) || '(sin titular)').join(' · ')}`);
 }
+// Yama (2026-11-03): la lista de enlaces a provincias «Nuestra Area de trabajo» solo en la
+// página de inicio. En las demás se quita su titular y la fila de enlaces que va detrás.
+const listaProvincias = [];
+for (const p of paginas) {
+  if (p.slug === 'index') continue;
+  const k = (p.filas || []).findIndex((f) => titular(p, f) === 'nuestra area de trabajo');
+  if (k < 0) continue;
+  const sig = p.filas[k + 1];
+  // En inicio son enlaces; en el resto, el mismo texto sin enlazar.
+  const esLista = sig && bloquesDeFila(sig).every((i) => p.blocks[i].type === 'text' && /^(?:\s*Contenedores [^\n]+\n?){5,}$/.test(p.blocks[i].text || ''));
+  if (!esLista) { errores.push(`${p.slug}: tras «Nuestra Area de trabajo» no va la lista de provincias`); continue; }
+  anotar(p.slug, [p.filas[k], sig]);
+  listaProvincias.push(p.slug);
+}
+resumenQuitar.push(`lista de provincias quitada en ${listaProvincias.length} páginas (se queda en inicio): ${listaProvincias.join(', ')}`);
 
 // --- Comprobaciones de las reglas ---
 for (const [k, t] of Object.entries(titulos)) if (t.length > MAX) errores.push(`título de ${k} con ${t.length} caracteres`);

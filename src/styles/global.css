@@ -102,6 +102,9 @@ a:where(:not(.boton)) { color: var(--marca2); }
 .texto { margin: 0 0 1rem; overflow-wrap: break-word; }
 .texto :where(ul, ol) { padding-left: 1.2rem; }
 .texto a { color: var(--marca2); overflow-wrap: anywhere; }
+/* Listas de enlaces uno por línea (provincias de inicio): cada nombre sin partir */
+.texto p:has(> a:first-child):has(> a + br) { font-size: .93rem; line-height: 1.7; }
+.texto p:has(> a:first-child):has(> a + br) > a { display: inline-block; overflow-wrap: normal; }
 .foto { margin: 1rem 0; }
 .foto img { border-radius: var(--radio); box-shadow: var(--sombra); max-width: 760px; width: 100%; height: auto; }
 a.foto { display: inline-block; transition: transform .15s ease; }

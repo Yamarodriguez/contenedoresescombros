@@ -123,6 +123,86 @@
    79,
    80,
    81
+  ],
+  "alquiler": [
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ],
+  "camiones-portacontenedores": [
+   73,
+   74,
+   75,
+   76,
+   77,
+   78
+  ],
+  "habilitacion-contenedores-escombros-via-publica": [
+   71,
+   72,
+   73,
+   74,
+   75,
+   76
+  ],
+  "medidas": [
+   73,
+   74,
+   75,
+   76,
+   77,
+   78
+  ],
+  "precio": [
+   71,
+   72,
+   73,
+   74,
+   75,
+   76
+  ],
+  "presupuesto": [
+   72,
+   73,
+   74,
+   75,
+   76,
+   77
+  ],
+  "recogida-escombros": [
+   73,
+   74,
+   75,
+   76,
+   77,
+   78
+  ],
+  "sacos-para-escombros": [
+   74,
+   75,
+   76,
+   77,
+   78,
+   79
+  ],
+  "transporte": [
+   68,
+   69,
+   70,
+   71,
+   72,
+   73
+  ],
+  "venta": [
+   72,
+   73,
+   74,
+   75,
+   76,
+   77
   ]
  }
 }
