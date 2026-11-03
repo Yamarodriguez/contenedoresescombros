@@ -6,6 +6,7 @@ import cambiosData from '../data/fallos-original.json';
 import { tipoFrase, nombresPropios } from '../lib/textos.mjs';
 import datosExcavacion from '../data/excavaciones-ciudades.json';
 import { paginasExcavacion } from '../lib/excavaciones.mjs';
+import paginasNuevas from '../data/paginas-nuevas.json';
 
 // llms.txt: resumen de la web para asistentes de IA (qué es, datos clave y
 // enlaces agrupados con una línea de descripción). Solo datos que ya están en la web.
@@ -47,6 +48,7 @@ Contacto: WhatsApp y teléfono ${site.telefono} · ${site.correo} · ${site.domi
 
 ## Servicios
 ${servicios.map(linea).join('\n')}
+${Object.entries(paginasNuevas as Record<string, any>).filter(([k]) => !k.startsWith('_')).map(([k, p]) => `- [${p.h1}](https://${site.dominio}/${k}/): ${p.descripcion}`).join('\n')}
 
 ## Tamaños de contenedor
 ${tamanos.map(linea).join('\n')}

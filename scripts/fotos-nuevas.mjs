@@ -5,7 +5,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 
-const datos = JSON.parse(fs.readFileSync('src/data/contenido-nuevo.json', 'utf8'));
+// Contenido añadido encima del original y páginas nuevas (src/data/paginas-nuevas.json).
+const datos = {
+  ...JSON.parse(fs.readFileSync('src/data/contenido-nuevo.json', 'utf8')),
+  ...JSON.parse(fs.readFileSync('src/data/paginas-nuevas.json', 'utf8')),
+};
 fs.mkdirSync('public/img/nuevas', { recursive: true });
 let n = 0;
 for (const [slug, pag] of Object.entries(datos)) {

@@ -114,6 +114,17 @@ for (const e of paginasExcavacion(datosExcavacion, ciudades)) {
   await generar({ slug: 'excavaciones' }, e.clave, path.join('public', src));
   salida[clave] = { src, alt: e.clave };
 }
+// Otras páginas nuevas (src/data/paginas-nuevas.json): la palabra clave es su «clave».
+const paginasNuevas = JSON.parse(fs.readFileSync('src/data/paginas-nuevas.json', 'utf8'));
+for (const [slug, p] of Object.entries(paginasNuevas)) {
+  if (slug.startsWith('_') || (SOLO && slug !== SOLO)) continue;
+  let nombre = fichero(p.clave);
+  if (usados.has(nombre)) nombre = `${nombre}-${slug}`;
+  usados.add(nombre);
+  const src = `/img/principal/${nombre}.jpg`;
+  await generar({ slug }, p.clave, path.join('public', src));
+  salida[slug] = { src, alt: p.clave };
+}
 if (!SOLO) fs.writeFileSync('src/data/principales.json', JSON.stringify(salida, null, 1) + '\n');
 console.log(`Imágenes principales: ${Object.keys(salida).length}${SOLO ? ' (prueba, sin escribir el índice)' : ''}`);
 for (const [k, v] of Object.entries(salida).slice(0, 4)) console.log(`  ${k}: ${v.src} | «${v.alt}»`);

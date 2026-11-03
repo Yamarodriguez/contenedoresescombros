@@ -168,6 +168,11 @@ a.foto:hover { transform: translateY(-3px); }
 .tarjeta-texto .texto { margin: 0; }
 .tarjeta-texto .texto p { margin: 0; }
 .anadido .texto :where(ul, ol) { margin: .4rem 0 1rem; }
+/* Tablas del contenido nuevo (p. ej. peso de los contenedores de tierra) */
+.texto .tabla { width: 100%; border-collapse: collapse; margin: 1rem 0 1.2rem; font-size: .97rem; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; }
+.texto .tabla th, .texto .tabla td { padding: .6rem .8rem; border-bottom: 1px solid var(--borde); text-align: left; vertical-align: top; }
+.texto .tabla thead th { background: var(--marca2); color: #fff; font-weight: 600; }
+.texto .tabla tbody tr:last-child td { border-bottom: 0; }
 /* Lista de páginas de excavaciones por comunidad y provincia, con sus localidades */
 .grupos-excavacion { columns: 2 380px; column-gap: 1.2rem; margin-top: 1rem; }
 .grupo-excavacion { display: inline-block; width: 100%; break-inside: avoid; margin: 0 0 1.2rem; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.1rem 1.3rem; }

@@ -44,7 +44,7 @@
         "foto": { "de": "/img/2021/06/alquiler-contenedores-escombros.jpg", "nombre": "contenedores-para-tierras-y-residuos-de-excavacion" },
         "html": "<p>La tierra y las piedras de una excavación se cargan en <strong>contenedores de tierra</strong> o de escombros para llevarlas a un gestor autorizado. Elegir bien el contenedor evita viajes de más.</p>",
         "tarjetas": [
-          { "h3": "Contenedores de tierra: qué tamaño elegir", "html": "<p>Para tierra suele convenir un contenedor pequeño o mediano, de 3 a 9&nbsp;m³: el límite lo marca el peso que puede cargar el camión, no el volumen. Mira las <a href=\"/medidas/\">medidas de los contenedores</a>.</p>" },
+          { "h3": "Contenedores de tierra: qué tamaño elegir", "html": "<p>Para tierra se usan contenedores pequeños, de 3 o 5&nbsp;m³: el límite lo marca el peso que puede cargar el camión, no el volumen. Mira cómo elegir los <a href=\"/contenedores-de-tierra/\">contenedores de tierra</a>.</p>" },
           { "h3": "Por qué la tierra llena el contenedor por peso", "html": "<p>Un metro cúbico de tierra pesa mucho más que uno de escombro de reforma: aproximadamente entre 1,5 y 2 toneladas, según la humedad y el tipo de terreno. Por eso un contenedor de tierra no se llena hasta arriba.</p>" },
           { "h3": "Tierra limpia o mezclada con escombros", "html": "<p>La tierra limpia, sin escombros, plásticos ni basura, se puede reutilizar en rellenos o en otra obra. Mezclada con escombros se trata como residuo de obra, así que conviene no mezclarla.</p>" },
           { "h3": "Retirada de tierras y escombros", "html": "<p>Cuando el contenedor está lleno se retira y se lleva a un gestor o vertedero autorizado. Consulta la <a href=\"/recogida-escombros/\">recogida de escombros</a> y el <a href=\"/transporte/\">transporte de contenedores</a>.</p>" }
@@ -78,7 +78,7 @@
           { "pregunta": "¿Qué pasa si aparece roca al excavar?", "respuesta": "Hay que romperla con un martillo hidráulico montado en la excavadora. El trabajo es más lento y suele encarecer la excavación, por eso conviene conocer el terreno antes de empezar." },
           { "pregunta": "¿Se puede excavar si el acceso es estrecho?", "respuesta": "Sí, con miniexcavadoras, que pasan por accesos estrechos como un portal, un patio o un jardín. Avanzan más despacio que una máquina grande." },
           { "pregunta": "¿Qué se hace con la tierra que sale de la excavación?", "respuesta": "Se carga en contenedores o camiones y se lleva a un gestor o vertedero autorizado. La tierra limpia a veces se reutiliza en la propia obra o en rellenos." },
-          { "pregunta": "¿Qué contenedor necesito para la tierra?", "respuesta": "Para tierra suele convenir un contenedor de 3 a 9 m³, porque la tierra pesa mucho y el límite lo marca el peso que puede llevar el camión. Si la tierra va limpia, mejor no mezclarla con escombros." },
+          { "pregunta": "¿Qué contenedor necesito para la tierra?", "respuesta": "Para tierra se usan contenedores pequeños, de 3 o 5 m³, porque la tierra pesa mucho y el límite lo marca el peso que puede llevar el camión. Si la tierra va limpia, mejor no mezclarla con escombros." },
           { "pregunta": "¿Qué datos necesito para pedir presupuesto?", "respuesta": "La dirección de la obra, el tipo de trabajo (vaciado, zanja, piscina, nivelación), las medidas aproximadas (largo, ancho y profundidad), cómo es el acceso para la máquina y si hay que retirar la tierra." }
         ]
       },

@@ -646,5 +646,9 @@
  "excavaciones-zamora": {
   "src": "/img/principal/excavaciones-zamora.jpg",
   "alt": "Excavaciones en Zamora"
+ },
+ "contenedores-de-tierra": {
+  "src": "/img/principal/contenedores-tierra.jpg",
+  "alt": "Contenedores de tierra"
  }
 }

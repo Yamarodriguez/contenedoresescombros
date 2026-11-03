@@ -1,0 +1,66 @@
+{
+ "_nota": "Páginas NUEVAS que no vienen de WordPress (Yama, 2026-11-03). Cada clave es la dirección (/clave/). Se pintan con Anadido.astro (src/pages/<clave>.astro). Tono neutro y sin precios inventados. Las fotos de las secciones salen de scripts/fotos-nuevas.mjs.",
+ "contenedores-de-tierra": {
+  "titulo": "Contenedores de tierra: tamaños, peso y cuál elegir",
+  "descripcion": "Contenedores de tierra para obras y excavaciones: qué tamaño elegir (3 o 5 m³), cuánto pesa la tierra, tierra limpia o con escombros y permiso.",
+  "h1": "Contenedores de tierra",
+  "clave": "Contenedores de tierra",
+  "subtitulo": "Qué contenedor elegir para la tierra de una obra o una excavación, cuánto pesa y cómo se retira. Presupuesto sin compromiso.",
+  "entradilla": "<p>Un <strong>contenedor de tierra</strong> es un contenedor de obra que se usa para retirar la tierra y las piedras que salen de una excavación, del vaciado de un solar, de una zanja o de un jardín. Como la tierra pesa mucho, se usan <strong>contenedores pequeños, de 3 o 5&nbsp;m³</strong>, y se llenan por peso, no por volumen.</p><p>Aquí tienes qué tamaño elegir, cuánto pesa un contenedor lleno de tierra, qué se puede echar, cómo se llena y se retira y qué permiso hace falta.</p>",
+  "secciones": [
+   {
+    "h2": "Qué tamaño de contenedor elegir para la tierra",
+    "foto": { "de": "/img/2021/06/contenedor-escombro-3-m3.jpg", "nombre": "contenedor-de-tierra-3-m3" },
+    "html": "<p>En esta web, los contenedores de 3 y 5&nbsp;m³ son los indicados para materiales pesados como la tierra. Los grandes son para material ligero.</p>",
+    "tarjetas": [
+     { "h3": "Contenedor de 3 m³ para tierra", "html": "<p>El más usado para tierra: zanjas, jardines, pequeñas excavaciones y reformas. Mira el <a href=\"/contenedores-escombros-3-m3/\">contenedor de 3 m³</a>.</p>" },
+     { "h3": "Contenedor de 5 m³ para tierra", "html": "<p>Para más cantidad, como una zanja larga o el hueco de una piscina pequeña. Si la tierra está mojada, no se llena del todo. Mira el <a href=\"/contenedores-escombros-5-m3/\">contenedor de 5 m³</a>.</p>" },
+     { "h3": "Saco para poca tierra", "html": "<p>Para muy poca tierra o donde no cabe un contenedor, por ejemplo en un patio o una calle estrecha. Mira los <a href=\"/sacos-para-escombros/\">sacos para escombros</a>.</p>" },
+     { "h3": "Contenedores grandes (9 m³ o más)", "html": "<p>No son para tierra: llenos pesarían demasiado. Se usan para escombro ligero, madera, cartón o poda. Mira todas las <a href=\"/medidas/\">medidas de los contenedores</a>.</p>" }
+    ]
+   },
+   {
+    "h2": "Cuánto pesa un contenedor de tierra",
+    "foto": { "de": "/img/2021/06/alquiler-contenedores-escombros.jpg", "nombre": "contenedores-para-tierras-y-residuos-de-excavacion" },
+    "html": "<p>Un metro cúbico de tierra pesa aproximadamente <strong>entre 1,5 y 2 toneladas</strong>, según la humedad y el tipo de terreno: la tierra mojada o arcillosa pesa más que la seca y suelta. Con ese dato, un contenedor lleno de tierra pesa más o menos esto:</p><table class=\"tabla\"><thead><tr><th>Contenedor</th><th>Lleno de tierra pesa aprox.</th><th>¿Para tierra?</th></tr></thead><tbody><tr><td>3 m³</td><td>De 4,5 a 6 toneladas</td><td>Sí, el más usado</td></tr><tr><td>5 m³</td><td>De 7,5 a 10 toneladas</td><td>Sí, sin llenarlo del todo si está mojada</td></tr><tr><td>9 m³</td><td>De 13,5 a 18 toneladas</td><td>No, lleno pesa demasiado</td></tr><tr><td>12 m³ o más</td><td>Más de 18 toneladas</td><td>No, es para material ligero</td></tr></tbody></table><p>Por eso un contenedor de tierra no se llena hasta arriba: el límite lo marca el peso que puede llevar el camión. Al pedirlo, pregunta el peso máximo que admite.</p>"
+   },
+   {
+    "h2": "Tierra limpia o tierra con escombros",
+    "html": "<p>Lo que lleve el contenedor cambia cómo se gestiona la tierra en el gestor o vertedero autorizado.</p>",
+    "tarjetas": [
+     { "h3": "Tierra limpia", "html": "<p>Tierra y piedras sin escombros, plásticos, basura ni raíces grandes. Se puede reutilizar en rellenos o en otra obra, así que conviene no mezclarla.</p>" },
+     { "h3": "Tierra mezclada con escombros", "html": "<p>Si lleva ladrillos, hormigón, azulejos u otros restos de obra, se trata como residuo de construcción y demolición (escombro mezclado).</p>" },
+     { "h3": "Qué no se puede echar", "html": "<p>Residuos peligrosos, como el amianto (uralita), pinturas, disolventes o aceites, ni basura doméstica. Mira los materiales que se admiten en los <a href=\"/contenedores-escombros-3-m3/\">contenedores de escombros</a>.</p>" }
+    ]
+   },
+   {
+    "h2": "Cómo se llena y se retira un contenedor de tierra",
+    "html": "<ol><li><strong>Colócalo en un sitio firme y llano</strong>, dentro de la parcela o en la calle con permiso del ayuntamiento.</li><li><strong>Cárgalo repartiendo el peso</strong>, con máquina o a mano, sin pasar del borde.</li><li><strong>No lo llenes de más</strong>: si la tierra está mojada, deja margen por el peso.</li><li><strong>Avisa para la retirada</strong> cuando esté lleno: el camión lo recoge y deja otro vacío si hace falta.</li><li><strong>La tierra va a un gestor o vertedero autorizado</strong>, donde se reutiliza o se gestiona según lo que lleve.</li></ol><p>Más información sobre la <a href=\"/recogida-escombros/\">recogida de escombros</a> y el <a href=\"/transporte/\">transporte de contenedores</a>.</p>"
+   },
+   {
+    "h2": "Permiso para dejar el contenedor de tierra en la calle",
+    "html": "<p>Si el contenedor va en la vía pública, hace falta <strong>autorización del ayuntamiento</strong> para ocuparla. Si va dentro de la parcela o de la obra, ese permiso no hace falta. Mira cómo funciona la <a href=\"/habilitacion-contenedores-escombros-via-publica/\">habilitación de contenedores en la vía pública</a>.</p>"
+   },
+   {
+    "h2": "Contenedores de tierra para excavaciones",
+    "html": "<p>La mayor parte de la tierra sale de excavaciones: vaciados de solares, zanjas, piscinas y nivelación de parcelas. En la guía de <a href=\"/excavaciones/\">excavaciones y movimiento de tierras</a> tienes los tipos de trabajo, la licencia y el precio, y páginas por localidad como <a href=\"/excavaciones-valencia/\">excavaciones en Valencia</a>, <a href=\"/excavaciones-madrid/\">Madrid</a> o <a href=\"/excavaciones-barcelona/\">Barcelona</a>.</p>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre contenedores de tierra",
+    "faq": [
+     { "pregunta": "¿Qué contenedor necesito para la tierra?", "respuesta": "Un contenedor pequeño, de 3 o 5 m³. La tierra pesa mucho, así que los contenedores grandes no sirven: llenos de tierra pesarían demasiado para el camión." },
+     { "pregunta": "¿Cuánto pesa un contenedor de 3 m³ lleno de tierra?", "respuesta": "Aproximadamente entre 4,5 y 6 toneladas, porque un metro cúbico de tierra pesa entre 1,5 y 2 toneladas según la humedad y el tipo de terreno." },
+     { "pregunta": "¿Se puede llenar un contenedor de tierra hasta arriba?", "respuesta": "Normalmente no. El límite lo marca el peso que puede llevar el camión, no el volumen. Pregunta el peso máximo al pedir el contenedor, sobre todo si la tierra está mojada." },
+     { "pregunta": "¿Puedo mezclar tierra y escombros en el mismo contenedor?", "respuesta": "Se puede, pero entonces todo se gestiona como escombro mezclado. Si la tierra va limpia, es mejor llevarla aparte, porque se puede reutilizar en rellenos." },
+     { "pregunta": "¿Hace falta permiso para poner un contenedor de tierra en la calle?", "respuesta": "Sí, autorización del ayuntamiento para ocupar la vía pública. Si el contenedor va dentro de la parcela o de la obra, no hace falta ese permiso." },
+     { "pregunta": "¿Cuánto cuesta un contenedor de tierra?", "respuesta": "Depende del tamaño, de los días que lo tengas, de la zona y de si la tierra va limpia o mezclada. Mira los precios orientativos de los contenedores y pide presupuesto sin compromiso." }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de contenedor de tierra",
+    "html": "<p>Cuéntanos dónde está la obra, cuánta tierra hay que retirar (aproximadamente) y si va limpia o con escombros, y te enviamos un presupuesto sin compromiso. También tienes los <a href=\"/precio/\">precios orientativos de los contenedores</a>.</p>",
+    "boton": { "texto": "Pide presupuesto", "href": "/presupuesto/" }
+   }
+  ]
+ }
+}

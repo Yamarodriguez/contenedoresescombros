@@ -1,0 +1,28 @@
+---
+// Páginas nuevas que no vienen de WordPress (p. ej. /contenedores-de-tierra/, Yama 2026-11-03).
+// Contenido en src/data/paginas-nuevas.json; se pinta como el contenido añadido (Anadido.astro).
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Anadido from '../components/Anadido.astro';
+import site from '../data/site.json';
+import paginasNuevas from '../data/paginas-nuevas.json';
+import principales from '../data/principales.json';
+
+export function getStaticPaths() {
+  return Object.entries(paginasNuevas as Record<string, any>)
+    .filter(([clave]) => !clave.startsWith('_'))
+    .map(([clave, p]) => ({ params: { nueva: clave }, props: { clave, p } }));
+}
+
+const { clave, p } = Astro.props as { clave: string; p: any };
+const dominio = `https://${site.dominio}`;
+const url = `${dominio}/${clave}/`;
+const principal = (principales as Record<string, any>)[clave] || null;
+const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: p.h1, url }];
+const faq = p.secciones.flatMap((s: any) => s.faq || []);
+const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f: any) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
+---
+<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos}>
+  <Hero titulo={p.h1} subtitulo={p.subtitulo} imagen={principal} />
+  <Anadido datos={p} />
+</Base>

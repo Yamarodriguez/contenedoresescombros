@@ -76,7 +76,7 @@ export function paginasExcavacion(datos, ciudades) {
     const faq = [
       { pregunta: `¿Hace falta licencia para excavar en ${n}?`, respuesta: lic.faq },
       { pregunta: `¿Cuánto cuesta una excavación en ${n}?`, respuesta: 'Depende del volumen de tierra, la profundidad, el tipo de terreno, el acceso para la máquina y la retirada de la tierra. Se presupuesta cada obra, normalmente por metro cúbico o por jornada de máquina.' },
-      { pregunta: `¿Qué contenedor necesito para la tierra en ${n}?`, respuesta: 'Para tierra suele convenir un contenedor de 3 a 9 m³, porque la tierra pesa mucho y el límite lo marca el peso que puede llevar el camión. Si va limpia, mejor no mezclarla con escombros.' },
+      { pregunta: `¿Qué contenedor necesito para la tierra en ${n}?`, respuesta: 'Para tierra se usan contenedores pequeños, de 3 o 5 m³, porque la tierra pesa mucho y el límite lo marca el peso que puede llevar el camión. Si va limpia, mejor no mezclarla con escombros.' },
       { pregunta: `¿Puedo dejar el contenedor de tierra en la calle en ${n}?`, respuesta: `Solo con autorización del ${ayto} para ocupar la vía pública. Si el contenedor va dentro de la parcela, no hace falta ese permiso.` },
       { pregunta: `¿Qué datos necesito para pedir presupuesto de excavación en ${n}?`, respuesta: 'La dirección de la obra, el tipo de trabajo (vaciado, zanja, piscina, nivelación), las medidas aproximadas (largo, ancho y profundidad), cómo es el acceso para la máquina y si hay que retirar la tierra.' },
     ];
@@ -93,7 +93,7 @@ export function paginasExcavacion(datos, ciudades) {
         {
           h2: `Contenedores para la tierra en ${n}`,
           foto: { nombre: 'contenedores-para-tierras-y-residuos-de-excavacion' },
-          html: `<p>La tierra de una excavación se carga en <strong>contenedores de tierra</strong> o de escombros y se lleva a un gestor autorizado. Para tierra suele convenir un contenedor de 3 a 9 m³, porque pesa mucho: aproximadamente entre 1,5 y 2 toneladas por metro cúbico. Si va limpia, sin escombros, se puede reutilizar en rellenos.</p><p>Consulta los <a href="/${slug}/">contenedores de escombros en ${n}</a> y las <a href="/medidas/">medidas de cada contenedor</a>.</p>`,
+          html: `<p>La tierra de una excavación se carga en <strong>contenedores de tierra</strong> o de escombros y se lleva a un gestor autorizado. Para tierra se usan contenedores pequeños, de 3 o 5 m³, porque pesa mucho: aproximadamente entre 1,5 y 2 toneladas por metro cúbico. Si va limpia, sin escombros, se puede reutilizar en rellenos.</p><p>Mira cómo elegir los <a href="/contenedores-de-tierra/">contenedores de tierra</a> y consulta los <a href="/${slug}/">contenedores de escombros en ${n}</a>.</p>`,
         },
         { h2: `Licencia para excavar en ${n}`, html: lic.html },
         {

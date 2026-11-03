@@ -3,6 +3,7 @@ import site from '../data/site.json';
 import ciudades from '../data/ciudades.json';
 import datosExcavacion from '../data/excavaciones-ciudades.json';
 import { paginasExcavacion } from '../lib/excavaciones.mjs';
+import paginasNuevas from '../data/paginas-nuevas.json';
 
 const files = import.meta.glob('../content/pages/*.json', { eager: true });
 
@@ -12,6 +13,8 @@ export const GET: APIRoute = () => {
     ...Object.values(files).map((m: any) => m.default).filter((d: any) => !/^(aviso-legal|politica-de-)/.test(d.slug)).map((d: any) => d.url as string),
     // Páginas de excavaciones por ciudad (nuevas, no vienen de WordPress).
     ...paginasExcavacion(datosExcavacion, ciudades).map((p: any) => `https://${site.dominio}${p.ruta}`),
+    // Otras páginas nuevas (src/data/paginas-nuevas.json), p. ej. /contenedores-de-tierra/.
+    ...Object.keys(paginasNuevas).filter((k) => !k.startsWith('_')).map((k) => `https://${site.dominio}/${k}/`),
   ].sort();
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
     .map((u) => `  <url><loc>${u}</loc></url>`)

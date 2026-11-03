@@ -4007,6 +4007,30 @@
    512
   ]
  },
+ "/img/nuevas/contenedor-de-tierra-3-m3-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/contenedor-de-tierra-3-m3-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/contenedor-de-tierra-3-m3-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/contenedor-de-tierra-3-m3.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
  "/img/nuevas/contenedores-para-tierras-y-residuos-de-excavacion-1080.webp": {
   "w": 1080,
   "h": 1080,
@@ -5991,6 +6015,30 @@
   "ws": []
  },
  "/img/principal/contenedores-poda.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "/img/principal/contenedores-tierra-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/contenedores-tierra-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/contenedores-tierra-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/contenedores-tierra.jpg": {
   "w": 1200,
   "h": 630,
   "ws": [
