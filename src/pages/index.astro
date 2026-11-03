@@ -9,7 +9,8 @@ import faqData from '../data/faq.json';
 import site from '../data/site.json';
 import ciudades from '../data/ciudades.json';
 import cambiosData from '../data/fallos-original.json';
-import { aplicarCambios, tipoFrase, nombresPropios } from '../lib/textos.mjs';
+import principales from '../data/principales.json';
+import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq } from '../lib/textos.mjs';
 
 // Cambios aprobados por Yama (títulos, H1, descripciones, mayúsculas y alt): src/data/fallos-original.json
 const cambios = cambiosData as any;
@@ -20,18 +21,24 @@ const tituloH1 = cambios.h1['index'] || tipoFrase(h1 ? h1.text : data.title, pro
 const bloques = aplicarCambios(data.blocks, { titulo: tituloH1, propios });
 const omitir = data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0);
 const faq = (faqData as Record<string, any[]>)['index'] || [];
-const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
+const filas = (data as any).filas || [];
+const faqBloque = filas.map((f: any) => detectarFaq(f, bloques, cambios.preguntas)).find(Boolean);
+const preguntasPagina = [
+  ...(faqBloque ? faqBloque.items.map((it: any) => ({ pregunta: it.q, respuesta: bloques[it.t].text })) : []),
+  ...faq,
+];
+const datos = preguntasPagina.length ? [{ '@type': 'FAQPage', mainEntity: preguntasPagina.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 ---
 <Base
   title={cambios.titulos['index'] || seo.titulo || data.title}
   description={cambios.descripciones['index'] || seo.descripcion}
   canonical={data.url}
-  imagen={seo.imagen}
+  imagen={(principales as any).index?.src || seo.imagen}
   ogTitulo={seo.ogTitulo}
   ogDescripcion={seo.ogDescripcion}
   datos={datos}
 >
-  <Hero titulo={tituloH1} subtitulo={site.descripcion} />
-  <Contenido bloques={bloques} filas={(data as any).filas} omitir={omitir} />
-  <Faq items={faq} />
+  <Hero titulo={tituloH1} subtitulo={site.descripcion} imagen={(principales as any).index || null} />
+  <Contenido bloques={bloques} filas={filas} omitir={omitir} preguntas={cambios.preguntas} tituloFaq={cambios.tituloFaq} faqExtra={faqBloque ? faq : []} />
+  {!faqBloque && <Faq items={faq} />}
 </Base>

@@ -55,6 +55,35 @@ export function aplicarCambios(bloques, { titulo = '', propios = [] } = {}) {
   });
 }
 
+const normT = (t = '') => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.\s]+$/, '').replace(/\s+/g, ' ').trim();
+
+/**
+ * Bloque de 4 columnas «titular H2 + texto | foto + botón | titular H2 + texto | foto + botón»
+ * (Medidas / Recogida) -> preguntas frecuentes. Devuelve null si la fila no es ese bloque o
+ * si algún titular no tiene pregunta aprobada en `preguntas`.
+ */
+export function detectarFaq(fila, bloques, preguntas = {}) {
+  const cols = fila && fila.columnas;
+  if (!cols || cols.length !== 4) return null;
+  const tipos = (c) => c.items.map((it) => (it.fila ? 'fila' : (bloques[it.b] || {}).type)).join(',');
+  const items = [];
+  for (const [a, b] of [[cols[0], cols[1]], [cols[2], cols[3]]]) {
+    if (tipos(a) !== 'heading,text' || tipos(b) !== 'image,button') return null;
+    const h = a.items[0].b;
+    const q = preguntas[normT(bloques[h].text)];
+    if (!q || bloques[h].tag !== 'h2') return null;
+    items.push({ q, h, t: a.items[1].b, img: b.items[0].b, btn: b.items[1].b });
+  }
+  return { items };
+}
+
+/** Índice del titular original -> pregunta, para todas las filas convertidas de una página. */
+export function preguntasConvertidas(bloques, filas, preguntas = {}) {
+  const m = new Map();
+  for (const f of filas || []) { const d = detectarFaq(f, bloques, preguntas); if (d) for (const it of d.items) m.set(it.h, it.q); }
+  return m;
+}
+
 /** Nombres propios que hay que respetar al quitar las mayúsculas. */
 export function nombresPropios(ciudades = {}) {
   const s = new Set(['España', 'Comunidad Valenciana', 'Canarias', 'Cataluña']);

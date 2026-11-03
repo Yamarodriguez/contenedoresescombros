@@ -1,0 +1,32 @@
+---
+// «Preguntas frecuentes de contenedores» (petición de Yama, 2026-11-03): el bloque de 4
+// columnas Medidas / Recogida pasa a tarjetas de pregunta con su foto, respuesta y botón.
+// Si la página tenía más preguntas frecuentes, van debajo en desplegables.
+import Bloque from './Bloque.astro';
+
+interface Props { items: any[]; bloques: any[]; titulo: string; extra?: { pregunta: string; respuesta: string }[] }
+const { items, bloques, titulo, extra = [] } = Astro.props as Props;
+---
+<div class="faq-bloque">
+  <h2 class="titular">{titulo}</h2>
+  <div class="faq-tarjetas">
+    {items.map((it) => (
+      <article class="faq-tarjeta">
+        <Bloque b={bloques[it.img]} />
+        <h3 class="faq-pregunta">{it.q}</h3>
+        <Bloque b={bloques[it.t]} />
+        <Bloque b={bloques[it.btn]} />
+      </article>
+    ))}
+  </div>
+  {extra.length > 0 && (
+    <div class="acordeon faq-mas">
+      {extra.map((f) => (
+        <details>
+          <summary>{f.pregunta}</summary>
+          <div class="texto"><p>{f.respuesta}</p></div>
+        </details>
+      ))}
+    </div>
+  )}
+</div>

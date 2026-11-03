@@ -1,18 +1,35 @@
 ---
 import site from '../data/site.json';
-interface Props { titulo: string; subtitulo?: string; cta?: boolean; }
-const { titulo, subtitulo, cta = true } = Astro.props;
+import imagenes from '../data/imagenes.json';
+
+interface Props { titulo: string; subtitulo?: string; cta?: boolean; imagen?: { src: string; alt: string } | null }
+const { titulo, subtitulo, cta = true, imagen = null } = Astro.props;
+// Imagen principal de la página (palabra clave en el fichero y en el alt). Arriba del
+// todo: carga en el momento, no en diferido.
+const d = imagen ? (imagenes as Record<string, any>)[imagen.src] || {} : {};
+const base = imagen ? imagen.src.replace(/\.(jpe?g|png)$/i, '') : '';
+const srcset = ((d.ws || []) as number[]).map((w) => `${base}-${w}.webp ${w}w`).join(', ');
 ---
 <section class="heroe">
-  <div class="heroe-in">
-    <h1>{titulo}</h1>
-    {subtitulo && <p class="heroe-sub">{subtitulo}</p>}
-    {cta && (
-      <div class="heroe-cta">
-        <a class="boton" href="/presupuesto/">Pide presupuesto gratis</a>
-        <a class="boton boton-wa" href={`https://wa.me/${site.whatsapp}`} rel="nofollow">WhatsApp {site.telefono}</a>
+  <div class:list={['heroe-in', { 'con-imagen': imagen }]}>
+    <div class="heroe-texto">
+      <h1>{titulo}</h1>
+      {subtitulo && <p class="heroe-sub">{subtitulo}</p>}
+      {cta && (
+        <div class="heroe-cta">
+          <a class="boton" href="/presupuesto/">Pide presupuesto gratis</a>
+          <a class="boton boton-wa" href={`https://wa.me/${site.whatsapp}`} rel="nofollow">WhatsApp {site.telefono}</a>
+        </div>
+      )}
+      <slot />
+    </div>
+    {imagen && (
+      <div class="heroe-imagen">
+        <picture>
+          {srcset && <source type="image/webp" srcset={srcset} sizes="(max-width: 860px) 100vw, 520px" />}
+          <img src={imagen.src} alt={imagen.alt} width={d.w} height={d.h} fetchpriority="high" decoding="async" />
+        </picture>
       </div>
     )}
-    <slot />
   </div>
 </section>

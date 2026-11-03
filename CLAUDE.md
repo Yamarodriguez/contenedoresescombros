@@ -62,6 +62,9 @@ Fase 5 (formulario) HECHA: Netlify Forms con envío sin recargar (fetch), aviso 
 Fase 6 (velocidad) HECHA: webp 400/800 con `<picture>` (470 webp), tipografía Inter local (fontsource), todas las imágenes con medidas. sharp funciona (devDependency).
 Diseño rehecho (2026-11-03): filas y columnas de Elementor (`filas` en cada JSON, `Fila.astro`), fichas en tarjetas, héroe con foto. Capturas: `node scripts/capturas-paginas.mjs local <carpeta>`.
 Auditoría SEO/AEO en `informes/auditoria-seo-aeo.md`. Cambios aprobados por Yama en `src/data/fallos-original.json` (títulos, H1, descripciones) y `src/lib/textos.mjs` (mayúsculas -> tipo frase, alt de fotos); los comprobadores los aplican. Regla: `node scripts/cambios-aprobados.mjs --seco`.
-Miniaturas de WordPress: `public/_redirects` (scripts/redirecciones-wp.mjs). Pendiente de Yama: subir (push), Bing, dirección, modelo de negocio, precios reales, robots de entrenamiento.
+Miniaturas de WordPress: `public/_redirects` (scripts/redirecciones-wp.mjs).
+Logo «Contenedores» (2026-11-03, petición de Yama): `src/components/Logo.astro`, `public/favicon.svg`, PNG con `scripts/logo.mjs`.
+Imagen principal por página con la palabra clave escrita, en el fichero y en el alt: `scripts/imagenes-principales.mjs` -> `public/img/principal/` y `src/data/principales.json` (también og:image).
+Bloque Medidas/Recogida (90 páginas) -> «Preguntas frecuentes de contenedores» (`FaqBloque.astro`, `detectarFaq` en textos.mjs, preguntas en fallos-original.json). Pendiente de Yama: subir (push), Bing, dirección, modelo de negocio, precios reales, robots de entrenamiento.
 Siguiente: legales (Fase 4, pendiente de tus datos) y Fase 7 (lanzamiento: conectar Netlify, DNS y correo, GA4, redirecciones wp-content/Yoast, ads.txt, Search Console). Netlix/DNS necesitan a Yama.
 Las FAQ son factuales y neutras (no dicen quién presta el servicio) hasta confirmar si es directorio o alquiler propio.

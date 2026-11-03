@@ -1,12 +1,13 @@
 ---
 import site from '../data/site.json';
 import menus from '../data/menus.json';
+import Logo from './Logo.astro';
 const pie = ((menus as any).pie || []) as any[];
 ---
 <footer class="pie">
   <div class="pie-in">
     <div class="pie-col">
-      <strong>{site.nombre}</strong>
+      <a class="logo-pie" href="/" aria-label={`${site.nombre}: inicio`}><Logo claro /></a>
       <p>Contenedores de escombros y residuos de obra en toda España.</p>
     </div>
     <div class="pie-col">

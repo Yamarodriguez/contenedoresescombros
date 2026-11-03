@@ -1,0 +1,14 @@
+---
+// Logo «Contenedores»: contenedor de escombros con escombros asomando, en el verde de la marca.
+interface Props { claro?: boolean }
+const { claro = false } = Astro.props;
+---
+<span class:list={['marca', { 'marca-clara': claro }]}>
+  <svg class="marca-icono" viewBox="0 0 64 64" aria-hidden="true">
+    <path d="M19 24 L26 14 L31 24 Z M29 24 L36 11 L43 24 Z M41 24 L46 17 L50 24 Z" fill="#d99a4e" />
+    <rect x="9" y="23" width="46" height="7" rx="2.5" fill="#1b5733" />
+    <path d="M13 30 H51 L45 51 H19 Z" fill="#2f8f54" />
+    <rect x="24" y="37" width="16" height="3.5" rx="1.75" fill="#fff" opacity=".9" />
+  </svg>
+  <span class="marca-nombre">Contenedores</span>
+</span>

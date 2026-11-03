@@ -25,6 +25,7 @@ const imagenAbs = imagen ? (imagen.startsWith('http') ? imagen : `${dominio}${im
 
 const empresa: Record<string, unknown> = {
   '@type': 'Organization', '@id': `${dominio}/#empresa`, name: site.nombre, url: `${dominio}/`,
+  logo: { '@type': 'ImageObject', url: `${dominio}/img/logo.png`, width: 512, height: 512 },
   description: site.descripcion, areaServed: { '@type': 'Country', name: 'España' },
   ...(site.correo ? { email: site.correo } : {}),
   ...(site.telefono ? { telephone: site.telefono } : {}),
@@ -47,6 +48,8 @@ const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': graf
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     {site.verificacionGoogle && <meta name="google-site-verification" content={site.verificacionGoogle} />}
     {site.bing && <meta name="msvalidate.01" content={site.bing} />}
     {!indexar && <meta name="robots" content="noindex, follow" />}

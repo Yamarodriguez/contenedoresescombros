@@ -1,11 +1,12 @@
 ---
 import site from '../data/site.json';
 import menus from '../data/menus.json';
+import Logo from './Logo.astro';
 const principal = (menus as any).principal as any[];
 ---
 <header class="cabecera">
   <div class="cabecera-in">
-    <a class="logo" href="/">{site.nombre}</a>
+    <a class="logo" href="/" aria-label={`${site.nombre}: inicio`}><Logo /></a>
     <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">☰</button>
     <nav id="menu-principal" class="menu" aria-label="Menú principal">
       <ul class="menu-lista">

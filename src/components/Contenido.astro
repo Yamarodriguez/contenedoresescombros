@@ -2,21 +2,26 @@
 // Contenido de la página con su maquetación original de Elementor: cada fila
 // principal es una banda (fondo alterno) y dentro van sus columnas. El orden y
 // el contenido no cambian. Si una página no tuviera filas, se pinta en lista.
+// El bloque Medidas / Recogida se pinta como preguntas frecuentes (cambio aprobado).
 import Bloque from './Bloque.astro';
 import Fila from './Fila.astro';
+import FaqBloque from './FaqBloque.astro';
+import { detectarFaq } from '../lib/textos.mjs';
 
-interface Props { bloques: any[]; filas?: any[]; omitir?: number[] }
-const { bloques, filas = [], omitir = [] } = Astro.props as Props;
+interface Props { bloques: any[]; filas?: any[]; omitir?: number[]; preguntas?: Record<string, string>; tituloFaq?: string; faqExtra?: any[] }
+const { bloques, filas = [], omitir = [], preguntas = {}, tituloFaq = 'Preguntas frecuentes', faqExtra = [] } = Astro.props as Props;
 const salta = new Set(omitir);
 const visibles = (f: any): number => f.columnas.reduce((n: number, c: any) => n + c.items.reduce((m: number, it: any) => m + (it.fila ? visibles(it.fila) : salta.has(it.b) ? 0 : 1), 0), 0);
-const bandas = filas.filter((f) => visibles(f) > 0);
+const bandas = filas.filter((f) => visibles(f) > 0).map((f) => ({ f, faq: detectarFaq(f, bloques, preguntas) }));
 ---
 <div class="contenido">
   {bandas.length
-    ? bandas.map((f) => (
+    ? bandas.map(({ f, faq }) => (
         <section class="banda">
           <div class="banda-in">
-            <Fila fila={f} bloques={bloques} omitir={omitir} />
+            {faq
+              ? <FaqBloque items={faq.items} bloques={bloques} titulo={tituloFaq} extra={faqExtra} />
+              : <Fila fila={f} bloques={bloques} omitir={omitir} />}
           </div>
         </section>
       ))

@@ -3,7 +3,10 @@
 // en dist/, en el mismo orden. Se normaliza lo que cambia al publicar.
 import fs from 'node:fs';
 import path from 'node:path';
+import { preguntasConvertidas } from '../src/lib/textos.mjs';
 
+// Cambio aprobado: el titular del bloque Medidas / Recogida pasa a ser su pregunta.
+const cambios = JSON.parse(fs.readFileSync('src/data/fallos-original.json', 'utf8'));
 const contenido = JSON.parse(fs.readFileSync('contenido-vivo.json', 'utf8'));
 const paginas = Object.values(contenido);
 const DOM = /^https?:\/\/(?:www\.)?contenedoresescombros\.com/i;
@@ -71,7 +74,10 @@ for (const p of paginas) {
   comparadas++;
   const html = fs.readFileSync(f, 'utf8');
   const zona = zonaNueva(html);
-  subTxt(viejoTextos(p.blocks), textoUnidades(zona).join(' || '), 'texto', p, dif);
+  const pag = JSON.parse(fs.readFileSync(path.join('src/content/pages', (ruta || 'index') + '.json'), 'utf8'));
+  const conv = preguntasConvertidas(pag.blocks, pag.filas, cambios.preguntas);
+  const bl = p.blocks.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b));
+  subTxt(viejoTextos(bl), textoUnidades(zona).join(' || '), 'texto', p, dif);
   subArr(viejoBotones(p.blocks), nuevoBotones(html), 'boton', p, dif);
   subArr(viejoEnlaces(p.blocks), nuevoEnlaces(html), 'enlace', p, dif);
   subImg(viejoImagenes(p.blocks), nuevoImagenes(html), p, dif);

@@ -9,7 +9,8 @@ import site from '../data/site.json';
 import faqData from '../data/faq.json';
 import ciudades from '../data/ciudades.json';
 import cambiosData from '../data/fallos-original.json';
-import { aplicarCambios, tipoFrase, nombresPropios } from '../lib/textos.mjs';
+import principales from '../data/principales.json';
+import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq } from '../lib/textos.mjs';
 
 export async function getStaticPaths() {
   const files = import.meta.glob('../content/pages/*.json', { eager: true });
@@ -35,8 +36,15 @@ const bloques = aplicarCambios(data.blocks, { titulo: tituloH1, propios });
 const omitir = data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0);
 const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: cambios.h1[data.slug] || tipoFrase(data.title, propios), url: data.url }];
 const faq = (faqData as Record<string, any[]>)[data.slug] || [];
-const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
+// Bloque Medidas / Recogida convertido en preguntas: si existe, las preguntas de faq.json van dentro.
+const faqBloque = (data.filas || []).map((f: any) => detectarFaq(f, bloques, cambios.preguntas)).find(Boolean);
+const preguntasPagina = [
+  ...(faqBloque ? faqBloque.items.map((it: any) => ({ pregunta: it.q, respuesta: bloques[it.t].text })) : []),
+  ...faq,
+];
+const datos = preguntasPagina.length ? [{ '@type': 'FAQPage', mainEntity: preguntasPagina.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 const zona = (ciudades as Record<string, any>)[data.slug] || null;
+const principal = (principales as Record<string, any>)[data.slug] || null;
 const legal = /^(aviso-legal|politica-de-)/.test(data.slug);
 const subtitulo = legal ? '' : zona
   ? `Contenedores para escombros y residuos de obra en ${zona.nombre}: tamaños, precios orientativos y presupuesto sin compromiso.`
@@ -46,14 +54,14 @@ const subtitulo = legal ? '' : zona
   title={cambios.titulos[key] || seo.titulo || data.title}
   description={cambios.descripciones[key] || seo.descripcion}
   canonical={data.url}
-  imagen={seo.imagen}
+  imagen={principal?.src || seo.imagen}
   ogTitulo={seo.ogTitulo}
   ogDescripcion={seo.ogDescripcion}
   migas={migas}
   datos={datos}
 >
-  <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} />
-  <Contenido bloques={bloques} filas={data.filas} omitir={omitir} />
+  <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} imagen={principal} />
+  <Contenido bloques={bloques} filas={data.filas} omitir={omitir} preguntas={cambios.preguntas} tituloFaq={cambios.tituloFaq} faqExtra={faqBloque ? faq : []} />
   <Zona zona={zona} />
-  <Faq items={faq} />
+  {!faqBloque && <Faq items={faq} />}
 </Base>

@@ -63,6 +63,16 @@ const descripciones = {
   'politica-de-cookies': 'Política de cookies de contenedoresescombros.com: qué cookies usa la web, para qué sirven y cómo configurarlas o desactivarlas.',
 };
 
+// --- Bloque «Medidas / Recogida» (4 columnas, 90 páginas) -> «Preguntas frecuentes de contenedores» ---
+// Petición de Yama (2026-11-03, captura). Claves: titular H2 original sin acentos y en minúsculas.
+const tituloFaq = 'Preguntas frecuentes de contenedores';
+const preguntas = {
+  'medidas de los contenedores de escombros': '¿Qué medidas tienen los contenedores de escombros?',
+  'medidas de contenedores de escombros': '¿Qué medidas tienen los contenedores de escombros?',
+  'recogida de escombros': '¿Se puede contratar la recogida de escombros?',
+  'retirada de escombros y residuos': '¿Se puede contratar la retirada de escombros y residuos?',
+};
+
 // --- Comprobaciones de las reglas ---
 const errores = [];
 for (const [k, t] of Object.entries(titulos)) if (t.length > MAX) errores.push(`título de ${k} con ${t.length} caracteres`);
@@ -92,7 +102,7 @@ if (SECO) { console.log('\n(--seco: no se ha escrito nada)'); process.exit(0); }
 
 fs.writeFileSync('src/data/fallos-original.json', JSON.stringify({
   aprobado: 'Yama, 2026-11-03 (auditoría SEO/AEO)',
-  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)'],
-  titulos, h1, descripciones,
+  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)'],
+  titulos, h1, descripciones, tituloFaq, preguntas,
 }, null, 1) + '\n');
 console.log('\nEscrito src/data/fallos-original.json');
