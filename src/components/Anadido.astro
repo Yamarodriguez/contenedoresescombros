@@ -2,9 +2,6 @@
 // Contenido nuevo que va ENCIMA del original (src/data/contenido-nuevo.json), p. ej.
 // la página de Excavaciones (Yama, 2026-11-03). Usa los mismos bloques y estilos.
 import Bloque from './Bloque.astro';
-import ciudades from '../data/ciudades.json';
-import datosExcavacion from '../data/excavaciones-ciudades.json';
-import { gruposExcavacion } from '../lib/excavaciones.mjs';
 
 interface Props { datos: any }
 const { datos } = Astro.props as Props;
@@ -12,9 +9,6 @@ const h2 = (text: string) => ({ type: 'heading', tag: 'h2', text });
 const texto = (html: string) => ({ type: 'text', html, text: '' });
 // Filas completas: de 4 en 4 si salen justas; si no, como mucho 3 por fila (6 -> 3+3, 5 -> 3+2).
 const rejilla = (n: number) => (n % 4 === 0 ? 'tarjetas-texto' : 'tarjetas-texto tres');
-// Sección con «enlacesExcavaciones»: las páginas de excavaciones por comunidad y provincia,
-// con las localidades de cada provincia debajo (Yama, 2026-11-03).
-const gruposCiudad = gruposExcavacion(datosExcavacion, ciudades);
 ---
 <div class="contenido anadido">
   {datos.entradilla && (
@@ -36,26 +30,6 @@ const gruposCiudad = gruposExcavacion(datosExcavacion, ciudades);
         ) : (
           <>
             <Bloque b={h2(s.h2)} />
-            {s.enlacesExcavaciones && (
-              <div class="grupos-excavacion">
-                {gruposCiudad.map((g: any) => (
-                  <div class="grupo-excavacion">
-                    <h3 class="titular">{g.comunidad}</h3>
-                    <ul class="enlaces-zona">
-                      {g.provincias.map((p: any) => <li><a href={p.ruta}>{p.clave}</a></li>)}
-                    </ul>
-                    {g.provincias.filter((p: any) => p.localidades.length).map((p: any) => (
-                      <div class="localidades">
-                        <p class="texto">Localidades de {p.nombre}:</p>
-                        <ul class="enlaces-zona">
-                          {p.localidades.map((l: any) => <li><a href={l.ruta}>{l.clave}</a></li>)}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            )}
             {s.html && <Bloque b={texto(s.html)} />}
           </>
         )}

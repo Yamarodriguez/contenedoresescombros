@@ -1,7 +1,7 @@
 // Páginas de excavaciones por ciudad: /excavaciones-<ciudad>/ (Yama, 2026-11-03), una por
 // cada ciudad o provincia con página de contenedores. Plantilla sacada del análisis de las
 // páginas que salen arriba en Google (informes/analisis-google-excavaciones.md). Los datos
-// locales están en src/data/excavaciones-ciudades.json; nombre y cercanas, en ciudades.json.
+// locales están en src/data/excavaciones-ciudades.json; nombre y provincia, en ciudades.json.
 // Lo usan la página, el mapa del sitio, llms.txt, Anadido.astro, Zona y scripts/imagenes-principales.mjs.
 
 const MAX_TITULO = 60, MAX_DESC = 160;
@@ -67,12 +67,13 @@ export function paginasExcavacion(datos, ciudades) {
     const lic = licencia(comunidad, ayto);
     const situacion = d.situacion || (comunidad ? `está en ${enLa(comunidad)}` : '');
     const prov = provinciaDe(slug, datos, ciudades);
-    // Cercanas: su página de excavaciones si existe; si no, su página de contenedores.
-    const cercanas = (c.cercanas || []).map((x) => (datos[x.slug]
-      ? `<li><a href="${rutaExcavacion(x.slug)}">Excavaciones en ${x.nombre}</a></li>`
-      : `<li><a href="/${x.slug}/">${x.nombre}</a></li>`)).join('');
-    const deLaProvincia = prov && datos[prov] && ciudades[prov]
-      ? `<p>Mira también las <a href="${rutaExcavacion(prov)}">excavaciones en ${ciudades[prov].nombre}</a>.</p>` : '';
+    // Sin bloque de cercanas (Yama, 2026-11-03): solo la provincia que tiene pueblos (Valencia)
+    // lleva la lista de sus pueblos.
+    const pueblos = datosValidos(datos, ciudades).filter((x) => provinciaDe(x, datos, ciudades) === slug)
+      .sort((a, b) => ciudades[a].nombre.localeCompare(ciudades[b].nombre, 'es'));
+    const listaPueblos = pueblos.length > 1
+      ? { h2: `Excavaciones en los pueblos de ${n}`, html: `<p>Si tu obra está en un pueblo de la provincia de ${n}, consulta su página:</p><ul class="enlaces-zona">${pueblos.map((x) => `<li><a href="${rutaExcavacion(x)}">Excavaciones en ${ciudades[x].nombre}</a></li>`).join('')}</ul>` }
+      : null;
     const faq = [
       { pregunta: `¿Hace falta licencia para excavar en ${n}?`, respuesta: lic.faq },
       { pregunta: `¿Cuánto cuesta una excavación en ${n}?`, respuesta: 'Depende del volumen de tierra, la profundidad, el tipo de terreno, el acceso para la máquina y la retirada de la tierra. Se presupuesta cada obra, normalmente por metro cúbico o por jornada de máquina.' },
@@ -100,7 +101,7 @@ export function paginasExcavacion(datos, ciudades) {
           h2: `Precio de una excavación en ${n}`,
           html: '<p>El precio se calcula para cada obra, normalmente por metro cúbico o por jornada de máquina. Depende sobre todo de:</p><ul><li>El <strong>volumen</strong> de tierra y la profundidad.</li><li>El <strong>tipo de terreno</strong>: la roca necesita martillo hidráulico y más horas.</li><li>El <strong>acceso</strong> para la máquina: con poco espacio se trabaja con miniexcavadora.</li><li>La <strong>retirada de la tierra</strong>: cuántos contenedores o camiones hacen falta y la distancia al gestor autorizado.</li></ul><p>Más detalles en la guía de <a href="/excavaciones/">excavaciones y movimiento de tierras</a>.</p>',
         },
-        { h2: `Excavaciones cerca de ${n}`, html: `<p>Si tu obra está en una zona cercana, consulta su página:</p><ul class="enlaces-zona">${cercanas}</ul>${deLaProvincia}<p>Para el resto de España, mira la guía de <a href="/excavaciones/">excavaciones y movimiento de tierras</a>.</p>` },
+        ...(listaPueblos ? [listaPueblos] : []),
         { h2: `Preguntas frecuentes sobre excavaciones en ${n}`, faq },
         {
           h2: `Pide presupuesto de excavación en ${n}`,

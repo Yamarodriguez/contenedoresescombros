@@ -1,0 +1,34 @@
+---
+// Lista de las páginas de excavaciones por comunidad y provincia, con las localidades de cada
+// provincia debajo. Va AL FINAL de la página de Excavaciones (Yama, 2026-11-03).
+import ciudades from '../data/ciudades.json';
+import datosExcavacion from '../data/excavaciones-ciudades.json';
+import { gruposExcavacion } from '../lib/excavaciones.mjs';
+
+const grupos = gruposExcavacion(datosExcavacion, ciudades);
+---
+<div class="contenido">
+  <section class="banda banda-panel">
+    <div class="banda-in">
+      <h2 class="titular">Excavaciones por provincia y localidad</h2>
+      <div class="grupos-excavacion">
+        {grupos.map((g: any) => (
+          <div class="grupo-excavacion">
+            <h3 class="titular">{g.comunidad}</h3>
+            <ul class="enlaces-zona">
+              {g.provincias.map((p: any) => <li><a href={p.ruta}>{p.clave}</a></li>)}
+            </ul>
+            {g.provincias.filter((p: any) => p.localidades.length).map((p: any) => (
+              <div class="localidades">
+                <p class="texto">Localidades de {p.nombre}:</p>
+                <ul class="enlaces-zona">
+                  {p.localidades.map((l: any) => <li><a href={l.ruta}>{l.clave}</a></li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</div>

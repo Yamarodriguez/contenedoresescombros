@@ -115,7 +115,7 @@ a.foto:hover { transform: translateY(-3px); }
 
 /* -------- Bandas y columnas (maquetación original de Elementor) -------- */
 .banda { padding: 2.6rem 0; }
-.banda:nth-of-type(even) { background: var(--panel); }
+.banda:nth-of-type(even), .banda.banda-panel { background: var(--panel); }
 .banda-in { max-width: var(--ancho); margin: 0 auto; padding: 0 16px; }
 .fila { display: grid; grid-template-columns: var(--plantilla, 1fr); gap: 1.4rem 2.6rem; align-items: start; }
 .fila + .fila { margin-top: 1.4rem; }

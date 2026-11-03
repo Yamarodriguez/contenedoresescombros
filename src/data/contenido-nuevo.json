@@ -1,6 +1,7 @@
 {
   "_nota": "Contenido NUEVO que se pinta encima del original (petición de Yama, 2026-11-03). Estructura sacada del análisis de las páginas que salen arriba en Google (informes/analisis-google-excavaciones.md). Tono informativo y neutro: no promete servicios ni precios hasta que Yama confirme quién hace los trabajos.",
   "excavaciones": {
+    "listaAlFinal": true,
     "subtitulo": "Tipos de excavación, maquinaria, contenedores para la tierra y de qué depende el precio. Presupuesto sin compromiso.",
     "entradilla": "<p>Una <strong>excavación</strong> consiste en retirar tierra del terreno para preparar una obra: el vaciado de un solar o de un sótano, las zanjas de los cimientos o de las tuberías, el hueco de una piscina o la nivelación de una parcela. El <strong>movimiento de tierras</strong> incluye además los rellenos, la compactación y el transporte de la tierra sobrante, que se retira en <strong>contenedores de tierra</strong> o en camiones hasta un gestor autorizado.</p><p>Aquí tienes los tipos de excavación, la maquinaria que se usa, qué contenedor elegir para la tierra, de qué depende el precio y cómo pedir presupuesto.</p>",
     "secciones": [
@@ -63,10 +64,6 @@
       {
         "h2": "Cómo se hace una excavación, paso a paso",
         "html": "<ol><li><strong>Visita y medición</strong> del terreno: volumen, profundidad, acceso y tipo de suelo.</li><li><strong>Permisos</strong>: licencia de obra o declaración responsable del ayuntamiento y, si el proyecto lo pide, estudio geotécnico.</li><li><strong>Replanteo</strong>: se marcan en el terreno los límites y la profundidad de la excavación.</li><li><strong>Excavación</strong> con la maquinaria adecuada y carga de la tierra en contenedores o camiones.</li><li><strong>Retirada de la tierra</strong> al gestor autorizado y, al final, relleno, compactación y nivelación.</li></ol>"
-      },
-      {
-        "h2": "Excavaciones por provincia y localidad",
-        "enlacesExcavaciones": true
       },
       {
         "h2": "Preguntas frecuentes sobre excavaciones",
