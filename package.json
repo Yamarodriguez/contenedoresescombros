@@ -14,10 +14,12 @@
     "todo:visual": "node scripts/visual.mjs"
   },
   "dependencies": {
+    "@fontsource/inter": "5.3.0",
     "astro": "4.16.7",
     "image-size": "1.1.1"
   },
   "devDependencies": {
-    "playwright": "1.64.1"
+    "playwright": "1.64.1",
+    "sharp": "0.33.5"
   }
 }

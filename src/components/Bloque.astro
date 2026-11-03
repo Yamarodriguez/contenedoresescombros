@@ -7,6 +7,9 @@ const dim = (src: string) => (imagenes as Record<string, any>)[src] || {};
 const telFix = (h = '') => h.replace(/^tel:\s+/, 'tel:');
 const Tag = (b.type === 'heading' ? b.tag : 'div') as any;
 const d = b.type === 'image' ? dim(b.src) : {};
+const base = b.type === 'image' ? b.src.replace(/\.(jpe?g|png)$/i, '') : '';
+const srcset = ((d.ws || []) as number[]).map((w) => `${base}-${w}.webp ${w}w`).join(', ');
+const sizes = '(max-width: 800px) 100vw, 760px';
 ---
 {b.type === 'heading' && (
   b.href
@@ -16,8 +19,8 @@ const d = b.type === 'image' ? dim(b.src) : {};
 {b.type === 'text' && <div class="texto" set:html={b.html || b.text} />}
 {b.type === 'image' && (
   b.href
-    ? <a href={b.href} class="foto"><img src={b.src} alt={b.alt || ''} width={d.w} height={d.h} loading="lazy" decoding="async" /></a>
-    : <img class="foto" src={b.src} alt={b.alt || ''} width={d.w} height={d.h} loading="lazy" decoding="async" />
+    ? <a href={b.href} class="foto"><picture>{srcset && <source type="image/webp" srcset={srcset} sizes={sizes} />}<img src={b.src} alt={b.alt || ''} width={d.w} height={d.h} loading="lazy" decoding="async" /></picture></a>
+    : <div class="foto"><picture>{srcset && <source type="image/webp" srcset={srcset} sizes={sizes} />}<img src={b.src} alt={b.alt || ''} width={d.w} height={d.h} loading="lazy" decoding="async" /></picture></div>
 )}
 {b.type === 'button' && <a class="boton" href={telFix(b.href || '#')}>{b.text}</a>}
 {b.type === 'map' && (

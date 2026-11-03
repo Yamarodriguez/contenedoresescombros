@@ -1,10 +1,12 @@
 ---
-// Formulario de contacto. En la Fase 5 se termina (Netlify Forms, envio sin salir
-// de la pagina, aviso y /gracias/). Aqui va la base con los mismos campos.
+// Formulario de contacto con Netlify Forms. Envia sin salir de la pagina (fetch),
+// avisa de enviado o error, lleva campo anti-spam (honeypot) y, sin JavaScript,
+// cae en el envio normal a /gracias/. Avisa a yamandu_5@hotmail.com (se configura
+// en el panel de Netlify al conectar el sitio, Fase 7).
 ---
 <form class="formulario" name="contacto" method="POST" data-netlify="true" netlify-honeypot="empresa-bot" action="/gracias/">
   <input type="hidden" name="form-name" value="contacto" />
-  <p class="campo-trampa"><label>No rellenar <input name="empresa-bot" tabindex="-1" autocomplete="off" /></label></p>
+  <p class="campo-trampa" aria-hidden="true"><label>No rellenar <input name="empresa-bot" tabindex="-1" autocomplete="off" /></label></p>
   <label>Nombre<input type="text" name="nombre" required /></label>
   <label>Email<input type="email" name="email" required /></label>
   <label>Teléfono<input type="tel" name="telefono" /></label>
@@ -12,4 +14,30 @@
   <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
   <label class="acepto"><input type="checkbox" name="acepto" required /> He leído y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>.</label>
   <button type="submit" class="boton">Enviar</button>
+  <p class="form-estado" role="status" aria-live="polite" hidden></p>
 </form>
+<script>
+  document.querySelectorAll('form[data-netlify]').forEach((f) => {
+    const form = f as HTMLFormElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const estado = form.querySelector('.form-estado') as HTMLElement;
+      const boton = form.querySelector('button[type=submit]') as HTMLButtonElement;
+      if (boton) boton.disabled = true;
+      try {
+        const datos = new URLSearchParams(new FormData(form) as any).toString();
+        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: datos });
+        if (!r.ok) throw new Error('http ' + r.status);
+        form.reset();
+        estado.textContent = '¡Gracias! Hemos recibido tu mensaje y te responderemos lo antes posible.';
+        estado.className = 'form-estado ok';
+      } catch (err) {
+        estado.textContent = 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.';
+        estado.className = 'form-estado error';
+      } finally {
+        estado.hidden = false;
+        if (boton) boton.disabled = false;
+      }
+    });
+  });
+</script>

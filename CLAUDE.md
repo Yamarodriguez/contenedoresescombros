@@ -58,4 +58,7 @@ Fase 4 EN CURSO. Hecho: FAQ con datos estructurados (FAQPage) en index/medidas/p
 Enlazado entre ciudades HECHO: cada página de ciudad enlaza su provincia y 6 localidades cercanas (`src/data/ciudades.json`, geo de OpenStreetMap vía `scripts/geo-ciudades.mjs`, cache en informes/geo-cache.json). Componente `Zona.astro`.
 Regenerar todo en orden: `npm run generar` (extraer → geo → medidas → seo → menus). todo y todo:visual a 0, subido a GitHub.
 Pendiente Fase 4: legales reescritas (necesita dirección legal completa y confirmar modelo de negocio); decidir hola-mundo y personalizar-cookies; (opcional) tablas de medidas, más FAQ.
+Fase 5 (formulario) HECHA: Netlify Forms con envío sin recargar (fetch), aviso de enviado/error, honeypot anti-spam, /gracias/. Avisa a yamandu_5@hotmail.com (se activa en el panel de Netlify, Fase 7). Prueba real de envío: solo con el sitio ya en Netlify.
+Fase 6 (velocidad) HECHA: webp 400/800 con `<picture>` (470 webp), tipografía Inter local (fontsource), todas las imágenes con medidas. sharp funciona (devDependency).
+Siguiente: legales (Fase 4, pendiente de tus datos) y Fase 7 (lanzamiento: conectar Netlify, DNS y correo, GA4, redirecciones wp-content/Yoast, ads.txt, Search Console). Netlix/DNS necesitan a Yama.
 Las FAQ son factuales y neutras (no dicen quién presta el servicio) hasta confirmar si es directorio o alquiler propio.

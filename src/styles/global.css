@@ -29,7 +29,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--texto);
   background: var(--fondo);
   line-height: 1.65;
@@ -79,11 +79,11 @@ a:where(:not(.boton)) { color: var(--marca2); }
 .contenido p.titular { font-weight: 600; color: var(--marca2); font-size: 1.05rem; }
 .contenido .titular a { color: inherit; text-decoration: none; }
 .contenido .titular a:hover { color: var(--marca); }
-.texto { margin: 0 0 1rem; }
+.texto { margin: 0 0 1rem; overflow-wrap: break-word; }
 .texto :where(ul, ol) { padding-left: 1.2rem; }
 .texto a { color: var(--marca2); overflow-wrap: anywhere; }
 .foto { margin: 1rem 0; }
-img.foto, a.foto img { border-radius: var(--radio); box-shadow: var(--sombra); max-width: 760px; width: 100%; }
+.foto img { border-radius: var(--radio); box-shadow: var(--sombra); max-width: 760px; width: 100%; height: auto; }
 a.foto { display: inline-block; transition: transform .15s ease; }
 a.foto:hover { transform: translateY(-3px); }
 .mapa { width: 100%; height: 380px; border: 0; border-radius: var(--radio); margin: 1rem 0; box-shadow: var(--sombra); }
@@ -113,6 +113,9 @@ a.foto:hover { transform: translateY(-3px); }
 .formulario .acepto { font-weight: 400; display: flex; align-items: flex-start; gap: .5rem; }
 .formulario .acepto input { width: auto; }
 .campo-trampa { position: absolute; left: -9999px; }
+.form-estado { margin: 0; padding: .7rem .9rem; border-radius: 9px; font-weight: 600; }
+.form-estado.ok { background: #e4f3ea; color: #15532f; }
+.form-estado.error { background: #fde8e8; color: #972020; }
 
 /* -------- Pie -------- */
 .pie { background: #131a22; color: #d7dde4; margin-top: 0; }
