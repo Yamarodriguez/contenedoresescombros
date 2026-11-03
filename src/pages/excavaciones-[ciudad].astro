@@ -4,6 +4,7 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import Anadido from '../components/Anadido.astro';
+import ListaExcavaciones from '../components/ListaExcavaciones.astro';
 import site from '../data/site.json';
 import ciudades from '../data/ciudades.json';
 import datosExcavacion from '../data/excavaciones-ciudades.json';
@@ -28,4 +29,5 @@ const datos = [{ '@type': 'FAQPage', mainEntity: p.faq.map((f: any) => ({ '@type
 <Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos}>
   <Hero titulo={p.h1} subtitulo={p.contenido.subtitulo} imagen={principal} />
   <Anadido datos={p.contenido} />
+  {p.listaPueblos && <ListaExcavaciones titulo={p.listaPueblos.titulo} enlaces={p.listaPueblos.enlaces} />}
 </Base>
