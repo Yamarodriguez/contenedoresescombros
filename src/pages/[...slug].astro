@@ -37,7 +37,7 @@ const cambios = cambiosData as any;
 const propios = nombresPropios(ciudades);
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
 const tituloH1 = cambios.h1[data.slug] || tipoFrase(h1 ? h1.text : data.title, propios);
-const bloques = aplicarCambios(data.blocks, { titulo: tituloH1, propios });
+const bloques = aplicarCambios(data.blocks, { titulo: tituloH1, propios, encabezados: cambios.encabezados?.[data.slug] });
 // Partes del original que Yama ha pedido quitar (fallos-original.json -> quitar).
 const quitados = new Set<number>(cambios.quitar?.[data.slug] || []);
 const filas = (data.filas || []).filter((f: any) => !bloquesDeFila(f).every((i: number) => quitados.has(i)));

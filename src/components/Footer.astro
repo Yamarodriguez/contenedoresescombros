@@ -21,7 +21,7 @@ const bonito = (t: string) => {
 const contenedores = [
   { label: 'Precios', url: '/precio/' },
   { label: 'Medidas', url: '/medidas/' },
-  ...hijos('Medidas y tipos').filter((c) => c.url !== '/medidas/').slice(0, 9),
+  ...hijos('Medidas y tipos').filter((c) => c.url !== '/medidas/' && c.url !== '/contenedores-de-tierra/').slice(0, 9),
   { label: 'Contenedores de tierra', url: '/contenedores-de-tierra/' },
 ];
 const servicios = ['Alquiler', 'Recogida Escombros', 'Transporte', 'Habilitación vía publica', 'Venta', 'Excavaciones'].map(entrada).filter(Boolean);

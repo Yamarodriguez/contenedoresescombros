@@ -39,6 +39,18 @@ for (const f of fs.readdirSync('referencia')) {
 const mejor = (lista) => lista.sort((a, b) => contar(b) - contar(a))[0] || [];
 const principal = mejor(variantes);
 const pie = mejor(pies);
+// Entradas nuevas que no vienen de WordPress (páginas de src/data/paginas-nuevas.json).
+// Yama (2026-11-03): «Contenedores de tierra» en «Medidas y tipos», detrás de la de poda.
+const ANADIDOS = [
+  { dentro: 'Medidas y tipos', despues: '/poda/', label: 'Contenedores de tierra', url: '/contenedores-de-tierra/' },
+];
+for (const a of ANADIDOS) {
+  const padre = principal.find((e) => e.label === a.dentro);
+  if (!padre) throw new Error(`Menú: no está «${a.dentro}»`);
+  if (padre.children.some((c) => c.url === a.url)) continue;
+  const k = padre.children.findIndex((c) => c.url === a.despues);
+  padre.children.splice(k < 0 ? padre.children.length : k + 1, 0, { label: a.label, url: a.url, children: [] });
+}
 fs.mkdirSync('src/data', { recursive: true });
 fs.writeFileSync('src/data/menus.json', JSON.stringify({ principal, pie }, null, 1) + '\n');
 console.log(`Menu principal: ${contar(principal)} entradas (${principal.length} arriba). Pie: ${contar(pie)} entradas. Variantes vistas: ${new Set(variantes.map((v) => JSON.stringify(v))).size}`);

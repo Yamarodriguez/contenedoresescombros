@@ -1,32 +1,32 @@
 ---
-// Lista de las páginas de excavaciones por comunidad y provincia, con las localidades de cada
-// provincia debajo. Va AL FINAL de la página de Excavaciones (Yama, 2026-11-03).
-import ciudades from '../data/ciudades.json';
+// «Excavaciones por lugares»: la misma lista de la página de inicio («Contenedores por
+// lugares»), en las mismas 5 columnas y en el mismo orden, pero enlazando a la página de
+// excavaciones de cada lugar. Va AL FINAL de la página de Excavaciones (Yama, 2026-11-03).
+// Los pueblos de Valencia se enlazan desde /excavaciones-valencia/.
+import inicio from '../content/pages/index.json';
 import datosExcavacion from '../data/excavaciones-ciudades.json';
-import { gruposExcavacion } from '../lib/excavaciones.mjs';
+import { rutaExcavacion } from '../lib/excavaciones.mjs';
 
-const grupos = gruposExcavacion(datosExcavacion, ciudades);
+const bloques = (inicio as any).blocks as any[];
+const h = bloques.findIndex((b) => b.type === 'heading' && /^nuestra area de trabajo$/i.test(b.text.trim()));
+const columnas: { texto: string; ruta: string }[][] = [];
+for (let i = h + 1; h >= 0 && i < bloques.length && bloques[i].type === 'text'; i++) {
+  const enlaces = [...bloques[i].html.matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map((m) => {
+    const slug = new URL(m[1]).pathname.replace(/^\/|\/$/g, '').toLowerCase();
+    if (!(datosExcavacion as Record<string, any>)[slug]) throw new Error(`Lista de excavaciones: «${slug}» no tiene página de excavaciones`);
+    return { texto: m[2].trim().replace(/^Contenedores\s+/, 'Excavaciones '), ruta: rutaExcavacion(slug) };
+  });
+  columnas.push(enlaces);
+}
+if (columnas.flat().length < 40) throw new Error('Lista de excavaciones: no se encuentra la lista de lugares de la página de inicio');
 ---
 <div class="contenido">
   <section class="banda banda-panel">
     <div class="banda-in">
-      <h2 class="titular">Excavaciones por provincia y localidad</h2>
-      <div class="grupos-excavacion">
-        {grupos.map((g: any) => (
-          <div class="grupo-excavacion">
-            <h3 class="titular">{g.comunidad}</h3>
-            <ul class="enlaces-zona">
-              {g.provincias.map((p: any) => <li><a href={p.ruta}>{p.clave}</a></li>)}
-            </ul>
-            {g.provincias.filter((p: any) => p.localidades.length).map((p: any) => (
-              <div class="localidades">
-                <p class="texto">Localidades de {p.nombre}:</p>
-                <ul class="enlaces-zona">
-                  {p.localidades.map((l: any) => <li><a href={l.ruta}>{l.clave}</a></li>)}
-                </ul>
-              </div>
-            ))}
-          </div>
+      <div class="fila cols-1"><div class="col"><h2 class="titular">Excavaciones por lugares</h2></div></div>
+      <div class={`fila cols-${columnas.length}`} style={`--plantilla:${columnas.map(() => '20fr').join(' ')}`}>
+        {columnas.map((c) => (
+          <div class="col"><div class="texto"><p set:html={c.map((e) => `<a href="${e.ruta}">${e.texto}</a>`).join('<br />')} /></div></div>
         ))}
       </div>
     </div>

@@ -112,6 +112,17 @@ for (const p of paginas) {
 }
 resumenQuitar.push(`lista de provincias quitada en ${listaProvincias.length} páginas (se queda en inicio): ${listaProvincias.join(', ')}`);
 
+// --- Titulares del original cambiados a petición de Yama ---
+// Página -> { titular original (sin acentos, minúsculas): titular nuevo }.
+// Yama (2026-11-03): en inicio, «Nuestra Area de trabajo» -> «Contenedores por lugares».
+const encabezados = {
+  index: { 'nuestra area de trabajo': 'Contenedores por lugares' },
+};
+for (const [slug, m] of Object.entries(encabezados)) {
+  const p = paginas.find((x) => x.slug === slug);
+  for (const t of Object.keys(m)) if (!p.blocks.some((b) => b.type === 'heading' && normT(b.text) === t)) errores.push(`${slug}: no hay ningún titular «${t}»`);
+}
+
 // --- Comprobaciones de las reglas ---
 for (const [k, t] of Object.entries(titulos)) if (t.length > MAX) errores.push(`título de ${k} con ${t.length} caracteres`);
 const repetidos = Object.values(titulos).filter((t, i, a) => a.indexOf(t) !== i);
@@ -135,13 +146,14 @@ console.log(`H1 nuevos: ${Object.keys(h1).length} (${Object.entries(h1).map(([k,
 console.log(`Descripciones nuevas: ${Object.keys(descripciones).length} (${Object.keys(descripciones).join(', ')})`);
 console.log(`Encabezados de MAYÚSCULAS a tipo frase: ${mayus} (${ejMayus.size} textos distintos)\n${[...ejMayus].slice(0, 5).map(([a, b]) => `    «${a}» -> «${b}»`).join('\n')}`);
 console.log(`Fotos que reciben texto alternativo: ${alts}\n${ejAlt.map((e) => '    ' + e).join('\n')}`);
+console.log(`Titulares cambiados: ${Object.entries(encabezados).map(([s, m]) => Object.entries(m).map(([a, b]) => `${s}: «${a}» -> «${b}»`).join(' · ')).join(' · ')}`);
 console.log(`Partes quitadas:\n${resumenQuitar.map((e) => '    ' + e).join('\n')}`);
 if (errores.length) { console.log('ERRORES:\n  ' + errores.join('\n  ')); process.exit(1); }
 if (SECO) { console.log('\n(--seco: no se ha escrito nada)'); process.exit(0); }
 
 fs.writeFileSync('src/data/fallos-original.json', JSON.stringify({
   aprobado: 'Yama, 2026-11-03 (auditoría SEO/AEO)',
-  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)'],
-  titulos, h1, descripciones, tituloFaq, preguntas, quitar,
+  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)', 'encabezados: titulares del original cambiados a petición de Yama'],
+  titulos, h1, descripciones, tituloFaq, preguntas, quitar, encabezados,
 }, null, 1) + '\n');
 console.log('\nEscrito src/data/fallos-original.json');

@@ -3,7 +3,7 @@
 // en dist/, en el mismo orden. Se normaliza lo que cambia al publicar.
 import fs from 'node:fs';
 import path from 'node:path';
-import { preguntasConvertidas } from '../src/lib/textos.mjs';
+import { preguntasConvertidas, normT } from '../src/lib/textos.mjs';
 
 // Cambio aprobado: el titular del bloque Medidas / Recogida pasa a ser su pregunta.
 const cambios = JSON.parse(fs.readFileSync('src/data/fallos-original.json', 'utf8'));
@@ -78,7 +78,9 @@ for (const p of paginas) {
   const conv = preguntasConvertidas(pag.blocks, pag.filas, cambios.preguntas);
   // Partes del original que Yama ha pedido quitar (fallos-original.json -> quitar).
   const quitados = new Set(cambios.quitar?.[ruta || 'index'] || []);
-  const bl = p.blocks.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b)).filter((_, i) => !quitados.has(i));
+  // Titulares cambiados a petición de Yama (fallos-original.json -> encabezados).
+  const renombrados = cambios.encabezados?.[ruta || 'index'] || {};
+  const bl = p.blocks.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b.type === 'heading' && renombrados[normT(b.text)] ? { ...b, text: renombrados[normT(b.text)] } : b)).filter((_, i) => !quitados.has(i));
   subTxt(viejoTextos(bl), textoUnidades(zona).join(' || '), 'texto', p, dif);
   subArr(viejoBotones(bl), nuevoBotones(html), 'boton', p, dif);
   subArr(viejoEnlaces(bl), nuevoEnlaces(html), 'enlace', p, dif);

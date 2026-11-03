@@ -4,7 +4,8 @@
   "Encabezados en MAYÚSCULAS -> tipo frase",
   "Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)",
   "Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)",
-  "quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)"
+  "quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)",
+  "encabezados: titulares del original cambiados a petición de Yama"
  ],
  "titulos": {
   "albacete": "Contenedores de escombros en Albacete: precio y alquiler",
@@ -204,5 +205,10 @@
    76,
    77
   ]
+ },
+ "encabezados": {
+  "index": {
+   "nuestra area de trabajo": "Contenedores por lugares"
+  }
  }
 }

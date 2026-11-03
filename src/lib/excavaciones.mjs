@@ -27,7 +27,6 @@ const CON_ARTICULO = {
   'Principado de Asturias': 'el Principado de Asturias', 'Islas Baleares': 'las Islas Baleares',
 };
 const enLa = (comunidad) => CON_ARTICULO[comunidad] || comunidad;
-const mayus = (t) => t.charAt(0).toUpperCase() + t.slice(1);
 
 /** Dirección de la página de excavaciones de una ciudad (sin el «contenedores-escombros-» de algunas). */
 export const idExcavacion = (slug) => `excavaciones-${slug.replace(/^contenedores-escombros-/, '')}`;
@@ -127,26 +126,6 @@ export function paginasExcavacion(datos, ciudades) {
         `Excavaciones y movimiento de tierras en ${n}: vaciados, zanjas, piscinas, nivelación, contenedores para la tierra y licencia.`,
       ], MAX_DESC),
       faq, contenido,
-    };
-  });
-}
-
-/**
- * Las páginas agrupadas para listarlas: por comunidad (la Comunitat Valenciana primero) y,
- * dentro, cada provincia con sus localidades (p. ej. Valencia con sus pueblos).
- */
-export function gruposExcavacion(datos, ciudades) {
-  const paginas = paginasExcavacion(datos, ciudades);
-  const porSlug = new Map(paginas.map((p) => [p.slug, p]));
-  const orden = (a, b) => a.nombre.localeCompare(b.nombre, 'es');
-  const cabezas = paginas.filter((p) => !p.provincia || !porSlug.has(p.provincia));
-  const comunidades = [...new Set(cabezas.map((p) => p.comunidad || 'Otras'))]
-    .sort((a, b) => (a === CV ? -1 : b === CV ? 1 : a.localeCompare(b, 'es')));
-  return comunidades.map((comunidad) => {
-    const provincias = cabezas.filter((p) => (p.comunidad || 'Otras') === comunidad).sort(orden);
-    return {
-      comunidad: mayus(comunidad),
-      provincias: provincias.map((p) => ({ ...p, localidades: paginas.filter((x) => x.provincia === p.slug).sort(orden) })),
     };
   });
 }

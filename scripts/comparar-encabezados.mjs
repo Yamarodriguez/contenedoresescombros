@@ -5,7 +5,7 @@
 // H1 de servicio nuevos y encabezados de MAYÚSCULAS a tipo frase.
 import fs from 'node:fs';
 import path from 'node:path';
-import { tipoFrase, nombresPropios, preguntasConvertidas } from '../src/lib/textos.mjs';
+import { tipoFrase, nombresPropios, preguntasConvertidas, normT } from '../src/lib/textos.mjs';
 
 const cambios = JSON.parse(fs.readFileSync('src/data/fallos-original.json', 'utf8'));
 const propios = nombresPropios(JSON.parse(fs.readFileSync('src/data/ciudades.json', 'utf8')));
@@ -32,12 +32,14 @@ for (const p of paginas) {
   if (hb.length !== p.headings.length) { diferencias.push(`${p.url}: la estructura viva y la página no tienen los mismos titulares`); continue; }
   // Partes del original que Yama ha pedido quitar (fallos-original.json -> quitar).
   const quitados = new Set(cambios.quitar?.[slug] || []);
+  // Titulares cambiados a petición de Yama (fallos-original.json -> encabezados).
+  const renombrados = cambios.encabezados?.[slug] || {};
   let originales = []; let conTituloFaq = false;
   p.headings.forEach((h, k) => {
     if (quitados.has(hb[k])) return;
     const q = conv.get(hb[k]);
     if (q) { if (!conTituloFaq) { originales.push(['h2', limpia(cambios.tituloFaq)]); conTituloFaq = true; } originales.push(['h3', limpia(q)]); }
-    else if (/^h[1-3]$/.test(h.tag)) originales.push([h.tag, limpia(tipoFrase(h.text, propios))]);
+    else if (/^h[1-3]$/.test(h.tag)) originales.push([h.tag, limpia(renombrados[normT(h.text)] || tipoFrase(h.text, propios))]);
   });
   if (cambios.h1[slug]) originales = [['h1', limpia(cambios.h1[slug])], ...originales.filter(([t]) => t !== 'h1')];
   else if (!originales.some(([t]) => t === 'h1')) originales = [['h1', limpia(tipoFrase(p.title, propios))], ...originales];
