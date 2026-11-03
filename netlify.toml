@@ -2,7 +2,21 @@
   command = "npm run build"
   publish = "dist"
 
+# --- Cache del navegador (Fase 6) ---
+# Estilos, scripts y fuentes de Astro llevan huella en el nombre: se pueden guardar un ano.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+# Imagenes: 30 dias.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
 # --- Redirecciones de WordPress (que no se pierda nada de lo indexado) ---
+# Las miniaturas (foto-1024x1024.jpg, ...) van en public/_redirects, que Netlify
+# lee antes que este fichero (scripts/redirecciones-wp.mjs).
 
 # Imagenes viejas: /wp-content/uploads/... -> /img/...
 [[redirects]]
