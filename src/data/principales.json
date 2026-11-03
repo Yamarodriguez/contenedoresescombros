@@ -367,32 +367,284 @@
   "src": "/img/principal/contenedores-escombros-zaragoza.jpg",
   "alt": "Contenedores de escombros en Zaragoza"
  },
- "excavaciones/valencia": {
+ "excavaciones-valencia": {
   "src": "/img/principal/excavaciones-valencia.jpg",
   "alt": "Excavaciones en Valencia"
  },
- "excavaciones/betera": {
+ "excavaciones-betera": {
   "src": "/img/principal/excavaciones-betera.jpg",
   "alt": "Excavaciones en Bétera"
  },
- "excavaciones/sagunto": {
+ "excavaciones-sagunto": {
   "src": "/img/principal/excavaciones-sagunto.jpg",
   "alt": "Excavaciones en Sagunto"
  },
- "excavaciones/xativa": {
+ "excavaciones-xativa": {
   "src": "/img/principal/excavaciones-xativa.jpg",
   "alt": "Excavaciones en Xàtiva"
  },
- "excavaciones/algemesi": {
+ "excavaciones-algemesi": {
   "src": "/img/principal/excavaciones-algemesi.jpg",
   "alt": "Excavaciones en Algemesí"
  },
- "excavaciones/cullera": {
+ "excavaciones-cullera": {
   "src": "/img/principal/excavaciones-cullera.jpg",
   "alt": "Excavaciones en Cullera"
  },
- "excavaciones/madrid": {
+ "excavaciones-torrent": {
+  "src": "/img/principal/excavaciones-torrent.jpg",
+  "alt": "Excavaciones en Torrent"
+ },
+ "excavaciones-paterna": {
+  "src": "/img/principal/excavaciones-paterna.jpg",
+  "alt": "Excavaciones en Paterna"
+ },
+ "excavaciones-moncada": {
+  "src": "/img/principal/excavaciones-moncada.jpg",
+  "alt": "Excavaciones en Moncada"
+ },
+ "excavaciones-alboraya": {
+  "src": "/img/principal/excavaciones-alboraya.jpg",
+  "alt": "Excavaciones en Alboraya"
+ },
+ "excavaciones-paiporta": {
+  "src": "/img/principal/excavaciones-paiporta.jpg",
+  "alt": "Excavaciones en Paiporta"
+ },
+ "excavaciones-ribarroja-del-turia": {
+  "src": "/img/principal/excavaciones-ribarroja-turia.jpg",
+  "alt": "Excavaciones en Ribarroja del Turia"
+ },
+ "excavaciones-pobla-de-vallbona": {
+  "src": "/img/principal/excavaciones-pobla-vallbona.jpg",
+  "alt": "Excavaciones en Pobla de Vallbona"
+ },
+ "excavaciones-lliria": {
+  "src": "/img/principal/excavaciones-lliria.jpg",
+  "alt": "Excavaciones en Llíria"
+ },
+ "excavaciones-puerto-de-sagunto": {
+  "src": "/img/principal/excavaciones-puerto-sagunto.jpg",
+  "alt": "Excavaciones en Puerto de Sagunto"
+ },
+ "excavaciones-carcaixent": {
+  "src": "/img/principal/excavaciones-carcaixent.jpg",
+  "alt": "Excavaciones en Carcaixent"
+ },
+ "excavaciones-sueca": {
+  "src": "/img/principal/excavaciones-sueca.jpg",
+  "alt": "Excavaciones en Sueca"
+ },
+ "excavaciones-gandia": {
+  "src": "/img/principal/excavaciones-gandia.jpg",
+  "alt": "Excavaciones en Gandía"
+ },
+ "excavaciones-ontinyent": {
+  "src": "/img/principal/excavaciones-ontinyent.jpg",
+  "alt": "Excavaciones en Ontinyent"
+ },
+ "excavaciones-requena": {
+  "src": "/img/principal/excavaciones-requena.jpg",
+  "alt": "Excavaciones en Requena"
+ },
+ "excavaciones-madrid": {
   "src": "/img/principal/excavaciones-madrid.jpg",
   "alt": "Excavaciones en Madrid"
+ },
+ "excavaciones-alicante": {
+  "src": "/img/principal/excavaciones-alicante.jpg",
+  "alt": "Excavaciones en Alicante"
+ },
+ "excavaciones-castellon": {
+  "src": "/img/principal/excavaciones-castellon.jpg",
+  "alt": "Excavaciones en Castellón"
+ },
+ "excavaciones-alava": {
+  "src": "/img/principal/excavaciones-alava.jpg",
+  "alt": "Excavaciones en Álava"
+ },
+ "excavaciones-vizcaya": {
+  "src": "/img/principal/excavaciones-vizcaya.jpg",
+  "alt": "Excavaciones en Vizcaya"
+ },
+ "excavaciones-guipuzcoa": {
+  "src": "/img/principal/excavaciones-guipuzcoa.jpg",
+  "alt": "Excavaciones en Guipúzcoa"
+ },
+ "excavaciones-albacete": {
+  "src": "/img/principal/excavaciones-albacete.jpg",
+  "alt": "Excavaciones en Albacete"
+ },
+ "excavaciones-ciudad-real": {
+  "src": "/img/principal/excavaciones-ciudad-real.jpg",
+  "alt": "Excavaciones en Ciudad Real"
+ },
+ "excavaciones-cuenca": {
+  "src": "/img/principal/excavaciones-cuenca.jpg",
+  "alt": "Excavaciones en Cuenca"
+ },
+ "excavaciones-guadalajara": {
+  "src": "/img/principal/excavaciones-guadalajara.jpg",
+  "alt": "Excavaciones en Guadalajara"
+ },
+ "excavaciones-toledo": {
+  "src": "/img/principal/excavaciones-toledo.jpg",
+  "alt": "Excavaciones en Toledo"
+ },
+ "excavaciones-almeria": {
+  "src": "/img/principal/excavaciones-almeria.jpg",
+  "alt": "Excavaciones en Almería"
+ },
+ "excavaciones-cadiz": {
+  "src": "/img/principal/excavaciones-cadiz.jpg",
+  "alt": "Excavaciones en Cádiz"
+ },
+ "excavaciones-cordoba": {
+  "src": "/img/principal/excavaciones-cordoba.jpg",
+  "alt": "Excavaciones en Córdoba"
+ },
+ "excavaciones-granada": {
+  "src": "/img/principal/excavaciones-granada.jpg",
+  "alt": "Excavaciones en Granada"
+ },
+ "excavaciones-huelva": {
+  "src": "/img/principal/excavaciones-huelva.jpg",
+  "alt": "Excavaciones en Huelva"
+ },
+ "excavaciones-jaen": {
+  "src": "/img/principal/excavaciones-jaen.jpg",
+  "alt": "Excavaciones en Jaén"
+ },
+ "excavaciones-malaga": {
+  "src": "/img/principal/excavaciones-malaga.jpg",
+  "alt": "Excavaciones en Málaga"
+ },
+ "excavaciones-sevilla": {
+  "src": "/img/principal/excavaciones-sevilla.jpg",
+  "alt": "Excavaciones en Sevilla"
+ },
+ "excavaciones-asturias": {
+  "src": "/img/principal/excavaciones-asturias.jpg",
+  "alt": "Excavaciones en Asturias"
+ },
+ "excavaciones-cantabria": {
+  "src": "/img/principal/excavaciones-cantabria.jpg",
+  "alt": "Excavaciones en Cantabria"
+ },
+ "excavaciones-la-rioja": {
+  "src": "/img/principal/excavaciones-rioja.jpg",
+  "alt": "Excavaciones en La Rioja"
+ },
+ "excavaciones-navarra": {
+  "src": "/img/principal/excavaciones-navarra.jpg",
+  "alt": "Excavaciones en Navarra"
+ },
+ "excavaciones-murcia": {
+  "src": "/img/principal/excavaciones-murcia.jpg",
+  "alt": "Excavaciones en Murcia"
+ },
+ "excavaciones-baleares": {
+  "src": "/img/principal/excavaciones-baleares.jpg",
+  "alt": "Excavaciones en Baleares"
+ },
+ "excavaciones-ibiza": {
+  "src": "/img/principal/excavaciones-ibiza.jpg",
+  "alt": "Excavaciones en Ibiza"
+ },
+ "excavaciones-las-palmas": {
+  "src": "/img/principal/excavaciones-palmas.jpg",
+  "alt": "Excavaciones en Las Palmas"
+ },
+ "excavaciones-tenerife": {
+  "src": "/img/principal/excavaciones-tenerife.jpg",
+  "alt": "Excavaciones en Tenerife"
+ },
+ "excavaciones-barcelona": {
+  "src": "/img/principal/excavaciones-barcelona.jpg",
+  "alt": "Excavaciones en Barcelona"
+ },
+ "excavaciones-girona": {
+  "src": "/img/principal/excavaciones-girona.jpg",
+  "alt": "Excavaciones en Girona"
+ },
+ "excavaciones-lleida": {
+  "src": "/img/principal/excavaciones-lleida.jpg",
+  "alt": "Excavaciones en Lleida"
+ },
+ "excavaciones-tarragona": {
+  "src": "/img/principal/excavaciones-tarragona.jpg",
+  "alt": "Excavaciones en Tarragona"
+ },
+ "excavaciones-coruna": {
+  "src": "/img/principal/excavaciones-coruna.jpg",
+  "alt": "Excavaciones en La Coruña"
+ },
+ "excavaciones-lugo": {
+  "src": "/img/principal/excavaciones-lugo.jpg",
+  "alt": "Excavaciones en Lugo"
+ },
+ "excavaciones-ourense": {
+  "src": "/img/principal/excavaciones-ourense.jpg",
+  "alt": "Excavaciones en Ourense"
+ },
+ "excavaciones-pontevedra": {
+  "src": "/img/principal/excavaciones-pontevedra.jpg",
+  "alt": "Excavaciones en Pontevedra"
+ },
+ "excavaciones-huesca": {
+  "src": "/img/principal/excavaciones-huesca.jpg",
+  "alt": "Excavaciones en Huesca"
+ },
+ "excavaciones-teruel": {
+  "src": "/img/principal/excavaciones-teruel.jpg",
+  "alt": "Excavaciones en Teruel"
+ },
+ "excavaciones-zaragoza": {
+  "src": "/img/principal/excavaciones-zaragoza.jpg",
+  "alt": "Excavaciones en Zaragoza"
+ },
+ "excavaciones-badajoz": {
+  "src": "/img/principal/excavaciones-badajoz.jpg",
+  "alt": "Excavaciones en Badajoz"
+ },
+ "excavaciones-caceres": {
+  "src": "/img/principal/excavaciones-caceres.jpg",
+  "alt": "Excavaciones en Cáceres"
+ },
+ "excavaciones-avila": {
+  "src": "/img/principal/excavaciones-avila.jpg",
+  "alt": "Excavaciones en Ávila"
+ },
+ "excavaciones-burgos": {
+  "src": "/img/principal/excavaciones-burgos.jpg",
+  "alt": "Excavaciones en Burgos"
+ },
+ "excavaciones-leon": {
+  "src": "/img/principal/excavaciones-leon.jpg",
+  "alt": "Excavaciones en León"
+ },
+ "excavaciones-palencia": {
+  "src": "/img/principal/excavaciones-palencia.jpg",
+  "alt": "Excavaciones en Palencia"
+ },
+ "excavaciones-salamanca": {
+  "src": "/img/principal/excavaciones-salamanca.jpg",
+  "alt": "Excavaciones en Salamanca"
+ },
+ "excavaciones-segovia": {
+  "src": "/img/principal/excavaciones-segovia.jpg",
+  "alt": "Excavaciones en Segovia"
+ },
+ "excavaciones-soria": {
+  "src": "/img/principal/excavaciones-soria.jpg",
+  "alt": "Excavaciones en Soria"
+ },
+ "excavaciones-valladolid": {
+  "src": "/img/principal/excavaciones-valladolid.jpg",
+  "alt": "Excavaciones en Valladolid"
+ },
+ "excavaciones-zamora": {
+  "src": "/img/principal/excavaciones-zamora.jpg",
+  "alt": "Excavaciones en Zamora"
  }
 }

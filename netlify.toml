@@ -55,6 +55,37 @@
   to = "/"
   status = 301
 
+# Páginas de excavaciones por ciudad: primero se publicaron como /excavaciones/<ciudad>/
+# y Yama pidió /excavaciones-<ciudad>/ (2026-11-03).
+[[redirects]]
+  from = "/excavaciones/valencia/"
+  to = "/excavaciones-valencia/"
+  status = 301
+[[redirects]]
+  from = "/excavaciones/betera/"
+  to = "/excavaciones-betera/"
+  status = 301
+[[redirects]]
+  from = "/excavaciones/sagunto/"
+  to = "/excavaciones-sagunto/"
+  status = 301
+[[redirects]]
+  from = "/excavaciones/xativa/"
+  to = "/excavaciones-xativa/"
+  status = 301
+[[redirects]]
+  from = "/excavaciones/algemesi/"
+  to = "/excavaciones-algemesi/"
+  status = 301
+[[redirects]]
+  from = "/excavaciones/cullera/"
+  to = "/excavaciones-cullera/"
+  status = 301
+[[redirects]]
+  from = "/excavaciones/madrid/"
+  to = "/excavaciones-madrid/"
+  status = 301
+
 # www -> sin www
 [[redirects]]
   from = "https://www.contenedoresescombros.com/*"

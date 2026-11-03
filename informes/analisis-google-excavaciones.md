@@ -128,9 +128,11 @@ Después del análisis de excavacionesvalencia.net (apartado 7) se añadieron 3 
 - **Galería de trabajos reales** y una **ficha de Google Business Profile** (empresa en Google Maps). Lo tienen las empresas que salen arriba. Solo si hay empresa y trabajos reales detrás.
 - **Páginas de servicio** (piscinas, alquiler de excavadora con conductor, canalizaciones…) solo para los trabajos que de verdad se ofrezcan.
 
-## 8. Páginas de excavaciones por ciudad (hechas: primera tanda)
+## 8. Páginas de excavaciones por ciudad (hechas: las 70)
 
-Yama eligió una página nueva por ciudad: **/excavaciones/{ciudad}/**. Primera tanda, con las que ya tienen búsquedas: **Valencia, Bétera, Sagunto, Xàtiva, Algemesí, Cullera y Madrid**.
+Yama eligió una página nueva por ciudad con la dirección **/excavaciones-{ciudad}/** (por ejemplo /excavaciones-betera/, como hace excavacionesvalencia.net). Hay una por **cada ciudad o provincia que ya tiene página de contenedores: 70** (21 de la Comunitat Valenciana y Madrid con frase local; las provincias del resto de España con su comunidad). Las 7 primeras se publicaron como /excavaciones/{ciudad}/ y llevan redirección 301 a la dirección nueva (netlify.toml).
+
+En la página de Excavaciones, el apartado **«Excavaciones por provincia y localidad»** lista solo páginas de excavaciones, agrupadas por comunidad (la Comunitat Valenciana primero) y, dentro de Valencia, sus 20 localidades (y Baleares con Ibiza). Ya no enlaza a las páginas de contenedores.
 
 Cada página lleva:
 
@@ -143,7 +145,9 @@ Cada página lleva:
 
 **Arreglo de paso:** la página /torrent/ estaba situada en un Torrent de Girona (cercanas: Girona, Barcelona…). Ahora es Torrent (Valencia), con Paiporta, Valencia y Paterna como cercanas.
 
-**Siguiente tanda (cuando Yama lo apruebe):** Torrent, Paterna, Moncada, Alboraya, Paiporta, Ribarroja del Turia, La Pobla de Vallbona, Llíria, Puerto de Sagunto, Carcaixent, Sueca, Gandía, Ontinyent y Requena. Basta con añadirlas a `src/data/excavaciones-ciudades.json` con su comarca y su frase local.
+**Licencia fuera de la Comunitat Valenciana:** solo se dice «licencia urbanística o declaración responsable según la obra» (no se ha comprobado la ley de cada comunidad). En las páginas de provincia se habla del «ayuntamiento de tu municipio».
+
+**Para añadir una ciudad nueva:** basta con ponerla en `src/data/excavaciones-ciudades.json` (comunidad, y si se quiere situación, frase local y orden de trabajos) y regenerar las imágenes principales.
 
 ## 9. Plantilla original propuesta para las páginas de ciudad
 

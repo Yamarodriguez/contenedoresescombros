@@ -1,6 +1,7 @@
 {
- "_nota": "Páginas /excavaciones/<ciudad>/ (Yama, 2026-11-03). Nombre y cercanas salen de ciudades.json; aquí solo lo local y comprobable. region: «cv» (licencia según el artículo 232 del TRLOTUP) o «madrid». tipos: orden de los trabajos (claves de src/lib/excavaciones.mjs). enfoque: frase local, sin inventar datos.",
+ "_nota": "Páginas /excavaciones-<ciudad>/ para TODAS las ciudades y provincias con página de contenedores (Yama, 2026-11-03). Nombre y cercanas salen de ciudades.json; aquí solo lo local y comprobable. comunidad: la de la provincia (los pueblos la heredan de su provincia); en la Comunitat Valenciana (region «cv») la licencia se explica con el artículo 232 del TRLOTUP, en el resto solo «licencia o declaración responsable». ambito «provincia»: se habla del ayuntamiento de tu municipio. dentro: provincia a la que pertenece si ciudades.json no la trae. tipos: orden de los trabajos (claves de src/lib/excavaciones.mjs). situacion y enfoque: frases locales, sin inventar datos (opcionales).",
  "valencia": {
+  "comunidad": "Comunitat Valenciana",
   "tambien": "València",
   "situacion": "es la capital de la provincia de Valencia",
   "region": "cv",
@@ -39,10 +40,150 @@
   "enfoque": "Cerca del mar y del río Júcar el agua puede aparecer a poca profundidad al excavar; si pasa, hay que achicarla con bombas antes de seguir.",
   "tipos": ["piscinas", "vaciado", "zanjas", "canalizaciones", "nivelacion", "agricolas"]
  },
+ "torrent": {
+  "tambien": "Torrente",
+  "situacion": "está en l'Horta, junto a Valencia, y es uno de los municipios más poblados de la provincia",
+  "region": "cv",
+  "enfoque": "Tiene barrios, urbanizaciones en el monte como El Vedat y polígonos industriales, así que hay obras de todo tipo: desde zanjas y piscinas hasta vaciados de solares.",
+  "tipos": ["vaciado", "piscinas", "zanjas", "canalizaciones", "nivelacion", "muros"]
+ },
+ "paterna": {
+  "situacion": "está en l'Horta, junto a Valencia",
+  "region": "cv",
+  "enfoque": "Tiene grandes polígonos y parques empresariales, como el Parque Tecnológico, y urbanizaciones como La Cañada: son habituales los vaciados para naves y las piscinas y zanjas en chalets.",
+  "tipos": ["vaciado", "piscinas", "zanjas", "canalizaciones", "nivelacion", "desbroce"]
+ },
+ "moncada": {
+  "tambien": "Montcada",
+  "situacion": "está en la comarca de l'Horta Nord, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Combina casco urbano, huerta y zonas residenciales, así que hay desde zanjas y acometidas en el casco hasta nivelación de parcelas y canalizaciones de riego.",
+  "tipos": ["zanjas", "canalizaciones", "nivelacion", "agricolas", "vaciado", "piscinas"]
+ },
+ "alboraya": {
+  "situacion": "está en la comarca de l'Horta Nord, entre Valencia y el mar",
+  "region": "cv",
+  "enfoque": "Tiene casco urbano, huerta de chufa y playa (Port Saplaya y la Patacona): cerca del mar el agua puede aparecer a poca profundidad al excavar.",
+  "tipos": ["zanjas", "vaciado", "agricolas", "canalizaciones", "piscinas", "nivelacion"]
+ },
+ "paiporta": {
+  "situacion": "está en l'Horta, junto a Valencia",
+  "region": "cv",
+  "enfoque": "Es un municipio urbano y compacto, con obras en solares y viviendas donde el espacio es reducido: se trabaja mucho con miniexcavadora.",
+  "tipos": ["vaciado", "zanjas", "canalizaciones", "desbroce", "piscinas", "nivelacion"]
+ },
+ "ribarroja-del-turia": {
+  "tambien": "Riba-roja de Túria",
+  "situacion": "está en la comarca del Camp de Túria, junto al río Turia",
+  "region": "cv",
+  "enfoque": "Tiene urbanizaciones de chalets y grandes polígonos industriales, así que son habituales las piscinas, la nivelación de parcelas y los vaciados para naves.",
+  "tipos": ["piscinas", "nivelacion", "vaciado", "zanjas", "canalizaciones", "desbroce"]
+ },
+ "pobla-de-vallbona": {
+  "situacion": "está en la comarca del Camp de Túria, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Gran parte del municipio son urbanizaciones de chalets, así que son habituales las piscinas, las zanjas para acometidas y la nivelación de parcelas.",
+  "tipos": ["piscinas", "zanjas", "nivelacion", "canalizaciones", "desbroce", "muros"]
+ },
+ "lliria": {
+  "tambien": "Liria",
+  "situacion": "es la capital de la comarca del Camp de Túria, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Tiene casco antiguo, urbanizaciones y mucho terreno agrícola: hay desde zanjas en el casco hasta transformaciones agrícolas y nivelación de parcelas.",
+  "tipos": ["zanjas", "agricolas", "nivelacion", "piscinas", "canalizaciones", "muros"]
+ },
+ "puerto-de-sagunto": {
+  "tambien": "Port de Sagunt",
+  "situacion": "es el núcleo costero del municipio de Sagunto, en la comarca del Camp de Morvedre",
+  "region": "cv",
+  "enfoque": "Tiene viviendas, polígonos industriales y el puerto; cerca del mar el agua puede aparecer a poca profundidad al excavar y hay que achicarla con bombas.",
+  "tipos": ["vaciado", "zanjas", "canalizaciones", "piscinas", "nivelacion", "desbroce"]
+ },
+ "carcaixent": {
+  "tambien": "Carcagente",
+  "situacion": "está en la comarca de la Ribera Alta, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Está rodeado de campos de naranjos, así que además de las obras urbanas son habituales las transformaciones agrícolas y las canalizaciones de riego.",
+  "tipos": ["agricolas", "canalizaciones", "nivelacion", "zanjas", "vaciado", "desbroce"]
+ },
+ "sueca": {
+  "situacion": "es la capital de la comarca de la Ribera Baixa, junto al parque natural de la Albufera",
+  "region": "cv",
+  "enfoque": "Buena parte del término son arrozales: cerca del arrozal y del mar el agua aparece a poca profundidad, y en el campo son habituales la nivelación y las canalizaciones.",
+  "tipos": ["nivelacion", "canalizaciones", "agricolas", "zanjas", "vaciado", "piscinas"]
+ },
+ "gandia": {
+  "situacion": "es la capital de la comarca de La Safor, en la costa de la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Tiene ciudad, playa y huerta: cerca del mar el agua puede aparecer a poca profundidad al excavar, y en las urbanizaciones son habituales las piscinas.",
+  "tipos": ["piscinas", "vaciado", "zanjas", "canalizaciones", "nivelacion", "agricolas"]
+ },
+ "ontinyent": {
+  "tambien": "Onteniente",
+  "situacion": "es la capital de la comarca de la Vall d'Albaida, en la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Es una ciudad de interior con industria y parcelas en desnivel: son frecuentes los vaciados para naves, los muros de contención y la nivelación del terreno.",
+  "tipos": ["vaciado", "muros", "nivelacion", "zanjas", "canalizaciones", "piscinas"]
+ },
+ "requena": {
+  "situacion": "es la capital de la comarca de la Plana de Utiel-Requena, en el interior de la provincia de Valencia",
+  "region": "cv",
+  "enfoque": "Es un municipio muy extenso, con viñedos y aldeas, así que son habituales las transformaciones agrícolas, las canalizaciones de riego y la nivelación de parcelas.",
+  "tipos": ["agricolas", "canalizaciones", "nivelacion", "zanjas", "desbroce", "muros"]
+ },
  "madrid": {
   "situacion": "es la capital de España y de la Comunidad de Madrid",
-  "region": "madrid",
+  "comunidad": "Comunidad de Madrid",
   "enfoque": "En la ciudad son habituales los vaciados de sótanos, las obras en solares con acceso estrecho y las zanjas para acometidas; en las urbanizaciones de los alrededores, las piscinas y la nivelación de parcelas.",
   "tipos": ["vaciado", "zanjas", "piscinas", "nivelacion", "canalizaciones", "muros"]
- }
+ },
+ "contenedores-escombros-alicante": { "comunidad": "Comunitat Valenciana", "ambito": "provincia", "tambien": "Alacant", "enfoque": "Tiene mucha costa y urbanizaciones, así que son habituales las piscinas y la nivelación de parcelas; cerca del mar el agua puede aparecer a poca profundidad al excavar.", "tipos": ["piscinas", "vaciado", "zanjas", "nivelacion", "canalizaciones", "muros"] },
+ "castellon": { "comunidad": "Comunitat Valenciana", "ambito": "provincia", "tambien": "Castelló" },
+ "alava": { "comunidad": "País Vasco", "ambito": "provincia", "tambien": "Araba", "situacion": "está en el País Vasco, con capital en Vitoria-Gasteiz" },
+ "vizcaya": { "comunidad": "País Vasco", "ambito": "provincia", "tambien": "Bizkaia", "situacion": "está en el País Vasco, con capital en Bilbao" },
+ "guipuzcoa": { "comunidad": "País Vasco", "ambito": "provincia", "tambien": "Gipuzkoa", "situacion": "está en el País Vasco, con capital en San Sebastián" },
+ "albacete": { "comunidad": "Castilla-La Mancha", "ambito": "provincia" },
+ "ciudad-real": { "comunidad": "Castilla-La Mancha", "ambito": "provincia" },
+ "cuenca": { "comunidad": "Castilla-La Mancha", "ambito": "provincia" },
+ "guadalajara": { "comunidad": "Castilla-La Mancha", "ambito": "provincia" },
+ "toledo": { "comunidad": "Castilla-La Mancha", "ambito": "provincia" },
+ "almeria": { "comunidad": "Andalucía", "ambito": "provincia", "enfoque": "Tiene mucha superficie de invernaderos, así que además de las obras urbanas son habituales la nivelación de parcelas y las canalizaciones de riego.", "tipos": ["agricolas", "canalizaciones", "nivelacion", "zanjas", "vaciado", "piscinas"] },
+ "cadiz": { "comunidad": "Andalucía", "ambito": "provincia" },
+ "cordoba": { "comunidad": "Andalucía", "ambito": "provincia" },
+ "granada": { "comunidad": "Andalucía", "ambito": "provincia" },
+ "huelva": { "comunidad": "Andalucía", "ambito": "provincia" },
+ "jaen": { "comunidad": "Andalucía", "ambito": "provincia", "enfoque": "Gran parte de la provincia es olivar, así que además de las obras urbanas son habituales la nivelación de fincas y las canalizaciones de riego.", "tipos": ["agricolas", "canalizaciones", "nivelacion", "zanjas", "vaciado", "piscinas"] },
+ "contenedores-escombros-malaga": { "comunidad": "Andalucía", "ambito": "provincia", "enfoque": "Tiene mucha costa y urbanizaciones, así que son habituales las piscinas y la nivelación de parcelas; cerca del mar el agua puede aparecer a poca profundidad al excavar.", "tipos": ["piscinas", "vaciado", "zanjas", "nivelacion", "canalizaciones", "muros"] },
+ "contenedores-escombros-sevilla": { "comunidad": "Andalucía", "ambito": "provincia" },
+ "asturias": { "comunidad": "Principado de Asturias", "ambito": "provincia", "situacion": "es una comunidad del norte de España, con capital en Oviedo", "enfoque": "Tiene mucho terreno en pendiente, así que son frecuentes los muros de contención y la nivelación de parcelas.", "tipos": ["muros", "nivelacion", "zanjas", "vaciado", "canalizaciones", "desbroce"] },
+ "cantabria": { "comunidad": "Cantabria", "ambito": "provincia", "situacion": "es una comunidad del norte de España, con capital en Santander", "enfoque": "Tiene mucho terreno en pendiente, así que son frecuentes los muros de contención y la nivelación de parcelas.", "tipos": ["muros", "nivelacion", "zanjas", "vaciado", "canalizaciones", "desbroce"] },
+ "la-rioja": { "comunidad": "La Rioja", "ambito": "provincia", "situacion": "es una comunidad del norte de España, con capital en Logroño", "enfoque": "Tiene mucho viñedo, así que además de las obras urbanas son habituales las transformaciones agrícolas y las canalizaciones de riego.", "tipos": ["agricolas", "canalizaciones", "nivelacion", "zanjas", "vaciado", "piscinas"] },
+ "navarra": { "comunidad": "Navarra", "ambito": "provincia", "situacion": "es una comunidad del norte de España, con capital en Pamplona" },
+ "murcia": { "comunidad": "Región de Murcia", "ambito": "provincia", "situacion": "es la capital de la Región de Murcia" },
+ "baleares": { "comunidad": "Islas Baleares", "ambito": "provincia", "situacion": "es una comunidad formada por las islas de Mallorca, Menorca, Ibiza y Formentera", "enfoque": "En las islas son habituales las piscinas en viviendas y chalets, y en las zonas de roca hace falta martillo hidráulico.", "tipos": ["piscinas", "vaciado", "zanjas", "muros", "nivelacion", "canalizaciones"] },
+ "ibiza": { "comunidad": "Islas Baleares", "ambito": "provincia", "dentro": "baleares", "tambien": "Eivissa", "situacion": "es una de las Islas Baleares", "enfoque": "Son habituales las piscinas en viviendas y chalets, y en las zonas de roca hace falta martillo hidráulico.", "tipos": ["piscinas", "vaciado", "zanjas", "muros", "nivelacion", "canalizaciones"] },
+ "las-palmas": { "comunidad": "Canarias", "ambito": "provincia", "situacion": "es una provincia de Canarias formada por Gran Canaria, Lanzarote y Fuerteventura", "enfoque": "En las islas el terreno volcánico puede ser muy duro, y a veces hace falta martillo hidráulico para excavar.", "tipos": ["vaciado", "zanjas", "muros", "piscinas", "nivelacion", "canalizaciones"] },
+ "tenerife": { "comunidad": "Canarias", "ambito": "provincia", "situacion": "es la isla más grande de Canarias, en la provincia de Santa Cruz de Tenerife", "enfoque": "El terreno volcánico puede ser muy duro, y a veces hace falta martillo hidráulico para excavar.", "tipos": ["vaciado", "zanjas", "muros", "piscinas", "nivelacion", "canalizaciones"] },
+ "barcelona": { "comunidad": "Cataluña", "ambito": "provincia", "enfoque": "Es una zona muy urbana, con obras en solares entre medianeras, sótanos y accesos estrechos: se trabaja mucho con miniexcavadora.", "tipos": ["vaciado", "zanjas", "canalizaciones", "piscinas", "nivelacion", "muros"] },
+ "girona": { "comunidad": "Cataluña", "ambito": "provincia", "tambien": "Gerona" },
+ "lleida": { "comunidad": "Cataluña", "ambito": "provincia", "tambien": "Lérida" },
+ "tarragona": { "comunidad": "Cataluña", "ambito": "provincia" },
+ "coruna": { "comunidad": "Galicia", "ambito": "provincia", "tambien": "A Coruña" },
+ "lugo": { "comunidad": "Galicia", "ambito": "provincia" },
+ "ourense": { "comunidad": "Galicia", "ambito": "provincia", "tambien": "Orense" },
+ "pontevedra": { "comunidad": "Galicia", "ambito": "provincia" },
+ "huesca": { "comunidad": "Aragón", "ambito": "provincia" },
+ "teruel": { "comunidad": "Aragón", "ambito": "provincia" },
+ "zaragoza": { "comunidad": "Aragón", "ambito": "provincia" },
+ "badajoz": { "comunidad": "Extremadura", "ambito": "provincia" },
+ "caceres": { "comunidad": "Extremadura", "ambito": "provincia" },
+ "avila": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "burgos": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "leon": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "palencia": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "salamanca": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "segovia": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "soria": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "valladolid": { "comunidad": "Castilla y León", "ambito": "provincia" },
+ "zamora": { "comunidad": "Castilla y León", "ambito": "provincia" }
 }

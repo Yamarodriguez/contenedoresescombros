@@ -168,6 +168,13 @@ a.foto:hover { transform: translateY(-3px); }
 .tarjeta-texto .texto { margin: 0; }
 .tarjeta-texto .texto p { margin: 0; }
 .anadido .texto :where(ul, ol) { margin: .4rem 0 1rem; }
+/* Lista de páginas de excavaciones por comunidad y provincia, con sus localidades */
+.grupos-excavacion { columns: 2 380px; column-gap: 1.2rem; margin-top: 1rem; }
+.grupo-excavacion { display: inline-block; width: 100%; break-inside: avoid; margin: 0 0 1.2rem; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.1rem 1.3rem; }
+.grupo-excavacion:first-child { column-span: all; }
+.contenido .grupo-excavacion .titular { font-size: 1.1rem; margin: 0 0 .3rem; }
+.grupo-excavacion .localidades { margin-top: .9rem; padding-top: .8rem; border-top: 1px solid var(--borde); }
+.grupo-excavacion .localidades .texto { margin: 0; font-weight: 600; }
 .anadido .texto li { margin: .35rem 0; }
 
 /* -------- Botones -------- */

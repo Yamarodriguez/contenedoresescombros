@@ -105,7 +105,7 @@ for (const p of pages) {
 // Páginas de excavaciones por ciudad (src/lib/excavaciones.mjs): «Excavaciones en {ciudad}».
 const datosExcavacion = JSON.parse(fs.readFileSync('src/data/excavaciones-ciudades.json', 'utf8'));
 for (const e of paginasExcavacion(datosExcavacion, ciudades)) {
-  const clave = `excavaciones/${e.slug}`;
+  const clave = e.id;
   if (SOLO && clave !== SOLO) continue;
   let nombre = fichero(e.clave);
   if (usados.has(nombre)) nombre = `${nombre}-${e.slug}`;
