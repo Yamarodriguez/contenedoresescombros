@@ -9,6 +9,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 import { tipoFrase, nombresPropios } from '../src/lib/textos.mjs';
 import { paginasExcavacion } from '../src/lib/excavaciones.mjs';
+import { paginasContenedores } from '../src/lib/lugares.mjs';
 
 const SOLO = process.argv[2];
 const ANCHO = 1200, ALTO = 630, FRANJA = 150;
@@ -120,6 +121,16 @@ for (const e of paginasExcavacion(datosExcavacion, ciudades)) {
   const src = `/img/principal/${nombre}.jpg`;
   await generar({ slug: 'excavaciones' }, e.clave, path.join('public', src));
   salida[clave] = { src, alt: e.clave };
+}
+// Lugares nuevos: «Contenedores de escombros en {lugar}».
+for (const e of paginasContenedores(JSON.parse(fs.readFileSync('src/data/lugares-nuevos.json', 'utf8')), ciudades)) {
+  if (SOLO && e.slug !== SOLO) continue;
+  let nombre = fichero(e.clave);
+  if (usados.has(nombre)) nombre = `${nombre}-${e.slug}`;
+  usados.add(nombre);
+  const src = `/img/principal/${nombre}.jpg`;
+  await generar({ slug: e.slug }, e.clave, path.join('public', src));
+  salida[e.slug] = { src, alt: e.clave };
 }
 // Otras páginas nuevas (src/data/paginas-nuevas.json): la palabra clave es su «clave».
 const paginasNuevas = JSON.parse(fs.readFileSync('src/data/paginas-nuevas.json', 'utf8'));

@@ -62,7 +62,7 @@ export function paginasExcavacion(datos, ciudades) {
     const id = idExcavacion(slug);
     const comunidad = comunidadDe(slug, datos, ciudades);
     const conOtro = d.tambien ? `${n} (${d.tambien})` : n;
-    const ayto = d.ambito === 'provincia' ? 'ayuntamiento de tu municipio' : `Ayuntamiento de ${n}`;
+    const ayto = d.ambito === 'provincia' ? 'ayuntamiento de tu municipio' : `Ayuntamiento de ${d.ayto || n}`;
     const lic = licencia(comunidad, ayto);
     const situacion = d.situacion || (comunidad ? `está en ${enLa(comunidad)}` : '');
     const prov = provinciaDe(slug, datos, ciudades);

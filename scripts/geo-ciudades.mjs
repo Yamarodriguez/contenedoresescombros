@@ -4,6 +4,7 @@
 // Respeta la norma de Nominatim: 1 peticion/seg y User-Agent con contacto.
 import fs from 'node:fs';
 import path from 'node:path';
+import { listaLugares } from '../src/lib/lugares.mjs';
 
 const DIR = 'src/content/pages';
 const CACHE = 'informes/geo-cache.json';
@@ -27,6 +28,8 @@ const nombreDe = (title) => title.replace(/^contenedores(\s+escombros)?\s+/i, ''
 
 const pages = fs.readdirSync(DIR).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')));
 const ciudades = pages.filter((p) => !NONCITY.has(p.slug));
+// Lugares nuevos (src/data/lugares-nuevos.json): su provincia viene dada, no de OpenStreetMap.
+const lugares = listaLugares(JSON.parse(fs.readFileSync('src/data/lugares-nuevos.json', 'utf8')));
 
 fs.mkdirSync('informes', { recursive: true });
 let cache = fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, 'utf8')) : {};
@@ -52,6 +55,15 @@ for (const p of ciudades) { const n = nombreDe(p.title); info[p.slug] = { nombre
 const porNombre = new Map();
 for (const p of ciudades) porNombre.set(norm(info[p.slug].nombre), p.slug);
 
+const nuevos = {};
+for (const l of lugares) {
+  const provincia = l.provinciaSlug ? info[l.provinciaSlug].nombre : '';
+  const consulta = [l.nombre, provincia, 'España'].filter(Boolean).join(', ');
+  info[l.clave] = { nombre: l.nombre, geo: await geo(consulta) };
+  nuevos[l.clave] = { provincia, provinciaSlug: l.provinciaSlug };
+  ciudades.push({ slug: l.clave });
+}
+
 const hav = (a, b) => {
   const R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180, dLon = (b.lon - a.lon) * Math.PI / 180;
   const la1 = a.lat * Math.PI / 180, la2 = b.lat * Math.PI / 180;
@@ -61,16 +73,19 @@ const hav = (a, b) => {
 
 const salida = {};
 for (const p of ciudades) {
-  const me = info[p.slug]; if (!me.geo) continue;
-  const provBruta = me.geo.provincia || '';
+  const me = info[p.slug];
+  if (!me.geo && !nuevos[p.slug]) continue;
+  const provBruta = me.geo?.provincia || '';
   const mismaProv = norm(provBruta) === norm(me.nombre);
   const provincia = mismaProv ? '' : provBruta;
   const provSlug = porNombre.get(norm(provBruta));
-  const cercanas = ciudades
+  const cercanas = !me.geo ? [] : ciudades
     .filter((q) => q.slug !== p.slug && info[q.slug].geo)
     .map((q) => ({ slug: q.slug, nombre: info[q.slug].nombre, d: hav(me.geo, info[q.slug].geo) }))
     .sort((a, b) => a.d - b.d).slice(0, 6).map(({ slug, nombre }) => ({ slug, nombre }));
-  salida[p.slug] = { nombre: me.nombre, provincia, provinciaSlug: (provSlug && provSlug !== p.slug) ? provSlug : '', cercanas };
+  salida[p.slug] = nuevos[p.slug]
+    ? { nombre: me.nombre, ...nuevos[p.slug], cercanas }
+    : { nombre: me.nombre, provincia, provinciaSlug: (provSlug && provSlug !== p.slug) ? provSlug : '', cercanas };
 }
 
 fs.mkdirSync('src/data', { recursive: true });

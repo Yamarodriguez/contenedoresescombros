@@ -59,6 +59,11 @@ const preguntasPagina = [
 const datos = preguntasPagina.length ? [{ '@type': 'FAQPage', mainEntity: preguntasPagina.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 const zona = (ciudades as Record<string, any>)[data.slug] || null;
 const principal = (principales as Record<string, any>)[data.slug] || null;
+// Provincias: lista de sus pueblos al final, igual que en excavaciones (Yama, 2026-11-04).
+const pueblos = Object.entries(ciudades as Record<string, any>)
+  .filter(([, c]) => c.provinciaSlug === data.slug)
+  .sort(([, a], [, b]) => a.nombre.localeCompare(b.nombre, 'es'))
+  .map(([s, c]) => ({ texto: `Contenedores ${c.nombre}`, ruta: `/${s}/` }));
 // Legales: sin indexar y fuera del mapa del sitio (Yama, 2026-11-03).
 const legal = /^(aviso-legal|politica-de-)/.test(data.slug);
 const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
@@ -83,4 +88,5 @@ const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
   <Zona zona={zona} excavacion={(datosExcavacion as Record<string, any>)[data.slug] ? rutaExcavacion(data.slug) : null} />
   {!faqBloque && <Faq items={faq} />}
   {anadido?.listaAlFinal && <ListaExcavaciones />}
+  {zona && pueblos.length > 1 && <ListaExcavaciones titulo={`Contenedores de escombros en los pueblos de ${zona.nombre}`} enlaces={pueblos} />}
 </Base>
