@@ -1447,6 +1447,14 @@
   "src": "/img/principal/excavaciones-melilla.jpg",
   "alt": "Excavaciones en Melilla"
  },
+ "excavaciones-andorra": {
+  "src": "/img/principal/excavaciones-andorra.jpg",
+  "alt": "Excavaciones en Andorra"
+ },
+ "excavaciones-alarcon": {
+  "src": "/img/principal/excavaciones-alarcon.jpg",
+  "alt": "Excavaciones en Alarcón"
+ },
  "contenedores-escombros-alcala-de-henares": {
   "src": "/img/principal/contenedores-escombros-alcala-henares.jpg",
   "alt": "Contenedores de escombros en Alcalá de Henares"
@@ -2070,6 +2078,14 @@
  "contenedores-escombros-alcaniz": {
   "src": "/img/principal/contenedores-escombros-alcaniz.jpg",
   "alt": "Contenedores de escombros en Alcañiz"
+ },
+ "contenedores-escombros-andorra": {
+  "src": "/img/principal/contenedores-escombros-andorra.jpg",
+  "alt": "Contenedores de escombros en Andorra"
+ },
+ "contenedores-escombros-alarcon": {
+  "src": "/img/principal/contenedores-escombros-alarcon.jpg",
+  "alt": "Contenedores de escombros en Alarcón"
  },
  "contenedores-escombros-aranda-de-duero": {
   "src": "/img/principal/contenedores-escombros-aranda-duero.jpg",

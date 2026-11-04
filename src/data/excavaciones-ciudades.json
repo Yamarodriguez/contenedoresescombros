@@ -385,5 +385,7 @@
   "contenedores-escombros-san-cristobal-de-la-laguna": {"comunidad":"Canarias"},
   "contenedores-escombros-santa-cruz-de-tenerife": {"comunidad":"Canarias"},
   "contenedores-escombros-ceuta": {"comunidad":"Ceuta"},
-  "contenedores-escombros-melilla": {"comunidad":"Melilla"}
+  "contenedores-escombros-melilla": {"comunidad":"Melilla"},
+  "contenedores-escombros-andorra": {"comunidad":"Aragón"},
+  "contenedores-escombros-alarcon": {"comunidad":"Castilla-La Mancha"}
 }

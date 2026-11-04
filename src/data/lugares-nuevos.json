@@ -1,5 +1,5 @@
 {
- "_nota": "Lugares de casascontenedores.es que no tenían página aquí (Yama, 2026-11-04). Cada grupo: clave = slug de la página de provincia en ciudades.json («» si no hay), comunidad y lugares. Un lugar es su nombre, o [nombre, municipio] si no es un municipio (urbanización o pueblo costero: el permiso es del ayuntamiento de ese municipio). La dirección sale del nombre: /contenedores-escombros-<nombre>/ y /excavaciones-<nombre>/. Fuera: Andorra y Alarcón (ambiguos).",
+ "_nota": "Lugares de casascontenedores.es que no tenían página aquí (Yama, 2026-11-04). Cada grupo: clave = slug de la página de provincia en ciudades.json («» si no hay), comunidad y lugares. Un lugar es su nombre, o [nombre, municipio] si no es un municipio (urbanización o pueblo costero: el permiso es del ayuntamiento de ese municipio). La dirección sale del nombre: /contenedores-escombros-<nombre>/ y /excavaciones-<nombre>/. Andorra se toma como Andorra (Teruel) y Alarcón como Alarcón (Cuenca).",
  "grupos": [
   { "provincia": "madrid", "comunidad": "Comunidad de Madrid", "lugares": ["Alcalá de Henares", "Alcobendas", "Alcorcón", "Aranjuez", "Arganda del Rey", "Boadilla del Monte", "Collado Villalba", "Colmenar Viejo", "Coslada", "Fuenlabrada", "Getafe", "Las Rozas de Madrid", "Leganés", "Majadahonda", "Móstoles", "Navalcarnero", "Parla", "Pozuelo de Alarcón", "Rivas-Vaciamadrid", "San Sebastián de los Reyes", "Torrejón de Ardoz", "Tres Cantos", "Valdemoro"] },
   { "provincia": "barcelona", "comunidad": "Cataluña", "lugares": ["Badalona", "Castelldefels", "Cornellà de Llobregat", "Granollers", "L'Hospitalet de Llobregat", "Manresa", "Mataró", "Rubí", "Sabadell", "Sant Boi de Llobregat", "Sant Cugat del Vallès", "Santa Coloma de Gramenet", "Terrassa", "Vilanova i la Geltrú"] },
@@ -33,7 +33,8 @@
   { "provincia": "la-rioja", "comunidad": "La Rioja", "lugares": ["Logroño"] },
   { "provincia": "huesca", "comunidad": "Aragón", "lugares": ["Barbastro", "Jaca", "Monzón"] },
   { "provincia": "zaragoza", "comunidad": "Aragón", "lugares": ["Calatayud"] },
-  { "provincia": "teruel", "comunidad": "Aragón", "lugares": ["Alcañiz"] },
+  { "provincia": "teruel", "comunidad": "Aragón", "lugares": ["Alcañiz", "Andorra"] },
+  { "provincia": "cuenca", "comunidad": "Castilla-La Mancha", "lugares": ["Alarcón"] },
   { "provincia": "burgos", "comunidad": "Castilla y León", "lugares": ["Aranda de Duero", "Miranda de Ebro"] },
   { "provincia": "leon", "comunidad": "Castilla y León", "lugares": ["Ponferrada"] },
   { "provincia": "valladolid", "comunidad": "Castilla y León", "lugares": ["Medina del Campo"] },
