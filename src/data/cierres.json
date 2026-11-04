@@ -1,0 +1,21 @@
+{
+ "_nota": "Franja final de presupuesto (encima del pie) según la página (Yama, 2026-11-04). Sin entrada, sale la de contenedores de escombros de Footer.astro. Neutro: no dice quién hace las excavaciones.",
+ "excavaciones": {
+  "titulo": "¿Necesitas una excavación?",
+  "texto": "Cuéntanos qué hay que excavar, dónde está la obra y las medidas aproximadas.",
+  "datos": [
+   { "dt": "Trabajos", "dd": "Vaciados · zanjas · piscinas · nivelación" },
+   { "dt": "Servicios", "dd": "Excavación · movimiento de tierras · retirada de tierra" },
+   { "dt": "Dónde", "dd": "Toda España" }
+  ]
+ },
+ "contenedores-de-tierra": {
+  "titulo": "¿Necesitas un contenedor de tierra?",
+  "texto": "Cuéntanos cuánta tierra hay que retirar, si va limpia y dónde está la obra.",
+  "datos": [
+   { "dt": "Tamaños", "dd": "Sacos y contenedores de 3 o 5 m³" },
+   { "dt": "Servicios", "dd": "Alquiler · recogida · transporte" },
+   { "dt": "Dónde", "dd": "Toda España" }
+  ]
+ }
+}

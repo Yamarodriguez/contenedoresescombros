@@ -4,6 +4,20 @@
 import site from '../data/site.json';
 import menus from '../data/menus.json';
 import Logo from './Logo.astro';
+import cierres from '../data/cierres.json';
+
+// Franja final según la página (src/data/cierres.json); sin clave, la de contenedores de escombros.
+interface Props { cierre?: string }
+const { cierre: claveCierre } = Astro.props as Props;
+const cierre = (claveCierre && (cierres as Record<string, any>)[claveCierre]) || {
+  titulo: '¿Necesitas un contenedor de escombros?',
+  texto: 'Cuéntanos qué contenedor buscas, para qué obra y dónde lo necesitas.',
+  datos: [
+    { dt: 'Tamaños', dd: 'Sacos y contenedores de 3 a 30 m³' },
+    { dt: 'Servicios', dd: 'Alquiler · recogida · transporte' },
+    { dt: 'Dónde', dd: 'Toda España' },
+  ],
+};
 
 const principal = (menus as any).principal as any[];
 const legales = ((menus as any).pie || []) as any[];
@@ -32,14 +46,12 @@ const year = new Date().getFullYear();
   <div class="cierre-in">
     <div>
       <p class="etiqueta">Presupuesto sin compromiso</p>
-      <h2>¿Necesitas un contenedor de escombros?</h2>
-      <p>Cuéntanos qué contenedor buscas, para qué obra y dónde lo necesitas.</p>
+      <h2>{cierre.titulo}</h2>
+      <p>{cierre.texto}</p>
       <p><a class="boton boton-claro" href="/presupuesto/">Pide presupuesto</a></p>
     </div>
     <dl class="cierre-datos">
-      <div><dt>Tamaños</dt><dd>Sacos y contenedores de 3 a 30 m³</dd></div>
-      <div><dt>Servicios</dt><dd>Alquiler · recogida · transporte</dd></div>
-      <div><dt>Dónde</dt><dd>Toda España</dd></div>
+      {cierre.datos.map((d: any) => <div><dt>{d.dt}</dt><dd>{d.dd}</dd></div>)}
     </dl>
   </div>
 </section>

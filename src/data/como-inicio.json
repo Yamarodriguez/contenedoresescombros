@@ -1,0 +1,55 @@
+{
+ "_nota": "Páginas nuevas que llevan debajo la página de inicio adaptada (Yama, 2026-11-04). Cada clave es la página; `cambios` sustituye campos del bloque de inicio con ese número y `omitir` quita bloques. Solo van los contenedores que sirven para tierra (3 y 5 m³): los de 9 a 30 m³, poda y con llave se omiten porque /contenedores-de-tierra/ explica que no son para tierra. Sin precios nuevos: el bloque 44 es el orientativo del original.",
+ "contenedores-de-tierra": {
+  "tituloFaq": "Medidas y recogida de contenedores de tierra",
+  "tituloLugares": "Contenedores de tierra por lugares",
+  "preguntas": {
+   "medidas de contenedores de tierra": "¿Qué medidas tienen los contenedores de tierra?",
+   "recogida de tierra": "¿Se puede contratar la recogida de tierra?"
+  },
+  "faqExtra": [
+   { "pregunta": "¿Qué se puede echar en un contenedor de tierra?", "respuesta": "Tierra y piedras. Si además lleva escombros, hormigón, ladrillos o tejas, se gestiona como escombro mezclado. No se admiten residuos peligrosos ni materiales que requieran una gestión especial." },
+   { "pregunta": "¿Es lo mismo una cuba, una cubeta o un contenedor de tierra?", "respuesta": "Sí. «Contenedor de obra», «cuba» y «cubeta» son nombres distintos para el mismo contenedor metálico abierto. Se le llama contenedor de tierra cuando se usa para retirar tierra." }
+  ],
+  "omitir": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 86, 87, 88, 89, 90, 91],
+  "cambios": {
+   "0": { "text": "Contenedores de tierra para tu obra" },
+   "4": { "html": "<p>En <strong>contenedores de tierra</strong> encontrarás la profesionalidad y seguridad que requiere un servicio tan demandado como este: <strong>contenedores de tierra, de obra y, con ellos, la gestión de residuos.</strong></p><p>Hemos reunido las mejores empresas de contenedores de tierra en toda España, así facilitamos el proceso de búsqueda y contratación para los futuros clientes que quieran optar por nuestro servicio. De esta manera, nos comprometemos a garantizar el mejor trabajo con las mejores garantías y resultados. Trabajamos con precios competitivos, profesionales con años en el sector y con distintas opciones que sin duda se adaptan a cualquier tipo de demanda y necesidad.</p>" },
+   "5": { "text": "Tipos de contenedores de tierra" },
+   "6": { "html": "<p>Los contenedores de tierra son una solución ideal cuando se trata de pequeñas reformas, obras nuevas, zanjas o excavaciones, que al generar tanta tierra no se puede contar con los contenedores urbanos, por lo que necesitaría contactar con nuestro servicio. Estos contenedores cuentan con la homologación para poder dejarlos en la vía pública y ser retirados de forma sencilla.</p><p>Conoce los <strong>contenedores de tierra</strong> que ofrecemos para la recogida de la tierra producida en las reformas y obras.</p>" },
+   "7": { "text": "Materiales aceptados en un contenedor de tierra" },
+   "8": { "html": "<p>Tierra y piedras. Si la tierra va mezclada con escombros, hormigón, ladrillos, tejas o materiales cerámicos, se gestiona como escombro mezclado.</p>" },
+   "10": { "text": "Sacos para tierra" },
+   "12": { "text": "Contenedor de tierra 3 m³" },
+   "14": { "text": "Contenedor de tierra 5 m³" },
+   "27": { "text": "Empresa de contenedores de tierra" },
+   "28": { "html": "<p>Encuentra la empresa de contenedores de tierra que más se adapte a ti. Trabajamos con empresas registradas y profesionales.</p>" },
+   "31": { "html": "<p>Si tienes una empresa de contenedores de tierra, contacta con nosotros y publicita tu empresa aquí.</p>" },
+   "34": { "html": "<p>Si tienes una empresa de contenedores de tierra, contacta con nosotros y publicita tu empresa aquí.</p>" },
+   "37": { "html": "<p>Si tienes una empresa de contenedores de tierra, contacta con nosotros y publicita tu empresa aquí.</p>" },
+   "39": { "text": "Alquiler de contenedores de tierra" },
+   "40": { "html": "<p>Nuestro servicio de alquiler de contenedores de tierra cuenta con un coste variado según su necesidad, accesible y competitivo. Gestionamos los residuos de forma segura, profesional y económica.</p>" },
+   "41": { "text": "Alquiler de contenedor de tierra" },
+   "43": { "text": "Precio de contenedores de tierra" },
+   "44": { "html": "<p>El siguiente <strong>precio</strong> estimativo corresponde a un <strong>contenedor de obra</strong> de <strong>5 m3 a 6 m3</strong>, el cual puede oscilar entre aproximadamente <strong>80 y 170 euros</strong> por el periodo de una semana. Si además incluimos el servicio de transporte, de la posterior recogida y descarga, podría tener un <strong>precio final de 250 euros</strong>, dependiendo de la distancia y el tiempo. Dichos precios son estimativos y pueden llegar a ser negociables según tipo de contratación y periodicidad; en un <strong>contenedor de tierra</strong> pueden cambiar además según el peso y si la tierra va limpia o mezclada, por lo que es necesario definir los precios, entrevista mediante con el cliente. Su consulta no es molestia.</p>" },
+   "47": { "text": "Transporte para contenedores de tierra" },
+   "48": { "html": "<p>Para ofrecerle mayor comodidad y que pueda economizar costos en su reforma u obra de construcción, tú eliges el contenedor de tierra y nosotros nos ocupamos del resto.</p><p>Antes de gestionar el servicio de <strong>transporte de contenedores de tierra</strong>, se tiene que saber el tipo de residuos de los que se va a tratar, cómo se va a recoger, el tiempo que se requerirá y la localización.<br />Además, se tiene que tener en cuenta si el servicio contratado será de una única vez o se repetirá, por lo que el <strong>precio del transporte de contenedores de tierra</strong> variará. Así, dependerá del tipo de transporte o estructuras que se necesiten.</p>" },
+   "51": { "text": "Medidas de contenedores de tierra" },
+   "52": { "html": "<p>Elige el <strong>contenedor</strong> que se adapte a tu necesidad. Descubre las <strong>medidas y funciones de cada uno de los contenedores</strong> que proporcionamos. Ofrecemos asesoramiento.</p>" },
+   "54": { "text": "Medidas de contenedores" },
+   "55": { "text": "Recogida de tierra" },
+   "56": { "html": "<p>Contamos con servicios de recogida de tierra. Comunícate y te asesoramos en la retirada de tierra y en la disponibilidad y los precios de la recogida de tierra y de residuos.</p>" },
+   "58": { "text": "Recogida de tierra" },
+   "59": { "text": "Presupuesto de contenedores de tierra" },
+   "62": { "text": "¿Qué tipo de contenedor para tierra elegir?" },
+   "63": { "html": "<p>Nuestro equipo de trabajo se encuentra en óptimas condiciones de cualificación y especializado de tal forma que una breve entrevista alcanzará para que nosotros seleccionemos el mejor precio y producto para usted, según su necesidad. Antes de comenzar una obra, construcción o reforma es necesario definir el tipo de residuos que se van a generar, por lo que es importante resolver a su vez la forma de gestionarlos. Hay que tener en cuenta a la hora de elegir que existen distintos tipos de contenedores, que se clasifican en función de su capacidad, tamaño y soporte.</p><p>Para la tierra, que pesa mucho, se usan los <strong>contenedores de tierra</strong> pequeños, de 3 o 5 m³. Asesórate de las medidas de contenedores que ofrecemos.</p>" },
+   "65": { "items": [
+    { "title": "Saco para tierra", "text": "Disponemos de sacos para tierra, ideales para obras o reformas pequeñas y para los lugares donde no son aptos para un contenedor de obra.", "html": "<p>Disponemos de <strong>sacos para tierra</strong>, ideales para obras o reformas pequeñas y para los lugares donde no son aptos para un contenedor de obra.</p>" },
+    { "title": "Contenedores de tierra de 3 m³", "text": "Contenedor pequeño de 3 m³. Para materiales pesados como la tierra.", "html": "<p>Contenedor pequeño de 3 m³. Para materiales pesados como la tierra.</p>" },
+    { "title": "Contenedores de tierra de 5 m³", "text": "Contenedor de 5 m³. Para materiales pesados como la tierra. Contenedor con seguro, 5 m³. Se puede usar candado para evitar el uso de terceros.", "html": "<p><strong>Contenedor de 5 m³.</strong> Para materiales pesados como la tierra.</p><p><strong>Contenedor con seguro, 5 m³.</strong> Se puede usar candado para evitar el uso de terceros.</p>" }
+   ] },
+   "66": { "text": "Habilitación de contenedores de tierra en la vía pública" },
+   "67": { "html": "<p>Para poder tener un <strong>contenedor de tierra en la vía pública se debe comunicar a tu ayuntamiento la ocupación del espacio para el contenedor o solicitar un permiso.</strong><br />Adjuntamos enlace.</p>" }
+  }
+ }
+}

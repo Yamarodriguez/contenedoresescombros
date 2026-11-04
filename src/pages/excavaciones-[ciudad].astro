@@ -26,7 +26,7 @@ const migas = [
 ];
 const datos = [{ '@type': 'FAQPage', mainEntity: p.faq.map((f: any) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }];
 ---
-<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos}>
+<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos} cierre="excavaciones">
   <Hero titulo={p.h1} subtitulo={p.contenido.subtitulo} imagen={principal} />
   <Anadido datos={p.contenido} />
   {p.listaPueblos && <ListaExcavaciones titulo={p.listaPueblos.titulo} enlaces={p.listaPueblos.enlaces} />}

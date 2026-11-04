@@ -4,6 +4,12 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import Anadido from '../components/Anadido.astro';
+import Contenido from '../components/Contenido.astro';
+import ListaExcavaciones from '../components/ListaExcavaciones.astro';
+import inicio from '../content/pages/index.json';
+import comoInicio from '../data/como-inicio.json';
+import ciudades from '../data/ciudades.json';
+import { aplicarCambios, nombresPropios, detectarFaq } from '../lib/textos.mjs';
 import site from '../data/site.json';
 import paginasNuevas from '../data/paginas-nuevas.json';
 import principales from '../data/principales.json';
@@ -19,10 +25,32 @@ const dominio = `https://${site.dominio}`;
 const url = `${dominio}/${clave}/`;
 const principal = (principales as Record<string, any>)[clave] || null;
 const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: p.h1, url }];
-const faq = p.secciones.flatMap((s: any) => s.faq || []);
+// Debajo, la página de inicio adaptada (Yama, 2026-11-04): src/data/como-inicio.json.
+const adaptada = (comoInicio as Record<string, any>)[clave] || null;
+const sinEtiquetas = (h: string) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const bloquesInicio = (inicio as any).blocks as any[];
+const bloques = adaptada ? aplicarCambios(bloquesInicio.map((b, i) => {
+  const c = adaptada.cambios[i];
+  return c ? { ...b, ...c, ...(c.html ? { text: sinEtiquetas(c.html) } : {}) } : b;
+}), { titulo: p.h1, propios: nombresPropios(ciudades) }) : [];
+const filas = adaptada ? (inicio as any).filas : [];
+const omitir = adaptada ? [...bloquesInicio.flatMap((b, i) => (b.type === 'heading' && b.tag === 'h1' ? [i] : [])), ...adaptada.omitir] : [];
+const faqBloque = adaptada ? filas.map((f: any) => detectarFaq(f, bloques, adaptada.preguntas)).find(Boolean) : null;
+// Mismos lugares y orden que en inicio. No hay páginas de tierra por lugar: enlazan a la de contenedores.
+const lugares = adaptada ? bloquesInicio.slice(87, 92).flatMap((b) => [...b.html.matchAll(/<a href="([^"]+)"[^>]*>Contenedores ([^<]+)<\/a>/g)]).map((m: any) => ({
+  texto: `Contenedores de tierra ${m[2].trim()}`,
+  ruta: `/${new URL(m[1]).pathname.replace(/^\/|\/$/g, '').toLowerCase()}/`,
+})) : [];
+const faq = [
+  ...p.secciones.flatMap((s: any) => s.faq || []),
+  ...(faqBloque ? faqBloque.items.map((it: any) => ({ pregunta: it.q, respuesta: bloques[it.t].text })) : []),
+  ...(adaptada?.faqExtra || []),
+];
 const datos = faq.length ? [{ '@type': 'FAQPage', mainEntity: faq.map((f: any) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }] : [];
 ---
-<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos}>
+<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos} cierre={clave}>
   <Hero titulo={p.h1} subtitulo={p.subtitulo} imagen={principal} />
   <Anadido datos={p} />
+  {adaptada && <Contenido bloques={bloques} filas={filas} omitir={omitir} preguntas={adaptada.preguntas} tituloFaq={adaptada.tituloFaq} faqExtra={adaptada.faqExtra} />}
+  {adaptada && <ListaExcavaciones titulo={adaptada.tituloLugares} enlaces={lugares} columnas={3} />}
 </Base>

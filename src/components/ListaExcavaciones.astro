@@ -8,9 +8,8 @@ import datosExcavacion from '../data/excavaciones-ciudades.json';
 import { rutaExcavacion } from '../lib/excavaciones.mjs';
 
 interface Enlace { texto: string; ruta: string }
-interface Props { titulo?: string; enlaces?: Enlace[] }
-const { titulo = 'Excavaciones por lugares', enlaces } = Astro.props as Props;
-const COLUMNAS = 4;
+interface Props { titulo?: string; enlaces?: Enlace[]; columnas?: number }
+const { titulo = 'Excavaciones por lugares', enlaces, columnas: COLUMNAS = 4 } = Astro.props as Props;
 
 const bloques = (inicio as any).blocks as any[];
 const h = bloques.findIndex((b) => b.type === 'heading' && /^nuestra area de trabajo$/i.test(b.text.trim()));

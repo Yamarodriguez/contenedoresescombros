@@ -72,6 +72,7 @@ const subtitulo = legal ? '' : anadido?.subtitulo ? anadido.subtitulo : zona
   migas={migas}
   datos={datos}
   indexar={!legal}
+  cierre={data.slug === 'excavaciones' ? 'excavaciones' : undefined}
 >
   <Hero titulo={tituloH1} subtitulo={subtitulo} cta={!legal} imagen={principal} />
   {anadido && <Anadido datos={anadido} />}
