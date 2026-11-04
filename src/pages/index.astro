@@ -10,7 +10,7 @@ import site from '../data/site.json';
 import ciudades from '../data/ciudades.json';
 import cambiosData from '../data/fallos-original.json';
 import principales from '../data/principales.json';
-import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq } from '../lib/textos.mjs';
+import { aplicarCambios, tipoFrase, nombresPropios, detectarFaq, enlazarOtrosServicios } from '../lib/textos.mjs';
 
 // Cambios aprobados por Yama (títulos, H1, descripciones, mayúsculas y alt): src/data/fallos-original.json
 const cambios = cambiosData as any;
@@ -18,7 +18,7 @@ const propios = nombresPropios(ciudades);
 const seo = seoDe('index');
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
 const tituloH1 = cambios.h1['index'] || tipoFrase(h1 ? h1.text : data.title, propios);
-const bloques = aplicarCambios(data.blocks, { titulo: tituloH1, propios, encabezados: cambios.encabezados?.index });
+const bloques = enlazarOtrosServicios(aplicarCambios(data.blocks, { titulo: tituloH1, propios, encabezados: cambios.encabezados?.index }), { slug: 'index' });
 const omitir = data.blocks.map((b: any, i: number) => (b.type === 'heading' && b.tag === 'h1' ? i : -1)).filter((i: number) => i >= 0);
 const faq = (faqData as Record<string, any[]>)['index'] || [];
 const filas = (data as any).filas || [];

@@ -9,7 +9,7 @@ import ListaExcavaciones from '../components/ListaExcavaciones.astro';
 import inicio from '../content/pages/index.json';
 import comoInicio from '../data/como-inicio.json';
 import ciudades from '../data/ciudades.json';
-import { aplicarCambios, nombresPropios, detectarFaq } from '../lib/textos.mjs';
+import { aplicarCambios, nombresPropios, detectarFaq, enlazarOtrosServicios } from '../lib/textos.mjs';
 import site from '../data/site.json';
 import paginasNuevas from '../data/paginas-nuevas.json';
 import principales from '../data/principales.json';
@@ -29,10 +29,10 @@ const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: p.h1, url }];
 const adaptada = (comoInicio as Record<string, any>)[clave] || null;
 const sinEtiquetas = (h: string) => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 const bloquesInicio = (inicio as any).blocks as any[];
-const bloques = adaptada ? aplicarCambios(bloquesInicio.map((b, i) => {
+const bloques = adaptada ? enlazarOtrosServicios(aplicarCambios(bloquesInicio.map((b, i) => {
   const c = adaptada.cambios[i];
   return c ? { ...b, ...c, ...(c.html ? { text: sinEtiquetas(c.html) } : {}) } : b;
-}), { titulo: p.h1, propios: nombresPropios(ciudades) }) : [];
+}), { titulo: p.h1, propios: nombresPropios(ciudades) }), { slug: clave }) : [];
 const filas = adaptada ? (inicio as any).filas : [];
 const omitir = adaptada ? [...bloquesInicio.flatMap((b, i) => (b.type === 'heading' && b.tag === 'h1' ? [i] : [])), ...adaptada.omitir] : [];
 const faqBloque = adaptada ? filas.map((f: any) => detectarFaq(f, bloques, adaptada.preguntas)).find(Boolean) : null;

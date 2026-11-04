@@ -60,7 +60,8 @@ export const normT = (t = '') => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLo
 /**
  * Fichas de «Otros servicios de contenedores» (Yama, 2026-11-04): el titular y la foto de cada
  * ficha enlazan a su servicio. Excavaciones va a la página de excavaciones de ese lugar si la
- * tiene. Una ficha no enlaza a la página en la que está.
+ * tiene. Una ficha no enlaza a la página en la que está. También corrige los textos de las
+ * fichas que estaban mal en el original (texto de otra ficha, erratas y acentos).
  */
 export function enlazarOtrosServicios(bloques, { slug = '', excavacion = '/excavaciones/' } = {}) {
   const k = bloques.findIndex((b) => b.type === 'heading' && /^otros servicios/.test(normT(b.text)));
@@ -74,10 +75,22 @@ export function enlazarOtrosServicios(bloques, { slug = '', excavacion = '/excav
     if (/^camiones portacontenedores/.test(n)) return '/camiones-portacontenedores/';
     return null;
   };
-  let act = null;
+  const textoCorregido = (ficha, t) => {
+    if (/^venta de contenedores/.test(ficha) && /^si tienes un contenedor/.test(t)) return 'Si tienes un contenedor y quieres venderlo, estás en el sitio adecuado.';
+    if (/^comprar contenedores/.test(ficha) && /^quieres comprar/.test(t)) return '¿Quieres comprar un contenedor y conocer sus precios? Consulta más.';
+    if (/^contenedores maritimos/.test(ficha) && /^quieres comprar/.test(t)) return 'Conoce todas nuestras opciones en contenedores marítimos; contenedores para transporte, casas, oficinas, etc.';
+    if (/^excavaciones/.test(ficha) && /construcciones de oficinas/.test(t)) return 'Realizamos todo tipo de excavaciones y movimiento de tierra. Contáctanos y te asesoramos.';
+    if (/^camiones portacontenedores/.test(ficha) && /^venta de camiones/.test(t)) return 'Venta de camiones portacontenedores. Si necesitas un camión, no dudes en consultarnos. Precios y garantías.';
+    return null;
+  };
+  let act = null; let ficha = '';
   return bloques.map((b, i) => {
     if (i <= k) return b;
-    if (b.type === 'heading') act = destino(b.text);
+    if (b.type === 'heading') { act = destino(b.text); ficha = normT(b.text); }
+    if (b.type === 'text') {
+      const nuevo = textoCorregido(ficha, normT(b.text));
+      return nuevo ? { ...b, text: nuevo, html: `<p>${nuevo}</p>` } : b;
+    }
     if (!act || act === `/${slug}/` || (b.type !== 'heading' && b.type !== 'image')) return b;
     return { ...b, href: act };
   });

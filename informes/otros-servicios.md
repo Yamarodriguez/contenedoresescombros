@@ -9,7 +9,7 @@
 
 Arreglado con `enlazarOtrosServicios` (src/lib/textos.mjs). «Comprar contenedores» va a /venta/.
 
-## Textos del original que están mal (sin tocar, a la espera de Yama)
+## Textos del original que estaban mal (corregidos el 2026-11-04 a petición de Yama, en `enlazarOtrosServicios`)
 - 5 páginas: la ficha Contenedores marítimos lleva el texto de «Comprar contenedores», con la errata «Consutla».
 - presupuesto, empresa y contacto: la ficha Excavaciones habla de «construcciones de oficinas con contenedores».
 
