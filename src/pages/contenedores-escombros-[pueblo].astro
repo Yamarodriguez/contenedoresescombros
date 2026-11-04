@@ -11,6 +11,10 @@ import lugares from '../data/lugares-nuevos.json';
 import principales from '../data/principales.json';
 import { paginasContenedores } from '../lib/lugares.mjs';
 import { rutaExcavacion } from '../lib/excavaciones.mjs';
+import indexacion from "../data/indexacion.json";
+import { listaLugares } from "../lib/lugares.mjs";
+import { indexable, nuevosSlugs } from "../lib/indexacion.mjs";
+const nuevos = nuevosSlugs(listaLugares(lugares));
 
 export function getStaticPaths() {
   return paginasContenedores(lugares, ciudades).map((p: any) => ({ params: { pueblo: p.slug.replace(/^contenedores-escombros-/, '') }, props: { p } }));
@@ -20,10 +24,11 @@ const { p } = Astro.props as { p: any };
 const dominio = `https://${site.dominio}`;
 const url = `${dominio}${p.ruta}`;
 const principal = (principales as Record<string, any>)[p.slug] || null;
+const indexar = indexable(p.slug, nuevos, indexacion.indexar);
 const migas = [{ nombre: 'Inicio', url: `${dominio}/` }, { nombre: p.clave, url }];
 const datos = [{ '@type': 'FAQPage', mainEntity: p.faq.map((f: any) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })) }];
 ---
-<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos}>
+<Base title={p.titulo} description={p.descripcion} canonical={url} imagen={principal?.src} migas={migas} datos={datos} indexar={indexar}>
   <Hero titulo={p.h1} subtitulo={p.contenido.subtitulo} imagen={principal} />
   <Anadido datos={p.contenido} />
   <Zona zona={(ciudades as Record<string, any>)[p.slug]} excavacion={rutaExcavacion(p.slug)} />

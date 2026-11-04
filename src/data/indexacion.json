@@ -1,0 +1,15 @@
+{
+  "_nota": "Lotes de indexación de los lugares nuevos (Yama, 2026-11-04). Las páginas de contenedores y de excavaciones de los 202 lugares nuevos salen con «noindex» hasta que su clave (p. ej. contenedores-escombros-alcoy) esté en la lista «indexar». Ritmo: 10 al día, cada lote lo confirma Yama antes de subir.",
+  "indexar": [
+    "contenedores-escombros-alcala-de-henares",
+    "contenedores-escombros-alcobendas",
+    "contenedores-escombros-alcorcon",
+    "contenedores-escombros-aranjuez",
+    "contenedores-escombros-arganda-del-rey",
+    "contenedores-escombros-boadilla-del-monte",
+    "contenedores-escombros-collado-villalba",
+    "contenedores-escombros-colmenar-viejo",
+    "contenedores-escombros-coslada",
+    "contenedores-escombros-fuenlabrada"
+  ]
+}

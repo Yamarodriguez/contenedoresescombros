@@ -1,6 +1,7 @@
 // C3: el validador sobre dist/.
 import fs from 'node:fs';
 import path from 'node:path';
+import { listaLugares } from '../src/lib/lugares.mjs';
 
 const DOMINIO = 'https://contenedoresescombros.com';
 const fallos = [];
@@ -24,6 +25,16 @@ const ficheros = paginas('dist');
 // Sin indexar SOLO: 404, gracias y legales (Yama, 2026-11-03). El mapa del sitio lleva
 // exactamente las páginas que se indexan.
 const NOINDEX = /^(404\.html|gracias\/index\.html|aviso-legal\/index\.html|politica-de-[^/]+\/index\.html)$/;
+// Lugares nuevos por lotes (Yama, 2026-11-04): sin indexar hasta estar en src/data/indexacion.json.
+const LOTES = JSON.parse(fs.readFileSync('src/data/indexacion.json', 'utf8')).indexar;
+const NUEVOS = new Set(listaLugares(JSON.parse(fs.readFileSync('src/data/lugares-nuevos.json', 'utf8'))).map((l) => l.clave));
+const sinLote = (rel) => {
+  const partes = rel.split('/');
+  const m = partes.length === 2 && partes[1] === 'index.html' ? partes[0].match(/^(contenedores-escombros|excavaciones)-(.+)$/) : null;
+  if (!m) return false;
+  const clave = 'contenedores-escombros-' + m[2];
+  return NUEVOS.has(clave) && !LOTES.includes(clave);
+};
 const mapa = new Set([...fs.readFileSync('dist/sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 for (const f of ficheros) {
   const rel = path.relative('dist', f).replace(/\\/g, '/');
@@ -68,7 +79,7 @@ for (const f of ficheros) {
     }
   }
   const sinIndice = /<meta name="robots" content="noindex/.test(html);
-  const debeIndexarse = !NOINDEX.test(rel);
+  const debeIndexarse = !NOINDEX.test(rel) && !sinLote(rel);
   if (debeIndexarse && sinIndice) fallos.push(`${rel}: lleva noindex y debería indexarse`);
   if (!debeIndexarse && !sinIndice) fallos.push(`${rel}: debería llevar noindex`);
   if (!es404) {
