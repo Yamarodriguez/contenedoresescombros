@@ -57,6 +57,32 @@ export function aplicarCambios(bloques, { titulo = '', propios = [], encabezados
 
 export const normT = (t = '') => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.\s]+$/, '').replace(/\s+/g, ' ').trim();
 
+/**
+ * Fichas de «Otros servicios de contenedores» (Yama, 2026-11-04): el titular y la foto de cada
+ * ficha enlazan a su servicio. Excavaciones va a la página de excavaciones de ese lugar si la
+ * tiene. Una ficha no enlaza a la página en la que está.
+ */
+export function enlazarOtrosServicios(bloques, { slug = '', excavacion = '/excavaciones/' } = {}) {
+  const k = bloques.findIndex((b) => b.type === 'heading' && /^otros servicios/.test(normT(b.text)));
+  if (k < 0) return bloques;
+  const destino = (t) => {
+    const n = normT(t);
+    if (/^(venta|comprar) de? ?contenedores/.test(n) || n === 'comprar contenedores') return '/venta/';
+    if (/^excavaciones/.test(n)) return excavacion;
+    if (/^contenedores maritimos/.test(n)) return 'https://contenedoresmaritimos.net/';
+    if (/^casas contenedores/.test(n)) return 'https://casascontenedores.es/';
+    if (/^camiones portacontenedores/.test(n)) return '/camiones-portacontenedores/';
+    return null;
+  };
+  let act = null;
+  return bloques.map((b, i) => {
+    if (i <= k) return b;
+    if (b.type === 'heading') act = destino(b.text);
+    if (!act || act === `/${slug}/` || (b.type !== 'heading' && b.type !== 'image')) return b;
+    return { ...b, href: act };
+  });
+}
+
 /** Índices de todos los bloques de una fila, con sus filas anidadas. */
 export function bloquesDeFila(fila) {
   return fila.columnas.flatMap((c) => c.items.flatMap((it) => (it.fila ? bloquesDeFila(it.fila) : [it.b])));

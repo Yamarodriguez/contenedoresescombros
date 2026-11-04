@@ -3,10 +3,12 @@
 // en dist/, en el mismo orden. Se normaliza lo que cambia al publicar.
 import fs from 'node:fs';
 import path from 'node:path';
-import { preguntasConvertidas, normT } from '../src/lib/textos.mjs';
+import { preguntasConvertidas, normT, enlazarOtrosServicios } from '../src/lib/textos.mjs';
+import { rutaExcavacion } from '../src/lib/excavaciones.mjs';
 
 // Cambio aprobado: el titular del bloque Medidas / Recogida pasa a ser su pregunta.
 const cambios = JSON.parse(fs.readFileSync('src/data/fallos-original.json', 'utf8'));
+const datosExcavacion = JSON.parse(fs.readFileSync('src/data/excavaciones-ciudades.json', 'utf8'));
 const contenido = JSON.parse(fs.readFileSync('contenido-vivo.json', 'utf8'));
 const paginas = Object.values(contenido);
 const DOM = /^https?:\/\/(?:www\.)?contenedoresescombros\.com/i;
@@ -80,7 +82,9 @@ for (const p of paginas) {
   const quitados = new Set(cambios.quitar?.[ruta || 'index'] || []);
   // Titulares cambiados a petición de Yama (fallos-original.json -> encabezados).
   const renombrados = cambios.encabezados?.[ruta || 'index'] || {};
-  const bl = p.blocks.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b.type === 'heading' && renombrados[normT(b.text)] ? { ...b, text: renombrados[normT(b.text)] } : b)).filter((_, i) => !quitados.has(i));
+  // Enlaces de «Otros servicios» añadidos a petición de Yama (src/lib/textos.mjs).
+  const conEnlaces = enlazarOtrosServicios(p.blocks, { slug: ruta, excavacion: datosExcavacion[ruta] ? rutaExcavacion(ruta) : '/excavaciones/' });
+  const bl = conEnlaces.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b.type === 'heading' && renombrados[normT(b.text)] ? { ...b, text: renombrados[normT(b.text)] } : b)).filter((_, i) => !quitados.has(i));
   subTxt(viejoTextos(bl), textoUnidades(zona).join(' || '), 'texto', p, dif);
   subArr(viejoBotones(bl), nuevoBotones(html), 'boton', p, dif);
   subArr(viejoEnlaces(bl), nuevoEnlaces(html), 'enlace', p, dif);
