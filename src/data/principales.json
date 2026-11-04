@@ -650,5 +650,33 @@
  "contenedores-de-tierra": {
   "src": "/img/principal/contenedores-tierra.jpg",
   "alt": "Contenedores de tierra"
+ },
+ "alquiler-de-cubas": {
+  "src": "/img/principal/alquiler-cubas.jpg",
+  "alt": "Alquiler de cubas"
+ },
+ "contenedores-para-reformas": {
+  "src": "/img/principal/contenedores-reformas.jpg",
+  "alt": "Contenedores para reformas"
+ },
+ "contenedores-industriales": {
+  "src": "/img/principal/contenedores-industriales.jpg",
+  "alt": "Contenedores industriales"
+ },
+ "demoliciones": {
+  "src": "/img/principal/demoliciones.jpg",
+  "alt": "Demoliciones"
+ },
+ "contenedores-para-chatarra": {
+  "src": "/img/principal/contenedores-chatarra.jpg",
+  "alt": "Contenedores para chatarra"
+ },
+ "casetas-de-obra": {
+  "src": "/img/principal/casetas-obra.jpg",
+  "alt": "Casetas de obra"
+ },
+ "desescombro": {
+  "src": "/img/principal/desescombro.jpg",
+  "alt": "Desescombro"
  }
 }

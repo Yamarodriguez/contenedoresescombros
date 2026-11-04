@@ -42,7 +42,7 @@ for (const [k, s] of Object.entries(seo)) {
 }
 
 // Títulos cambiados aunque no pasen de 60 caracteres (Yama, 2026-11-03: SEO de Excavaciones).
-Object.assign(titulos, { excavaciones: 'Excavaciones y movimiento de tierras: tipos y presupuesto' });
+Object.assign(titulos, { excavaciones: 'Excavaciones y movimiento de tierras: tipos y presupuesto', transporte: 'Transporte de escombros y de contenedores de obra' });
 
 // --- H1 de las páginas de servicio ---
 const h1 = {

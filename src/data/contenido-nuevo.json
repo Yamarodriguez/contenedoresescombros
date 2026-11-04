@@ -85,5 +85,94 @@
         "boton": { "texto": "Pide presupuesto", "href": "/presupuesto/" }
       }
     ]
+  },
+  "transporte": {
+    "subtitulo": "Cómo se transportan los escombros, qué camión se usa, a dónde van y de qué depende el precio. Presupuesto sin compromiso.",
+    "entradilla": "<p>El <strong>transporte de escombros</strong> es llevar los residuos de una obra o una reforma desde el lugar donde se generan hasta un gestor autorizado. Se hace con contenedores, sacos o camiones, según la cantidad y el acceso.</p><p>Aquí tienes cómo se hace, qué camiones se usan, a dónde van los escombros y de qué depende el precio.</p>",
+    "secciones": [
+      {
+        "h2": "Cómo se hace el transporte de escombros",
+        "foto": {
+          "de": "/img/2021/06/transporte-contenedores-escombros.jpg",
+          "nombre": "transporte-de-escombros"
+        },
+        "html": "<p>La forma de transportarlos depende de cuánto escombro hay y de cómo se llega a la obra.</p>",
+        "tarjetas": [
+          {
+            "h3": "En contenedor",
+            "html": "<p>El camión deja el contenedor, se llena en la obra y vuelve a por él. Mira los <a href=\"/medidas/\">tamaños de contenedor</a>.</p>"
+          },
+          {
+            "h3": "En sacos",
+            "html": "<p>Para poca cantidad o calles sin sitio para un contenedor. Mira los <a href=\"/sacos-para-escombros/\">sacos para escombros</a>.</p>"
+          },
+          {
+            "h3": "En camión",
+            "html": "<p>Para grandes cantidades, como un derribo. Mira las <a href=\"/demoliciones/\">demoliciones</a>.</p>"
+          }
+        ]
+      },
+      {
+        "h2": "Camiones para el transporte de escombros",
+        "html": "<p>El camión se elige según el contenedor y el espacio para maniobrar. Mira los <a href=\"/camiones-portacontenedores/\">camiones portacontenedores</a>.</p>",
+        "tarjetas": [
+          {
+            "h3": "Camión portacontenedores de cadenas",
+            "html": "<p>Levanta el contenedor con dos brazos y cadenas. Es el habitual para los contenedores pequeños.</p>"
+          },
+          {
+            "h3": "Camión de gancho",
+            "html": "<p>Arrastra el contenedor con un gancho hasta la caja. Se usa para los contenedores grandes.</p>"
+          },
+          {
+            "h3": "Camión volquete",
+            "html": "<p>Carga el escombro directamente en su caja y lo descarga al llegar.</p>"
+          }
+        ]
+      },
+      {
+        "h2": "A dónde van los escombros",
+        "html": "<p>Los escombros se llevan a un gestor de residuos autorizado, que los clasifica y recicla lo que se puede. Desde 2022 la ley obliga a separar los residuos de obra no peligrosos en varias fracciones, como madera, minerales, metales o vidrio, preferiblemente en la propia obra. Mira también la <a href=\"/recogida-escombros/\">recogida de escombros</a>.</p>"
+      },
+      {
+        "h2": "Precio del transporte de escombros",
+        "html": "<p>El precio se calcula para cada servicio. Mira los <a href=\"/precio/\">precios orientativos</a>; estos son los factores que más lo cambian:</p>",
+        "tarjetas": [
+          {
+            "h3": "Distancia",
+            "html": "<p>Los kilómetros entre la obra y el gestor autorizado.</p>"
+          },
+          {
+            "h3": "Cantidad y peso",
+            "html": "<p>El tamaño del contenedor y cuántos viajes hacen falta.</p>"
+          },
+          {
+            "h3": "Tipo de residuo",
+            "html": "<p>El escombro limpio y los residuos mezclados no cuestan lo mismo.</p>"
+          },
+          {
+            "h3": "Frecuencia",
+            "html": "<p>Si el servicio es de una sola vez o se repite.</p>"
+          }
+        ]
+      },
+      {
+        "h2": "Preguntas frecuentes sobre el transporte de escombros",
+        "faq": [
+          {
+            "pregunta": "¿Dónde se llevan los escombros?",
+            "respuesta": "A un gestor de residuos autorizado, que los clasifica y recicla lo que se puede."
+          },
+          {
+            "pregunta": "¿Puedo transportar escombros en mi coche o furgoneta?",
+            "respuesta": "Para pequeñas cantidades, muchos municipios tienen puntos limpios que admiten escombro de obras domésticas. Consulta las condiciones de tu ayuntamiento."
+          },
+          {
+            "pregunta": "¿Cuánto cuesta el transporte de escombros?",
+            "respuesta": "Depende de la distancia, de la cantidad, del tipo de residuo y de si el servicio se repite. Se presupuesta en cada caso."
+          }
+        ]
+      }
+    ]
   }
 }

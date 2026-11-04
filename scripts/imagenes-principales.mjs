@@ -31,6 +31,13 @@ const FOTO = { // [foto, ¿es foto real (rellena) o recorte sobre blanco?]
   precio: [F + 'precios-contenedores-escombros.jpg'],
   medidas: [F + 'medidas-contenedores-Escombros.jpg'],
   'habilitacion-contenedores-escombros-via-publica': [F + 'habilitacion-de-contenedores-escombros-via-publica.jpg'],
+  'alquiler-de-cubas': ['/img/2021/06/alquiler-contenedores-escombros.jpg'],
+  'contenedores-para-reformas': ['/img/2021/06/contenedor-escombro-3-m3.jpg'],
+  'contenedores-industriales': ['/img/2021/06/contenedor-escombro-30-m3.jpg'],
+  'demoliciones': ['/img/2021/06/excavaciones.jpg', true],
+  'contenedores-para-chatarra': ['/img/2021/06/contenedores-escombros-cerrados.jpg'],
+  'casetas-de-obra': ['/img/2021/06/contenedores-maritimos.jpg'],
+  'desescombro': ['/img/2021/06/retirada-de-escombros.jpg', true],
 };
 for (const m of [3, 5, 9, 12, 20, 30]) FOTO[`contenedores-escombros-${m}-m3`] = [`${F}contenedor-escombro-${m}-m3.jpg`];
 const PORDEFECTO = [F + 'alquiler-contenedores-escombros.jpg'];

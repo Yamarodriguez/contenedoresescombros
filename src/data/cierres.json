@@ -4,18 +4,126 @@
   "titulo": "¿Necesitas una excavación?",
   "texto": "Cuéntanos qué hay que excavar, dónde está la obra y las medidas aproximadas.",
   "datos": [
-   { "dt": "Trabajos", "dd": "Vaciados · zanjas · piscinas · nivelación" },
-   { "dt": "Servicios", "dd": "Excavación · movimiento de tierras · retirada de tierra" },
-   { "dt": "Dónde", "dd": "Toda España" }
+   {
+    "dt": "Trabajos",
+    "dd": "Vaciados · zanjas · piscinas · nivelación"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Excavación · movimiento de tierras · retirada de tierra"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
   ]
  },
  "contenedores-de-tierra": {
   "titulo": "¿Necesitas un contenedor de tierra?",
   "texto": "Cuéntanos cuánta tierra hay que retirar, si va limpia y dónde está la obra.",
   "datos": [
-   { "dt": "Tamaños", "dd": "Sacos y contenedores de 3 o 5 m³" },
-   { "dt": "Servicios", "dd": "Alquiler · recogida · transporte" },
-   { "dt": "Dónde", "dd": "Toda España" }
+   {
+    "dt": "Tamaños",
+    "dd": "Sacos y contenedores de 3 o 5 m³"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Alquiler · recogida · transporte"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
+  ]
+ },
+ "contenedores-industriales": {
+  "titulo": "¿Necesitas un contenedor industrial?",
+  "texto": "Cuéntanos qué residuos tienes, dónde está tu empresa y cada cuánto hay que recogerlos.",
+  "datos": [
+   {
+    "dt": "Tamaños",
+    "dd": "Contenedores de 9 a 30 m³"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Alquiler · recogida · transporte"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
+  ]
+ },
+ "contenedores-para-chatarra": {
+  "titulo": "¿Necesitas un contenedor para chatarra?",
+  "texto": "Cuéntanos qué metal tienes, cuánta cantidad y dónde está.",
+  "datos": [
+   {
+    "dt": "Tamaños",
+    "dd": "Contenedores de 3 a 30 m³"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Alquiler · recogida · transporte"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
+  ]
+ },
+ "demoliciones": {
+  "titulo": "¿Necesitas una demolición?",
+  "texto": "Cuéntanos qué hay que derribar, dónde está y de qué material es.",
+  "datos": [
+   {
+    "dt": "Trabajos",
+    "dd": "Completa · parcial · interior · selectiva"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Demolición · retirada de escombros"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
+  ]
+ },
+ "desescombro": {
+  "titulo": "¿Necesitas un desescombro?",
+  "texto": "Cuéntanos qué hay que retirar, dónde está y cómo es el acceso.",
+  "datos": [
+   {
+    "dt": "Trabajos",
+    "dd": "Pisos · locales · trasteros · solares"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Vaciado · retirada · transporte"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
+  ]
+ },
+ "casetas-de-obra": {
+  "titulo": "¿Necesitas una caseta de obra?",
+  "texto": "Cuéntanos qué tipo de caseta buscas, dónde está la obra y durante cuánto tiempo.",
+  "datos": [
+   {
+    "dt": "Tipos",
+    "dd": "Oficina · vestuarios · aseos · almacén"
+   },
+   {
+    "dt": "Servicios",
+    "dd": "Alquiler · compra"
+   },
+   {
+    "dt": "Dónde",
+    "dd": "Toda España"
+   }
   ]
  }
 }

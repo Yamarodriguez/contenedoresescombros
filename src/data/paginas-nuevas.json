@@ -62,5 +62,646 @@
     "boton": { "texto": "Pide presupuesto", "href": "/presupuesto/" }
    }
   ]
+ },
+ "alquiler-de-cubas": {
+  "titulo": "Alquiler de cubas de escombros: tamaños, precio y permiso",
+  "descripcion": "Alquiler de cubas de escombros para obras y reformas: qué tamaño elegir, de qué depende el precio, qué se puede echar y qué permiso hace falta.",
+  "h1": "Alquiler de cubas de escombros",
+  "clave": "Alquiler de cubas",
+  "subtitulo": "Qué tamaño de cuba elegir, de qué depende el precio y qué permiso necesitas. Presupuesto sin compromiso.",
+  "entradilla": "<p>Una <strong>cuba de escombros</strong> es un contenedor metálico abierto donde se echan los residuos de una obra o una reforma. <strong>Cuba</strong>, <strong>cubeta</strong> y <strong>contenedor de obra</strong> son nombres distintos para lo mismo: cuál se usa depende de la zona. En Cataluña también se le llama contenedor de runa.</p><p>Aquí tienes los tamaños de las cubas, de qué depende el precio del alquiler, qué se puede echar y qué permiso hace falta para dejarla en la calle.</p>",
+  "secciones": [
+   {
+    "h2": "Tamaños de cubas de escombros",
+    "foto": {
+     "de": "/img/2021/06/contenedor-escombro-5-m3.jpg",
+     "nombre": "tamanos-de-cubas-de-escombros"
+    },
+    "html": "<p>El tamaño de la cuba se elige según la cantidad de residuos, cuánto pesan y el sitio donde va a quedar.</p>",
+    "tarjetas": [
+     {
+      "h3": "Cubas de 3 y 5 m³",
+      "html": "<p>Para reformas en casa y para materiales pesados, como la tierra o el escombro. Mira las cubas de <a href=\"/contenedores-escombros-3-m3/\">3 m³</a> y de <a href=\"/contenedores-escombros-5-m3/\">5 m³</a>.</p>"
+     },
+     {
+      "h3": "Cubas de 9 y 12 m³",
+      "html": "<p>Para reformas grandes y obras medianas, con material más ligero. Mira las cubas de <a href=\"/contenedores-escombros-9-m3/\">9 m³</a> y de <a href=\"/contenedores-escombros-12-m3/\">12 m³</a>.</p>"
+     },
+     {
+      "h3": "Cubas de 20 y 30 m³",
+      "html": "<p>Para obras grandes, demoliciones y residuos ligeros en gran cantidad. Mira las cubas de <a href=\"/contenedores-escombros-20-m3/\">20 m³</a> y de <a href=\"/contenedores-escombros-30-m3/\">30 m³</a>.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Cuánto cuesta alquilar una cuba",
+    "html": "<p>El precio se calcula para cada caso. Mira los <a href=\"/precio/\">precios orientativos de los contenedores</a>; estos son los factores que más lo cambian:</p>",
+    "tarjetas": [
+     {
+      "h3": "Tamaño de la cuba",
+      "html": "<p>Cuantos más metros cúbicos tiene, más cuesta el alquiler y el transporte.</p>"
+     },
+     {
+      "h3": "Días de alquiler",
+      "html": "<p>El tiempo que la cuba se queda en la obra. Si la necesitas más días de los previstos, avísalo antes.</p>"
+     },
+     {
+      "h3": "Zona y distancia",
+      "html": "<p>La distancia entre la obra, el almacén y el gestor autorizado cambia el coste del transporte.</p>"
+     },
+     {
+      "h3": "Tipo de residuo",
+      "html": "<p>No cuesta lo mismo gestionar escombro limpio que residuos mezclados.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Qué se puede echar en una cuba",
+    "html": "<p>En una cuba de obra se echan tierra, escombros, hormigón, ladrillos, tejas y materiales cerámicos. También madera, vidrio, plástico, metales y cartón. No se admiten residuos peligrosos, como el amianto (uralita), las pinturas o los disolventes.</p>"
+   },
+   {
+    "h2": "Permiso para dejar la cuba en la calle",
+    "html": "<p>Si la cuba va en la vía pública, hay que comunicarlo al ayuntamiento o pedir un permiso. Si va dentro de la parcela o de la obra, ese permiso no hace falta. Mira cómo funciona la <a href=\"/habilitacion-contenedores-escombros-via-publica/\">habilitación de contenedores en la vía pública</a>.</p>"
+   },
+   {
+    "h2": "Cómo se alquila una cuba, paso a paso",
+    "html": "<ol><li><strong>Calcula cuántos residuos vas a tener</strong> y de qué tipo.</li><li><strong>Elige el tamaño</strong> y la fecha de entrega.</li><li><strong>Pide el permiso</strong> si la cuba va en la calle.</li><li><strong>Llena la cuba</strong> sin pasar del borde.</li><li><strong>Pide la retirada</strong>: el camión se la lleva y los residuos van a un gestor autorizado.</li></ol>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre el alquiler de cubas",
+    "faq": [
+     {
+      "pregunta": "¿Es lo mismo una cuba que un contenedor de escombros?",
+      "respuesta": "Sí. Cuba, cubeta, contenedor de obra y contenedor de escombros son nombres distintos para el mismo contenedor metálico abierto."
+     },
+     {
+      "pregunta": "¿Qué tamaño de cuba necesito para una reforma?",
+      "respuesta": "Para una reforma en casa suele bastar una cuba de 3 o 5 m³. Para obras grandes o demoliciones se usan las de 20 o 30 m³."
+     },
+     {
+      "pregunta": "¿Hace falta permiso para poner una cuba en la calle?",
+      "respuesta": "Sí, hay que comunicarlo al ayuntamiento o pedir un permiso. Si la cuba va dentro de la parcela o de la obra, ese permiso no hace falta."
+     },
+     {
+      "pregunta": "¿Cuánto cuesta alquilar una cuba?",
+      "respuesta": "Depende del tamaño, de los días de alquiler, de la zona y del tipo de residuo. Lo mejor es pedir presupuesto indicando la dirección de la obra."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de alquiler de cuba",
+    "html": "<p>Cuéntanos dónde está la obra, qué tamaño necesitas y cuántos días, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
+ },
+ "contenedores-para-reformas": {
+  "titulo": "Contenedores para reformas: qué tamaño elegir y precio",
+  "descripcion": "Contenedores para reformas de baños, cocinas, pisos y locales: qué tamaño elegir, qué se puede echar, qué permiso hace falta y de qué depende el precio.",
+  "h1": "Contenedores para reformas",
+  "clave": "Contenedores para reformas",
+  "subtitulo": "Qué contenedor elegir para la reforma de un baño, una cocina, un piso o un local. Presupuesto sin compromiso.",
+  "entradilla": "<p>Una reforma genera más escombro del que parece: azulejos, tabiques, sanitarios, suelos y restos de obra que no se pueden tirar a los contenedores urbanos. Por eso se usa un <strong>contenedor para reformas</strong>, que se deja junto a la obra y se retira cuando está lleno.</p><p>Aquí tienes qué tamaño elegir según la reforma, qué se puede echar, cómo organizarlo en un edificio y qué permiso hace falta.</p>",
+  "secciones": [
+   {
+    "h2": "Qué tamaño de contenedor elegir para una reforma",
+    "foto": {
+     "de": "/img/2021/06/contenedor-escombro-3-m3.jpg",
+     "nombre": "contenedor-para-reformas"
+    },
+    "html": "<p>Estas son orientaciones: la cantidad real depende de lo que se tire y de lo que pese. Si dudas, consulta las <a href=\"/medidas/\">medidas de los contenedores</a>.</p>",
+    "tarjetas": [
+     {
+      "h3": "Reforma pequeña",
+      "html": "<p>Un aseo o un arreglo puntual: puede bastar con <a href=\"/sacos-para-escombros/\">sacos para escombros</a>.</p>"
+     },
+     {
+      "h3": "Reforma de baño o cocina",
+      "html": "<p>Suele ser suficiente un <a href=\"/contenedores-escombros-3-m3/\">contenedor de 3 m³</a>.</p>"
+     },
+     {
+      "h3": "Reforma de un piso completo",
+      "html": "<p>Lo habitual es un <a href=\"/contenedores-escombros-5-m3/\">contenedor de 5 m³</a>, o varios viajes de uno más pequeño.</p>"
+     },
+     {
+      "h3": "Local o reforma grande",
+      "html": "<p>Con mucho material ligero, un <a href=\"/contenedores-escombros-9-m3/\">contenedor de 9 m³</a> o más.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Qué se puede echar en un contenedor de reforma",
+    "html": "<p>Lo normal en una reforma se puede echar en el contenedor, salvo los residuos peligrosos.</p>",
+    "tarjetas": [
+     {
+      "h3": "Sí se puede",
+      "html": "<p>Escombros, azulejos, ladrillos, tejas, sanitarios, madera, vidrio, plástico, metales y cartón.</p>"
+     },
+     {
+      "h3": "No se puede",
+      "html": "<p>Residuos peligrosos, como el amianto (uralita), las pinturas, los disolventes o los aceites, ni basura doméstica.</p>"
+     },
+     {
+      "h3": "Mejor separado",
+      "html": "<p>Separar los materiales facilita su gestión y reciclaje. Pregunta antes si el contenedor es para un solo material o para mezcla.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Reformas en pisos y edificios",
+    "html": "<p>En una reforma dentro de un edificio hay que pensar cómo baja el escombro hasta la calle.</p>",
+    "tarjetas": [
+     {
+      "h3": "Sacos si no cabe el contenedor",
+      "html": "<p>En calles estrechas o sin sitio para el contenedor, los <a href=\"/sacos-para-escombros/\">sacos</a> son la alternativa.</p>"
+     },
+     {
+      "h3": "Contenedor con llave",
+      "html": "<p>Evita que otras personas tiren cosas dentro. Mira los <a href=\"/contenedores-escombros-con-llave/\">contenedores con llave</a>.</p>"
+     },
+     {
+      "h3": "Permiso del ayuntamiento",
+      "html": "<p>Si el contenedor va en la calle, hay que comunicarlo o pedir permiso. Mira la <a href=\"/habilitacion-contenedores-escombros-via-publica/\">habilitación en la vía pública</a>.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "De qué depende el precio de un contenedor para reformas",
+    "html": "<p>Depende del tamaño, de los días que lo tengas, de la zona y de lo que eches dentro. Mira los <a href=\"/precio/\">precios orientativos</a> y la <a href=\"/recogida-escombros/\">recogida de escombros</a>.</p>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre contenedores para reformas",
+    "faq": [
+     {
+      "pregunta": "¿Qué contenedor necesito para reformar un baño?",
+      "respuesta": "Suele bastar uno de 3 m³. Si el baño es pequeño y hay poco escombro, también pueden servir sacos."
+     },
+     {
+      "pregunta": "¿Qué contenedor necesito para reformar un piso?",
+      "respuesta": "Lo habitual es uno de 5 m³, aunque depende de cuántos tabiques y suelos se quiten."
+     },
+     {
+      "pregunta": "¿Puedo tirar los muebles viejos en el contenedor?",
+      "respuesta": "Consúltalo al pedirlo: los contenedores grandes admiten muebles y enseres, pero conviene decir qué vas a echar."
+     },
+     {
+      "pregunta": "¿Puedo echar uralita en el contenedor de la reforma?",
+      "respuesta": "No. La uralita puede llevar amianto, que es un residuo peligroso y tiene una gestión especial."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de contenedor para tu reforma",
+    "html": "<p>Cuéntanos qué vas a reformar, dónde está la obra y cuántos días necesitas el contenedor, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
+ },
+ "contenedores-industriales": {
+  "titulo": "Contenedores industriales y de basura para empresas",
+  "descripcion": "Contenedores industriales y de basura para empresas, naves y comercios: tamaños, residuos que admiten, recogida periódica y compra o alquiler.",
+  "h1": "Contenedores industriales y de basura",
+  "clave": "Contenedores industriales",
+  "subtitulo": "Tamaños, residuos que admiten, recogida periódica y compra o alquiler. Presupuesto sin compromiso.",
+  "entradilla": "<p>Un <strong>contenedor industrial</strong> se usa en empresas, naves, comercios y obras grandes para reunir residuos que no caben en los contenedores urbanos. Para este uso se emplean sobre todo los contenedores de gran volumen, pensados para material ligero como madera, cartón o plástico.</p><p>Aquí tienes qué tamaños se usan, qué residuos admiten, cómo funciona la recogida y si conviene alquilarlos o comprarlos.</p>",
+  "secciones": [
+   {
+    "h2": "Tamaños de contenedores industriales",
+    "foto": {
+     "de": "/img/2021/06/contenedor-escombro-30-m3.jpg",
+     "nombre": "contenedores-industriales"
+    },
+    "html": "<p>El tamaño depende de cuántos residuos se generan y de cada cuánto se recogen.</p>",
+    "tarjetas": [
+     {
+      "h3": "Contenedor de 30 m³",
+      "html": "<p>Gran volumen para basuras industriales: madera, cartón y plástico, además de muebles o poda. Mira el <a href=\"/contenedores-escombros-30-m3/\">contenedor de 30 m³</a>.</p>"
+     },
+     {
+      "h3": "Contenedor de 20 m³",
+      "html": "<p>Para empresas y obras con mucho material ligero. Mira el <a href=\"/contenedores-escombros-20-m3/\">contenedor de 20 m³</a>.</p>"
+     },
+     {
+      "h3": "Contenedores de 9 y 12 m³",
+      "html": "<p>Cuando hay menos espacio o menos residuos. Mira los de <a href=\"/contenedores-escombros-9-m3/\">9 m³</a> y <a href=\"/contenedores-escombros-12-m3/\">12 m³</a>.</p>"
+     },
+     {
+      "h3": "Contenedor con llave",
+      "html": "<p>Para que nadie ajeno a la empresa tire residuos dentro. Mira los <a href=\"/contenedores-escombros-con-llave/\">contenedores con llave</a>.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Qué residuos admite un contenedor de basura industrial",
+    "html": "<p>Conviene separar por materiales, porque se gestionan de forma distinta.</p>",
+    "tarjetas": [
+     {
+      "h3": "Cartón y papel",
+      "html": "<p>Embalajes de comercios, almacenes y naves. Ocupan mucho y pesan poco.</p>"
+     },
+     {
+      "h3": "Plástico y madera",
+      "html": "<p>Film, palés y restos de embalaje o de carpintería.</p>"
+     },
+     {
+      "h3": "Metales",
+      "html": "<p>Mejor aparte: mira los <a href=\"/contenedores-para-chatarra/\">contenedores para chatarra</a>.</p>"
+     },
+     {
+      "h3": "Residuos peligrosos",
+      "html": "<p>No se echan: aceites, disolventes, pinturas o productos químicos tienen una gestión especial.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Recogida puntual o periódica",
+    "html": "<p>El servicio puede ser de una sola vez o repetirse, y eso cambia el precio. Antes de contratarlo hay que saber el tipo de residuo, la cantidad, el tiempo y el lugar. Mira el <a href=\"/transporte/\">transporte de contenedores</a>.</p>"
+   },
+   {
+    "h2": "Alquilar o comprar un contenedor de basura",
+    "html": "<p>El alquiler conviene cuando la necesidad es temporal o cuando se quiere incluir el transporte. La compra puede interesar si el contenedor se va a usar siempre en el mismo sitio. Mira la <a href=\"/alquiler/\">información de alquiler</a> y la <a href=\"/venta/\">venta de contenedores</a>.</p>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre contenedores industriales",
+    "faq": [
+     {
+      "pregunta": "¿Qué es un contenedor industrial?",
+      "respuesta": "Es un contenedor de gran volumen para reunir los residuos de una empresa, una nave, un comercio o una obra grande."
+     },
+     {
+      "pregunta": "¿Puedo poner un contenedor en mi nave?",
+      "respuesta": "Sí. Si va dentro de tu parcela no hace falta permiso para ocupar la vía pública, pero el camión tiene que poder entrar y maniobrar."
+     },
+     {
+      "pregunta": "¿Se puede contratar una recogida periódica?",
+      "respuesta": "Depende de la empresa y de la zona. Indica la frecuencia al pedir presupuesto, porque cambia el precio."
+     },
+     {
+      "pregunta": "¿Se pueden echar residuos peligrosos?",
+      "respuesta": "No. Los residuos peligrosos necesitan una gestión especial y no se mezclan con el resto."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de contenedor industrial",
+    "html": "<p>Cuéntanos dónde está tu empresa, qué residuos tienes y cada cuánto hay que recogerlos, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
+ },
+ "demoliciones": {
+  "titulo": "Demoliciones: tipos, permisos y retirada de escombros",
+  "descripcion": "Demoliciones de casas, naves y tabiques: tipos de derribo, licencia, amianto, demolición selectiva y retirada de escombros. Pide presupuesto.",
+  "h1": "Demoliciones y derribos",
+  "clave": "Demoliciones",
+  "subtitulo": "Tipos de demolición, permisos, amianto y retirada de escombros. Presupuesto sin compromiso.",
+  "entradilla": "<p>Una <strong>demolición</strong> consiste en derribar total o parcialmente una construcción: una casa, una nave, un muro o los tabiques de un piso. Además del derribo hay que retirar y gestionar todos los escombros que salen.</p><p>Aquí tienes los tipos de demolición, los permisos que suelen hacer falta, qué pasa si hay amianto y cómo se retiran los residuos.</p>",
+  "secciones": [
+   {
+    "h2": "Tipos de demolición",
+    "foto": {
+     "de": "/img/2021/06/excavaciones.jpg",
+     "nombre": "tipos-de-demolicion"
+    },
+    "html": "<p>El tipo de demolición depende de lo que se derriba, del entorno y de lo que se quiera conservar.</p>",
+    "tarjetas": [
+     {
+      "h3": "Demolición completa",
+      "html": "<p>Se derriba todo el edificio o la nave para dejar el solar libre.</p>"
+     },
+     {
+      "h3": "Demolición parcial",
+      "html": "<p>Se derriba solo una parte, como un muro, una planta o un anexo, y se conserva el resto.</p>"
+     },
+     {
+      "h3": "Demolición interior",
+      "html": "<p>Se quitan tabiques, suelos y falsos techos de un piso o un local antes de una reforma.</p>"
+     },
+     {
+      "h3": "Demolición selectiva",
+      "html": "<p>Se desmonta por materiales para retirar primero lo peligroso y separar los residuos que se pueden reciclar.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Permisos para una demolición",
+    "html": "<p>Una demolición suele necesitar licencia o declaración responsable del ayuntamiento y, según la obra, un proyecto firmado por un técnico. Los requisitos cambian según el municipio, así que conviene consultarlo antes de empezar. Si el contenedor va en la calle, también hace falta la <a href=\"/habilitacion-contenedores-escombros-via-publica/\">autorización para la vía pública</a>.</p>"
+   },
+   {
+    "h2": "Demolición con amianto",
+    "html": "<p>Muchas cubiertas y depósitos antiguos de uralita llevan amianto. En ese caso no se puede derribar sin más: los trabajos los tiene que hacer una empresa inscrita en el Registro de Empresas con Riesgo por Amianto (RERA), con un plan de trabajo aprobado por la autoridad laboral. Y el amianto no se puede echar a un contenedor de escombros.</p>"
+   },
+   {
+    "h2": "Retirada de los escombros de una demolición",
+    "html": "<p>Desde 2022 la ley de residuos obliga a separar los residuos de obra no peligrosos en varias fracciones, como madera, minerales, metales o vidrio, y desde 2024 la demolición tiene que hacerse de forma selectiva.</p>",
+    "tarjetas": [
+     {
+      "h3": "Contenedores para demoliciones",
+      "html": "<p>Para escombro pesado se usan contenedores pequeños; los grandes, para material ligero. Mira las <a href=\"/medidas/\">medidas de los contenedores</a>.</p>"
+     },
+     {
+      "h3": "Transporte de escombros",
+      "html": "<p>Los residuos se llevan a un gestor autorizado. Mira el <a href=\"/transporte/\">transporte de escombros</a>.</p>"
+     },
+     {
+      "h3": "Excavación después del derribo",
+      "html": "<p>Si se va a construir, puede hacer falta una <a href=\"/excavaciones/\">excavación</a> del solar.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "De qué depende el precio de una demolición",
+    "html": "<p>Se presupuesta cada obra. Influyen el tamaño y la altura de lo que se derriba, el material, el acceso para la maquinaria, si hay edificios pegados, si hay amianto y la cantidad de escombro que hay que retirar.</p>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre demoliciones",
+    "faq": [
+     {
+      "pregunta": "¿Hace falta licencia para demoler una casa?",
+      "respuesta": "Normalmente sí, licencia o declaración responsable del ayuntamiento, y a veces un proyecto técnico. Depende del municipio y de la obra."
+     },
+     {
+      "pregunta": "¿Qué pasa si el tejado es de uralita?",
+      "respuesta": "Si lleva amianto, lo tiene que retirar una empresa inscrita en el RERA con un plan de trabajo aprobado, antes de la demolición."
+     },
+     {
+      "pregunta": "¿Qué es una demolición selectiva?",
+      "respuesta": "Es desmontar la construcción por materiales, para retirar antes lo peligroso y separar lo que se puede reciclar."
+     },
+     {
+      "pregunta": "¿Qué contenedor necesito para una demolición?",
+      "respuesta": "Depende del material. El escombro pesado va en contenedores pequeños, porque el límite lo marca el peso que puede llevar el camión."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de demolición",
+    "html": "<p>Cuéntanos qué hay que derribar, dónde está y de qué material es, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
+ },
+ "contenedores-para-chatarra": {
+  "titulo": "Contenedores para chatarra: tamaños, qué echar y retirada",
+  "descripcion": "Contenedores para chatarra en obras, talleres y empresas: qué tamaño elegir, qué metales se pueden echar y cómo se retira la chatarra.",
+  "h1": "Contenedores para chatarra",
+  "clave": "Contenedores para chatarra",
+  "subtitulo": "Qué tamaño elegir, qué metales se pueden echar y cómo se retira. Presupuesto sin compromiso.",
+  "entradilla": "<p>Un <strong>contenedor para chatarra</strong> sirve para reunir los restos de metal de una obra, un taller o una empresa: hierro, acero, aluminio o cobre. Separar el metal del resto de residuos facilita que se recicle.</p><p>Aquí tienes qué tamaño elegir, qué se puede echar, por qué conviene tenerlo con llave y cómo se retira.</p>",
+  "secciones": [
+   {
+    "h2": "Qué tamaño de contenedor elegir para chatarra",
+    "foto": {
+     "de": "/img/2021/06/contenedores-escombros-cerrados.jpg",
+     "nombre": "contenedores-para-chatarra"
+    },
+    "html": "<p>Depende de si la chatarra es pesada o voluminosa. Mira las <a href=\"/medidas/\">medidas de los contenedores</a>.</p>",
+    "tarjetas": [
+     {
+      "h3": "Chatarra pesada",
+      "html": "<p>Vigas, tubos o piezas macizas: contenedores pequeños, de <a href=\"/contenedores-escombros-3-m3/\">3 m³</a> o <a href=\"/contenedores-escombros-5-m3/\">5 m³</a>, porque manda el peso.</p>"
+     },
+     {
+      "h3": "Chatarra ligera y voluminosa",
+      "html": "<p>Chapas, perfiles o estructuras huecas: contenedores más grandes, de <a href=\"/contenedores-escombros-9-m3/\">9 m³</a> o más.</p>"
+     },
+     {
+      "h3": "Contenedor con llave",
+      "html": "<p>La chatarra atrae robos. Mira los <a href=\"/contenedores-escombros-con-llave/\">contenedores con llave</a>.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Qué se puede echar en un contenedor de chatarra",
+    "html": "<p>Conviene preguntar antes, pero estas son las pautas generales.</p>",
+    "tarjetas": [
+     {
+      "h3": "Sí",
+      "html": "<p>Hierro, acero, aluminio, cobre, latón y otros restos metálicos sin mezclar con otros residuos.</p>"
+     },
+     {
+      "h3": "Aparte",
+      "html": "<p>Los electrodomésticos y aparatos eléctricos son otro tipo de residuo, igual que las baterías.</p>"
+     },
+     {
+      "h3": "No",
+      "html": "<p>Bidones con restos de aceite o productos químicos, ni nada que sea residuo peligroso.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Retirada de la chatarra",
+    "html": "<p>Cuando el contenedor está lleno se retira y la chatarra se lleva a un gestor autorizado. La chatarra limpia y separada puede tener valor, así que pregunta si se descuenta del precio. Mira el <a href=\"/transporte/\">transporte de contenedores</a> y la <a href=\"/recogida-escombros/\">recogida de residuos</a>.</p>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre contenedores para chatarra",
+    "faq": [
+     {
+      "pregunta": "¿Qué contenedor necesito para chatarra?",
+      "respuesta": "Para chatarra pesada, uno pequeño de 3 o 5 m³, porque manda el peso. Para chatarra ligera y voluminosa, uno de 9 m³ o más."
+     },
+     {
+      "pregunta": "¿Puedo mezclar chatarra con escombros?",
+      "respuesta": "Mejor no. La ley pide separar los residuos de obra por materiales, y el metal limpio se recicla mejor."
+     },
+     {
+      "pregunta": "¿Puedo echar electrodomésticos?",
+      "respuesta": "No en un contenedor de chatarra normal: los aparatos eléctricos son otro tipo de residuo."
+     },
+     {
+      "pregunta": "¿Me pagan por la chatarra?",
+      "respuesta": "Depende del metal, de la cantidad y de quién la recoja. Pregúntalo al pedir presupuesto."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de contenedor para chatarra",
+    "html": "<p>Cuéntanos qué tipo de metal tienes, cuánta cantidad y dónde está, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
+ },
+ "casetas-de-obra": {
+  "titulo": "Casetas de obra: tipos, alquiler o compra y qué pedir",
+  "descripcion": "Casetas de obra para oficina, vestuarios, aseos y almacén: tipos, alquiler o compra, contenedores adaptados y qué necesitas antes de instalarlas.",
+  "h1": "Casetas de obra",
+  "clave": "Casetas de obra",
+  "subtitulo": "Tipos de casetas, alquiler o compra y qué tener en cuenta para instalarlas. Presupuesto sin compromiso.",
+  "entradilla": "<p>Una <strong>caseta de obra</strong> es un módulo prefabricado que se coloca en la obra para usarlo como oficina, vestuario, aseo o almacén. Se lleva en camión, se instala en poco tiempo y se retira al terminar.</p><p>Las obras tienen que contar con vestuarios, lavabos y retretes en proporción al número de trabajadores, y las casetas son una forma habitual de tenerlos.</p>",
+  "secciones": [
+   {
+    "h2": "Tipos de casetas de obra",
+    "foto": {
+     "de": "/img/2021/06/contenedores-maritimos.jpg",
+     "nombre": "casetas-de-obra"
+    },
+    "html": "<p>Cada caseta se prepara para un uso.</p>",
+    "tarjetas": [
+     {
+      "h3": "Caseta de oficina",
+      "html": "<p>Para la dirección de obra, los planos y las reuniones.</p>"
+     },
+     {
+      "h3": "Caseta de vestuarios",
+      "html": "<p>Para que el personal se cambie y guarde sus cosas.</p>"
+     },
+     {
+      "h3": "Caseta de aseos",
+      "html": "<p>Con retretes, lavabos y, si hace falta, duchas.</p>"
+     },
+     {
+      "h3": "Caseta de almacén",
+      "html": "<p>Para guardar herramientas y material bajo llave.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Alquiler o compra de casetas de obra",
+    "html": "<p>El alquiler conviene en obras con fecha de fin. La compra puede interesar si la caseta se va a usar durante años o en varias obras. Un <a href=\"https://contenedoresmaritimos.net/\">contenedor marítimo</a> adaptado también se puede usar como almacén u oficina.</p>"
+   },
+   {
+    "h2": "Qué tener en cuenta antes de instalar una caseta",
+    "html": "<ol><li><strong>Suelo</strong>: tiene que estar firme y nivelado.</li><li><strong>Acceso</strong>: el camión que la trae tiene que poder llegar y descargar.</li><li><strong>Luz y agua</strong>: los aseos necesitan agua y desagüe, o un sistema autónomo.</li><li><strong>Permiso</strong>: si la caseta ocupa la vía pública, hay que consultarlo con el ayuntamiento.</li></ol>"
+   },
+   {
+    "h2": "Preguntas frecuentes sobre casetas de obra",
+    "faq": [
+     {
+      "pregunta": "¿Es obligatorio tener caseta en una obra?",
+      "respuesta": "Las obras deben tener vestuarios, lavabos y retretes en proporción a los trabajadores. La caseta es una forma habitual de cumplirlo, y lo concreta el plan de seguridad de cada obra."
+     },
+     {
+      "pregunta": "¿Cuánto cuesta alquilar una caseta de obra?",
+      "respuesta": "Depende del tipo, del tamaño, del tiempo de alquiler y del transporte hasta la obra. Se presupuesta en cada caso."
+     },
+     {
+      "pregunta": "¿Se puede usar un contenedor marítimo como caseta?",
+      "respuesta": "Sí, sobre todo como almacén. Adaptado, también puede servir de oficina."
+     },
+     {
+      "pregunta": "¿Qué necesito para instalar una caseta?",
+      "respuesta": "Un suelo firme y nivelado, acceso para el camión y, si lleva aseos, agua y desagüe o un sistema autónomo."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de caseta de obra",
+    "html": "<p>Cuéntanos qué tipo de caseta necesitas, dónde está la obra y durante cuánto tiempo, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
+ },
+ "desescombro": {
+  "titulo": "Desescombro y vaciado de pisos, locales y solares",
+  "descripcion": "Desescombro y desalojos: vaciado de pisos, locales, trasteros y solares, retirada de muebles y escombros, y de qué depende el precio.",
+  "h1": "Desescombro y desalojos",
+  "clave": "Desescombro",
+  "subtitulo": "Vaciado de pisos, locales, trasteros y solares, y retirada de escombros. Presupuesto sin compromiso.",
+  "entradilla": "<p>El <strong>desescombro</strong> es retirar los escombros y restos que quedan después de una obra o que se han acumulado en un sitio. Un <strong>desalojo</strong> o vaciado es sacar todo lo que hay en un piso, un local o un trastero: muebles, enseres y basura.</p><p>Aquí tienes qué trabajos son los más habituales, cómo se organizan y de qué depende el precio.</p>",
+  "secciones": [
+   {
+    "h2": "Trabajos de desescombro y desalojo",
+    "foto": {
+     "de": "/img/2021/06/retirada-de-escombros.jpg",
+     "nombre": "desescombro-y-desalojos"
+    },
+    "html": "<p>Estos son los trabajos que se piden con más frecuencia.</p>",
+    "tarjetas": [
+     {
+      "h3": "Desescombro de obra",
+      "html": "<p>Retirada de los escombros y restos de una obra o una reforma. Mira la <a href=\"/recogida-escombros/\">recogida de escombros</a>.</p>"
+     },
+     {
+      "h3": "Vaciado de pisos",
+      "html": "<p>Se sacan muebles, electrodomésticos y enseres de una vivienda, por ejemplo tras una herencia o una venta.</p>"
+     },
+     {
+      "h3": "Vaciado de locales y naves",
+      "html": "<p>Se retira el mobiliario y los restos de un negocio antes de una reforma o de un nuevo uso.</p>"
+     },
+     {
+      "h3": "Trasteros y garajes",
+      "html": "<p>Se vacían los espacios pequeños, muchas veces con sacos en lugar de contenedor.</p>"
+     },
+     {
+      "h3": "Limpieza de solares",
+      "html": "<p>Se retiran escombros, basura y vegetación de una parcela. Mira las <a href=\"/excavaciones/\">excavaciones y movimiento de tierras</a>.</p>"
+     },
+     {
+      "h3": "Limpieza tras una demolición",
+      "html": "<p>Se retira lo que queda después de un derribo. Mira las <a href=\"/demoliciones/\">demoliciones</a>.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Cómo se hace un desescombro, paso a paso",
+    "html": "<ol><li><strong>Valoración</strong>: se mira qué hay que sacar, cuánto hay y cómo es el acceso.</li><li><strong>Elección del contenedor</strong>: <a href=\"/sacos-para-escombros/\">sacos</a> o un contenedor, según la cantidad y el sitio.</li><li><strong>Permiso</strong>: si el contenedor va en la calle, <a href=\"/habilitacion-contenedores-escombros-via-publica/\">hay que comunicarlo o pedir autorización</a>.</li><li><strong>Carga y separación</strong> por materiales.</li><li><strong>Retirada</strong> a un gestor autorizado.</li></ol>"
+   },
+   {
+    "h2": "De qué depende el precio de un desescombro",
+    "html": "<p>Se calcula para cada trabajo.</p>",
+    "tarjetas": [
+     {
+      "h3": "Cantidad",
+      "html": "<p>Los metros cúbicos o los kilos que hay que retirar.</p>"
+     },
+     {
+      "h3": "Acceso",
+      "html": "<p>No cuesta lo mismo un bajo que un cuarto sin ascensor.</p>"
+     },
+     {
+      "h3": "Tipo de residuo",
+      "html": "<p>Escombro, muebles o electrodomésticos se gestionan de forma distinta. Lo peligroso, como el amianto, necesita una gestión especial.</p>"
+     }
+    ]
+   },
+   {
+    "h2": "Preguntas frecuentes sobre desescombro",
+    "faq": [
+     {
+      "pregunta": "¿Qué es un desescombro?",
+      "respuesta": "Es retirar los escombros y restos que quedan después de una obra o que se han acumulado en un lugar."
+     },
+     {
+      "pregunta": "¿Qué diferencia hay entre desescombro y desalojo?",
+      "respuesta": "El desescombro retira restos de obra. El desalojo o vaciado saca todo lo que hay en un piso o un local, como muebles y enseres."
+     },
+     {
+      "pregunta": "¿Hace falta contenedor para vaciar un piso?",
+      "respuesta": "Depende de la cantidad. Para un trastero pueden bastar sacos; para un piso entero se suele usar un contenedor."
+     },
+     {
+      "pregunta": "¿Cuánto cuesta vaciar un piso?",
+      "respuesta": "Depende de la cantidad, del acceso y de lo que haya que retirar. Se presupuesta en cada caso."
+     }
+    ]
+   },
+   {
+    "h2": "Pide presupuesto de desescombro",
+    "html": "<p>Cuéntanos qué hay que retirar, dónde está y cómo es el acceso, y te enviamos un presupuesto sin compromiso.</p>",
+    "boton": {
+     "texto": "Pide presupuesto",
+     "href": "/presupuesto/"
+    }
+   }
+  ]
  }
 }

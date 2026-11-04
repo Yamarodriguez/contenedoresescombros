@@ -32,13 +32,24 @@ const bonito = (t: string) => {
   if (/sacos/i.test(t)) return 'Sacos para escombros';
   return t;
 };
+// Páginas de servicios nuevos (Yama, 2026-11-04): van en su sitio de cada columna.
+const NUEVOS = ['/contenedores-para-reformas/', '/contenedores-industriales/', '/contenedores-para-chatarra/', '/casetas-de-obra/'];
 const contenedores = [
   { label: 'Precios', url: '/precio/' },
   { label: 'Medidas', url: '/medidas/' },
-  ...hijos('Medidas y tipos').filter((c) => c.url !== '/medidas/' && c.url !== '/contenedores-de-tierra/').slice(0, 9),
+  ...hijos('Medidas y tipos').filter((c) => c.url !== '/medidas/' && c.url !== '/contenedores-de-tierra/' && !NUEVOS.includes(c.url)).slice(0, 9),
   { label: 'Contenedores de tierra', url: '/contenedores-de-tierra/' },
+  { label: 'Contenedores para reformas', url: '/contenedores-para-reformas/' },
+  { label: 'Contenedores industriales', url: '/contenedores-industriales/' },
+  { label: 'Contenedores para chatarra', url: '/contenedores-para-chatarra/' },
 ];
-const servicios = ['Alquiler', 'Recogida Escombros', 'Transporte', 'Habilitación vía publica', 'Venta', 'Excavaciones'].map(entrada).filter(Boolean);
+const servicios = [
+  ...['Alquiler', 'Recogida Escombros', 'Transporte', 'Habilitación vía publica', 'Venta', 'Excavaciones'].map(entrada).filter(Boolean),
+  { label: 'Alquiler de cubas', url: '/alquiler-de-cubas/' },
+  { label: 'Demoliciones', url: '/demoliciones/' },
+  { label: 'Desescombro y desalojos', url: '/desescombro/' },
+  { label: 'Casetas de obra', url: '/casetas-de-obra/' },
+];
 const lugares = hijos('Provincias').slice(0, 8);
 const year = new Date().getFullYear();
 ---

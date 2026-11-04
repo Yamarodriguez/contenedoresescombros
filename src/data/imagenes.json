@@ -4007,6 +4007,30 @@
    512
   ]
  },
+ "/img/nuevas/casetas-de-obra-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/casetas-de-obra-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/casetas-de-obra-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/casetas-de-obra.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
  "/img/nuevas/contenedor-de-tierra-3-m3-1080.webp": {
   "w": 1080,
   "h": 1080,
@@ -4023,6 +4047,78 @@
   "ws": []
  },
  "/img/nuevas/contenedor-de-tierra-3-m3.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
+ "/img/nuevas/contenedor-para-reformas-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/contenedor-para-reformas-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/contenedor-para-reformas-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/contenedor-para-reformas.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
+ "/img/nuevas/contenedores-industriales-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-industriales-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-industriales-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-industriales.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
+ "/img/nuevas/contenedores-para-chatarra-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-para-chatarra-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-para-chatarra-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/contenedores-para-chatarra.jpg": {
   "w": 1080,
   "h": 1080,
   "ws": [
@@ -4055,6 +4151,78 @@
    1080
   ]
  },
+ "/img/nuevas/desescombro-y-desalojos-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/desescombro-y-desalojos-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/desescombro-y-desalojos-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/desescombro-y-desalojos.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
+ "/img/nuevas/tamanos-de-cubas-de-escombros-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/tamanos-de-cubas-de-escombros-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/tamanos-de-cubas-de-escombros-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/tamanos-de-cubas-de-escombros.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
+ "/img/nuevas/tipos-de-demolicion-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/tipos-de-demolicion-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/tipos-de-demolicion-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/tipos-de-demolicion.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
  "/img/nuevas/tipos-de-excavacion-y-movimiento-de-tierras-1080.webp": {
   "w": 1080,
   "h": 1080,
@@ -4079,6 +4247,30 @@
    1080
   ]
  },
+ "/img/nuevas/transporte-de-escombros-1080.webp": {
+  "w": 1080,
+  "h": 1080,
+  "ws": []
+ },
+ "/img/nuevas/transporte-de-escombros-400.webp": {
+  "w": 400,
+  "h": 400,
+  "ws": []
+ },
+ "/img/nuevas/transporte-de-escombros-800.webp": {
+  "w": 800,
+  "h": 800,
+  "ws": []
+ },
+ "/img/nuevas/transporte-de-escombros.jpg": {
+  "w": 1080,
+  "h": 1080,
+  "ws": [
+   400,
+   800,
+   1080
+  ]
+ },
  "/img/principal/alquiler-contenedores-escombros-1200.webp": {
   "w": 1200,
   "h": 630,
@@ -4095,6 +4287,54 @@
   "ws": []
  },
  "/img/principal/alquiler-contenedores-escombros.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "/img/principal/alquiler-cubas-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/alquiler-cubas-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/alquiler-cubas-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/alquiler-cubas.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "/img/principal/casetas-obra-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/casetas-obra-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/casetas-obra-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/casetas-obra.jpg": {
   "w": 1200,
   "h": 630,
   "ws": [
@@ -4263,6 +4503,30 @@
   "ws": []
  },
  "/img/principal/contenedor-escombros-9-m3.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "/img/principal/contenedores-chatarra-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/contenedores-chatarra-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/contenedores-chatarra-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/contenedores-chatarra.jpg": {
   "w": 1200,
   "h": 630,
   "ws": [
@@ -5999,6 +6263,30 @@
    1200
   ]
  },
+ "/img/principal/contenedores-industriales-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/contenedores-industriales-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/contenedores-industriales-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/contenedores-industriales.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
  "/img/principal/contenedores-poda-1200.webp": {
   "w": 1200,
   "h": 630,
@@ -6023,6 +6311,30 @@
    1200
   ]
  },
+ "/img/principal/contenedores-reformas-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/contenedores-reformas-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/contenedores-reformas-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/contenedores-reformas.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
  "/img/principal/contenedores-tierra-1200.webp": {
   "w": 1200,
   "h": 630,
@@ -6039,6 +6351,54 @@
   "ws": []
  },
  "/img/principal/contenedores-tierra.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "/img/principal/demoliciones-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/demoliciones-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/demoliciones-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/demoliciones.jpg": {
+  "w": 1200,
+  "h": 630,
+  "ws": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "/img/principal/desescombro-1200.webp": {
+  "w": 1200,
+  "h": 630,
+  "ws": []
+ },
+ "/img/principal/desescombro-400.webp": {
+  "w": 400,
+  "h": 210,
+  "ws": []
+ },
+ "/img/principal/desescombro-800.webp": {
+  "w": 800,
+  "h": 420,
+  "ws": []
+ },
+ "/img/principal/desescombro.jpg": {
   "w": 1200,
   "h": 630,
   "ws": [

@@ -256,8 +256,9 @@ a.foto:hover { transform: translateY(-3px); }
   .faq-tarjeta > :not(.foto) { grid-column: 1; }
 }
 @media (max-width: 1300px) {
-  .menu-boton { display: block; order: 3; }
-  .menu { flex-basis: 100%; display: none; }
+  .cabecera-in { flex-wrap: wrap; }
+  .menu-boton { display: block; order: 3; margin-left: auto; }
+  .menu { flex-basis: 100%; order: 4; display: none; min-width: 0; }
   .menu.abierto { display: block; }
   .menu-lista { flex-direction: column; align-items: stretch; gap: 0; max-height: 72vh; overflow: auto; padding-bottom: .5rem; }
   .menu-lista > li { border-bottom: 1px solid var(--borde); }

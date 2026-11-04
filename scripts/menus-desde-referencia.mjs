@@ -43,6 +43,16 @@ const pie = mejor(pies);
 // Yama (2026-11-03): «Contenedores de tierra» en «Medidas y tipos», detrás de la de poda.
 const ANADIDOS = [
   { dentro: 'Medidas y tipos', despues: '/poda/', label: 'Contenedores de tierra', url: '/contenedores-de-tierra/' },
+  // Yama (2026-11-04): servicios nuevos.
+  { dentro: 'Medidas y tipos', despues: '/contenedores-de-tierra/', label: 'Contenedores para reformas', url: '/contenedores-para-reformas/' },
+  { dentro: 'Medidas y tipos', despues: '/contenedores-para-reformas/', label: 'Contenedores industriales', url: '/contenedores-industriales/' },
+  { dentro: 'Medidas y tipos', despues: '/contenedores-industriales/', label: 'Contenedores para chatarra', url: '/contenedores-para-chatarra/' },
+  { dentro: 'Medidas y tipos', despues: '/contenedores-para-chatarra/', label: 'Casetas de obra', url: '/casetas-de-obra/' },
+  { dentro: 'Alquiler', despues: '', label: 'Alquiler de contenedores', url: '/alquiler/' },
+  { dentro: 'Alquiler', despues: '/alquiler/', label: 'Alquiler de cubas', url: '/alquiler-de-cubas/' },
+  { dentro: 'Excavaciones', despues: '', label: 'Excavaciones y movimiento de tierras', url: '/excavaciones/' },
+  { dentro: 'Excavaciones', despues: '/excavaciones/', label: 'Demoliciones', url: '/demoliciones/' },
+  { dentro: 'Excavaciones', despues: '/demoliciones/', label: 'Desescombro y desalojos', url: '/desescombro/' },
 ];
 for (const a of ANADIDOS) {
   const padre = principal.find((e) => e.label === a.dentro);
