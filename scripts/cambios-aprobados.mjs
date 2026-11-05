@@ -172,6 +172,19 @@ for (const [slug, m] of Object.entries(encabezados)) {
   for (const t of Object.keys(m)) if (!p.blocks.some((b) => b.type === 'heading' && normT(b.text) === t)) errores.push(`${slug}: no hay ningún titular «${t}»`);
 }
 
+// --- Erratas del original corregidas a petición de Yama ---
+// Página -> { texto a reemplazar: texto correcto }. Se aplican al pintar y en C2 (src/lib/textos.mjs).
+// Yama (2026-11-05): la página de Álava copió de Ourense el bloque de «vía pública» y le quedó «Ourense».
+const correcciones = {
+  alava: { Ourense: 'Álava' },
+};
+for (const [slug, m] of Object.entries(correcciones)) {
+  const p = paginas.find((x) => x.slug === slug);
+  if (!p) { errores.push(`correcciones: no existe la página «${slug}»`); continue; }
+  const texto = JSON.stringify(p.blocks);
+  for (const de of Object.keys(m)) if (!texto.includes(de)) errores.push(`correcciones: en «${slug}» no aparece «${de}»`);
+}
+
 // --- Comprobaciones de las reglas ---
 for (const [k, t] of Object.entries(titulos)) if (t.length > MAX) errores.push(`título de ${k} con ${t.length} caracteres`);
 const repetidos = Object.values(titulos).filter((t, i, a) => a.indexOf(t) !== i);
@@ -201,13 +214,14 @@ console.log(`Encabezados de MAYÚSCULAS a tipo frase: ${mayus} (${ejMayus.size} 
 console.log(`Fotos que reciben texto alternativo: ${alts}\n${ejAlt.map((e) => '    ' + e).join('\n')}`);
 console.log(`Titulares cambiados: ${Object.entries(encabezados).map(([s, m]) => Object.entries(m).map(([a, b]) => `${s}: «${a}» -> «${b}»`).join(' · ')).join(' · ')}`);
 console.log(`Etiquetas de botón limpias: ${Object.keys(botones).length} (${Object.entries(botones).map(([a, b]) => `«${a}» -> «${b}»`).join(' · ')})`);
+console.log(`Correcciones del original: ${Object.entries(correcciones).map(([s, m]) => Object.entries(m).map(([a, b]) => `${s}: «${a}» -> «${b}»`).join(' · ')).join(' · ')}`);
 console.log(`Partes quitadas:\n${resumenQuitar.map((e) => '    ' + e).join('\n')}`);
 if (errores.length) { console.log('ERRORES:\n  ' + errores.join('\n  ')); process.exit(1); }
 if (SECO) { console.log('\n(--seco: no se ha escrito nada)'); process.exit(0); }
 
 fs.writeFileSync('src/data/fallos-original.json', JSON.stringify({
   aprobado: 'Yama, 2026-11-03 (auditoría SEO/AEO)',
-  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)', 'encabezados: titulares del original cambiados a petición de Yama', 'botones: etiquetas de botón limpias (MAYÚSCULAS, gritones o con faltas -> texto claro; src/lib/textos.mjs)'],
-  titulos, h1, descripciones, tituloFaq, preguntas, quitar, encabezados, botones,
+  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)', 'encabezados: titulares del original cambiados a petición de Yama', 'botones: etiquetas de botón limpias (MAYÚSCULAS, gritones o con faltas -> texto claro; src/lib/textos.mjs)', 'correcciones: erratas del original (texto copiado de otra ciudad) corregidas a petición de Yama (src/lib/textos.mjs)'],
+  titulos, h1, descripciones, tituloFaq, preguntas, quitar, encabezados, botones, correcciones,
 }, null, 1) + '\n');
 console.log('\nEscrito src/data/fallos-original.json');

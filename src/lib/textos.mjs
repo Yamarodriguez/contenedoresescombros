@@ -47,12 +47,20 @@ export function altPara(bloques, i, porDefecto = '', propios = []) {
 }
 
 /** Aplica las reglas a los bloques de una página: encabezados en tipo frase, alt de las
- *  fotos y etiquetas de botón (MAYÚSCULAS -> tipo frase, y las de `botones` con su texto limpio). */
-export function aplicarCambios(bloques, { titulo = '', propios = [], encabezados = {}, botones = {} } = {}) {
+ *  fotos, etiquetas de botón (MAYÚSCULAS -> tipo frase, y las de `botones` con su texto limpio)
+ *  y, si se pasan, las `correcciones` de erratas del original de esa página (texto a reemplazar). */
+export function aplicarCambios(bloques, { titulo = '', propios = [], encabezados = {}, botones = {}, correcciones = null } = {}) {
+  const corregir = (s = '') => {
+    if (!correcciones || !s) return s;
+    for (const [de, a] of Object.entries(correcciones)) s = s.split(de).join(a);
+    return s;
+  };
   return bloques.map((b, i) => {
-    if (b.type === 'heading') return { ...b, text: encabezados[normT(b.text)] || tipoFrase(b.text, propios) };
+    if (b.type === 'heading') return { ...b, text: encabezados[normT(b.text)] || corregir(tipoFrase(b.text, propios)) };
     if (b.type === 'image' && !(b.alt || '').trim()) return { ...b, alt: altPara(bloques, i, titulo, propios) };
-    if (b.type === 'button') return { ...b, text: botones[normT(b.text)] || tipoFrase(b.text, propios) };
+    if (b.type === 'button') return { ...b, text: botones[normT(b.text)] || corregir(tipoFrase(b.text, propios)) };
+    if (correcciones && b.type === 'text') return { ...b, text: corregir(b.text), html: corregir(b.html) };
+    if (correcciones && b.type === 'toggle') return { ...b, items: b.items.map((it) => ({ ...it, title: corregir(it.title), html: corregir(it.html) })) };
     return b;
   });
 }

@@ -37,7 +37,7 @@ const cambios = cambiosData as any;
 const propios = nombresPropios(ciudades);
 const h1 = data.blocks.find((b: any) => b.type === 'heading' && b.tag === 'h1');
 const tituloH1 = cambios.h1[data.slug] || tipoFrase(h1 ? h1.text : data.title, propios);
-const bloques = enlazarOtrosServicios(aplicarCambios(data.blocks, { titulo: tituloH1, propios, encabezados: cambios.encabezados?.[data.slug], botones: cambios.botones }), {
+const bloques = enlazarOtrosServicios(aplicarCambios(data.blocks, { titulo: tituloH1, propios, encabezados: cambios.encabezados?.[data.slug], botones: cambios.botones, correcciones: cambios.correcciones?.[data.slug] }), {
   slug: data.slug,
   excavacion: (datosExcavacion as Record<string, any>)[data.slug] ? rutaExcavacion(data.slug) : '/excavaciones/',
 });

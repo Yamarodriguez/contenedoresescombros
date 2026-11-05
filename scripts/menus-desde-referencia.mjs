@@ -61,6 +61,14 @@ for (const a of ANADIDOS) {
   const k = padre.children.findIndex((c) => c.url === a.despues);
   padre.children.splice(k < 0 ? padre.children.length : k + 1, 0, { label: a.label, url: a.url, children: [] });
 }
+// Yama (2026-11-05): destinos para las entradas que WordPress dejaba en «#».
+// «Medidas y tipos» -> la página de medidas; «Provincias» -> inicio (donde está la lista
+// completa de provincias). «TODAS» apuntaba a un ancla #provincias que ya no existe -> inicio.
+const DESTINOS = { 'Medidas y tipos': '/medidas/', Provincias: '/' };
+for (const e of principal) if (DESTINOS[e.label] && (!e.url || e.url === '#')) e.url = DESTINOS[e.label];
+const prov = principal.find((e) => e.label === 'Provincias');
+const todas = prov && prov.children.find((c) => c.label === 'TODAS');
+if (todas && /^#/.test(todas.url || '')) todas.url = '/';
 fs.mkdirSync('src/data', { recursive: true });
 fs.writeFileSync('src/data/menus.json', JSON.stringify({ principal, pie }, null, 1) + '\n');
 console.log(`Menu principal: ${contar(principal)} entradas (${principal.length} arriba). Pie: ${contar(pie)} entradas. Variantes vistas: ${new Set(variantes.map((v) => JSON.stringify(v))).size}`);

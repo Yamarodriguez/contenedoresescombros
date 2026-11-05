@@ -6,7 +6,8 @@
   "Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)",
   "quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)",
   "encabezados: titulares del original cambiados a petición de Yama",
-  "botones: etiquetas de botón limpias (MAYÚSCULAS, gritones o con faltas -> texto claro; src/lib/textos.mjs)"
+  "botones: etiquetas de botón limpias (MAYÚSCULAS, gritones o con faltas -> texto claro; src/lib/textos.mjs)",
+  "correcciones: erratas del original (texto copiado de otra ciudad) corregidas a petición de Yama (src/lib/textos.mjs)"
  ],
  "titulos": {
   "alava": "Contenedores de escombros en Álava: precio y alquiler",
@@ -351,5 +352,10 @@
   "alquiler contenedor escombro": "Alquiler de contenedores",
   "medidas de contendores": "Medidas de contenedores",
   "haz click aqui!": "Más información"
+ },
+ "correcciones": {
+  "alava": {
+   "Ourense": "Álava"
+  }
  }
 }

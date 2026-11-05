@@ -84,12 +84,20 @@ for (const p of paginas) {
   const renombrados = cambios.encabezados?.[ruta || 'index'] || {};
   // Etiquetas de botón limpias a petición de Yama (fallos-original.json -> botones; src/lib/textos.mjs).
   const botones = cambios.botones || {};
+  // Erratas del original corregidas a petición de Yama (fallos-original.json -> correcciones).
+  const correcciones = cambios.correcciones?.[ruta || 'index'] || null;
+  const corregir = (s = '') => { if (!correcciones || !s) return s; for (const [de, a] of Object.entries(correcciones)) s = s.split(de).join(a); return s; };
   // Enlaces de «Otros servicios» añadidos a petición de Yama (src/lib/textos.mjs).
   const conEnlaces = enlazarOtrosServicios(p.blocks, { slug: ruta, excavacion: datosExcavacion[ruta] ? rutaExcavacion(ruta) : '/excavaciones/' });
   const bl = conEnlaces.map((b, i) => {
     if (conv.has(i)) return { ...b, text: conv.get(i) };
     if (b.type === 'heading' && renombrados[normT(b.text)]) return { ...b, text: renombrados[normT(b.text)] };
     if (b.type === 'button' && botones[normT(b.text)]) return { ...b, text: botones[normT(b.text)] };
+    if (correcciones) {
+      if (b.type === 'text') return { ...b, text: corregir(b.text), html: corregir(b.html) };
+      if (b.type === 'heading') return { ...b, text: corregir(b.text) };
+      if (b.type === 'toggle') return { ...b, items: b.items.map((it) => ({ ...it, title: corregir(it.title), html: corregir(it.html) })) };
+    }
     return b;
   }).filter((_, i) => !quitados.has(i));
   subTxt(viejoTextos(bl), textoUnidades(zona).join(' || '), 'texto', p, dif);
