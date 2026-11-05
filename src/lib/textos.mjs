@@ -46,11 +46,13 @@ export function altPara(bloques, i, porDefecto = '', propios = []) {
   return limpiarAlt(tipoFrase(t || porDefecto, propios));
 }
 
-/** Aplica las reglas a los bloques de una página: encabezados en tipo frase y alt de las fotos. */
-export function aplicarCambios(bloques, { titulo = '', propios = [], encabezados = {} } = {}) {
+/** Aplica las reglas a los bloques de una página: encabezados en tipo frase, alt de las
+ *  fotos y etiquetas de botón (MAYÚSCULAS -> tipo frase, y las de `botones` con su texto limpio). */
+export function aplicarCambios(bloques, { titulo = '', propios = [], encabezados = {}, botones = {} } = {}) {
   return bloques.map((b, i) => {
     if (b.type === 'heading') return { ...b, text: encabezados[normT(b.text)] || tipoFrase(b.text, propios) };
     if (b.type === 'image' && !(b.alt || '').trim()) return { ...b, alt: altPara(bloques, i, titulo, propios) };
+    if (b.type === 'button') return { ...b, text: botones[normT(b.text)] || tipoFrase(b.text, propios) };
     return b;
   });
 }

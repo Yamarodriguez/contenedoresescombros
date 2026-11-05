@@ -13,6 +13,7 @@ import { aplicarCambios, nombresPropios, detectarFaq, enlazarOtrosServicios } fr
 import site from '../data/site.json';
 import paginasNuevas from '../data/paginas-nuevas.json';
 import principales from '../data/principales.json';
+import cambiosData from '../data/fallos-original.json';
 
 export function getStaticPaths() {
   return Object.entries(paginasNuevas as Record<string, any>)
@@ -32,7 +33,7 @@ const bloquesInicio = (inicio as any).blocks as any[];
 const bloques = adaptada ? enlazarOtrosServicios(aplicarCambios(bloquesInicio.map((b, i) => {
   const c = adaptada.cambios[i];
   return c ? { ...b, ...c, ...(c.html ? { text: sinEtiquetas(c.html) } : {}) } : b;
-}), { titulo: p.h1, propios: nombresPropios(ciudades) }), { slug: clave }) : [];
+}), { titulo: p.h1, propios: nombresPropios(ciudades), botones: cambiosData.botones }), { slug: clave }) : [];
 const filas = adaptada ? (inicio as any).filas : [];
 const omitir = adaptada ? [...bloquesInicio.flatMap((b, i) => (b.type === 'heading' && b.tag === 'h1' ? [i] : [])), ...adaptada.omitir] : [];
 const faqBloque = adaptada ? filas.map((f: any) => detectarFaq(f, bloques, adaptada.preguntas)).find(Boolean) : null;

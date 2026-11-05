@@ -82,9 +82,16 @@ for (const p of paginas) {
   const quitados = new Set(cambios.quitar?.[ruta || 'index'] || []);
   // Titulares cambiados a petición de Yama (fallos-original.json -> encabezados).
   const renombrados = cambios.encabezados?.[ruta || 'index'] || {};
+  // Etiquetas de botón limpias a petición de Yama (fallos-original.json -> botones; src/lib/textos.mjs).
+  const botones = cambios.botones || {};
   // Enlaces de «Otros servicios» añadidos a petición de Yama (src/lib/textos.mjs).
   const conEnlaces = enlazarOtrosServicios(p.blocks, { slug: ruta, excavacion: datosExcavacion[ruta] ? rutaExcavacion(ruta) : '/excavaciones/' });
-  const bl = conEnlaces.map((b, i) => (conv.has(i) ? { ...b, text: conv.get(i) } : b.type === 'heading' && renombrados[normT(b.text)] ? { ...b, text: renombrados[normT(b.text)] } : b)).filter((_, i) => !quitados.has(i));
+  const bl = conEnlaces.map((b, i) => {
+    if (conv.has(i)) return { ...b, text: conv.get(i) };
+    if (b.type === 'heading' && renombrados[normT(b.text)]) return { ...b, text: renombrados[normT(b.text)] };
+    if (b.type === 'button' && botones[normT(b.text)]) return { ...b, text: botones[normT(b.text)] };
+    return b;
+  }).filter((_, i) => !quitados.has(i));
   subTxt(viejoTextos(bl), textoUnidades(zona).join(' || '), 'texto', p, dif);
   subArr(viejoBotones(bl), nuevoBotones(html), 'boton', p, dif);
   subArr(viejoEnlaces(bl), nuevoEnlaces(html), 'enlace', p, dif);

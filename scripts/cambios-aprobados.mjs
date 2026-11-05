@@ -28,6 +28,7 @@ const titulosFijos = {
   'camiones-portacontenedores': 'Venta de camiones portacontenedores',
   'contenedores-escombros-con-llave': 'Contenedores de escombros con llave (cerrados)',
   'contenedores-escombros-sevilla': 'Contenedores y cubas de escombros en Sevilla: precio',
+  empresa: 'Anuncia tu empresa de contenedores de escombros',
 };
 for (const m of [3, 5, 9, 12, 20, 30]) titulosFijos[`contenedores-escombros-${m}-m3`] = `Contenedor de escombros de ${m} m3: medidas y precio`;
 const nombreCiudad = (k) => (k === 'lleida' ? 'Lleida (Lérida)' : ciudades[k]?.nombre);
@@ -36,9 +37,12 @@ function tituloCiudad(x) {
 }
 const titulos = {};
 for (const [k, s] of Object.entries(seo)) {
-  if ((s.titulo || '').length <= MAX) continue;
-  const nuevo = titulosFijos[k] || (nombreCiudad(k) ? tituloCiudad(nombreCiudad(k)) : null);
-  if (nuevo) titulos[k] = nuevo; else console.log(`  AVISO sin regla para el título de ${k}`);
+  // Páginas con título fijo y TODAS las ciudades/provincias reciben el título limpio,
+  // aunque el viejo de Yoast cupiera en 60 (p. ej. «Contenedores Escombros Álava -
+  // Contenedor de obra Álava»). El resto solo se avisa si el viejo pasaba de 60.
+  const nuevo = titulosFijos[k] || (ciudades[k] ? tituloCiudad(nombreCiudad(k)) : null);
+  if (nuevo) { titulos[k] = nuevo; continue; }
+  if ((s.titulo || '').length > MAX) console.log(`  AVISO sin regla para el título de ${k}`);
 }
 
 // Títulos cambiados aunque no pasen de 60 caracteres (Yama, 2026-11-03: SEO de Excavaciones).
@@ -67,6 +71,38 @@ const descripciones = {
   excavaciones: 'Excavaciones y movimiento de tierras: vaciado, zanjas, piscinas y nivelación, maquinaria, contenedores de tierra y de qué depende el precio. Pide presupuesto.',
 };
 
+// --- Descripciones limpias para Google (quitan los emojis ✅ y las faltas del Yoast viejo) ---
+// Hasta ahora, las ciudades y muchos servicios caían en la descripción vieja de src/data/seo.json
+// («Contenedores escombros Álava ✅ servicios alquiler contendores de escombros…»). Se rehacen
+// aquí, limpias y en la misma línea aprobada. Mismo estilo que las localidades nuevas (lugares.mjs).
+const MAXD = 160;
+const primeraDesc = (arr) => arr.find((t) => t.length <= MAXD) || arr[arr.length - 1];
+const descCiudad = (n) => primeraDesc([
+  `Contenedores de escombros en ${n}: tamaños, precio orientativo, alquiler y recogida, y el permiso para la vía pública. Pide presupuesto sin compromiso.`,
+  `Contenedores de escombros en ${n}: tamaños, precio orientativo, alquiler y permiso para la vía pública. Pide presupuesto sin compromiso.`,
+  `Contenedores de escombros en ${n}: tamaños, precio y permiso del ayuntamiento. Pide presupuesto sin compromiso.`,
+  `Contenedores de escombros en ${n}: tamaños, precio y presupuesto sin compromiso.`,
+]);
+// Todas las páginas de ciudad/provincia de WordPress (las que están en ciudades.json).
+for (const k of Object.keys(seo)) if (ciudades[k]) descripciones[k] = descCiudad(ciudades[k].nombre);
+// Inicio y servicios (mismo problema de emojis/faltas). Factuales y neutras.
+Object.assign(descripciones, {
+  index: 'Contenedores de escombros y residuos de obra en toda España: tamaños de 3 a 30 m³, medidas, precios orientativos y presupuesto sin compromiso.',
+  precio: 'Precio de un contenedor de escombros por tamaño: de qué depende (tamaño, días, zona y residuo) y cuánto cuesta. Pide presupuesto sin compromiso.',
+  medidas: 'Medidas de los contenedores de escombros por tamaño, de 3 a 30 m³: largo, ancho y alto y qué cabe en cada uno. Pide presupuesto sin compromiso.',
+  alquiler: 'Alquiler de contenedores de escombros y de obra: tamaños, de qué depende el precio y qué permiso hace falta. Pide presupuesto sin compromiso.',
+  transporte: 'Transporte de escombros y de contenedores de obra: cómo funcionan la entrega y la recogida y de qué depende el precio. Pide presupuesto sin compromiso.',
+  'recogida-escombros': 'Recogida y retirada de escombros de obra: cómo se contrata, cuándo pasa el camión y de qué depende el precio. Pide presupuesto sin compromiso.',
+  'sacos-para-escombros': 'Sacos para escombros (big bag): para qué sirven, cuánto aguantan y cuándo elegirlos en vez de un contenedor. Pide presupuesto sin compromiso.',
+  poda: 'Contenedor para restos de poda y jardín: para qué sirve, qué se puede echar y de qué depende el precio. Pide presupuesto sin compromiso.',
+  'habilitacion-contenedores-escombros-via-publica': 'Permiso para el contenedor de escombros en la vía pública: cuándo hace falta y cómo pedirlo al ayuntamiento. Pide presupuesto sin compromiso.',
+  'camiones-portacontenedores': 'Camiones portacontenedores: tipos, para qué sirven y venta. Información y presupuesto sin compromiso.',
+  venta: 'Venta de contenedores de escombros y de obra: tipos, usos y de qué depende el precio. Pide información y presupuesto sin compromiso.',
+  'contenedores-escombros-con-llave': 'Contenedor de escombros con llave (cerrado): para qué sirve, cuándo conviene y de qué depende el precio. Pide presupuesto sin compromiso.',
+  empresa: '¿Tienes una empresa de contenedores de escombros o de obra? Trabaja con nosotros: rellena el formulario y nos ponemos en contacto contigo.',
+});
+for (const m of [3, 5, 9, 12, 20, 30]) descripciones[`contenedores-escombros-${m}-m3`] = `Contenedor de escombros de ${m} m³: medidas, para qué obras sirve y precio orientativo. Pide presupuesto sin compromiso.`;
+
 // --- Bloque «Medidas / Recogida» (4 columnas, 90 páginas) -> «Preguntas frecuentes de contenedores» ---
 // Petición de Yama (2026-11-03, captura). Claves: titular H2 original sin acentos y en minúsculas.
 const tituloFaq = 'Preguntas frecuentes de contenedores';
@@ -75,6 +111,19 @@ const preguntas = {
   'medidas de contenedores de escombros': '¿Qué medidas tienen los contenedores de escombros?',
   'recogida de escombros': '¿Se puede contratar la recogida de escombros?',
   'retirada de escombros y residuos': '¿Se puede contratar la retirada de escombros y residuos?',
+};
+
+// --- Etiquetas de botón limpias (Yama, 2026-11-05) ---
+// Botones del original en MAYÚSCULAS, gritones o con faltas -> etiqueta limpia. Clave: texto
+// original del botón normalizado (normT). Los demás botones en MAYÚSCULAS pasan a tipo frase
+// solos (src/lib/textos.mjs). Lo aplican la web y el comprobador C2.
+const botones = {
+  presupuesto: 'Pide presupuesto',
+  'llamenos aqui!': 'Llámanos',
+  whatsapp: 'WhatsApp',
+  'alquiler contenedor escombro': 'Alquiler de contenedores',
+  'medidas de contendores': 'Medidas de contenedores',
+  'haz click aqui!': 'Más información',
 };
 
 // --- Partes del original que se quitan ---
@@ -128,6 +177,10 @@ for (const [k, t] of Object.entries(titulos)) if (t.length > MAX) errores.push(`
 const repetidos = Object.values(titulos).filter((t, i, a) => a.indexOf(t) !== i);
 if (repetidos.length) errores.push('títulos repetidos: ' + repetidos.join(' | '));
 for (const [k, d] of Object.entries(descripciones)) if (d.length > 160) errores.push(`descripción de ${k} con ${d.length} caracteres`);
+// Cada clave de `botones` tiene que existir como botón en alguna página (si no, sobra o cambió el original).
+const botonesOriginales = new Set();
+for (const p of paginas) for (const b of p.blocks) if (b.type === 'button') botonesOriginales.add(normT(b.text));
+for (const k of Object.keys(botones)) if (!botonesOriginales.has(k)) errores.push(`botón sin coincidencia en el original: «${k}»`);
 
 // --- Recuento de las reglas generales (mayúsculas y fotos) ---
 const propios = nombresPropios(ciudades);
@@ -147,13 +200,14 @@ console.log(`Descripciones nuevas: ${Object.keys(descripciones).length} (${Objec
 console.log(`Encabezados de MAYÚSCULAS a tipo frase: ${mayus} (${ejMayus.size} textos distintos)\n${[...ejMayus].slice(0, 5).map(([a, b]) => `    «${a}» -> «${b}»`).join('\n')}`);
 console.log(`Fotos que reciben texto alternativo: ${alts}\n${ejAlt.map((e) => '    ' + e).join('\n')}`);
 console.log(`Titulares cambiados: ${Object.entries(encabezados).map(([s, m]) => Object.entries(m).map(([a, b]) => `${s}: «${a}» -> «${b}»`).join(' · ')).join(' · ')}`);
+console.log(`Etiquetas de botón limpias: ${Object.keys(botones).length} (${Object.entries(botones).map(([a, b]) => `«${a}» -> «${b}»`).join(' · ')})`);
 console.log(`Partes quitadas:\n${resumenQuitar.map((e) => '    ' + e).join('\n')}`);
 if (errores.length) { console.log('ERRORES:\n  ' + errores.join('\n  ')); process.exit(1); }
 if (SECO) { console.log('\n(--seco: no se ha escrito nada)'); process.exit(0); }
 
 fs.writeFileSync('src/data/fallos-original.json', JSON.stringify({
   aprobado: 'Yama, 2026-11-03 (auditoría SEO/AEO)',
-  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)', 'encabezados: titulares del original cambiados a petición de Yama'],
-  titulos, h1, descripciones, tituloFaq, preguntas, quitar, encabezados,
+  reglas: ['Encabezados en MAYÚSCULAS -> tipo frase', 'Fotos sin texto alternativo -> alt del titular de su ficha o sección (src/lib/textos.mjs)', 'Bloque Medidas/Recogida de 4 columnas -> «Preguntas frecuentes de contenedores» (src/lib/textos.mjs: detectarFaq)', 'quitar: índices de bloques del original que no se pintan (Excavaciones: lo repetido de contenedores)', 'encabezados: titulares del original cambiados a petición de Yama', 'botones: etiquetas de botón limpias (MAYÚSCULAS, gritones o con faltas -> texto claro; src/lib/textos.mjs)'],
+  titulos, h1, descripciones, tituloFaq, preguntas, quitar, encabezados, botones,
 }, null, 1) + '\n');
 console.log('\nEscrito src/data/fallos-original.json');
